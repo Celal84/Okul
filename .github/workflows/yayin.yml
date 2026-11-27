@@ -1,0 +1,66 @@
+name: Yayın (web + sürüm)
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: yayin-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  derle:
+    runs-on: ubuntu-latest
+    outputs:
+      ver: ${{ steps.v.outputs.ver }}
+      yeni: ${{ steps.v.outputs.yeni }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: İçerik denetimi
+        run: node tools/validate.mjs && node tools/check-math.mjs
+      - name: Sürüm
+        id: v
+        run: |
+          ver="$(tr -d ' \r\n' < VERSION)"
+          echo "ver=$ver" >> "$GITHUB_OUTPUT"
+          if git rev-parse -q --verify "refs/tags/Homework_v$ver" >/dev/null; then echo "yeni=0" >> "$GITHUB_OUTPUT"; else echo "yeni=1" >> "$GITHUB_OUTPUT"; fi
+      - name: Web + APK derle
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KS_PASS: ${{ secrets.KEYSTORE_PASSWORD }}
+        run: |
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/homework.jks"
+            export KS="$RUNNER_TEMP/homework.jks"
+            "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "build-tools;35.0.0" "platforms;android-35" >/dev/null
+          fi
+          bash build.sh
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: dist/www }
+      - name: GitHub sürümü (Homework_vX.Y.Z)
+        if: github.ref == 'refs/heads/main' && steps.v.outputs.yeni == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ver="${{ steps.v.outputs.ver }}"
+          (cd dist && zip -qr "Homework_v$ver-web.zip" www)
+          files=("dist/Homework_v$ver-web.zip"); [ -f "dist/Homework_v$ver.apk" ] && files+=("dist/Homework_v$ver.apk")
+          gh release create "Homework_v$ver" "${files[@]}" --title "Homework_v$ver" --generate-notes --target "$GITHUB_SHA"
+  web:
+    if: github.ref == 'refs/heads/main'
+    needs: derle
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.d.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+        with: { enablement: true }
+      - id: d
+        uses: actions/deploy-pages@v4

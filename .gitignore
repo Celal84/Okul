@@ -1,0 +1,4 @@
+dist/
+*.jks
+keystore-password.txt
+node_modules/

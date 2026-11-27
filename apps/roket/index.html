@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Hızlı Okuma Roketi</title>
+<style>
+:root{--bg1:#0b1240;--bg2:#3a1c71;--card:rgba(255,255,255,.10);--line:rgba(255,255,255,.18);--y:#ffd23f;--g:#3ddc84;--r:#ff5c7a;--b:#4fc3ff;--ink:#fff;--paper:#fffaf0;--dk:#2b2350}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
+html,body{margin:0;height:100%;background:linear-gradient(160deg,var(--bg1),var(--bg2));color:var(--ink);font-family:"Trebuchet MS",Roboto,system-ui,sans-serif;overflow:hidden}
+#sky{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.sx{position:absolute;background:#fff;border-radius:50%;animation:tw 3s ease-in-out infinite}
+@keyframes tw{50%{opacity:.15}}
+#app{position:relative;z-index:1;height:100%;overflow-y:auto;padding:14px 14px 28px;max-width:720px;margin:0 auto}
+button{font-family:inherit;border:0;cursor:pointer;color:inherit}
+input{user-select:text;-webkit-user-select:text;font-family:inherit}
+.btn{background:var(--y);color:#2a1a00;font-weight:800;font-size:22px;padding:14px 22px;border-radius:18px;box-shadow:0 5px 0 #c99a00;transition:transform .08s}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #c99a00}
+.btn.g{background:var(--g);box-shadow:0 5px 0 #1f9e58;color:#03311a}
+.btn.b{background:var(--b);box-shadow:0 5px 0 #1a7fb3;color:#012}
+.btn.r{background:var(--r);box-shadow:0 5px 0 #b0304a;color:#fff}
+.btn.ghost{background:rgba(255,255,255,.16);box-shadow:0 5px 0 rgba(0,0,0,.3);color:#fff}
+.btn.big{font-size:26px;padding:18px 24px;width:100%}
+.btn.sm{font-size:18px;padding:10px 14px}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.back{width:50px;height:50px;border-radius:15px;background:var(--card);font-size:24px;flex:none}
+.top h2{margin:0;font-size:23px;flex:1;line-height:1.15}
+.pill{background:var(--card);border-radius:999px;padding:7px 12px;font-weight:800;font-size:17px;white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:14px;margin-bottom:12px}
+.mascot{display:flex;gap:8px;align-items:flex-start;margin:4px 0 14px}
+.owl{font-size:50px;line-height:1;animation:bob 2.4s ease-in-out infinite;flex:none}
+.bubble{background:#fff;color:var(--dk);border-radius:18px;padding:12px 14px;font-size:18px;line-height:1.4;position:relative;flex:1;font-weight:600}
+.bubble:before{content:"";position:absolute;left:-9px;top:16px;border:10px solid transparent;border-right-color:#fff;border-left:0}
+.spk{background:#efeaff;border-radius:12px;width:42px;height:42px;font-size:20px;float:right;margin:0 0 4px 8px}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@keyframes pop{0%{transform:scale(.6)}100%{transform:scale(1)}}
+@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+/* home */
+.logo{text-align:center;margin:2px 0 8px}
+.logo h1{margin:0;font-size:31px;letter-spacing:.5px;background:linear-gradient(90deg,#ffd23f,#ff7eb6,#4fc3ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo .rk{display:inline-block;font-size:40px;animation:fly 3s ease-in-out infinite}
+@keyframes fly{50%{transform:translate(6px,-8px) rotate(6deg)}}
+.hdr{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.rank{flex:1;font-weight:800;font-size:17px;line-height:1.2}
+.rank small{display:block;font-weight:600;opacity:.75;font-size:14px}
+.fuel{height:14px;background:rgba(0,0,0,.35);border-radius:10px;overflow:hidden;margin-top:6px}
+.fuel i{display:block;height:100%;background:linear-gradient(90deg,#ff9f1c,#ffd23f);border-radius:10px}
+.daily{display:flex;align-items:center;gap:12px}
+.daily .de{font-size:38px}
+.daily b{font-size:18px}.daily small{display:block;opacity:.8;font-size:14px}
+.dots{display:flex;gap:6px;margin-top:6px}.dots i{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;font-style:normal;font-size:13px}.dots i.on{background:var(--g)}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.tile{border-radius:24px;padding:14px 12px;text-align:left;min-height:138px;position:relative;overflow:hidden;box-shadow:0 6px 0 rgba(0,0,0,.28);color:#fff}
+.tile:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.28)}
+.tile .te{font-size:44px;display:block;line-height:1.1}
+.tile b{font-size:19px;display:block;margin-top:6px;text-shadow:0 2px 0 rgba(0,0,0,.2)}
+.tile small{font-size:14px;opacity:.95;display:block;margin-top:3px;line-height:1.25}
+.tile.done:after{content:"✓";position:absolute;top:10px;right:12px;background:#fff;color:#1f9e58;border-radius:50%;width:28px;height:28px;font-weight:900;display:grid;place-items:center}
+.t1{background:linear-gradient(145deg,#ff9f1c,#ff5c7a)}.t2{background:linear-gradient(145deg,#4f7cff,#7a3cff)}
+.t3{background:linear-gradient(145deg,#00b894,#00a3c4)}.t4{background:linear-gradient(145deg,#e84393,#9b59b6)}
+.t5{background:linear-gradient(145deg,#6c5ce7,#00a3c4)}.t6{background:linear-gradient(145deg,#f39c12,#d35400)}
+.foot{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ver{text-align:center;opacity:.45;font-size:12px;margin-top:14px}
+/* lists */
+.item{display:flex;align-items:center;gap:12px;width:100%;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:12px 14px;margin-bottom:10px;text-align:left}
+.item:active{background:rgba(255,255,255,.2)}
+.ie{font-size:36px;flex:none}.it{flex:1}.it b{display:block;font-size:20px}.it small{font-size:15px;opacity:.8}
+.item.lock{opacity:.5}
+.tag{background:var(--y);color:#2a1a00;border-radius:10px;padding:3px 8px;font-size:13px;font-weight:800;flex:none}
+.tag.g{background:var(--g);color:#03311a}
+/* flash */
+.speed{text-align:center;font-size:18px;opacity:.9}
+.stage{height:190px;display:grid;place-items:center;background:rgba(0,0,0,.28);border-radius:24px;margin:10px 0 16px;border:2px solid var(--line);overflow:hidden}
+.fix{font-size:64px;color:var(--y);font-weight:900}
+.fw{font-weight:800;letter-spacing:1px;text-align:center;padding:0 10px;line-height:1.2}
+.fw.mask{opacity:.55;letter-spacing:0}
+.fw.reveal{color:var(--y);animation:pop .3s}
+.q{font-size:24px;opacity:.9}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opts.one{grid-template-columns:1fr}
+.opt{background:#fff;color:var(--dk);font-size:23px;font-weight:800;padding:16px 8px;border-radius:18px;box-shadow:0 5px 0 #b8b0d9;min-height:70px;animation:pop .2s}
+.opt.ok{background:var(--g);color:#fff;box-shadow:0 5px 0 #1f9e58}
+.opt.no{background:var(--r);color:#fff;box-shadow:0 5px 0 #b0304a;animation:shake .4s}
+/* grids */
+.nextb{text-align:center;font-size:24px;margin-bottom:12px}
+.nextb b{display:inline-block;background:var(--y);color:#2a1a00;border-radius:14px;padding:2px 18px;font-size:34px;min-width:64px}
+.grid{display:grid;gap:8px}
+.cell{aspect-ratio:1;background:#fff;border-radius:16px;font-weight:900;box-shadow:0 4px 0 #b8b0d9;padding:0}
+.cell.done{background:rgba(61,220,132,.25);box-shadow:none;color:var(--g)!important}
+.cell.no{background:var(--r);color:#fff!important;animation:shake .35s}
+.grid.words .cell{aspect-ratio:auto;padding:16px 2px;font-size:20px;color:var(--dk)}
+.target{text-align:center;font-size:23px;margin-bottom:12px}
+.target b{background:var(--y);color:#2a1a00;border-radius:14px;padding:4px 16px;font-size:30px;display:inline-block}
+/* eyes */
+.phase{text-align:center;font-size:22px;font-weight:800;margin-bottom:8px;color:var(--y);min-height:30px}
+.eyes{position:relative;height:56vh;background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.08),rgba(0,0,0,.3));border-radius:24px;border:2px solid var(--line);overflow:hidden;touch-action:none}
+.tg{position:absolute;left:0;top:0;font-size:50px;width:60px;height:60px;line-height:60px;text-align:center;will-change:transform}
+.cd{position:absolute;inset:0;display:grid;place-items:center;font-size:96px;font-weight:900;color:var(--y);animation:pop .4s}
+.hint{text-align:center;opacity:.9;font-size:16px;line-height:1.4}
+.plus{position:absolute;font-weight:900;color:var(--y);font-size:26px;animation:up .8s forwards;pointer-events:none}
+@keyframes up{to{transform:translateY(-50px);opacity:0}}
+/* reading */
+.paper{background:var(--paper);color:#222;border-radius:22px;padding:34px 16px 22px;font-size:25px;line-height:2.25;position:relative;margin-bottom:14px;font-weight:600;word-spacing:3px;box-shadow:0 6px 0 rgba(0,0,0,.25)}
+.paper.blur{filter:blur(8px)}
+.w{border-radius:8px;padding:2px 3px;transition:background .12s,color .12s}
+.w.on{background:#ffd23f;color:#000}
+.w.past{color:#9a9a9a}
+.prk{position:absolute;left:8px;top:4px;font-size:20px;line-height:1;transition:left .18s linear,top .25s;pointer-events:none}
+.ctl{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+.wpm{text-align:center;min-width:74px}.wpm b{font-size:28px;display:block;line-height:1}.wpm small{font-size:12px;opacity:.8}
+.qcard{background:#fff;color:var(--dk);border-radius:22px;padding:20px 16px;font-size:25px;font-weight:800;margin:10px 0 16px;line-height:1.35}
+.qopts{display:grid;gap:12px}
+/* result */
+.res{text-align:center;padding-top:16px}
+.res h1{font-size:34px;margin:8px 0}
+.stars{font-size:62px;margin:4px 0}
+.st{display:inline-block;filter:grayscale(1) brightness(.45);margin:0 2px}
+.st.on{animation:starIn .55s both}
+@keyframes starIn{0%{transform:scale(0) rotate(-120deg);filter:none}70%{transform:scale(1.3);filter:none}100%{transform:scale(1);filter:none}}
+.msg{font-size:21px;line-height:1.4;margin:8px 0}
+.line{background:var(--card);border-radius:14px;padding:10px 12px;margin:8px auto;font-size:18px;max-width:480px;line-height:1.35}
+.row{display:flex;gap:12px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.row .btn{flex:1;min-width:140px}
+.big-e{font-size:84px;line-height:1;animation:bob 2.4s ease-in-out infinite}
+/* toast / confetti */
+#toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,160px);background:#fff;color:var(--dk);padding:12px 18px;border-radius:16px;font-weight:800;font-size:18px;box-shadow:0 8px 30px rgba(0,0,0,.45);transition:transform .35s;z-index:50;width:max-content;max-width:90%;text-align:center}
+#toast.show{transform:translate(-50%,0)}
+.cf{position:fixed;top:-50px;font-size:28px;z-index:40;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(115vh) rotate(600deg)}}
+/* album */
+.alb{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.sk{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px 4px;text-align:center}
+.sk .e{font-size:46px;display:block}
+.sk.lock .e{filter:grayscale(1) brightness(.35)}
+.sk small{display:block;font-size:13px;margin-top:4px}
+/* parent */
+.tbl{width:100%;border-collapse:collapse;font-size:16px}
+.tbl td,.tbl th{padding:7px 4px;border-bottom:1px solid var(--line);text-align:left}
+.set{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:18px}
+.tog{width:64px;height:36px;border-radius:18px;background:#777;position:relative;flex:none}
+.tog.on{background:var(--g)}
+.tog:after{content:"";position:absolute;top:4px;left:4px;width:28px;height:28px;border-radius:50%;background:#fff;transition:left .2s}
+.tog.on:after{left:32px}
+.inp{font-size:28px;padding:12px;border-radius:14px;border:0;width:170px;text-align:center;color:var(--dk)}
+.inp.wide{width:100%;max-width:320px}
+h3{margin:4px 0 10px;font-size:20px}
+.tips li{margin-bottom:8px;line-height:1.4;font-size:16px}
+/* v2 */
+.t7{background:linear-gradient(145deg,#2ecc71,#16a085)}.t8{background:linear-gradient(145deg,#ff7675,#fd79a8)}
+.h0{color:#0a58ca}.h1{color:#c0392b}.w.on .h0,.w.on .h1{color:#000}
+.w.gone{opacity:0;transition:opacity .5s}
+.w.sent{background:#d6f5e3}
+.w.err{background:#ff5c7a;color:#fff}
+.w.end{outline:3px solid #0a58ca}
+.bars{display:flex;gap:10px;align-items:flex-end;height:120px;margin:8px 0 4px;justify-content:center}
+.bar{width:64px;background:linear-gradient(0deg,#ff9f1c,#ffd23f);border-radius:12px 12px 4px 4px;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;color:#2a1a00;font-weight:900;font-size:17px;padding-top:4px;transition:height .8s;min-height:26px}
+.bar.e{background:rgba(255,255,255,.12);color:#fff}
+.barl{display:flex;gap:10px;justify-content:center;font-size:13px;opacity:.85}.barl span{width:64px;text-align:center}
+.train{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:center;padding:0 6px}
+.wg{background:#fff;color:var(--dk);border-radius:12px;padding:6px 10px;font-weight:900;font-size:32px;animation:pop .25s;box-shadow:0 4px 0 #b8b0d9}
+.wg.sf{background:#ffd23f}
+.tbar{height:12px;background:rgba(0,0,0,.35);border-radius:8px;overflow:hidden;margin-bottom:10px}.tbar i{display:block;height:100%;background:var(--g);transition:width .2s linear}
+.rate{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:7px 0;border-bottom:1px solid var(--line);font-size:16px}
+.rate>span:last-child{display:flex;gap:4px;flex:none}.rate button{width:36px;height:40px;border-radius:10px;background:rgba(255,255,255,.16);font-weight:900;font-size:18px}
+.rate button.on{background:var(--y);color:#2a1a00}
+.seg{display:flex;gap:6px}.seg button{padding:8px 14px;border-radius:12px;background:rgba(255,255,255,.16);font-weight:800;font-size:17px}.seg button.on{background:var(--y);color:#2a1a00}
+</style></head>
+<body>
+<div id="sky"></div>
+<div id="app"></div>
+<div id="toast"></div>
+<script>
+"use strict";
+/* ================== VERİ ================== */
+const SYL=(()=>{const c='bcçdfgklmnprsştyz'.split(''),v='aeıioöuü'.split(''),o=[];c.forEach(a=>v.forEach(b=>o.push(a+b)));'al el il ol ul an en in on un ar er ir or ur as es is os us at et it ot ut'.split(' ').forEach(x=>o.push(x));return o})();
+const W1='at ev su el göz kuş top süt ay dağ gül kar yol taş buz kız ip ok bal saç diş kol baş kum çay tuz yaz kış gün ses kek gök göl dal kaz fil ot et iz yüz söz kalp renk mor ders kurt boy saz dev sap'.split(' ');
+const W2='kedi masa elma okul kalem kitap deniz güneş bulut çiçek ağaç balık ördek tavuk köpek kuzu ekmek peynir kapı anne baba dede nine oyun yağmur rüzgar toprak orman nehir tavşan aslan kaplan zebra maymun limon armut kiraz üzüm karpuz havuç sepet şapka çanta silgi defter sınıf bahçe yatak yastık tabak kaşık çatal bardak uçak gemi tren roket yıldız sabah akşam çorba bebek'.split(' ');
+const W3='araba kelebek kurbağa oyuncak pencere tencere patates gezegen bisiklet öğretmen kütüphane salıncak sandalye dondurma portakal karınca zürafa penguen papağan çikolata astronot uzaylı mandalina ayakkabı şemsiye buzdolabı merdiven hastane yumurta kaplumbağa kardeşim arkadaş teleskop'.split(' ');
+const W4=['kırmızı top','mavi deniz','sarı güneş','büyük ağaç','küçük kedi','beyaz bulut','yeşil elma','sıcak çorba','soğuk su','uzun yol','tatlı bal','hızlı tren','parlak yıldız','renkli kalem','eski kitap','yeni ayakkabı','uçan kuş','mutlu çocuk','kocaman fil','minik arı','tatlı kiraz','kırmızı elma','sarı limon','mavi gökyüzü','yeşil yaprak','büyük roket','küçük balık','beyaz kar','siyah kedi','sıcak süt'];
+const W5=['Ali top at.','Ece süt iç.','Kedi uyudu.','Kuş uçtu.','Annem kek yaptı.','Babam eve geldi.','Güneş doğdu.','Kar yağıyor.','Arı bal yapar.','Çiçek açtı.','Tren geldi.','Balık yüzer.','Fil büyüktür.','Roket uçtu.','Ay parlıyor.','Kitap oku.','Ders bitti.','Yağmur yağdı.','Kedi süt içti.','Köpek havladı.','Elma kırmızı.','Su soğuk.','Çay sıcak.','Oyun bitti.','Zil çaldı.','Tavşan koştu.'];
+const FL=[
+ {n:'Heceler',e:'🔤',items:SYL,ms:800,min:120},
+ {n:'Kısa Kelimeler',e:'🐣',items:W1,ms:800,min:120},
+ {n:'İki Heceli',e:'🐥',items:W2,ms:900,min:150},
+ {n:'Uzun Kelimeler',e:'🦅',items:W3,ms:1000,min:180},
+ {n:'İkili Kelimeler',e:'👯',items:W4,ms:1200,min:250},
+ {n:'Kısa Cümleler',e:'📜',items:W5,ms:1400,min:350}];
+const STORIES=[
+{id:1,e:'🐱',t:'Pamuk ile Top',x:"Pamuk küçük, beyaz bir kedidir. Pamuk'un kırmızı bir topu var. Bir gün top masanın altına kaçtı. Pamuk patisini uzattı ama yetişemedi. Sonra Ece geldi. Ece topu çıkardı ve Pamuk'a attı. Pamuk çok sevindi. İkisi akşama kadar oynadılar.",
+ q:[['Pamuk nasıl bir kedi?','Beyaz','Siyah','Sarı'],["Pamuk'un topu ne renkti?",'Kırmızı','Mavi','Yeşil'],['Topu kim çıkardı?','Ece','Ali','Annesi']]},
+{id:2,e:'☔',t:'Yağmurlu Gün',x:"Sabah gökyüzü griydi. Biraz sonra yağmur yağmaya başladı. Can sarı yağmurluğunu giydi. Annesiyle birlikte dışarı çıktı. Su birikintilerine atladı. Şap şap sesler çıktı. Bir salyangoz gördü. Salyangoz yavaş yavaş yürüyordu. Can ona “Merhaba küçük dost!” dedi. Eve dönünce sıcak bir çorba içti.",
+ q:[["Can'ın yağmurluğu ne renkti?",'Sarı','Mor','Beyaz'],['Can dışarıda ne gördü?','Salyangoz','Kelebek','Köpek'],['Eve dönünce ne içti?','Çorba','Süt','Limonata']]},
+{id:3,e:'🐝',t:'Minik Arı Vız',x:"Vız, çiçekleri çok seven minik bir arıdır. Her sabah erkenden uyanır. Önce papatyalara uğrar. Sonra güllerin yanına uçar. Çiçeklerden nektar toplar. Kovana dönünce arkadaşlarıyla bal yapar. Bir gün rüzgar çok sert esti. Vız bir yaprağın altına saklandı. Rüzgar dinince yeniden uçtu. Akşam kovanına mutlu döndü.",
+ q:[['Vız önce hangi çiçeklere uğrar?','Papatyalara','Lalelere','Menekşelere'],['Rüzgar esince Vız ne yaptı?','Yaprağın altına saklandı','Kovana döndü','Uykuya daldı'],['Arılar kovanda ne yapar?','Bal','Süt','Ekmek']]},
+{id:4,e:'🪁',t:'Parktaki Uçurtma',x:"Zeynep ile dedesi parka gittiler. Yanlarında rengarenk bir uçurtma vardı. Dedesi ipi tuttu, Zeynep koşmaya başladı. Uçurtma yavaşça havalandı. Gökyüzünde bir kuş gibi süzüldü. Zeynep “Daha yükseğe!” diye bağırdı. Birden uçurtma bir ağaca takıldı. Dedesi uzun bir sopa buldu. Uçurtmayı dikkatlice kurtardı. Zeynep dedesine sarıldı ve “Sen bir kahramansın!” dedi.",
+ q:[['Zeynep parka kiminle gitti?','Dedesiyle','Annesiyle','Kardeşiyle'],['Uçurtma nereye takıldı?','Ağaca','Çatıya','Direğe'],['Dedesi uçurtmayı neyle kurtardı?','Sopayla','Merdivenle','İple']]},
+{id:5,e:'🐢',t:'Kaplumbağa Tosbi',x:"Tosbi bahçede yaşayan yaşlı bir kaplumbağadır. Çok yavaş yürür ama hiç acele etmez. Bir sabah marul yemek için yola çıktı. Yolda bir tavşan gördü. Tavşan hızla koşup onu geçti. “Ben çoktan varırım!” dedi. Ama tavşan yorulup bir ağacın altında uyudu. Tosbi adım adım yürümeye devam etti. Marul tarlasına ilk o vardı. Tavşan uyandığında çok şaşırdı. Tosbi gülümsedi ve tavşana da marul ayırdı.",
+ q:[['Tosbi nasıl yürür?','Yavaş','Hızlı','Zıplayarak'],['Tavşan neden geç kaldı?','Uyudu','Kayboldu','Yemek yedi'],['Tosbi sonunda ne yaptı?','Tavşana marul ayırdı','Eve gitti','Tavşana kızdı']]},
+{id:6,e:'🏖️',t:'Denizdeki Gün',x:"Yaz tatilinde Mert ailesiyle denize gitti. Kumda büyük bir kale yaptı. Kalenin etrafına deniz kabukları dizdi. Kız kardeşi Elif kaleye bir bayrak taktı. Sonra birlikte denize girdiler. Su biraz soğuktu ama çok eğlenceliydi. Mert suyun içinde küçük balıklar gördü. Balıklar ayaklarının etrafında yüzüyordu. Akşamüstü güneş batarken gökyüzü turuncu oldu. Mert “Burası dünyanın en güzel yeri.” dedi.",
+ q:[['Mert kumdan ne yaptı?','Kale','Gemi','Köprü'],['Kaleye bayrağı kim taktı?','Elif','Mert','Babası'],['Güneş batarken gökyüzü ne renk oldu?','Turuncu','Mor','Yeşil']]},
+{id:7,e:'🔑',t:'Kayıp Anahtar',x:"Annem işe gitmek için hazırlanıyordu. Ama anahtarını bulamadı. “Anahtarım nerede?” diye sordu. Hepimiz aramaya başladık. Babam mutfağa baktı. Ben yatakların altına baktım. Kardeşim Ayşe koltuğun arasına elini soktu. Orada bir oyuncak araba, iki boncuk ve bir kalem buldu. Ama anahtar yoktu. Sonra köpeğimiz Karabaş havlamaya başladı. Kulübesine gittik. Anahtar Karabaş'ın kulübesinin içindeydi! Hepimiz kahkahalarla güldük.",
+ q:[['Ne kaybolmuştu?','Anahtar','Gözlük','Çanta'],['Ayşe koltukta ne buldu?','Oyuncak araba','Top','Para'],['Anahtar nereden çıktı?','Köpeğin kulübesinden','Mutfaktan','Çantadan']]},
+{id:8,e:'☁️',t:'Bulutların Şekilleri',x:"Deniz ile Arda çimenlerin üstüne uzandılar. Gökyüzündeki bulutlara baktılar. Deniz “Şu bulut bir fil gibi!” dedi. Gerçekten de bulutun uzun bir hortumu vardı. Arda başka bir bulutu gösterdi. “Bu da bir dondurmaya benziyor.” dedi. Rüzgar esti ve bulutlar yavaşça değişti. Fil bir ejderhaya dönüştü. Dondurma ise bir gemiye benzedi. İki arkadaş saatlerce bulutları izledi. Eve dönerken Arda “Yarın yine gelelim mi?” diye sordu. Deniz gülerek “Elbette!” dedi.",
+ q:[['İlk bulut neye benziyordu?','File','Ata','Balığa'],['Fil neye dönüştü?','Ejderhaya','Gemiye','Kuşa'],["Arda'nın gösterdiği bulut neye benziyordu?",'Dondurmaya','Arabaya','Ağaca']]},
+{id:9,e:'🌱',t:'Küçük Fidan',x:"Okulun bahçesinde öğretmenimiz bize bir fidan gösterdi. “Bunu birlikte dikeceğiz.” dedi. Önce toprağı kazdık. Fidanı çukura yerleştirdik. Üzerine toprak örttük. Sonra her birimiz bir bardak su döktük. Her hafta fidanı sulamaya söz verdik. Kış geldi, fidanın yaprakları döküldü. Biraz üzüldük. Ama öğretmenimiz “Bahar gelince yine yeşerecek.” dedi. Gerçekten de baharda dallarında minik yeşil yapraklar çıktı. Şimdi fidanımız her gün biraz daha büyüyor.",
+ q:[['Fidanı nereye diktiler?','Okulun bahçesine','Parka','Evin önüne'],['Kışın fidana ne oldu?','Yaprakları döküldü','Çiçek açtı','Meyve verdi'],['Baharda dallarda ne çıktı?','Yeşil yapraklar','Elmalar','Kuş yuvası']]},
+{id:10,e:'🚀',t:'Uzay Yolculuğu',x:"Ela bir gece rüya gördü. Rüyasında parlak bir rokete bindi. Roket “Üç, iki, bir!” diye sayınca havalandı. Bulutları geçti ve uzaya çıktı. Ela pencereden Dünya'ya baktı. Dünya mavi bir boncuk gibi görünüyordu. Sonra Ay'a indi. Ay'da yürümek çok kolaydı, her adımda zıplıyordu. Orada küçük, yeşil bir uzaylıyla tanıştı. Uzaylının adı Zıpzıp'tı. Zıpzıp ona parlayan bir taş hediye etti. Ela teşekkür etti ve rokete geri döndü. Sabah uyandığında yastığının yanında küçük, parlak bir taş vardı. Acaba bu bir rüya mıydı?",
+ q:[['Uzaydan bakınca Dünya neye benziyordu?','Mavi bir boncuğa','Kırmızı bir topa','Sarı bir limona'],['Uzaylının adı neydi?','Zıpzıp','Vızvız','Pıtpıt'],["Uzaylı Ela'ya ne hediye etti?",'Parlayan bir taş','Bir çiçek','Bir şeker']]},
+{id:11,e:'🍳',t:'Pazar Kahvaltısı',x:"Pazar sabahı evimizde herkes erken kalktı. Babam taze ekmek almaya fırına gitti. Annem çayı demledi. Ben masaya tabakları ve çatalları koydum. Kardeşim Ömer peynirleri ve zeytinleri getirdi. Babam eve döndüğünde ekmekler hâlâ sıcaktı. Hep birlikte masaya oturduk. Annem domatesli yumurta yapmıştı. Babaannem de evde yaptığı vişne reçelini getirdi. Kahvaltıda hep birlikte sohbet ettik ve güldük. Pazar kahvaltıları haftanın en güzel zamanıdır.",
+ q:[['Babam nereye gitti?','Fırına','Markete','Parka'],['Ömer masaya ne getirdi?','Peynir ve zeytin','Bal ve tereyağı','Meyve suyu'],['Babaanne hangi reçeli getirdi?','Vişne','Çilek','Kayısı']]},
+{id:12,e:'🐿️',t:'Sincap ile Kış Hazırlığı',x:"Orman sonbaharda sarı ve kırmızı renklere büründü. Sincap Pıtır kışa hazırlanmak istiyordu. Her gün ağaçtan ağaca atladı. Fındık, ceviz ve palamut topladı. Hepsini ağaç kovuğundaki yuvasına taşıdı. Arkadaşı Kirpi onu izliyordu. “Neden bu kadar çok yiyecek topluyorsun?” diye sordu. Pıtır “Kışın her yer karla kaplanacak. O zaman yiyecek bulamam.” dedi. Kirpi “Ben kışın uyurum, o yüzden toplamam.” dedi. Kış gelince orman bembeyaz oldu. Pıtır sıcak yuvasında cevizlerini yedi. Kirpi ise yaprakların altında mışıl mışıl uyudu.",
+ q:[['Sincabın adı neydi?','Pıtır','Fındık','Kirpi'],['Sincap yiyecekleri nereye taşıdı?','Ağaç kovuğuna','Toprağın altına','Mağaraya'],['Kirpi kışın ne yapar?','Uyur','Yiyecek toplar','Yüzer']]},
+{id:13,e:'🚲',t:'Bisiklet Dersi',x:"Kerem'in yeni bir bisikleti vardı. Ama daha önce hiç bisiklet sürmemişti. Ablası Selin ona yardım etmek istedi. Önce kaskını taktılar. Selin bisikletin arkasından tuttu. Kerem pedallara bastı. Bisiklet sallandı ve Kerem yere düştü. Dizi biraz acıdı. Ağlamak istedi ama vazgeçti. “Bir daha deneyeceğim.” dedi. İkinci denemede biraz daha uzağa gitti. Üçüncü denemede Selin elini bıraktı. Kerem bunu fark etmedi bile. Tek başına bahçenin sonuna kadar gitti. Geri döndüğünde yüzünde kocaman bir gülümseme vardı. “Başardım!” diye bağırdı.",
+ q:[["Kerem'e kim yardım etti?",'Ablası','Babası','Arkadaşı'],['Bisiklete binmeden önce ne taktılar?','Kask','Gözlük','Eldiven'],['Kerem kaçıncı denemede tek başına sürdü?','Üçüncü','Birinci','Beşinci']]},
+{id:14,e:'📚',t:'Kütüphanedeki Sır',x:"Defne okul kütüphanesine gitmeyi çok severdi. Bir gün en üst rafta eski, mavi bir kitap gördü. Kitabın kapağında altın renkli bir anahtar resmi vardı. Defne kitabı açtı. İlk sayfada “Bu kitabı okuyan, harika bir yolculuğa çıkar.” yazıyordu. Defne okumaya başladı. Kitapta denizlerin altındaki şehirler, konuşan ağaçlar ve uçan atlar vardı. Okudukça kendini o yerlerdeymiş gibi hissetti. Zil çaldığında kitabın yarısını bitirmişti. Kütüphaneci gülümsedi. “Gördün mü? Kitaplar bizi her yere götürür.” dedi. Defne kitabı ödünç aldı. O akşam kitabın sonunu merakla okudu. Artık en sevdiği yolculuk okumaktı.",
+ q:[['Kitap ne renkti?','Mavi','Kırmızı','Yeşil'],['Kapakta ne resmi vardı?','Anahtar','Kalp','Yıldız'],['Kütüphaneci ne dedi?','Kitaplar bizi her yere götürür','Kitabı rafa geri koy','Burada sessiz ol']]}
+];
+const STK=[{e:'🌍',n:'Dünya',s:0},{e:'🌙',n:'Ay',s:5},{e:'🔴',n:'Mars',s:15},{e:'☄️',n:'Kuyruklu Yıldız',s:30},{e:'🪐',n:'Satürn',s:45},{e:'👽',n:'Uzaylı Dost',s:65},{e:'🛸',n:'UFO',s:85},{e:'🛰️',n:'Uydu',s:110},{e:'🌌',n:'Galaksi',s:140},{e:'👩‍🚀',n:'Astronot',s:175},{e:'🌞',n:'Güneş',s:215},{e:'🏆',n:'Uzay Kupası',s:260}];
+const RANKS=[[0,'Çaylak Astronot'],[25,'Roket Pilotu'],[70,'Uzay Kaşifi'],[140,'Galaksi Kaptanı'],[220,'Işık Hızı Ustası']];
+const ANIM=[[0,'🐢','Kaplumbağa'],[30,'🐰','Tavşan'],[50,'🦊','Tilki'],[70,'🐆','Çita'],[100,'🚀','Roket']];
+const CONF={b:'dp',d:'b',p:'b',m:'n',n:'m',ı:'i',i:'ı',o:'ö',ö:'o',u:'ü',ü:'u',s:'ş',ş:'s',c:'ç',ç:'c',g:'ğ',ğ:'g',e:'a',a:'e',k:'h',h:'k',l:'t',t:'l',r:'n',y:'v',v:'y',z:'s'};
+const CHAINS=[['ev','evler','evlerde','evlerdeki'],['kitap','kitaplar','kitaplarım','kitaplarımız'],['okul','okullar','okullarda','okullardaki'],['oyun','oyuncak','oyuncaklar','oyuncaklarım'],['göz','gözlük','gözlükçü','gözlükçüler'],['kalem','kalemlik','kalemlikler','kalemliklerde'],['yol','yolcu','yolculuk','yolculukta'],['oku','okuyucu','okuyucular','okuyuculara'],['koş','koşucu','koşucular','koşuculardan'],['bahçe','bahçeler','bahçelerde','bahçelerdeki'],['ağaç','ağaçlar','ağaçlarda','ağaçlardaki'],['kuş','kuşlar','kuşların','kuşlarına'],['deniz','denizler','denizlerde','denizlerdeki'],['çiçek','çiçekçi','çiçekçiler','çiçekçilerden'],['süt','sütçü','sütçüler','sütçülerden'],['göl','göller','göllerde','göllerdeki'],['oyna','oynadı','oynadılar','oynadılarmış'],['gel','geldi','geldik','geldikçe'],['top','toplar','toplarım','toplarımız'],['balık','balıkçı','balıkçılar','balıkçılardan'],['yaz','yazlık','yazlıkta','yazlıktaki'],['renk','renkli','renkliler','renklilerden']];
+const GRADE_T={1:60,2:80,3:100};
+const COLS=['#e84393','#0984e3','#00b894','#e17055','#6c5ce7','#d63031','#00a3c4','#f39c12'];
+
+/* ================== DURUM ================== */
+function defaults(){return{name:'',stars:0,flashUnlocked:1,flashMs:{},schulte:{},pacerWpm:40,chunk:1,storyDone:{},tests:[],daily:{d:'',played:[],claimed:false},streak:0,lastDay:'',findBest:0,eyesLast:0,sound:true,voice:true,repeat:{},grade:2,fade:false,syl:false,heceMs:{},orf:[]}}
+function load(){try{const d=JSON.parse(localStorage.getItem('hor1')||'{}');return Object.assign(defaults(),d)}catch(e){return defaults()}}
+let S=load();
+function save(){try{localStorage.setItem('hor1',JSON.stringify(S))}catch(e){}}
+
+/* ================== YARDIMCILAR ================== */
+const $=s=>document.querySelector(s);
+const app=$('#app');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const strip=s=>s.replace(/<[^>]+>/g,'');
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+function range(a,b){const o=[];for(let i=a;i<=b;i++)o.push(i);return o}
+function dstr(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+const today=()=>dstr(new Date());
+const yesterday=()=>{const d=new Date();d.setDate(d.getDate()-1);return dstr(d)};
+function on(sel,fn){const e=$(sel);if(e)e.onclick=fn}
+function lev(a,b){const m=a.length,n=b.length,d=[];for(let i=0;i<=m;i++){d[i]=[i]}for(let j=1;j<=n;j++)d[0][j]=j;for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n]}
+function mutate(w){
+  for(let k=0;k<40;k++){
+    const ch=w.split('');const idx=[];ch.forEach((c,i)=>{if(/[a-zçğıöşü]/.test(c))idx.push(i)});
+    if(!idx.length)break;
+    const i=pick(idx),c=ch[i];
+    if(CONF[c]&&Math.random()<.75){ch[i]=pick(CONF[c].split(''))}
+    else if(i+1<ch.length&&/[a-zçğıöşü]/.test(ch[i+1])&&ch[i+1]!==c){ch[i]=ch[i+1];ch[i+1]=c}
+    else continue;
+    const r=ch.join('');if(r!==w)return r;
+  }
+  return w+'a';
+}
+function distract(w,pool,n){
+  const out=[];
+  const near=pool.filter(x=>x!==w).map(x=>({x,d:lev(w,x)+Math.random()*1.6})).sort((a,b)=>a.d-b.d);
+  for(const o of near){if(out.length>=n-1)break;out.push(o.x)}
+  let g=0;while(out.length<n&&g++<30){const m=mutate(w);if(m!==w&&!out.includes(m))out.push(m)}
+  return out;
+}
+function fsz(w){const l=w.length;return l<=3?66:l<=6?56:l<=9?46:l<=13?36:28}
+const wc=s=>s.x.split(/\s+/).length;
+/* Türkçe heceleme: her hecede bir ünlü; ünlüler arası 0-1 ünsüz → ünsüzden önce, 2+ ünsüz → son ünsüzden önce böl */
+function hecele(w){
+  const V='aeıioöuüâîûAEIİOÖUÜÂÎÛ',L=/[a-zçğıöşüâîûA-ZÇĞIİÖŞÜÂÎÛ]/;
+  const li=[];for(let i=0;i<w.length;i++)if(L.test(w[i]))li.push(i);
+  const v=[];li.forEach((p,k)=>{if(V.includes(w[p]))v.push(k)});
+  if(v.length<2)return[w];
+  const cut=[];for(let k=0;k<v.length-1;k++){const a=v[k],b=v[k+1];cut.push(li[b-a-1===0?b:b-1])}
+  const out=[];let p=0;cut.forEach(c=>{out.push(w.slice(p,c));p=c});out.push(w.slice(p));return out;
+}
+const sylCount=t=>t.split(/\s+/).reduce((a,w)=>a+(/[a-zçğıöşüâîû]/i.test(w)?hecele(w).length:0),0);
+const sylHTML=w=>hecele(w).map((h,i)=>`<span class="h${i%2}">${esc(h)}</span>`).join('');
+const wHTML=w=>S.syl?sylHTML(w):esc(w);
+/* anlamlı öbekler: noktalama ya da 3 kelime / ~14 harfte kapanır */
+function phrases(words){const out=[];let cur=[],len=0;const P=/[.!?,;:”"]$/;words.forEach((w,i)=>{cur.push(i);len+=w.length+1;const nx=words[i+1]||'';if(P.test(w)||cur.length>=3||(len>=15&&!P.test(nx))){out.push(cur);cur=[];len=0}});if(cur.length)out.push(cur);return out}
+function groupsOf(words,mode){if(mode===3)return phrases(words);const g=[];for(let i=0;i<words.length;i+=mode)g.push(range(i,Math.min(words.length,i+mode)-1));return g}
+function sentencesOf(words){const out=[];let cur=[];words.forEach((w,i)=>{cur.push(i);if(/[.!?…][”"]?$/.test(w)){out.push(cur);cur=[]}});if(cur.length)out.push(cur);return out}
+const rankOf=st=>{let r=RANKS[0][1];RANKS.forEach(x=>{if(st>=x[0])r=x[1]});return r};
+const animOf=w=>{let r=ANIM[0];ANIM.forEach(x=>{if(w>=x[0])r=x});return r};
+
+/* ses */
+let AC=null;
+function beep(f,dur,type,vol,when){if(!S.sound)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();const o=AC.createOscillator(),g=AC.createGain();o.type=type||'sine';o.frequency.value=f;const t=AC.currentTime+(when||0);g.gain.setValueAtTime(vol||.15,t);g.gain.exponentialRampToValueAtTime(.001,t+dur);o.connect(g);g.connect(AC.destination);o.start(t);o.stop(t+dur+.02)}catch(e){}}
+const sfx={ok(){beep(660,.12,'sine',.16);beep(990,.2,'sine',.14,.09)},bad(){beep(190,.28,'square',.07)},tick(){beep(1100,.05,'sine',.06)},star(){[523,659,784,1047].forEach((f,i)=>beep(f,.22,'triangle',.13,i*.1))},pop(){beep(820,.07,'triangle',.12)}};
+function speak(t){if(!S.voice||!t)return;try{if(window.Android&&Android.speak){Android.speak(t);return}if(window.speechSynthesis){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='tr-TR';u.rate=.9;speechSynthesis.speak(u)}}catch(e){}}
+
+const sayCb={};let sayN=0;
+window.ttsDone=id=>{const f=sayCb[id];if(f)f()};
+function sayThen(t,cb){
+  const id='s'+(++sayN);let fired=false;const fin=()=>{if(fired)return;fired=true;delete sayCb[id];cb()};sayCb[id]=fin;
+  const est=Math.max(1500,t.split(/\s+/).length*650);
+  try{
+    if(window.Android&&Android.speakId&&Android.ttsReady()){Android.speakId(t,id);T(fin,est*3+2000);return}
+    if(!window.Android&&window.speechSynthesis){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='tr-TR';u.rate=.85;u.onend=fin;u.onerror=fin;speechSynthesis.speak(u);T(fin,est*3+2000);return}
+  }catch(e){}
+  T(fin,est);
+}
+function hushAll(){try{if(window.Android&&Android.stop)Android.stop();if(window.speechSynthesis)speechSynthesis.cancel()}catch(e){}}
+
+/* toast + konfeti */
+const tq=[];let tBusy=false;
+function toast(m){tq.push(m);if(!tBusy)nextToast()}
+function nextToast(){const m=tq.shift();const el=$('#toast');if(!m){tBusy=false;return}tBusy=true;el.textContent=m;el.classList.add('show');setTimeout(()=>{el.classList.remove('show');setTimeout(nextToast,400)},2300)}
+function confetti(){const em=['⭐','✨','🎉','🌟','🚀','💫'];for(let i=0;i<34;i++){const d=document.createElement('div');d.className='cf';d.textContent=pick(em);d.style.left=Math.random()*100+'vw';d.style.animationDuration=(1.8+Math.random()*1.8)+'s';d.style.animationDelay=Math.random()*.6+'s';document.body.appendChild(d);setTimeout(()=>d.remove(),4200)}}
+
+/* ekran yönetimi */
+let timers=[],raf=0,backFn=null,hideHook=null;
+function T(f,ms){const id=setTimeout(f,ms);timers.push(id);return id}
+function clearAll(){timers.forEach(clearTimeout);timers=[];cancelAnimationFrame(raf);raf=0;hideHook=null;hushAll()}
+function screen(html,back){clearAll();app.innerHTML=html;app.scrollTop=0;backFn=back||null}
+function goBack(){if(backFn)backFn();else if(window.Android&&Android.exit)Android.exit()}
+function onHide(){if(hideHook)hideHook()}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)onHide()});
+app.addEventListener('click',e=>{const b=e.target.closest('[data-say]');if(b){e.stopPropagation();speak(b.dataset.say)}});
+const topbar=(t,r)=>`<div class="top"><button class="back" onclick="goBack()">⬅️</button><h2>${t}</h2>${r||''}</div>`;
+const mascot=t=>`<div class="mascot"><div class="owl">🦉</div><div class="bubble"><button class="spk" data-say="${esc(strip(t))}">🔊</button>${t}</div></div>`;
+
+/* yıldız + görev */
+const unlocked=()=>STK.filter(s=>S.stars>=s.s).length;
+function addStars(n){if(n<=0)return;const b=unlocked();S.stars+=n;const a=unlocked();for(let i=b;i<a;i++)toast('🎁 Yeni çıkartma: '+STK[i].e+' '+STK[i].n+'!');save()}
+function markPlayed(g){
+  const t=today();
+  if(S.daily.d!==t)S.daily={d:t,played:[],claimed:false};
+  if(!S.daily.played.includes(g))S.daily.played.push(g);
+  if(S.lastDay!==t){S.streak=(S.lastDay===yesterday())?S.streak+1:1;S.lastDay=t}
+  if(S.daily.played.length>=3&&!S.daily.claimed){S.daily.claimed=true;toast('🎯 Günün görevi tamam! +5 ⭐');addStars(5)}
+  save();
+}
+
+/* sonuç ekranı */
+function result(o){
+  const st=Math.max(0,Math.min(3,o.stars));
+  screen(`<div class="res"><div class="big-e">${o.emoji||'🦉'}</div><h1>${o.title}</h1>
+  <div class="stars">${[0,1,2].map(i=>`<span class="st ${i<st?'on':''}" style="animation-delay:${.2+i*.3}s">⭐</span>`).join('')}</div>
+  ${st?`<div class="pill" style="display:inline-block">+${st} ⭐ kazandın</div>`:''}
+  <p class="msg">${o.msg||''}</p>${o.extra||''}${(o.lines||[]).filter(Boolean).map(l=>`<div class="line">${l}</div>`).join('')}
+  <div class="row"><button class="btn ghost" id="rb">🏠 Ana Üs</button><button class="btn g" id="ra">${o.againLabel||'🔁 Tekrar'}</button></div></div>`,o.back||home);
+  on('#rb',home);on('#ra',o.again);
+  addStars(st);
+  if(st>=3)confetti();
+  if(st>0)T(sfx.star,200);
+  T(()=>speak(strip(o.title)+'. '+strip(o.msg||'')),500);
+  if(o.after)T(o.after,60);
+}
+
+/* ================== GİRİŞ / ANA ÜS ================== */
+function welcome(){
+  screen(`<div class="res"><div class="big-e">🦉</div><h1>Hızlı Okuma Roketi</h1>
+  <p class="msg">Merhaba! Ben <b>Baykuş Kaptan</b>. Seninle birlikte okuma hızını uzaya kadar çıkaracağız! 🚀</p>
+  <p class="msg">Adın ne astronot?</p><input class="inp wide" id="nm" maxlength="14" placeholder="Adını yaz">
+  <div class="row"><button class="btn g big" id="ok">Uçuşa Başla 🚀</button></div></div>`,null);
+  on('#ok',()=>{const v=$('#nm').value.trim();S.name=(v||'Kaptan').slice(0,14);save();sfx.star();home()});
+  T(()=>speak('Merhaba! Ben Baykuş Kaptan. Adın ne?'),600);
+}
+function home(){
+  const t=today();const pl=S.daily.d===t?S.daily.played:[];const claimed=S.daily.d===t&&S.daily.claimed;
+  const nx=STK.find(s=>S.stars<s.s);const prevS=[...STK].reverse().find(s=>S.stars>=s.s);
+  const prog=nx?Math.round((S.stars-prevS.s)/(nx.s-prevS.s)*100):100;
+  const msgs=[`Merhaba <b>${esc(S.name)}</b>! Bugün hangi gezegene uçuyoruz? 🚀`,'Gözlerin ne kadar hızlı olursa okuman da o kadar hızlanır! 👀','Her gün biraz oyna, roketin hızlansın! 🔥','Önce anla, sonra hızlan. Anlamadan okumak frensiz roket gibidir! 🧠','Aynı hikâyeyi tekrar tekrar okumak seni en çok hızlandıran şey! 🔁','Sesli ve duygulu oku, sanki bir tiyatro oyuncususun! 🎭',`Haydi <b>${esc(S.name)}</b>, yıldız toplama zamanı! ⭐`];
+  const G=[['repeat','t7','🔁','Tekrar Uçuşu','Aynı hikâyeyi 3 kez oku, hızlan'],['hece','t8','🚂','Hece Treni','Heceleri ve ekleri birleştir'],['flash','t1','⚡','Şimşek Kelimeler','Kelimeyi bir bakışta yakala'],['pacer','t2','🚀','Roket Okuma','Rokete yetişerek hikâye oku'],['test','t3','⏱️','Hız Ölçer','Okuma hızını ölç'],['find','t6','🔍','Kelime Avı','Benzerlerin arasından bul'],['schulte','t4','🔢','Sayı Avı','Dikkat ısınması'],['eyes','t5','👀','Göz Jimnastiği','Okumadan önce ısınma']];
+  screen(`<div class="logo"><span class="rk">🚀</span><h1>Hızlı Okuma Roketi</h1></div>
+  <div class="hdr"><div class="rank">👩‍🚀 ${rankOf(S.stars)}<small>${esc(S.name)}</small></div><span class="pill">⭐ ${S.stars}</span><span class="pill">🔥 ${S.streak}</span></div>
+  ${mascot(pick(msgs))}
+  <div class="card daily"><div class="de">${claimed?'🎉':'🎯'}</div><div style="flex:1"><b>Günün Görevi</b><small>${claimed?'Bugünkü görevi tamamladın, süpersin!':'3 farklı oyun oyna, 5 ⭐ kazan'}</small><div class="dots">${[0,1,2].map(i=>`<i class="${i<pl.length?'on':''}">${i<pl.length?'✓':''}</i>`).join('')}</div></div></div>
+  <div class="tiles">${G.map(g=>`<button class="tile ${g[1]} ${pl.includes(g[0])?'done':''}" data-g="${g[0]}"><span class="te">${g[2]}</span><b>${g[3]}</b><small>${g[4]}</small></button>`).join('')}</div>
+  <div class="card"><b>🛢️ Roket yakıtı</b> <small style="opacity:.8">${nx?`— ${nx.e} ${nx.n} için ${nx.s-S.stars} ⭐ daha`:'— Tüm çıkartmalar senin!'}</small><div class="fuel"><i style="width:${prog}%"></i></div></div>
+  <div class="foot"><button class="btn b" id="alb">🏆 Albüm ${unlocked()}/${STK.length}</button><button class="btn ghost" id="par">👨‍👩‍👧 Ebeveyn</button></div>
+  <div class="ver">Hızlı Okuma Roketi v2</div>`,null);
+  app.querySelectorAll('.tile').forEach(b=>b.onclick=()=>{sfx.pop();({repeat:()=>storyList('repeat'),hece:heceMenu,flash:flashMenu,pacer:()=>storyList('pacer'),test:()=>storyList('test'),schulte:schulteMenu,eyes:eyesIntro,find:findIntro})[b.dataset.g]()});
+  on('#alb',album);on('#par',parentGate);
+}
+
+/* ================== ŞİMŞEK KELİMELER ================== */
+function flashMenu(){
+  screen(topbar('⚡ Şimşek Kelimeler')+mascot('Ortada bir <b>+</b> çıkacak, gözünü ona dik. Kelime şimşek gibi görünüp kaybolacak. Hangisi olduğunu bul!')+
+  `<div>${FL.map((l,i)=>{const lock=i>=S.flashUnlocked,ms=S.flashMs[i];return `<button class="item ${lock?'lock':''}" data-i="${i}"><span class="ie">${lock?'🔒':l.e}</span><span class="it"><b>${i+1}. ${l.n}</b><small>${lock?'Önceki seviyede 8 doğru yap':(ms?'Hızın: '+(ms/1000).toFixed(2)+' saniye':'Yeni seviye!')}</small></span>${!lock&&i===S.flashUnlocked-1?'<span class="tag">Sıradaki</span>':''}</button>`}).join('')}</div>`,home);
+  app.querySelectorAll('.item').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;if(i>=S.flashUnlocked){sfx.bad();toast('🔒 Önce önceki seviyeyi geç!');return}flashGame(i)});
+}
+function flashGame(lv){
+  const L=FL[lv];let ms=S.flashMs[lv]||L.ms,r=0,ok=0;const pool=shuffle(L.items.slice());const one=lv>=4;
+  screen(topbar(`${L.e} ${L.n}`,`<span class="pill" id="fr">1/10</span>`)+`<div class="speed">⚡ Görünme süresi: <b id="fms"></b> sn</div><div class="stage" id="st"></div><div class="opts ${one?'one':''}" id="op"></div>`,flashMenu);
+  const st=$('#st'),op=$('#op');
+  function round(){
+    if(r>=10)return end();
+    $('#fms').textContent=(ms/1000).toFixed(2);$('#fr').textContent=(r+1)+'/10';
+    op.innerHTML='';const w=pool[r%pool.length];
+    st.innerHTML='<div class="fix">+</div>';sfx.tick();
+    T(()=>{st.innerHTML=`<div class="fw" style="font-size:${fsz(w)}px">${esc(w)}</div>`;
+      T(()=>{st.innerHTML=`<div class="fw mask" style="font-size:${fsz(w)}px">${w.replace(/\S/g,'▓')}</div>`;
+        T(()=>{st.innerHTML='<div class="q">Hangisiydi? 🤔</div>';choices(w)},120)},ms)},700);
+  }
+  function choices(w){
+    const opts=shuffle([w,...distract(w,L.items,3)]);let done=false;
+    op.innerHTML=opts.map(o=>`<button class="opt" data-w="${esc(o)}">${esc(o)}</button>`).join('');
+    op.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+      if(done)return;done=true;const right=b.dataset.w===w;
+      if(right){b.classList.add('ok');ok++;sfx.ok();ms=Math.max(L.min,Math.round(ms*.85))}
+      else{b.classList.add('no');sfx.bad();op.querySelectorAll('.opt').forEach(x=>{if(x.dataset.w===w)x.classList.add('ok')});ms=Math.min(2500,Math.round(ms*1.2))}
+      st.innerHTML=`<div class="fw reveal" style="font-size:${fsz(w)}px">${esc(w)}</div>`;speak(w);
+      r++;T(round,right?1000:1700);
+    });
+  }
+  function end(){
+    S.flashMs[lv]=ms;let un=false;
+    if(ok>=8&&S.flashUnlocked===lv+1&&lv+1<FL.length){S.flashUnlocked=lv+2;un=true}
+    markPlayed('flash');save();
+    result({emoji:ok>=8?'⚡':'🦉',title:ok>=8?'Şimşek gibisin!':ok>=5?'Güzel gidiyor!':'Devam et!',stars:ok>=9?3:ok>=7?2:ok>=5?1:0,
+      msg:`10 kelimeden <b>${ok}</b> tanesini yakaladın.`,lines:[`⚡ Yeni hızın: ${(ms/1000).toFixed(2)} saniye`,un?'🔓 Yeni seviye açıldı: '+FL[lv+1].e+' '+FL[lv+1].n:''],
+      again:()=>flashGame(un?lv+1:lv),againLabel:un?'▶️ Yeni Seviye':'🔁 Tekrar',back:flashMenu});
+  }
+  T(round,400);
+}
+
+/* ================== SAYI AVI ================== */
+const SM=[{k:'n3',n:'3×3 Sayılar',e:'🟢',size:3,it:range(1,9),t:[12,20],fs:44},{k:'n4',n:'4×4 Sayılar',e:'🟡',size:4,it:range(1,16),t:[30,50],fs:34},{k:'n5',n:'5×5 Sayılar',e:'🔴',size:5,it:range(1,25),t:[55,90],fs:28},{k:'abc',n:'Alfabe Sırası',e:'🔤',size:4,it:'A B C Ç D E F G Ğ H I İ J K L M'.split(' '),t:[40,70],fs:34}];
+function schulteMenu(){
+  screen(topbar('🔢 Sayı Avı')+mascot('Sayıları <b>1, 2, 3...</b> diye sırayla bul ve dokun. Ne kadar hızlı bulursan gözlerin o kadar hızlanır!')+
+  SM.map((m,i)=>`<button class="item" data-i="${i}"><span class="ie">${m.e}</span><span class="it"><b>${m.n}</b><small>${S.schulte[m.k]?'Rekorun: '+S.schulte[m.k].toFixed(1)+' sn':'Henüz oynanmadı'}</small></span></button>`).join(''),home);
+  app.querySelectorAll('.item').forEach(b=>b.onclick=()=>schulteGame(+b.dataset.i));
+}
+function schulteGame(mi){
+  const M=SM[mi];const cells=shuffle(M.it.map(String));let nx=0,mis=0,t0=0;
+  screen(topbar(M.e+' '+M.n,`<span class="pill" id="tm">0.0 sn</span>`)+`<div class="nextb">Sıradaki: <b id="nx">${M.it[0]}</b></div><div class="grid" id="gr" style="grid-template-columns:repeat(${M.size},1fr)">${cells.map(c=>`<button class="cell" data-v="${c}" style="color:${pick(COLS)};font-size:${M.fs}px">${c}</button>`).join('')}</div><p class="hint">İlk dokunuşta süre başlar ⏱️</p>`,schulteMenu);
+  function tick(){if(t0)$('#tm').textContent=((Date.now()-t0)/1000).toFixed(1)+' sn';T(tick,100)}tick();
+  app.querySelectorAll('.cell').forEach(b=>b.onclick=()=>{
+    if(b.classList.contains('done'))return;
+    if(b.dataset.v===String(M.it[nx])){
+      if(!t0)t0=Date.now();b.classList.add('done');b.textContent='✓';sfx.pop();nx++;
+      if(nx>=M.it.length){const sec=(Date.now()-t0)/1000;const best=S.schulte[M.k];const rec=!best||sec<best;if(rec)S.schulte[M.k]=sec;
+        let stars=sec<=M.t[0]?3:sec<=M.t[1]?2:1;if(mis>3)stars=Math.max(1,stars-1);markPlayed('schulte');save();
+        T(()=>result({emoji:'🔢',title:rec?'Yeni rekor!':'Hepsini buldun!',stars,msg:`Süren: <b>${sec.toFixed(1)} saniye</b>`,lines:[mis?`❌ ${mis} yanlış dokunuş`:'🎯 Hiç yanlış yapmadın!',best&&!rec?`🏁 Rekorun: ${best.toFixed(1)} sn`:''],again:()=>schulteGame(mi),back:schulteMenu,after:rec&&best?confetti:null}),400);
+      }else $('#nx').textContent=M.it[nx];
+    }else{mis++;sfx.bad();b.classList.add('no');T(()=>b.classList.remove('no'),400)}
+  });
+}
+
+/* ================== GÖZ JİMNASTİĞİ ================== */
+const EP=[
+ {n:'Sağa – sola ↔️',f:t=>({x:.5+.48*Math.sin(t*2.1),y:.5})},
+ {n:'Yukarı – aşağı ↕️',f:t=>({x:.5,y:.5+.48*Math.sin(t*2.1)})},
+ {n:'Çapraz ↗️',f:t=>{const s=Math.sin(t*2);return{x:.5+.46*s,y:.5-.46*s}}},
+ {n:'Daire ⭕',f:t=>({x:.5+.44*Math.cos(t*2),y:.5+.44*Math.sin(t*2)})},
+ {n:'Sonsuzluk ♾️',f:t=>({x:.5+.46*Math.sin(t*1.6),y:.5+.36*Math.sin(t*3.2)})},
+ {n:'Okuma zıplaması 📖',f:t=>{const s=Math.floor(t*1.8),c=s%3,l=Math.floor(s/3)%5;return{x:[.02,.5,.98][c],y:.04+l*.23}}}];
+function eyesIntro(){
+  screen(topbar('👀 Göz Jimnastiği')+mascot('Uzaylı <b>👽</b> ekranda dolaşacak. <b>Başını oynatma</b>, sadece gözlerinle takip et! Uzaylı <b>⭐ yıldıza</b> dönüşünce hemen ekrana dokun.')+
+  `<div class="card" style="text-align:center;font-size:18px;line-height:1.6">6 hareket var: ↔️ ↕️ ↗️ ⭕ ♾️ 📖<br>Toplam 42 saniye sürer.${S.eyesLast?`<br>Geçen sefer: ⭐ ${S.eyesLast} yakaladın`:''}</div><button class="btn g big" id="go">Başla 👀</button>`,home);
+  on('#go',eyesGame);
+}
+function eyesGame(){
+  screen(topbar('👀 Göz Jimnastiği',`<span class="pill" id="ec">⭐ 0</span>`)+`<div class="phase" id="ph"></div><div class="eyes" id="es"><div class="tg" id="tg" style="display:none">👽</div></div><p class="hint">Uzaylı ⭐ olunca dokun!</p>`,eyesIntro);
+  const es=$('#es'),tg=$('#tg'),ph=$('#ph');const PD=7000,TOT=PD*EP.length;
+  let t0=0,cur=-1,caught=0,events=0,miss=0,isStar=false,starEnd=0,nextEv=2500;
+  let n=3;const cd=document.createElement('div');cd.className='cd';es.appendChild(cd);
+  function count(){if(n>0){cd.textContent=n;cd.style.animation='none';void cd.offsetWidth;cd.style.animation='';sfx.tick();n--;T(count,800)}else{cd.remove();tg.style.display='';t0=performance.now();raf=requestAnimationFrame(loop)}}
+  count();
+  function loop(now){
+    const el=Math.max(0,now-t0);const pi=Math.floor(el/PD);
+    if(pi>=EP.length)return end();
+    if(pi!==cur){cur=pi;ph.textContent=EP[pi].n;sfx.tick()}
+    const W=es.clientWidth-60,H=es.clientHeight-60;const p=EP[pi].f((el%PD)/1000);
+    tg.style.transform=`translate(${p.x*W}px,${p.y*H}px)`;
+    if(!isStar&&el>nextEv&&el<TOT-1600){isStar=true;events++;tg.textContent='⭐';starEnd=el+1200}
+    if(isStar&&el>starEnd){isStar=false;tg.textContent='👽';nextEv=el+2000+Math.random()*2200}
+    raf=requestAnimationFrame(loop);
+  }
+  es.onpointerdown=e=>{
+    if(!t0)return;
+    if(isStar){isStar=false;caught++;tg.textContent='👽';nextEv=(performance.now()-t0)+2000+Math.random()*2000;sfx.ok();$('#ec').textContent='⭐ '+caught;
+      const r=es.getBoundingClientRect();const p=document.createElement('div');p.className='plus';p.textContent='+1';p.style.left=(e.clientX-r.left)+'px';p.style.top=(e.clientY-r.top-20)+'px';es.appendChild(p);setTimeout(()=>p.remove(),800)}
+    else{miss++;sfx.bad()}
+  };
+  function end(){
+    const score=(caught-miss*.5)/Math.max(1,events);const stars=score>=.8?3:score>=.5?2:caught>0?1:0;
+    S.eyesLast=caught;markPlayed('eyes');save();
+    result({emoji:'👀',title:stars>=3?'Kartal gözlü!':'Gözlerin ısındı!',stars,msg:`${events} yıldızdan <b>${caught}</b> tanesini yakaladın.`,lines:[miss?`🙈 ${miss} kere erken dokundun`:'🎯 Hiç boşa dokunmadın!','💡 Okumadan önce göz jimnastiği yapmak gözlerini hazırlar.'],again:eyesGame,back:eyesIntro});
+  }
+}
+
+/* ================== KELİME AVI ================== */
+function findIntro(){
+  screen(topbar('🔍 Kelime Avı')+mascot('Yukarıda bir kelime göreceksin. Aşağıda ona <b>çok benzeyen</b> kelimeler var. Sadece <b>aynısı</b> olanları bul ve dokun! Dikkat, bazıları çok benziyor 😉')+
+  `<div class="card" style="text-align:center;font-size:18px">5 tur · ${S.findBest?'Rekorun: '+S.findBest.toFixed(1)+' sn':'Henüz rekor yok'}</div><button class="btn g big" id="go">Avlanmaya Başla 🔍</button>`,home);
+  on('#go',findGame);
+}
+function findGame(){
+  let r=0,mis=0;const R=5,t0=Date.now();
+  screen(topbar('🔍 Kelime Avı',`<span class="pill" id="fr">1/5</span>`)+`<div class="target">Bul: <b id="tw"></b> <span class="pill" id="fc"></span></div><div class="grid words" id="gr"></div>`,findIntro);
+  const gr=$('#gr');
+  function round(){
+    if(r>=R)return end();
+    $('#fr').textContent=(r+1)+'/'+R;
+    const src=r<2?W1.filter(w=>w.length>=3):r<4?W2:W3;const w=pick(src);const long=w.length>6;const n=long?12:16,k=3+Math.floor(Math.random()*3);
+    const arr=[];for(let i=0;i<k;i++)arr.push(w);while(arr.length<n)arr.push(mutate(w));shuffle(arr);
+    let found=0;$('#tw').textContent=w;$('#fc').textContent='0/'+k;
+    gr.style.gridTemplateColumns=`repeat(${long?3:4},1fr)`;
+    gr.innerHTML=arr.map(x=>`<button class="cell" data-ok="${x===w?1:0}">${esc(x)}</button>`).join('');
+    gr.querySelectorAll('.cell').forEach(b=>b.onclick=()=>{
+      if(b.classList.contains('done'))return;
+      if(b.dataset.ok==='1'){b.classList.add('done');found++;sfx.pop();$('#fc').textContent=found+'/'+k;if(found===k){sfx.ok();r++;T(round,650)}}
+      else{mis++;sfx.bad();b.classList.add('no');T(()=>b.classList.remove('no'),400)}
+    });
+  }
+  function end(){
+    const sec=(Date.now()-t0)/1000;const rec=!S.findBest||sec<S.findBest;if(rec)S.findBest=sec;
+    markPlayed('find');save();
+    result({emoji:'🔍',title:mis===0?'Dedektif gibisin!':'Avı bitirdin!',stars:mis<=1?3:mis<=4?2:1,msg:`Süren: <b>${sec.toFixed(1)} saniye</b>`,lines:[mis?`❌ ${mis} benzer kelimeye kandın`:'🎯 Hiç kanmadın!',rec?'🏁 Yeni rekor!':`🏁 Rekorun: ${S.findBest.toFixed(1)} sn`],again:findGame,back:findIntro});
+  }
+  round();
+}
+
+/* ================== HİKÂYELER: LİSTE / SORULAR ================== */
+function storyList(mode){
+  const P=mode==='pacer',R=mode==='repeat';
+  const bestOf=id=>{const a=S.tests.filter(x=>x.id===id);return a.length?Math.max(...a.map(x=>x.w)):0};
+  const isDone=s=>P?S.storyDone[s.id]:R?S.repeat[s.id]:bestOf(s.id);
+  const firstUndone=STORIES.find(s=>!isDone(s));
+  const title=P?'🚀 Roket Okuma':R?'🔁 Tekrar Uçuşu':'⏱️ Hız Ölçer';
+  const intro=P?`Roket kelimelerin üstünden geçecek. Gözünle <b>rokete yetiş</b> ve sarı kelimeyi oku! Sonunda 3 soru var. Hepsini bilirsen roket hızlanır.`
+    :R?`Önce ben hikâyeyi sesli okuyacağım, sen parmağınla takip et. Sonra aynı hikâyeyi <b>3 kez sesli</b> oku. Her turda roketin biraz daha yükselecek! 🔁`
+    :`Bir hikâye seç ve <b>kendi hızında</b> oku. Bitince okuma hızını ölçeceğim. Anlamak da önemli, sonunda sorular var!`;
+  screen(topbar(title,P?`<span class="pill">🚀 ${S.pacerWpm}</span>`:'')+mascot(intro)+
+  STORIES.map(s=>{const b=bestOf(s.id),r=S.repeat[s.id];
+    const mark=P?(S.storyDone[s.id]?'<span class="tag g">✓ Okundu</span>':''):R?(r?`<span class="tag g">${r.w1}→${r.w3}</span>`:''):(b?`<span class="tag g">${b} k/dk</span>`:'');
+    return `<button class="item" data-id="${s.id}"><span class="ie">${s.e}</span><span class="it"><b>${s.t}</b><small>${wc(s)} kelime · ${sylCount(s.x)} hece</small></span>${mark||(firstUndone===s?'<span class="tag">Sıradaki</span>':'')}</button>`}).join(''),home);
+  app.querySelectorAll('.item').forEach(b=>b.onclick=()=>(P?pacerRead:R?repeatRead:testRead)(+b.dataset.id));
+}
+function quiz(s,cb,back){
+  let qi=0,c=0;
+  function show(){
+    if(qi>=s.q.length)return cb(c);
+    const q=s.q[qi],a=q[1];const opts=shuffle(q.slice(1));let dn=false;
+    screen(topbar('🧠 Soru '+(qi+1)+'/'+s.q.length,`<span class="pill">${s.e}</span>`)+`<div class="qcard"><button class="spk" data-say="${esc(q[0])}">🔊</button>${esc(q[0])}</div><div class="qopts">${opts.map(o=>`<button class="opt" data-a="${esc(o)}">${esc(o)}</button>`).join('')}</div>`,back);
+    app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+      if(dn)return;dn=true;
+      if(b.dataset.a===a){b.classList.add('ok');c++;sfx.ok()}
+      else{b.classList.add('no');sfx.bad();app.querySelectorAll('.opt').forEach(x=>{if(x.dataset.a===a)x.classList.add('ok')})}
+      qi++;T(show,1300);
+    });
+  }
+  show();
+}
+
+/* ================== ROKET OKUMA ================== */
+function pacerRead(id){
+  const s=STORIES.find(x=>x.id===id);const words=s.x.split(/\s+/);let gi=0,run=false,h=0,lastTop=-1,started=false,groups=groupsOf(words,S.chunk);
+  const back=()=>storyList('pacer');
+  screen(topbar(s.e+' '+s.t)+`<div class="paper" id="pp"><div class="prk" id="rk">🚀</div>${words.map((w,i)=>`<span class="w" id="w${i}">${wHTML(w)}</span>`).join(' ')}</div>
+  <div class="ctl"><button class="btn ghost sm" id="sl">🐢 −</button><div class="wpm"><b id="wv">${S.pacerWpm}</b><small>kelime/dk</small></div><button class="btn ghost sm" id="fa">+ 🐇</button></div>
+  <div class="ctl"><button class="btn ghost sm" id="ch"></button><button class="btn ghost sm" id="fd"></button><button class="btn ghost sm" id="sy"></button></div>
+  <button class="btn g big" id="go">Başla 🚀</button>`,back);
+  const rk=$('#rk'),go=$('#go');
+  const CHL={1:'☝️ 1 kelime',2:'👯 2 kelime',3:'🧩 Öbek'};
+  const setCh=()=>{$('#ch').textContent=CHL[S.chunk]||CHL[1];$('#fd').textContent=S.fade?'👻 Kaybolan: açık':'👻 Kaybolan: kapalı';$('#sy').textContent=S.syl?'🌈 Hece: açık':'🌈 Hece: kapalı'};setCh();
+  const locked=()=>{if(started){toast('Bunu başlamadan önce seç 🙂');return true}return false};
+  on('#sl',()=>{S.pacerWpm=Math.max(20,S.pacerWpm-5);$('#wv').textContent=S.pacerWpm;save();sfx.pop()});
+  on('#fa',()=>{S.pacerWpm=Math.min(200,S.pacerWpm+5);$('#wv').textContent=S.pacerWpm;save();sfx.pop()});
+  on('#ch',()=>{if(locked())return;S.chunk=S.chunk>=3?1:S.chunk+1;groups=groupsOf(words,S.chunk);setCh();save();sfx.pop()});
+  on('#fd',()=>{if(locked())return;S.fade=!S.fade;setCh();save();sfx.pop()});
+  on('#sy',()=>{if(locked())return;S.syl=!S.syl;words.forEach((w,i)=>{$('#w'+i).innerHTML=wHTML(w)});setCh();save();sfx.pop()});
+  function pause(){run=false;clearTimeout(h);go.textContent='Devam ▶️';go.className='btn g big'}
+  hideHook=pause;
+  function step(){
+    if(!run)return;
+    app.querySelectorAll('.w.on').forEach(e=>{e.classList.remove('on');e.classList.add('past');if(S.fade)e.classList.add('gone')});
+    if(gi>=groups.length){run=false;rk.textContent='🏁';go.style.display='none';T(()=>quiz(s,done,back),900);return}
+    const g=groups[gi];g.forEach(j=>$('#w'+j).classList.add('on'));
+    const sp=$('#w'+g[0]);
+    rk.style.left=(sp.offsetLeft+sp.offsetWidth/2-11)+'px';rk.style.top=(sp.offsetTop-21)+'px';
+    if(sp.offsetTop!==lastTop){lastTop=sp.offsetTop;sp.scrollIntoView({block:'center',behavior:'smooth'})}
+    gi++;const last=words[g[g.length-1]];let d=60000/S.pacerWpm*g.length;
+    if(/[.!?”]$/.test(last))d*=1.5;else if(/[,;:]$/.test(last))d*=1.2;
+    h=T(step,d);
+  }
+  go.onclick=()=>{
+    if(run){pause();return}
+    run=true;go.textContent='Durdur ⏸';go.className='btn r big';
+    if(!started){started=true;let n=3;const cd=()=>{if(!run)return;if(n>0){rk.textContent=n;sfx.tick();n--;h=T(cd,700)}else{rk.textContent='🚀';step()}};cd()}
+    else step();
+  };
+  function done(c){
+    S.storyDone[id]=true;const lines=[];
+    if(c===3){S.pacerWpm=Math.min(200,S.pacerWpm+5);lines.push(`🚀 Roket hızlandı: <b>${S.pacerWpm}</b> kelime/dk`)}
+    else if(c<=1){S.pacerWpm=Math.max(20,S.pacerWpm-5);lines.push(`🐢 Roketi biraz yavaşlattık: <b>${S.pacerWpm}</b> kelime/dk. Acele yok!`)}
+    else lines.push(`🚀 Roket hızı aynı kaldı: <b>${S.pacerWpm}</b> kelime/dk`);
+    markPlayed('pacer');save();
+    const ni=STORIES.findIndex(x=>x.id===id);const nxt=STORIES[(ni+1)%STORIES.length];
+    result({emoji:c===3?'🚀':'🦉',title:c===3?'Süpersin!':c===2?'Çok iyi!':'Devam et!',stars:c,msg:`3 sorudan <b>${c}</b> tanesini bildin.`,lines,again:()=>pacerRead(nxt.id),againLabel:'▶️ Sonraki Hikâye',back});
+  }
+}
+
+/* ================== TEKRAR UÇUŞU (tekrarlı okuma + eşlikli okuma) ================== */
+function repeatRead(id){
+  const s=STORIES.find(x=>x.id===id);const words=s.x.split(/\s+/),n=words.length,sy=sylCount(s.x),sents=sentencesOf(words);
+  const back=()=>storyList('repeat');const tries=[];let t0=0,phase='listen',listening=false;
+  const TIPS=['Şimdi sıra sende! Hikâyeyi <b>sesli</b> oku. Acele etme, doğru oku.','Harika! İkinci turda biraz daha <b>akıcı</b> okumayı dene. Kelimeler artık tanıdık!','Son tur! Bu sefer <b>duygulu</b> oku: soru cümlesinde sesini yükselt, ünlemde heyecanlan! 🎭'];
+  screen(topbar('🔁 '+s.e+' '+s.t,`<span class="pill" id="rt">Dinle 👂</span>`)+`<div id="mz">${mascot('Önce ben okuyacağım. Sen de <b>parmağınla</b> yeşil cümleyi takip et ve içinden bana eşlik et. 🦉')}</div>
+  <div class="paper" id="pp">${words.map((w,i)=>`<span class="w" id="w${i}">${wHTML(w)}</span>`).join(' ')}</div>
+  <div class="card" id="bc"><div class="bars" id="bars"></div><div class="barl"><span>1. tur</span><span>2. tur</span><span>3. tur</span></div></div>
+  <div class="row" style="margin-top:0" id="br"><button class="btn ghost" id="sk">Atla ⏭️</button><button class="btn g" id="go">🦉 Baykuş okusun</button></div>`,back);
+  const go=$('#go'),sk=$('#sk');
+  function bars(){const mx=Math.max(60,...tries.map(t=>t.w));$('#bars').innerHTML=[0,1,2].map(i=>{const t=tries[i];return t?`<div class="bar" style="height:${Math.max(22,Math.round(t.w/mx*110))}px">${t.w}</div>`:'<div class="bar e" style="height:26px">?</div>'}).join('')}
+  bars();
+  const clr=()=>app.querySelectorAll('.w.sent,.w.on').forEach(e=>e.classList.remove('sent','on'));
+  function listen(){
+    listening=true;go.textContent='⏹️ Durdur';go.className='btn r';let k=0;
+    const next=()=>{clr();if(!listening)return;if(k>=sents.length){listening=false;return ready()}
+      const g=sents[k++];g.forEach(j=>$('#w'+j).classList.add('sent'));$('#w'+g[0]).scrollIntoView({block:'center',behavior:'smooth'});
+      sayThen(g.map(j=>words[j]).join(' '),()=>T(next,250))};
+    next();
+  }
+  function ready(){
+    clr();hushAll();listening=false;phase='read';const k=tries.length;
+    $('#rt').textContent=(k+1)+'/3 ⏱️';$('#mz').innerHTML=mascot(TIPS[k]);sk.style.display='none';
+    go.textContent=`${k+1}. tur: Başla ⏱️`;go.className='btn g';app.scrollTop=0;
+  }
+  sk.onclick=()=>{listening=false;ready()};
+  hideHook=()=>{if(listening){listening=false;hushAll();go.textContent='🦉 Tekrar dinle';go.className='btn g'}};
+  go.onclick=()=>{
+    if(phase==='listen'){if(listening){listening=false;hushAll();clr();go.textContent='🦉 Tekrar dinle';go.className='btn g'}else listen();return}
+    if(!t0){t0=Date.now();go.textContent='Bitirdim ✅';go.className='btn b';sfx.tick();return}
+    const sec=(Date.now()-t0)/1000;if(sec<3)return;t0=0;
+    tries.push({w:Math.round(n/sec*60),h:Math.round(sy/sec*60),sec});bars();sfx.ok();
+    if(tries.length<3){if(tries.length>1){const d=tries[tries.length-1].w-tries[tries.length-2].w;if(d>0)toast(`📈 +${d} kelime/dk!`)}ready();return}
+    $('#br').style.display='none';T(()=>quiz(s,done,back),900);
+  };
+  function done(c){
+    const w1=tries[0].w,w3=tries[2].w,gain=Math.round((w3-w1)/w1*100);
+    const prev=S.repeat[id];S.repeat[id]={w1,w3,c,t:Date.now()};markPlayed('repeat');save();
+    const stars=Math.min(3,c+(gain>=10&&c>=2?1:0));
+    const lines=[`1. tur: <b>${w1}</b> → 3. tur: <b>${w3}</b> kelime/dk ${gain>0?`(📈 %${gain} daha hızlı)`:''}`,`🌈 Son turda dakikada <b>${tries[2].h}</b> hece`,`🧠 Anlama: <b>${c}/3</b>`];
+    if(gain<=0)lines.push('💡 Hız artmadıysa sorun değil, önemli olan doğru ve akıcı okumak.');
+    if(prev&&w3>prev.w3)lines.push('🏆 Bu hikâyedeki rekorunu kırdın!');
+    const ni=STORIES.findIndex(x=>x.id===id);const nxt=STORIES[(ni+1)%STORIES.length];
+    result({emoji:gain>=10?'🔁':'🦉',title:gain>=20?'Roket gibi hızlandın!':gain>=5?'Her turda daha iyi!':'Tebrikler!',stars,msg:`Aynı hikâyeyi 3 kez okudun.`,lines,again:()=>repeatRead(nxt.id),againLabel:'▶️ Sonraki Hikâye',back});
+  }
+}
+
+/* ================== HECE TRENİ ================== */
+const HM=[{k:'hece',n:'Heceleri Birleştir',e:'🚃',d:'Vagonlardaki heceleri birleştir, kelimeyi bul'},{k:'ek',n:'Ek Treni',e:'🚂',d:'Kelimeye ekler takılıyor, son kelimeyi bul'}];
+function heceMenu(){
+  screen(topbar('🚂 Hece Treni')+mascot('Tren vagonlarında <b>heceler</b> ve <b>ekler</b> var. Vagonları gözünle birleştir, tren kaybolunca hangi kelime olduğunu seç!')+
+  HM.map((m,i)=>`<button class="item" data-i="${i}"><span class="ie">${m.e}</span><span class="it"><b>${m.n}</b><small>${S.heceMs[m.k]?'Hızın: '+(S.heceMs[m.k]/1000).toFixed(2)+' sn/vagon':m.d}</small></span></button>`).join(''),home);
+  app.querySelectorAll('.item').forEach(b=>b.onclick=()=>trainGame(+b.dataset.i));
+}
+function trainGame(mi){
+  const M=HM[mi],EK=M.k==='ek';let ms=S.heceMs[M.k]||700,r=0,ok=0;
+  const pool=shuffle(EK?CHAINS.slice():[...W2,...W3].filter(w=>hecele(w).length>=2));
+  screen(topbar(M.e+' '+M.n,`<span class="pill" id="fr">1/10</span>`)+`<div class="speed">🚃 Vagon süresi: <b id="fms"></b> sn</div><div class="stage" id="st"></div><div class="opts" id="op"></div>`,heceMenu);
+  const st=$('#st'),op=$('#op');
+  function round(){
+    if(r>=10)return end();
+    $('#fms').textContent=(ms/1000).toFixed(2);$('#fr').textContent=(r+1)+'/10';op.innerHTML='';
+    let parts,w,opts;
+    if(EK){const c=pool[r%pool.length];const t=1+Math.floor(Math.random()*3);w=c[t];parts=[c[0]];for(let i=1;i<=t;i++)parts.push(c[i].slice(c[i-1].length));opts=shuffle(c.slice())}
+    else{w=pool[r%pool.length];parts=hecele(w);opts=shuffle([w,...distract(w,W2.concat(W3),3)])}
+    st.innerHTML='<div class="train" id="tr">🚂</div>';sfx.tick();const tr=$('#tr');let i=0;
+    const add=()=>{if(i<parts.length){const sp=document.createElement('span');sp.className='wg'+(EK&&i>0?' sf':'');sp.innerHTML=EK?esc(parts[i]):`<span class="h${i%2}">${esc(parts[i])}</span>`;tr.appendChild(sp);i++;sfx.pop();T(add,ms)}
+      else T(()=>{st.innerHTML='<div class="q">Hangi kelimeydi? 🤔</div>';choices(w,opts)},Math.max(250,ms*.6))};
+    T(add,500);
+  }
+  function choices(w,opts){
+    let done=false;op.innerHTML=opts.map(o=>`<button class="opt" data-w="${esc(o)}">${esc(o)}</button>`).join('');
+    op.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+      if(done)return;done=true;const right=b.dataset.w===w;
+      if(right){b.classList.add('ok');ok++;sfx.ok();ms=Math.max(220,Math.round(ms*.87))}
+      else{b.classList.add('no');sfx.bad();op.querySelectorAll('.opt').forEach(x=>{if(x.dataset.w===w)x.classList.add('ok')});ms=Math.min(1500,Math.round(ms*1.2))}
+      st.innerHTML=`<div class="fw reveal" style="font-size:${fsz(w)}px">${S.syl||!EK?sylHTML(w):esc(w)}</div>`;speak(w);
+      r++;T(round,right?1100:1800);
+    });
+  }
+  function end(){
+    S.heceMs[M.k]=ms;markPlayed('hece');save();
+    result({emoji:'🚂',title:ok>=8?'Makinist oldun!':ok>=5?'Tren hızlanıyor!':'Devam et!',stars:ok>=9?3:ok>=7?2:ok>=5?1:0,msg:`10 trenden <b>${ok}</b> tanesini doğru okudun.`,lines:[`🚃 Yeni vagon hızın: ${(ms/1000).toFixed(2)} saniye`,EK?'💡 Türkçede kelimeler ek alarak uzar. Ekleri tanımak uzun kelimeleri hızlı okumayı sağlar.':'💡 Heceleri hızlı birleştirmek, kelimeyi tek bakışta okumanın ilk adımıdır.'],again:()=>trainGame(mi),back:heceMenu});
+  }
+  T(round,400);
+}
+
+/* ================== HIZ ÖLÇER ================== */
+function testRead(id){
+  const s=STORIES.find(x=>x.id===id);const n=wc(s);let t0=0;const back=()=>storyList('test');
+  screen(topbar('⏱️ '+s.e+' '+s.t)+`<div id="mz">${mascot('Hazır olunca <b>Başla</b> düğmesine bas. Hikâyeyi kendi hızında oku. Bitince <b>Bitirdim</b> düğmesine bas. Acele etme, sonra sorular gelecek!')}</div>
+  <div class="paper blur" id="pp">${s.x.split(/\s+/).map(wHTML).join(' ')}</div><button class="btn g big" id="go">Başla ⏱️</button>`,back);
+  const go=$('#go');
+  go.onclick=()=>{
+    if(!t0){t0=Date.now();$('#pp').classList.remove('blur');go.textContent='Bitirdim ✅';go.className='btn b big';const m=$('#mz');if(m)m.remove();app.scrollTop=0;sfx.tick();return}
+    const sec=(Date.now()-t0)/1000;if(sec<3)return;
+    const wpm=Math.round(n/sec*60);
+    quiz(s,c=>testDone(s,wpm,sec,c),back);
+  };
+}
+function gauge(w){
+  const cx=120,cy=118,R=95,max=150;const pt=v=>{const a=Math.PI-(Math.min(v,max)/max)*Math.PI;return[cx+R*Math.cos(a),cy-R*Math.sin(a)]};
+  const seg=[[0,30,'#ff5c7a'],[30,50,'#ff9f1c'],[50,70,'#ffd23f'],[70,100,'#3ddc84'],[100,150,'#4fc3ff']];
+  const arcs=seg.map(([a,b,c])=>{const p1=pt(a),p2=pt(b);return `<path d="M${p1[0].toFixed(1)} ${p1[1].toFixed(1)} A${R} ${R} 0 0 1 ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}" stroke="${c}" stroke-width="20" fill="none"/>`}).join('');
+  const deg=-90+Math.min(w,max)/max*180;
+  return `<svg viewBox="0 0 240 140" width="260" style="max-width:100%"><g>${arcs}</g>
+  <g id="ndl" style="transform-origin:${cx}px ${cy}px;transform:rotate(-90deg);transition:transform 1.4s cubic-bezier(.3,1.4,.5,1)" data-deg="${deg}"><line x1="${cx}" y1="${cy}" x2="${cx}" y2="${cy-80}" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g>
+  <circle cx="${cx}" cy="${cy}" r="11" fill="#fff"/></svg>`;
+}
+function testDone(s,wpm,sec,c){
+  const good=S.tests.filter(x=>x.c>=2);const best=good.length?Math.max(...good.map(x=>x.w)):0;const prev=S.tests.length?S.tests[S.tests.length-1]:null;
+  S.tests.push({t:Date.now(),w:wpm,c,id:s.id,s:Math.round(sec)});if(S.tests.length>60)S.tests=S.tests.slice(-60);
+  const rec=c>=2&&wpm>best&&best>0;const A=animOf(wpm);
+  markPlayed('test');save();
+  const lines=[`${A[1]} Hız seviyesi: <b>${A[2]}</b>`,`🌈 Dakikada <b>${Math.round(sylCount(s.x)/sec*60)}</b> hece`,`🧠 Anlama: <b>${c}/3</b> soru`];
+  if(c<=1)lines.push('💡 Hızlı okumak güzel ama <b>anlamak</b> daha önemli. Bir dahaki sefere biraz daha dikkatli oku!');
+  else if(prev){const d=wpm-prev.w;lines.push(d>0?`📈 Geçen seferden <b>${d}</b> kelime daha hızlı!`:d<0?'🐢 Bu sefer biraz daha yavaş okudun, sorun değil!':'➖ Geçen seferle aynı hızdasın.')}
+  if(rec)lines.push('🏆 <b>Yeni hız rekoru!</b>');
+  result({emoji:A[1],title:`Dakikada ${wpm} kelime!`,stars:c,msg:`${wc(s)} kelimeyi <b>${Math.round(sec)} saniyede</b> okudun.`,extra:`<div>${gauge(wpm)}</div>`,lines,
+    again:()=>storyList('test'),againLabel:'📚 Başka Hikâye',back:()=>storyList('test'),
+    after:()=>{const g=$('#ndl');if(g){g.getBoundingClientRect();g.style.transform=`rotate(${g.dataset.deg}deg)`}if(rec)confetti()}});
+}
+
+/* ================== SESLİ OKUMA DEĞERLENDİRMESİ (ebeveyn) ================== */
+const PROS=[['🎭 İfade','Duyguyu sesine yansıtıyor mu?'],['🧩 Öbekleme','Kelimeleri anlamlı gruplar hâlinde okuyor mu?'],['🌊 Akıcılık','Takılmadan, tekrar etmeden okuyor mu?'],['⏩ Hız','Ne çok yavaş ne çok hızlı, konuşur gibi mi?']];
+function orfList(){
+  screen(topbar('🎙️ Sesli Okuma Ölçümü')+`<div class="card" style="font-size:16px;line-height:1.5">Çocuğunuz <b>daha önce okumadığı</b> bir hikâyeyi 1 dakika boyunca <b>sesli</b> okusun. Siz yanlış okuduğu kelimelere dokunun. Süre bitince okuduğu son kelimeye dokunun. Sonuç: <b>dakikada doğru okunan kelime</b> ve doğruluk yüzdesi.</div>`+
+  STORIES.map(s=>{const o=S.orf.filter(x=>x.id===s.id).pop();return `<button class="item" data-id="${s.id}"><span class="ie">${s.e}</span><span class="it"><b>${s.t}</b><small>${wc(s)} kelime</small></span>${o?`<span class="tag g">${o.w} dk/doğru</span>`:''}</button>`}).join(''),parent);
+  app.querySelectorAll('.item').forEach(b=>b.onclick=()=>orfRun(+b.dataset.id));
+}
+function orfRun(id){
+  const s=STORIES.find(x=>x.id===id);const words=s.x.split(/\s+/);const err=new Set();let t0=0,sec=0,phase='wait',endIdx=-1;
+  screen(topbar('🎙️ '+s.e+' '+s.t,`<span class="pill" id="tm">60</span>`)+`<div class="tbar"><i id="tb" style="width:100%"></i></div><p class="hint" id="hn">Hazır olunca Başla'ya basın ve kitabı çocuğa verin.</p>
+  <div class="paper" id="pp" style="font-size:22px">${words.map((w,i)=>`<span class="w" data-i="${i}">${esc(w)}</span>`).join(' ')}</div><button class="btn g big" id="go">Başla ⏱️</button>`,orfList);
+  const go=$('#go'),hn=$('#hn');
+  function tick(){if(phase!=='run')return;const el=(Date.now()-t0)/1000;$('#tm').textContent=Math.max(0,Math.ceil(60-el));$('#tb').style.width=Math.max(0,100-el/60*100)+'%';if(el>=60)stop();else T(tick,200)}
+  function stop(){if(phase!=='run')return;sec=Math.min(60,(Date.now()-t0)/1000);phase='end';sfx.star();hn.innerHTML='⏹️ <b>Süre bitti.</b> Çocuğun okuduğu <b>son kelimeye</b> dokunun.';go.style.display='none'}
+  $('#pp').onclick=e=>{const w=e.target.closest('.w');if(!w)return;const i=+w.dataset.i;
+    if(phase==='run'){if(err.has(i)){err.delete(i);w.classList.remove('err')}else{err.add(i);w.classList.add('err')}}
+    else if(phase==='end'){endIdx=i;w.classList.add('end');finish()}};
+  go.onclick=()=>{
+    if(phase==='wait'){phase='run';t0=Date.now();go.textContent='Erken bitirdi ✅';go.className='btn b big';hn.innerHTML='Yanlış okunan, atlanan ya da 3 saniyeden uzun takılınan kelimeye dokunun (geri almak için tekrar dokunun).';tick();return}
+    if(phase==='run'){stop()}
+  };
+  function finish(){
+    phase='done';const read=endIdx+1;let e=0;err.forEach(i=>{if(i<=endIdx)e++});
+    const correct=Math.max(0,read-e),wcpm=Math.round(correct/(sec/60)),acc=read?Math.round(correct/read*100):0;
+    const rate={};
+    screen(topbar('🎙️ Sonuç')+`<div class="card" style="text-align:center"><div style="font-size:44px;font-weight:900;color:var(--y)">${wcpm}</div><div>dakikada doğru kelime</div>
+    <div style="margin-top:8px">✅ Doğruluk: <b>%${acc}</b> · ${read} kelime, ${e} hata · ${Math.round(sec)} sn</div>
+    <div style="margin-top:6px;opacity:.9;font-size:15px">${acc>=95?'🟢 Doğruluk çok iyi.':acc>=90?'🟡 Doğruluk iyi; hızdan çok doğruluğa odaklanın.':'🔴 Metin şu an zor geliyor; daha kısa metinlerle tekrarlı okuma önerilir.'}</div></div>
+    <div class="card"><h3>🎭 Prozodi (Rasinski ölçeği, 1–4)</h3>${PROS.map((p,k)=>`<div class="rate"><span>${p[0]}<br><small style="opacity:.75">${p[1]}</small></span><span>${[1,2,3,4].map(v=>`<button data-k="${k}" data-v="${v}">${v}</button>`).join('')}</span></div>`).join('')}
+    <p class="hint" style="margin-top:8px">1: hiç · 2: biraz · 3: çoğunlukla · 4: tamamen. Toplam 10 ve üstü akıcı okumayı gösterir.</p></div>
+    <button class="btn g big" id="sv">Kaydet 💾</button>`,orfList);
+    app.querySelectorAll('.rate button').forEach(b=>b.onclick=()=>{const k=b.dataset.k;rate[k]=+b.dataset.v;app.querySelectorAll(`.rate button[data-k="${k}"]`).forEach(x=>x.classList.toggle('on',x===b))});
+    on('#sv',()=>{const ps=Object.values(rate);S.orf.push({t:Date.now(),id,w:wcpm,a:acc,p:ps.length===4?ps.reduce((x,y)=>x+y,0):0});if(S.orf.length>40)S.orf=S.orf.slice(-40);save();toast('Kaydedildi 💾');parent()});
+  }
+}
+
+/* ================== ALBÜM ================== */
+function album(){
+  screen(topbar('🏆 Uzay Albümü',`<span class="pill">⭐ ${S.stars}</span>`)+mascot('Yıldız topladıkça yeni çıkartmalar açılır. Hepsini toplayabilir misin?')+
+  `<div class="alb">${STK.map(s=>{const ok=S.stars>=s.s;return `<div class="sk ${ok?'':'lock'}"><span class="e">${s.e}</span><small>${ok?s.n:'⭐ '+s.s}</small></div>`}).join('')}</div>
+  <div class="card" style="margin-top:12px"><h3>🎖️ Rütbeler</h3>${RANKS.map(r=>`<div style="padding:4px 0;${S.stars>=r[0]?'':'opacity:.45'}">${S.stars>=r[0]?'✅':'🔒'} ${r[1]} <small>(${r[0]} ⭐)</small></div>`).join('')}</div>`,home);
+}
+
+/* ================== EBEVEYN ================== */
+function parentGate(){
+  const a=11+Math.floor(Math.random()*9),b=3+Math.floor(Math.random()*7);
+  screen(topbar('👨‍👩‍👧 Ebeveyn Paneli')+`<div class="card" style="text-align:center"><p class="msg">Bu bölüm anne-babalar için.<br>Devam etmek için işlemi çözün:</p><div style="font-size:36px;font-weight:900;margin:10px 0">${a} × ${b} = ?</div><input class="inp" id="pa" type="number" inputmode="numeric"><div class="row"><button class="btn g" id="pk">Gir</button></div></div>`,home);
+  on('#pk',()=>{if(+$('#pa').value===a*b)parent();else{sfx.bad();toast('Yanlış cevap');home()}});
+}
+function chart(){
+  const d=S.tests.slice(-12);if(!d.length)return '<p style="opacity:.8">Henüz Hız Ölçer testi yapılmadı.</p>';
+  const W=320,H=170,px=26,py=22,mx=Math.max(80,...d.map(x=>x.w))+10;
+  const X=i=>d.length===1?W/2:px+i*(W-2*px)/(d.length-1),Y=v=>H-py-(v/mx)*(H-2*py);
+  const pts=d.map((x,i)=>X(i).toFixed(1)+','+Y(x.w).toFixed(1)).join(' ');
+  const col=c=>c>=3?'#3ddc84':c===2?'#ffd23f':'#ff5c7a';
+  let grid='';const stp=Math.max(20,Math.ceil(mx/6/10)*10);for(let v=0;v<=mx;v+=stp){grid+=`<line x1="${px}" x2="${W-6}" y1="${Y(v)}" y2="${Y(v)}" stroke="rgba(255,255,255,.12)"/><text x="2" y="${Y(v)+4}" fill="rgba(255,255,255,.55)" font-size="10">${v}</text>`}
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%">${grid}<polyline points="${pts}" fill="none" stroke="#4fc3ff" stroke-width="3"/>${d.map((x,i)=>`<circle cx="${X(i)}" cy="${Y(x.w)}" r="6" fill="${col(x.c)}"/><text x="${X(i)}" y="${Y(x.w)-10}" fill="#fff" font-size="11" text-anchor="middle" font-weight="bold">${x.w}</text>`).join('')}</svg>
+  <div style="font-size:14px;opacity:.85">Nokta rengi anlamayı gösterir: 🟢 3/3 · 🟡 2/3 · 🔴 0-1/3</div>`;
+}
+function parent(){
+  const fmt=t=>{const d=new Date(t);return d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear()};
+  const last=S.tests.slice(-8).reverse();let rs=0;
+  const tog=(k,l)=>`<div class="set"><span>${l}</span><button class="tog ${S[k]?'on':''}" data-k="${k}"></button></div>`;
+  screen(topbar('👨‍👩‍👧 Ebeveyn Paneli')+
+  `<div class="card"><h3>📈 Okuma hızı (kelime/dakika)</h3>${chart()}
+  ${last.length?`<table class="tbl" style="margin-top:8px"><tr><th>Tarih</th><th>Hikâye</th><th>Hız</th><th>Anlama</th></tr>${last.map(x=>{const s=STORIES.find(y=>y.id===x.id);return `<tr><td>${fmt(x.t)}</td><td>${s?s.e:''}</td><td><b>${x.w}</b></td><td>${x.c}/3</td></tr>`}).join('')}</table>`:''}</div>
+  <div class="card"><h3>🎙️ Sesli okuma ölçümü</h3>
+  <div class="set" style="border:0"><span>Sınıf</span><span class="seg">${[1,2,3].map(g=>`<button data-g="${g}" class="${S.grade===g?'on':''}">${g}. sınıf</button>`).join('')}</span></div>
+  <div style="font-size:15px;opacity:.9;margin-bottom:8px">${S.grade}. sınıf yıl sonu için Türkiye'de sık kullanılan hedef: yaklaşık <b>${GRADE_T[S.grade]} kelime/dk</b>, doğruluk <b>%95+</b>. (Çocuktan çocuğa değişir; asıl önemli olan kendi gelişimidir.)</div>
+  ${S.orf.length?`<table class="tbl"><tr><th>Tarih</th><th>Hikâye</th><th>D.K/dk</th><th>Doğruluk</th><th>Prozodi</th></tr>${S.orf.slice(-6).reverse().map(x=>{const s=STORIES.find(y=>y.id===x.id);return `<tr><td>${fmt(x.t)}</td><td>${s?s.e:''}</td><td><b>${x.w}</b></td><td>%${x.a}</td><td>${x.p?x.p+'/16':'—'}</td></tr>`}).join('')}</table>`:'<p style="opacity:.8;font-size:15px">Henüz ölçüm yok. Ayda 1–2 kez yapmanız yeterli.</p>'}
+  <button class="btn b" id="orf" style="width:100%;margin-top:10px">🎙️ Yeni ölçüm yap</button></div>
+  <div class="card"><h3>📊 Özet</h3>
+  <div>⭐ Toplam yıldız: <b>${S.stars}</b> · 🔥 Seri: <b>${S.streak} gün</b></div>
+  <div style="margin-top:6px">🔁 Tekrar Uçuşu: <b>${Object.keys(S.repeat).length}</b> hikâye${(()=>{const r=Object.values(S.repeat);return r.length?` · ortalama artış <b>%${Math.round(r.reduce((a,x)=>a+(x.w3-x.w1)/x.w1*100,0)/r.length)}</b>`:''})()}</div>
+  <div style="margin-top:6px">🚂 Hece Treni: ${HM.map(m=>`${m.n}: <b>${S.heceMs[m.k]?(S.heceMs[m.k]/1000).toFixed(2)+' sn':'—'}</b>`).join(' · ')}</div>
+  <div style="margin-top:6px">🚀 Roket Okuma hızı: <b>${S.pacerWpm}</b> kelime/dk · Okunan hikâye: <b>${Object.keys(S.storyDone).length}/${STORIES.length}</b></div>
+  <div style="margin-top:6px">⚡ Şimşek Kelimeler (görünme süresi):<br>${FL.map((l,i)=>`${l.e} ${l.n}: <b>${S.flashMs[i]?(S.flashMs[i]/1000).toFixed(2)+' sn':'—'}</b>`).join('<br>')}</div>
+  <div style="margin-top:6px">🔢 Sayı Avı rekorları: ${SM.map(m=>`${m.n}: <b>${S.schulte[m.k]?S.schulte[m.k].toFixed(1)+' sn':'—'}</b>`).join(' · ')}</div></div>
+  <div class="card"><h3>⚙️ Ayarlar</h3>
+  <div class="set"><span>🚀 Roket Okuma hızı</span><span><button class="btn ghost sm" id="m5">−5</button> <b id="pw">${S.pacerWpm}</b> <button class="btn ghost sm" id="p5">+5</button></span></div>
+  ${tog('syl','🌈 Heceleri renkli göster (yeni başlayanlar için)')}${tog('fade','👻 Roket Okumada okunan kelimeler kaybolsun')}${tog('sound','🔔 Ses efektleri')}${tog('voice','🗣️ Sesli okuma (kelimeleri ve soruları seslendirir)')}
+  <div class="set"><span>🧹 Tüm ilerlemeyi sıfırla</span><button class="btn r sm" id="rs">Sıfırla</button></div></div>
+  <div class="card"><h3>💡 Ebeveynler için ipuçları (bilimsel kaynaklı)</h3><ul class="tips">
+  <li><b>Günde 10–15 dakika</b>, kısa ve her gün. Örnek uçuş planı: 1 dk Göz Jimnastiği → Şimşek Kelimeler veya Hece Treni → Tekrar Uçuşu → Roket Okuma.</li>
+  <li>7–9 yaşta "hızlı okuma", <b>kelimeleri otomatik tanıma</b> ve <b>akıcı sesli okuma</b> demektir. Yetişkin hızlı okuma teknikleri (iç sesi bastırma vb.) bu yaş için önerilmez.</li>
+  <li><b>Tekrar Uçuşu</b> en güçlü kanıta sahip yöntemdir (tekrarlı okuma; ABD Ulusal Okuma Paneli). Aynı metni 3–4 kez sesli okumak hem o metinde hem yeni metinlerde akıcılığı artırır. Önce Baykuş'u dinlemek "eşlikli okuma"dır.</li>
+  <li><b>Hece Treni</b>: Türkçe hece temelli ve ekleme dayalı bir dildir. Heceleri hızlı birleştirmek ve ekleri tanımak uzun kelimeleri tek bakışta okumayı sağlar. Yeni başlayanlarda <b>renkli hece</b> ayarını açın.</li>
+  <li><b>Roket Okuma</b>daki <b>Öbek</b> modu metni anlamlı gruplar hâlinde gösterir (öbekli metin, Rasinski). <b>Kaybolan</b> mod hafif bir zaman baskısıyla okumayı hızlandırır; hız yalnızca soruların hepsi doğruysa artar.</li>
+  <li>Hızdan önce <b>anlama</b> gelir. Anlama 3'te 1'e düşüyorsa yavaşlamaya teşvik edin. Hedef: doğruluk %95+, sorularda %80+.</li>
+  <li><b>Göz Jimnastiği</b> ve <b>Sayı Avı</b> dikkat ısınmasıdır; tek başına okuma hızını artırdığına dair güçlü kanıt yoktur (Rayner ve ark., 2016). Kısa ısınma olarak kullanın.</li>
+  <li>Ayda 1–2 kez <b>Sesli Okuma Ölçümü</b> yapın ve çocuğu yalnızca <b>kendi önceki sonucuyla</b> karşılaştırın. Japonya'daki "ondoku" gibi her gün evde sesli okumak çok faydalıdır.</li>
+  <li>Sesli okuma için telefonda Türkçe metin okuma (TTS) sesi yüklü olmalıdır.</li></ul></div>`,home);
+  on('#orf',orfList);
+  app.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{S.grade=+b.dataset.g;save();parent()});
+  on('#m5',()=>{S.pacerWpm=Math.max(20,S.pacerWpm-5);$('#pw').textContent=S.pacerWpm;save()});
+  on('#p5',()=>{S.pacerWpm=Math.min(200,S.pacerWpm+5);$('#pw').textContent=S.pacerWpm;save()});
+  app.querySelectorAll('.tog').forEach(b=>b.onclick=()=>{const k=b.dataset.k;S[k]=!S[k];b.classList.toggle('on',S[k]);save();if(k==='voice'&&S.voice)speak('Sesli okuma açık')});
+  on('#rs',()=>{const b=$('#rs');if(!rs){rs=1;b.textContent='Emin misiniz? Tekrar basın';return}const nm=S.name;S=defaults();S.name=nm;save();toast('İlerleme sıfırlandı');home()});
+}
+
+/* ================== BAŞLAT ================== */
+(function sky(){const k=$('#sky');for(let i=0;i<70;i++){const d=document.createElement('i');d.className='sx';const z=Math.random()*2.4+.6;d.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${z}px;height:${z}px;opacity:${.3+Math.random()*.7};animation-duration:${2+Math.random()*4}s;animation-delay:${Math.random()*4}s`;k.appendChild(d)}})();
+if(S.name)home();else welcome();
+</script>
+</body></html>
