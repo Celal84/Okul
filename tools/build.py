@@ -13,7 +13,7 @@ if out.exists():
     shutil.rmtree(out)
 out.mkdir(parents=True)
 data = "\n".join(p.read_text(encoding="utf-8") for p in sorted((src / "data").glob("*.js")))
-M = {"/*CSS*/": r("style.css"), "/*DATA*/": safe(data), "/*JS*/": safe(r("app.js"))}
+M = {"/*CSS*/": r("style.css"), "/*DATA*/": safe(data), "/*JS*/": safe("\n".join(r(f) for f in ("app.js", "ekstra.js", "basla.js")))}
 html = re.sub("|".join(map(re.escape, M)), lambda m: M[m.group(0)], r("template.html")).replace("__VER__", ver)
 (out / "index.html").write_text(html, encoding="utf-8", newline="")
 (out / "sw.js").write_text(r("sw.js").replace("__VER__", ver), encoding="utf-8")

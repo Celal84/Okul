@@ -57,5 +57,47 @@ HW.add({ders:"gorsel", sinif:1, uniteler:[
        {s:"Oyun hamuruyla bir ördek yaptın. Bu çalışma neye benzer?", c:["Heykele","Baskıya","Kolaja"], a:"Hamurdan yapılan figür heykele benzer."},
        {s:"Hangisi ressamın kullandığı araçlardandır?", c:["Boya ve fırça","Top","Kaşık"], a:"Ressamlar boya, fırça ve kâğıt kullanır."}
      ]}
+  ]},
+  {ad:"Malzeme ve Çevre", konular:[
+    {id:"gs1-malzeme-teknik", ad:"Resim Malzemeleri ve Basit Teknikler", e:"🖍️",
+     anlat:[
+       {b:"Boyalar", m:"Resim yaparken pastel boya, kuru boya, sulu boya ve parmak boyası kullanırız. Boyayı fırça, sünger ya da parmağımızla sürebiliriz. Boya bitince kapaklarını kapatırız.", o:"🎨 Fırça ve su ile sulu boya."},
+       {b:"Kâğıt ve kesme", m:"Kâğıdı yırtabilir, kesebilir, katlayabiliriz. Makasla keserken dikkatli oluruz; makası sadece kâğıdı kesmek için kullanırız. Kâğıt parçalarını yapıştırıcıyla birleştirebiliriz.", o:"Yırtılmış renkli kâğıtlarla resim yapılır."},
+       {b:"Kolaj ve baskı", m:"Kâğıt, kumaş gibi malzemeleri yapıştırarak resim yapmaya kolaj denir. Bir şeye boya sürüp kâğıda bastırarak baskı yapabiliriz. Parmak izimiz de bir baskıdır.", o:"Parmağınla bir kuş yapabilirsin."},
+       {b:"Düzenli çalışalım", m:"Çalışmadan önce masayı örter, önlüğümüzü giyeriz. Malzemeleri düzenli kullanır, işimiz bitince toplarız. Arkadaşımızın çalışmasına zarar vermeyiz.", o:"Düzen, güzel resim demektir."}
+     ],
+     ipucu:"Kes, yırt, yapıştır, bastır! Kolaj = yapıştırma, baskı = bastırma.",
+     kartlar:[["Sulu boya","Fırça ve su ile kullanılır"],["Kolaj","Parçaları yapıştırarak resim"],["Baskı","Boyayı bastırarak iz bırakmak"],["Makas","Dikkatli kullanılır"],["Önlük","Giysiyi korur"],["Yapıştırıcı","Parçaları birleştirir"]],
+     sorular:[
+       {s:"Hangisi bir resim malzemesidir?", c:["Boya","Tabak","Çanta"], a:"Boya resim yapmak için kullanılır."},
+       {s:"Parçaları yapıştırarak yapılan resme ne denir?", c:["Kolaj","Baskı","Müzik"], a:"Yapıştırma ile yapılan çalışma kolajdır."},
+       {s:"Parmak izi ile yapılan çalışma hangisidir?", c:["Baskı","Kesme","Katlama"], a:"Boyayı bastırarak baskı yapılır."},
+       {s:"Makası ne için kullanırız?", c:["Kâğıt kesmek için","Arkadaşımızla oynamak için","Yemek yemek için"], a:"Makas yalnızca kâğıt kesmek içindir."},
+       {s:"Boyaya başlamadan önce ne giyeriz?", c:["Önlük","Mont","Şapka"], a:"Giysimiz kirlenmesin diye önlük giyeriz."},
+       {s:"Kâğıtları birleştirmek için ne kullanırız?", c:["Yapıştırıcı","Su","Silgi"], a:"Kâğıtları yapıştırıcıyla birleştiririz."},
+       {s:"İşimiz bitince ne yaparız?", c:["Malzemeleri toplarız","Her şeyi bırakırız","Boyaları atarız"], a:"Düzenli olmak için malzemeleri toplarız."},
+       {s:"Fırça ile hangi boya kullanılır?", c:["Sulu boya","Çay","Makas"], a:"Sulu boya fırça ile sürülür."}
+     ]}
+  ]},
+  {ad:"Doğa ve Atık Malzemeler", konular:[
+    {id:"gs1-doga-geri-donusum", ad:"Doğadan ve Atık Malzemelerden Sanat", e:"♻️",
+     anlat:[
+       {b:"Doğadan malzeme", m:"Yaprak, çiçek, taş, çubuk ve kum doğal malzemelerdir. Onlarla resim ve kolaj yapabiliriz. Doğaya zarar vermemek için yerden toplanan malzemeleri alırız; canlı bitkiyi koparmayız.", o:"Yaprak baskısıyla ağaç yapılır."},
+       {b:"Atık malzeme", m:"Kullanıldıktan sonra çöpe atılan şeylere atık denir. Karton kutu, yumurta kolisi, plastik kapak ve eski gazeteyi sanat için kullanabiliriz.", o:"Karton kutudan robot yapabiliriz."},
+       {b:"Geri dönüşüm", m:"Atıkları yeniden kullanmak çöpü azaltır. Kâğıt, cam, plastik ve metal ayrı kutulara atılır. Böylece yeni ürünler yapılır ve doğa korunur.", o:"Mavi kutu kâğıt, sarı kutu plastik için olabilir."},
+       {b:"Hayal edelim", m:"Bir kutu kimi zaman ev, kimi zaman araba olabilir. Hayal gücümüzü kullanırız. Çalışmamıza bir isim verir ve arkadaşlarımıza gösteririz.", o:"Eski kutu → minik bir ev."}
+     ],
+     ipucu:"Atılmadan önce bir daha düşün: bu kutu sanat olabilir mi? ♻️",
+     kartlar:[["Yaprak","Doğal malzeme"],["Karton kutu","Atık malzeme"],["Atık","Çöpe atılacak şey"],["Geri dönüşüm","Yeniden kullanmak"],["Doğal malzeme","Taş, yaprak, kum"],["Hayal gücü","Yeni şeyler düşünmek"]],
+     sorular:[
+       {s:"Hangisi doğal bir malzemedir?", c:["Yaprak","Plastik kapak","Karton kutu"], a:"Yaprak doğada kendiliğinden bulunur."},
+       {s:"Hangisi atık malzemedir?", c:["Boş yumurta kolisi","Kum","Çiçek"], a:"Çöpe atılacak koli atık malzemedir."},
+       {s:"Geri dönüşüm ne demektir?", c:["Atığı yeniden kullanmak","Çöpü yakmak","Çöpü atmak"], a:"Atığı yeniden kullanmak geri dönüşümdür."},
+       {s:"Karton kutudan ne yapabiliriz?", c:["Robot","Deniz","Güneş"], a:"Kutu ile oyuncak yapılabilir."},
+       {s:"Doğadan malzeme alırken ne yapmalıyız?", c:["Doğaya zarar vermeyiz","Çiçekleri koparırız","Ağaçları keseriz"], a:"Doğaya zarar vermemeliyiz."},
+       {s:"Kâğıt atıklar nereye atılır?", c:["Kâğıt geri dönüşüm kutusuna","Denize","Yola"], a:"Kâğıtlar geri dönüşüm kutusuna atılır."},
+       {s:"Hayal gücü ile ne yapabiliriz?", c:["Yeni sanat eserleri","Çöp kutusu","Sınav"], a:"Hayal gücüyle özgün işler yaparız."},
+       {s:"Atık malzemelerle sanat yapınca ne olur?", c:["Çöp azalır","Çöp artar","Resim bozulur"], a:"Yeniden kullanmak çöpü azaltır."}
+     ]}
   ]}
 ]});

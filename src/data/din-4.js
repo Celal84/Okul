@@ -125,5 +125,89 @@ HW.add({ders:"din", sinif:4, uniteler:[
        {s:"Aşağıdaki surelerden hangisinde ayet sayısı en azdır?", c:["Kevser","İhlas","Fatiha","Üçünde de aynı"], a:"Kevser 3 ayettir; İhlas 4, Fatiha 7 ayettir."},
        {s:"Fatiha Suresi namazda ne zaman okunur?", c:["Her rekâtta","Yalnızca bir kez","Yalnızca son rekâtta","Hiç okunmaz"], a:"Fatiha her namazın her rekâtında okunur."}
      ]}
+  ]},
+  {ad:"İbadet", konular:[
+    {id:"din4-ibadetler", ad:"İbadet: Namaz, Oruç, Zekât ve Hac", e:"🕌",
+     anlat:[
+       {b:"İbadet nedir?", m:"İbadet, Allah’a olan sevgimizi ve bağlılığımızı gösterdiğimiz davranışlardır. Namaz, oruç, zekât ve hac temel ibadetlerdir. Dua etmek ve Kur’an okumak da ibadettir.", o:"Allah’ı anmak ve ona şükretmek ibadettir."},
+       {b:"Namaz", m:"Müslümanlar günde beş vakit namaz kılar: sabah, öğle, ikindi, akşam ve yatsı. Namazdan önce abdest alınır. Cuma günü öğle vakti cuma namazı, camide cemaatle kılınır.", o:"Beş vakit: sabah, öğle, ikindi, akşam, yatsı."},
+       {b:"Oruç ve zekât", m:"Oruç Ramazan ayında tutulur; sabah imsaktan akşam iftara kadar yemeden içmeden durulur. Zekât, zengin Müslümanın malının bir kısmını ihtiyaç sahiplerine vermesidir.", o:"Oruç bizi sabırlı ve paylaşımcı yapar."},
+       {b:"Hac", m:"Hac, Mekke’de Kâbe’yi ve kutsal yerleri ziyaret etmektir. Sağlığı ve parası yeten Müslüman ömründe bir kez hacca gider. Dünyanın her yerinden Müslümanlar orada buluşur.", o:"Hac, Kurban Bayramı günlerinde yapılır."}
+     ],
+     ipucu:"Namaz vakitleri: Sabah, Öğle, İkindi, Akşam, Yatsı. 'Sa-Ö-İ-A-Y' diye sayabilirsin!",
+     kartlar:[["Günde kaç vakit namaz var?","Beş"],["Oruç hangi ayda tutulur?","Ramazan"],["Namazdan önce ne alınır?","Abdest"],["Zekât kime verilir?","İhtiyaç sahibine"],["Hac nerede yapılır?","Mekke"],["Cuma namazı ne zaman kılınır?","Cuma günü öğle vakti"],["Akşam yemeği orucu açma","İftar"],["Sabah yemeği (oruç)","Sahur"]],
+     sorular:[
+       {s:"Müslümanlar günde kaç vakit namaz kılar?", c:["Beş","Üç","Yedi","İki"], a:"Günde beş vakit namaz kılınır."},
+       {s:"Oruç hangi ayda tutulur?", c:["Ramazan","Muharrem","Şaban","Recep"], a:"Oruç Ramazan ayında tutulur."},
+       {s:"Namazdan önce ne yapılır?", c:["Abdest alınır","Yemek yenir","Uyunur","Koşulur"], a:"Namazdan önce abdest alınır."},
+       {s:"Zekât ne demektir?", c:["Zenginin malından ihtiyaç sahibine vermesi","Mekke’yi ziyaret etmek","Sabah erken kalkmak","Kur’an ezberlemek"], a:"Zekât, malın bir kısmını ihtiyaç sahiplerine vermektir."},
+       {s:"Hangisi namaz vakti değildir?", c:["Gece yarısı","Sabah","İkindi","Yatsı"], a:"Beş vakit: sabah, öğle, ikindi, akşam, yatsı."},
+       {s:"Orucu akşam açılan yemeğe ne denir?", c:["İftar","Sahur","Kahvaltı","Ziyafet"], a:"Orucu açma yemeği iftardır."},
+       {s:"Oruç tutmak bize ne kazandırır?", c:["Sabır ve ihtiyaç sahibini anlamayı","Daha hızlı koşmayı","Daha çok uyumayı","Çok yemek yemeyi"], a:"Oruç sabır öğretir, aç insanları anlamamızı sağlar."},
+       {s:"Ayşe’nin ailesi her Ramazan fakir komşularına yemek götürüyor. Bu davranış hangi ibadetle ilgilidir?", c:["Paylaşmak ve zekât gibi yardımlaşma","Hac","Cuma namazı","Abdest"], a:"Muhtaçlara yardım etmek zekât ve paylaşma ibadetinin ruhuna uygundur."}
+     ]}
+  ]},
+  {ad:"Hz. Muhammed’i Tanıyalım: Peygamberlik ve Hicret", konular:[
+    {id:"din4-peygamberlik-hicret", ad:"Peygamberlik, Vahiy ve Hicret", e:"🌙",
+     anlat:[
+       {b:"İlk vahiy", m:"Hz. Muhammed 40 yaşındayken Mekke yakınındaki Hira Mağarası’nda düşünürken Cebrail geldi. Allah’ın ilk emri <b>“Oku!”</b> oldu. Böylece peygamberlik başladı. Bu ilk ayetler Alak Suresi’ndedir.", o:"İlk ayet: “Yaratan Rabbinin adıyla oku!”"},
+       {b:"Mekke yılları", m:"Hz. Muhammed insanları tek olan Allah’a inanmaya, doğru ve adil olmaya çağırdı. Mekke’deki müşrikler bunu kabul etmedi; Müslümanlara eziyet ettiler. Peygamberimiz sabretti.", o:"Ona “güvenilir” anlamında Muhammedü’l-Emin denirdi."},
+       {b:"Hicret", m:"Müslümanlar zulümden kurtulmak için Mekke’den Medine’ye göç etti. Buna <b>hicret</b> denir. Hz. Muhammed’e Medine’de arkadaşı Hz. Ebubekir eşlik etti. Hicret 622 yılında oldu.", o:"Hicret = Allah için yurdunu bırakıp göç etmek."},
+       {b:"Medine’de kardeşlik", m:"Medineli Müslümanlara <b>Ensar</b>, Mekke’den gelenlere <b>Muhacir</b> denir. Ensar, Muhacirlerle evini ve yiyeceğini paylaştı. Peygamberimiz Medine’de Mescid-i Nebevi’yi yaptırdı.", o:"Ensar yardım eden, Muhacir göç eden demektir."}
+     ],
+     ipucu:"Ensar = Ev sahibi (yardım eden). Muhacir = Misafir (göç eden). 'E-ev sahibi, M-misafir!'",
+     kartlar:[["İlk vahiy nerede geldi?","Hira Mağarası"],["Vahiy getiren melek","Cebrail"],["İlk emir neydi?","Oku!"],["Mekke’den Medine’ye göç","Hicret"],["Medineli yardımcılar","Ensar"],["Mekke’den göç edenler","Muhacir"],["Hicrette ona eşlik eden","Hz. Ebubekir"],["Medine’de yapılan mescit","Mescid-i Nebevi"]],
+     sorular:[
+       {s:"Hz. Muhammed’e ilk vahiy nerede geldi?", c:["Hira Mağarası","Kâbe","Medine","Sevr Mağarası"], a:"İlk vahiy Hira Mağarası’nda geldi."},
+       {s:"İlk gelen ayetteki Allah’ın ilk emri nedir?", c:["Oku!","Yaz!","Koş!","Uyu!"], a:"İlk emir “Oku!” oldu."},
+       {s:"Mekke’den Medine’ye göçe ne denir?", c:["Hicret","Hac","Zekât","İsra"], a:"Mekke’den Medine’ye göç hicrettir."},
+       {s:"Hicrette Hz. Muhammed’e kim eşlik etti?", c:["Hz. Ebubekir","Hz. Ömer","Hz. Ali","Hz. Bilal"], a:"Yolculukta Hz. Ebubekir yanındaydı."},
+       {s:"Mekke’den göç edenlere ne denir?", c:["Muhacir","Ensar","Hâkim","Elçi"], a:"Göç edenlere muhacir denir."},
+       {s:"Peygamberimizin Medine’de yaptırdığı mescit hangisidir?", c:["Mescid-i Nebevi","Ayasofya","Süleymaniye","Selimiye"], a:"Medine’de Mescid-i Nebevi inşa edildi."},
+       {s:"Ensar ile Muhacirlerin ilişkisi bize hangi değeri öğretir?", c:["Paylaşma ve kardeşlik","Rekabet","Kıskançlık","Bencillik"], a:"Ensar evini ve yiyeceğini paylaşarak kardeşliği gösterdi."},
+       {s:"Yeni bir okula gelen arkadaşına yardım etmek, hangi olaydaki davranışa benzer?", c:["Ensarın Muhacirlere yardımına","Mekke’deki zulme","Cebrail’in gelişine","Hira’da düşünmeye"], a:"Yardım eden Ensar gibi, yeni gelene destek oluruz."}
+     ]}
+  ]},
+  {ad:"Dinî Bayramlar", konular:[
+    {id:"din4-bayramlar", ad:"Dinî Bayramlarımız: Ramazan ve Kurban", e:"🎉",
+     anlat:[
+       {b:"Ramazan Bayramı", m:"Ramazan ayı bitince Ramazan Bayramı gelir; 3 gün sürer. Oruç tutan Müslümanlar sevinçle bayram yapar. Bayramda <b>fitre</b> adı verilen yardım ihtiyaç sahiplerine verilir.", o:"Bayram sabahı bayram namazı kılınır."},
+       {b:"Kurban Bayramı", m:"Kurban Bayramı hac ibadeti günlerinde başlar. Hz. İbrahim’in Allah’a olan teslimiyetini hatırlarız. Kurban kesilir; etin bir kısmı ihtiyaç sahiplerine verilir. Bayram 4 gün sürer.", o:"Kurban, paylaşmanın güzel bir örneğidir."},
+       {b:"Bayramda ne yaparız?", m:"Büyükleri ziyaret eder, ellerini öperiz. Akrabalarımızı ve komşularımızı ziyaret ederiz. Küskünler barışır. Çocuklara harçlık ve şeker verilir. “Bayramınız mübarek olsun” deriz.", o:"Bayramlaşmak sevgiyi artırır."},
+       {b:"Yardımlaşma", m:"Bayramlar yalnızca eğlence değil; paylaşma, barışma ve dayanışma günleridir. Yalnız kalan, yoksul ya da hasta insanları ziyaret etmek en güzel bayram davranışlarındandır.", o:"Yaşlı komşuyu ziyaret etmek güzel bir davranıştır."}
+     ],
+     ipucu:"Ramazan Bayramı 3 gün, Kurban Bayramı 4 gün. 'Ramazan–3, Kurban–4' diye aklında tut!",
+     kartlar:[["Ramazan Bayramı kaç gün?","3 gün"],["Kurban Bayramı kaç gün?","4 gün"],["Bayram sevinci söz","Bayramınız mübarek olsun"],["Bayramda büyüklere ne yapılır?","Ziyaret, el öpme"],["Kurban eti kimlere verilir?","İhtiyaç sahiplerine"],["Ramazan Bayramı yardımı","Fitre"],["Kurban kimin hatırasıdır?","Hz. İbrahim"],["Küskünler bayramda ne yapar?","Barışır"]],
+     sorular:[
+       {s:"Ramazan Bayramı kaç gün sürer?", c:["3 gün","1 gün","4 gün","7 gün"], a:"Ramazan Bayramı 3 gün sürer."},
+       {s:"Ramazan Bayramı hangi aydan sonra gelir?", c:["Ramazan","Zilhicce","Muharrem","Safer"], a:"Ramazan ayı bitince Ramazan Bayramı gelir."},
+       {s:"Kurban Bayramı hangi peygamberin teslimiyetini hatırlatır?", c:["Hz. İbrahim","Hz. Nuh","Hz. Musa","Hz. İsa"], a:"Hz. İbrahim’in Allah’a teslimiyeti hatırlanır."},
+       {s:"Bayramlaşırken ne deriz?", c:["Bayramınız mübarek olsun","Günaydın","İyi geceler","Afiyet olsun"], a:"Bayramda “Bayramınız mübarek olsun” deriz."},
+       {s:"Hangisi bayram davranışıdır?", c:["Küskün akrabayı ziyaret etmek","Kavga etmek","Yalnız kalmak","Komşuyu azarlamak"], a:"Küskünleri barıştırmak bayram ruhuna uygundur."},
+       {s:"Fitre nedir?", c:["Ramazan Bayramı’nda verilen yardım","Kurban eti","Hac masrafı","Cuma namazı"], a:"Fitre, ihtiyaç sahiplerine verilen bayram yardımıdır."},
+       {s:"Bayramlar bizim hangi değerlerimizi güçlendirir?", c:["Paylaşma, barışma, dayanışma","Rekabet ve kıskançlık","Yalnızlık","Bencillik"], a:"Bayramlar birlik ve dayanışmayı artırır."},
+       {s:"Bayramda yalnız yaşayan yaşlı komşunuza ne yaparsınız?", c:["Ziyaret edip bayramını kutlarım","Görmezden gelirim","Gürültü yaparım","Kapıyı çalıp kaçarım"], a:"Yalnız insanı ziyaret etmek en güzel bayram davranışıdır."}
+     ]}
+  ]},
+  {ad:"Allah’a İman", konular:[
+    {id:"din4-allah-isimleri", ad:"Allah’ın Güzel İsimleri (Esmaü’l-Hüsna)", e:"🌟",
+     anlat:[
+       {b:"Allah birdir", m:"Müslümanlar Allah’ın bir olduğuna, her şeyi yarattığına inanır. Allah’ın bizi her an gördüğünü ve duyduğunu biliriz. Bu inanç bizi doğru davranmaya yöneltir.", o:"Allah her şeyi yaratandır."},
+       {b:"Güzel isimler", m:"Allah’ın güzel isimlerine <b>Esmaü’l-Hüsna</b> denir; 99 tanedir. Bu isimler Allah’ı tanımamıza yardım eder. Bazı isimleri öğrenelim: Rahman, Rahim, Halık, Rezzak, Semi, Basir, Alim.", o:"Esmaü’l-Hüsna = en güzel isimler."},
+       {b:"İsimlerin anlamı", m:"<b>er-Rahman</b>: çok merhametli. <b>el-Halık</b>: yaratan. <b>er-Rezzak</b>: rızık veren. <b>es-Semi</b>: işiten. <b>el-Basir</b>: gören. <b>el-Alim</b>: her şeyi bilen. <b>el-Gaffar</b>: çok bağışlayan.", o:"Allah rızkımızı verir: er-Rezzak."},
+       {b:"Bu isimleri örnek alalım", m:"Allah merhametli olduğu için biz de merhametli oluruz. Allah bağışlayıcı olduğu için biz de affeder, küsmeyiz. Bütün bunlar bize güzel ahlakı öğretir.", o:"Her işe “Bismillah” diyerek başlarız."}
+     ],
+     ipucu:"Rahman = merhamet, Halık = yaratma, Rezzak = rızık, Semi = duyma, Basir = görme, Alim = bilme. Kısaca: R-H-R-S-B-A!",
+     kartlar:[["er-Rahman","çok merhametli"],["el-Halık","yaratan"],["er-Rezzak","rızık veren"],["es-Semi","işiten"],["el-Basir","gören"],["el-Alim","her şeyi bilen"],["el-Gaffar","çok bağışlayan"],["Esmaü’l-Hüsna kaç isim?","99"]],
+     sorular:[
+       {s:"Allah’ın güzel isimlerine ne denir?", c:["Esmaü’l-Hüsna","Besmele","Salavat","Tekbir"], a:"Güzel isimlere Esmaü’l-Hüsna denir."},
+       {s:"er-Rahman ne demektir?", c:["Çok merhametli","Yaratan","Gören","Bilen"], a:"er-Rahman, çok merhametli demektir."},
+       {s:"el-Halık ne demektir?", c:["Yaratan","Rızık veren","Bağışlayan","İşiten"], a:"el-Halık, yaratan demektir."},
+       {s:"Rızkımızı veren Allah’ın ismi hangisidir?", c:["er-Rezzak","es-Semi","el-Basir","el-Alim"], a:"Rızık veren anlamında er-Rezzak."},
+       {s:"Allah’ın çok bağışlayıcı olması bize ne öğretir?", c:["Biz de affedici olmayı","Kin tutmayı","Kırmayı","Başkalarını suçlamayı"], a:"Allah bağışladığı gibi biz de affetmeyi öğreniriz."},
+       {s:"Allah’ın bir olduğuna inanmaya ne denir?", c:["Tevhid","Hicret","Zekât","İftar"], a:"Allah’ın birliğine inanmak tevhiddir."},
+       {s:"Hangisi Allah’ın güzel isimlerinden biri değildir?", c:["Ensar","er-Rahim","el-Gaffar","el-Alim"], a:"Ensar Medineli yardımcılara denir; diğerleri Allah’ın güzel isimleridir."},
+       {s:"Bir arkadaşın seni kırdı ve özür diledi. Allah’ın hangi ismi seni nasıl davranmaya yönlendirir?", c:["el-Gaffar: affederim","el-Halık: küserim","es-Semi: bağırırım","er-Rezzak: uzaklaşırım"], a:"Allah çok bağışlayıcı olduğu için biz de affetmeyi öğreniriz."}
+     ]}
   ]}
 ]});

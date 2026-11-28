@@ -1,5 +1,49 @@
 HW.add({ders:"turkce", sinif:3, uniteler:[
-{ad:"Sözcükte Anlam", konular:[
+  {ad:"Dinleme ve Konuşma", konular:[
+    {id:"tr3-dinleme-konusma", ad:"Dinleme, İzleme ve Konuşma", e:"🎧",
+     anlat:[
+      {b:"Dinleme amacı", m:"Dinlerken amacımızı belirleriz: bilgi almak, öğrenmek ya da eğlenmek. Amaca göre dikkatimizi ayarlarız."},
+      {b:"Konuyu bulma", m:"Dinlediğimiz metnin konusunu, kişilerini ve olaylarını belirleriz. Önemli bilgileri kısa notlarla yazarız."},
+      {b:"Kontrol soruları", m:"Ne, nerede, ne zaman, kim, neden, nasıl sorularıyla dinlediğimizi kontrol ederiz.", o:"Ne zaman gittiler? Dün."},
+      {b:"Hazırlıklı konuşma", m:"Konuşmadan önce ne söyleyeceğimizi düşünürüz. Giriş, gelişme, sonuç sırasıyla anlatırız. Ses tonumuzu ayarlarız."}
+     ],
+     ipucu:"Amacı belirle, notları al, soruyla kontrol et, sırayla anlat!",
+     kartlar:[["Dinleme amacı ne olabilir?","Bilgi almak, öğrenmek"],["Dinlerken neyi belirleriz?","Konu, kişi, olay"],["Dinlediğimizi neyle kontrol ederiz?","5N1K soruları"],["Konuşma hangi sırayla yapılır?","Giriş, gelişme, sonuç"],["Konuşurken neyi ayarlarız?","Ses tonunu ve vurguyu"],["Anlamadığımızı ne yaparız?","Nazikçe sorarız"]],
+     sorular:[
+      {s:"Hangisi dinleme amacı olabilir?", c:["Bilgi edinmek","Gürültü yapmak","Konuyu bozmak"], a:"Dinlerken öğrenmek amaçlanır."},
+      {s:"Dinlediğimizi kontrol etmek için hangi soruları kullanırız?", c:["Ne, nerede, ne zaman, kim, neden, nasıl","Yalnızca kaç","Yalnızca hangi renk"], a:"5N1K soruları metni kontrol eder."},
+      {s:"Konuşmada hangi sıra doğrudur?", c:["Giriş, gelişme, sonuç","Sonuç, giriş, gelişme","Gelişme, sonuç, giriş"], a:"Konuşma giriş, gelişme, sonuç şeklinde ilerler."},
+      {s:"Bir metni dinlerken önce neyi bulmaya çalışırız?", c:["Konuyu ve ana olayı","Cümle sayısını","Sayfa numarasını"], a:"Önce konuyu anlarız."},
+      {s:"Hazırlıklı konuşmanın ilk adımı nedir?", c:["Ne söyleyeceğimizi düşünmek","Sessiz kalmak","Çok hızlı konuşmak"], a:"Önce düşünür, sonra konuşuruz."},
+      {s:"Konuşurken ses tonu ne işe yarar?", c:["Duyguyu ve vurguyu anlatır","Dinleyiciyi susturur","Sözcükleri siler"], a:"Ses tonu anlamı güçlendirir."},
+      {s:"Not alırken neye dikkat ederiz?", c:["Önemli kelimeleri yazarız","Her sözcüğü yazarız","Hiç yazmayız"], a:"Önemli kelimeler yeterlidir."},
+      {s:"Olayın nerede geçtiğini bulmak için hangi soruyu sorarız?", c:["Nerede?","Kaç?","Kim?"], a:"Yer için nerede sorulur."},
+      {s:"Bir arkadaşımız sunum yaparken ne yapmalıyız?", c:["Sessizce dinleyip sonunda soru sormalıyız","Konuşmaya başlamalıyız","Sınıftan çıkmalıyız"], a:"Saygılı dinleyici sonunda soru sorar."},
+      {s:"'Dün ormanda yürüyüşe çıktık.' cümlesinde 'Ne zaman?' sorusunun cevabı nedir?", c:["Dün","Ormanda","Yürüyüş"], a:"Zaman bildiren sözcük dün'dür."}
+     ]}
+  ]},
+  {ad:"Sözcükte Anlam", konular:[
+    {id:"tr3-sozluk-alfabe", ad:"Sözlük ve Alfabetik Sıra", e:"📖",
+     anlat:[
+      {b:"Alfabetik sıra", m:"Sözcükler alfabedeki sıraya göre dizilir. İlk harfler aynıysa ikinci harfe bakılır.", o:"ağaç, anne, arı"},
+      {b:"Sözlük kullanma", m:"Sözlükte sözcüğün ilk, ikinci, üçüncü harfine bakarak ilerleriz. Sayfa başındaki rehber sözcükler aradığımızı bulmamıza yardım eder."},
+      {b:"Sözlük bilgisi", m:"Sözlük sözcüğün anlamını, türünü ve örnek cümlesini verir. Sözcüğün birden çok anlamı varsa anlamlar numaralanır.", o:"yüz: 1. Sayı. 2. Çehre."},
+      {b:"Ansiklopedi", m:"Ansiklopedi, bir konu hakkında ayrıntılı bilgi veren kaynaktır. O da alfabe sırasına göre düzenlenir."}
+     ],
+     ipucu:"Alfabe sırasını bil, harf harf ilerle: sözlük seni bulur!",
+     kartlar:[["Sözlükte sıralama nasıl?","Alfabe sırasına göre"],["Sayfa başındaki ve sonundaki sözcük","Rehber sözcük"],["Sözlük bize ne verir?","Sözcüğün anlamını"],["Ayrıntılı bilgi veren kaynak","Ansiklopedi"],["Hangisi önce gelir: ağaç, arı?","ağaç"],["Çok anlamlı sözcük sözlükte nasıl gösterilir?","Anlamlar numaralanır"]],
+     sorular:[
+      {s:"Hangi sıralama alfabe sırasına uygundur?", c:["ağaç, anne, arı","arı, ağaç, anne","anne, arı, ağaç"], a:"Alfabe sırası: ğ, n, r."},
+      {s:"'çiçek', 'balık', 'elma' sözcüklerinden hangisi sözlükte önce gelir?", c:["balık","çiçek","elma"], a:"B, Ç ve E'den önce gelir."},
+      {s:"'okul' ve 'oyun' sözcüklerinden hangisi sözlükte önce gelir?", c:["okul","oyun","ikisi birlikte"], a:"İkinci harfler k ve y: k önce gelir."},
+      {s:"Sayfa başındaki ve sonundaki sözcüğü gösteren sözcüklere ne denir?", c:["Rehber sözcük","Madde başı","Ek"], a:"Bunlar rehber sözcüktür."},
+      {s:"Hangi dizilim alfabe sırasına uygundur?", c:["elma, erik, incir","incir, elma, erik","erik, incir, elma"], a:"e-l, e-r, i sırasıyla."},
+      {s:"Bir konu hakkında ayrıntılı bilgiyi hangi kaynaktan buluruz?", c:["Ansiklopedi","Takvim","Karne"], a:"Ansiklopedi ayrıntılı bilgi verir."},
+      {s:"Sözlükte çok anlamlı sözcüğün anlamları nasıl gösterilir?", c:["Numaralanarak","Silinerek","Karıştırılarak"], a:"Her anlam bir numara alır."},
+      {s:"Hangi sözcük sözlükte en sonda yer alır? gül, göl, gün, güneş", c:["güneş","gün","gül"], a:"Sıra: göl, gül, gün, güneş."},
+      {s:"'sınıf' sözcüğünü sözlükte ararken önce hangi harfe bakarız?", c:["s","ı","f"], a:"Önce ilk harf: s."},
+      {s:"Bir sözcüğün anlamını öğrenmek için hangisine bakarız?", c:["Sözlük","Atlas","Resim defteri"], a:"Anlam sözlükte bulunur."}
+     ]},
 {id:"tr3-es-zit-anlam", ad:"Eş ve Zıt Anlamlı Kelimeler", e:"↔️",
  anlat:[
   {b:"Eş anlamlı kelimeler", m:"Yazılışları farklı, anlamları aynı ya da çok yakın olan kelimelere eş anlamlı kelimeler denir. Aynı şeyi anlatmak için farklı kelimeler kullanabiliriz.", o:"güzel - hoş, çabuk - hızlı, kolay - basit"},
@@ -62,9 +106,30 @@ HW.add({ders:"turkce", sinif:3, uniteler:[
   {s:"'Yumuşak' kelimesi hangi cümlede gerçek anlamlıdır?", c:["Yastık çok yumuşaktı.","Yumuşak huylu bir çocuktu.","Yumuşak bir sesle konuştu.","Yumuşak kalpli biriydi."], a:"Yastığın dokunuşla yumuşak olması gerçek anlamdır."},
   {s:"'Annem bugün biraz soğuk davrandı.' cümlesi için hangisi doğrudur?", c:["'Soğuk' mecaz anlamda, ilgisiz anlamında kullanılmıştır.","'Soğuk' gerçek anlamda kullanılmıştır.","Annemin elleri üşümüştür.","Hava soğuk olduğu için annem çok giyinmiştir."], a:"Davranışın soğuk olması ilgisizliği anlatır; mecazdır."},
   {s:"Hangi iki cümlede 'taş' kelimesi sırayla gerçek ve mecaz anlamda kullanılmıştır?", c:["Yoldan bir taş aldım. / Taş gibi bir kalbi vardı.","Taş gibi bir kalbi vardı. / Yoldan bir taş aldım.","Taş duvar yıkıldı. / Taş merdiven çıktım.","Taş gibi sağlam. / Taş gibi sert."], a:"Önce gerçek taş, sonra duygusuzluğu anlatan mecaz kullanım gelir."}
- ]}
-]},
-{ad:"Kelime Türleri ve Ekler", konular:[
+ ]},
+    {id:"tr3-deyim-atasozu", ad:"Deyim ve Atasözü", e:"💬",
+     anlat:[
+      {b:"Deyim nedir?", m:"Deyim, kalıplaşmış ve çoğunlukla gerçek anlamından ayrı bir anlam taşıyan sözdür. Öğüt vermez.", o:"ağzı kulaklarına varmak = çok sevinmek"},
+      {b:"Atasözü nedir?", m:"Atasözü, uzun yılların deneyimiyle oluşmuş, öğüt veren kalıplaşmış sözdür.", o:"Damlaya damlaya göl olur."},
+      {b:"Aradaki fark", m:"Deyim bir durumu anlatır, öğüt vermez. Atasözü öğüt verir ve genel doğruyu anlatır."},
+      {b:"Yerinde kullanma", m:"Deyim ve atasözlerini yerinde kullanırsak anlatımımız güzelleşir.", o:"Sınavı geçince ağzı kulaklarına vardı."}
+     ],
+     ipucu:"Deyim: söz kalıbı, öğüt yok. Atasözü: ders var, öğüt var!",
+     kartlar:[["ağzı kulaklarına varmak","Çok sevinmek"],["burnu havada olmak","Kibirli olmak"],["kulak vermek","Dikkatle dinlemek"],["Damlaya damlaya göl olur","Az birikerek çok olur"],["Bir elin nesi var, iki elin sesi var","Birlik gücü artırır"],["Sakla samanı gelir zamanı","Biriktirmek ileride yarar"],["Öğüt veren söz","Atasözü"]],
+     sorular:[
+      {s:"'Ağzı kulaklarına varmak' deyimi ne anlatır?", c:["Çok sevinmek","Çok üzülmek","Çok konuşmak"], a:"Çok sevinen kişi için kullanılır."},
+      {s:"'Damlaya damlaya göl olur.' atasözü hangi öğüdü verir?", c:["Az az biriktirirsek çok olur","Göllere gitmeliyiz","Yağmur çok yağar"], a:"Küçük birikimler büyür."},
+      {s:"Hangisi bir atasözüdür?", c:["Sakla samanı, gelir zamanı.","Burnu havada olmak","Ağzı kulaklarına varmak"], a:"Öğüt veren kalıp söz atasözüdür."},
+      {s:"Hangisi bir deyimdir?", c:["Burnu havada olmak","Bir elin nesi var, iki elin sesi var.","Ağaç yaşken eğilir."], a:"Burnu havada olmak öğüt vermeyen bir deyimdir."},
+      {s:"'Bir elin nesi var, iki elin sesi var.' atasözü neyi anlatır?", c:["Birlikte çalışmanın gücünü","Elin ağrısını","Müzik yapmayı"], a:"Birlik beraberlik önemlidir."},
+      {s:"'Kulak vermek' ne demektir?", c:["Dikkatle dinlemek","Kulağı kesmek","Gürültü yapmak"], a:"Kulak vermek dikkatle dinlemektir."},
+      {s:"Deyimle atasözünü ayıran özellik hangisidir?", c:["Atasözü öğüt verir, deyim vermez","Deyim öğüt verir, atasözü vermez","İkisi de aynı anlamdadır"], a:"Atasözü öğüt verir."},
+      {s:"'Ağaç yaşken eğilir.' atasözünün anlamı nedir?", c:["Eğitim küçük yaşta daha kolaydır","Ağaçlar eğilir","Yağmur ağacı kırar"], a:"Çocuk yaşta edinilen alışkanlıklar kolay yerleşir."},
+      {s:"'Sınavdan yüksek not alınca ağzı kulaklarına vardı.' cümlesinde kişi nasıl hissetmiştir?", c:["Çok sevinmiştir","Çok kızmıştır","Yorulmuştur"], a:"Ağzı kulaklarına varmak çok sevinmektir."},
+      {s:"Parasını biriktiren Zeynep'in davranışını hangi atasözü destekler?", c:["Sakla samanı gelir zamanı","Ağaç yaşken eğilir","Bir elin nesi var, iki elin sesi var"], a:"Biriktirmek ileride işe yarar."}
+     ]}
+  ]},
+  {ad:"Kelime Türleri ve Ekler", konular:[
 {id:"tr3-adlar", ad:"Adlar (İsimler)", e:"🏷️",
  anlat:[
   {b:"Ad (isim) nedir?", m:"Varlıklara, kişilere, yerlere ve kavramlara verilen sözcüklere ad (isim) denir. Etrafında gördüğün her şeyin bir adı vardır.", o:"kedi, masa, İzmir, Elif, sevgi"},
@@ -127,9 +192,30 @@ HW.add({ders:"turkce", sinif:3, uniteler:[
   {s:"Hangi sözcük ek almamış, yani köktür?", c:["deniz","denizler","denizde","denizden"], a:"Deniz köktür; diğerleri ek almıştır."},
   {s:"'Annem pazardan taze elma aldı.' cümlesinde 'pazardan' sözcüğü neyi anlatır?", c:["Elmanın alındığı yeri","Gidilen yönü","Bulunulan yeri","Alınan eşyayı"], a:"-dan eki ayrılma bildirir: pazardan alındı."},
   {s:"'Öğretmenin sınıfa girdiği anda çocuklar sustu.' cümlesindeki 'sınıfa' sözcüğüne hangi ek gelmiştir?", c:["Yönelme eki","Çoğul eki","Bulunma eki","Ayrılma eki"], a:"Sınıf-a, girilen yönü gösterir."}
- ]}
-]},
-{ad:"Cümle, Noktalama ve Yazım", konular:[
+ ]},
+    {id:"tr3-yapim-ekleri", ad:"Yapım Ekleri ve Sözcük Türetme", e:"🌱",
+     anlat:[
+      {b:"Kök ve ek", m:"Sözcüğün anlamlı en küçük parçası köktür. Köke gelen ek yeni sözcük türetirse yapım eki olur.", o:"göz + lük = gözlük"},
+      {b:"Sık kullanılan yapım ekleri", m:"-lık, -lı, -sız, -cı gibi ekler köke yeni anlam katar.", o:"tuz + lu = tuzlu; tuz + suz = tuzsuz"},
+      {b:"Yapım eki ve çekim eki", m:"Çekim ekleri sözcüğü başka sözcüklerle ilişkilendirir. Yapım ekleri yeni sözcük yapar.", o:"kitap → kitaplar (çekim); kitap → kitapçı (yapım)"},
+      {b:"Yeni sözcük, yeni tür", m:"Yapım ekiyle sözcüğün türü değişebilir.", o:"güzel → güzellik"}
+     ],
+     ipucu:"Yeni sözcük türetiyorsa yapım eki, ilişki kuruyorsa çekim eki!",
+     kartlar:[["Sözcüğün anlamlı en küçük parçası","Kök"],["Yeni sözcük türeten ek","Yapım eki"],["tuz + lu","tuzlu"],["tuz + suz","tuzsuz"],["göz + lük","gözlük"],["kitap + çı","kitapçı"],["Çoğul eki hangi tür ektir?","Çekim eki"]],
+     sorular:[
+      {s:"Hangisi yapım ekiyle türemiş bir sözcüktür?", c:["tuzlu","evde","kitaplar"], a:"Tuzlu = tuz + lu."},
+      {s:"'Gözlük' sözcüğünün kökü hangisidir?", c:["göz","lük","gözlük"], a:"Eki çıkarınca göz kalır."},
+      {s:"Hangisi yapım ekidir?", c:["-cı","-ler","-de"], a:"-cı yeni sözcük türetir."},
+      {s:"'Susuz' sözcüğündeki -suz eki ne anlam katar?", c:["Yokluk","Çokluk","Zaman"], a:"-suz yokluk anlamı verir."},
+      {s:"'Kitapçı' sözcüğündeki -çı eki neyi bildirir?", c:["Meslek","Yer","Zaman"], a:"Kitap satan kişi, meslek bildirir."},
+      {s:"'Sulu' sözcüğünün zıt anlamlısı hangisidir?", c:["susuz","sulama","sucu"], a:"-lı ve -sız zıt anlam kurar."},
+      {s:"'Kitaplar' sözcüğündeki -lar eki hangi türdendir?", c:["Çekim eki","Yapım eki","Kök"], a:"Çoğul eki çekim ekidir."},
+      {s:"'Güzel' sözcüğüne -lik eki gelince hangi sözcük oluşur?", c:["güzellik","güzeller","güzelde"], a:"Güzel + lik = güzellik."},
+      {s:"'Balık' + '-çı' birleşince hangi sözcük olur?", c:["balıkçı","balıklar","balıkta"], a:"Balık + çı = balıkçı."},
+      {s:"Hangi sözcük yapım eki almıştır?", c:["çiçekçi","çiçekler","çiçeğe"], a:"Çiçekçi = çiçek + çi."}
+     ]}
+  ]},
+  {ad:"Cümle, Noktalama ve Yazım", konular:[
 {id:"tr3-cumle-turleri", ad:"Cümle ve Cümle Türleri", e:"📝",
  anlat:[
   {b:"Cümle nedir?", m:"Duygu, düşünce ve isteklerimizi anlatan, anlamlı kelime dizisine cümle denir. Cümle büyük harfle başlar, noktalama işaretiyle biter.", o:"Ali bahçede top oynadı."},
@@ -192,9 +278,30 @@ HW.add({ders:"turkce", sinif:3, uniteler:[
   {s:"'Biliyorum ki bu işi başaracaksın.' cümlesindeki 'ki' ile ilgili hangisi doğrudur?", c:["Bağlaçtır, ayrı yazılır.","Ektir, bitişik yazılır.","Soru ekidir.","Çoğul ekidir."], a:"Bu ki iki cümleyi bağlar ve ayrı yazılır."},
   {s:"Hangi cümlede 'mi' yanlış yazılmıştır?", c:["Gelmişmi acaba?","Gelmiş mi acaba?","Okula gitti mi?","Sen ağladın mı?"], a:"Soru eki mi ayrı yazılır."},
   {s:"'Sen ... bizimle gel, çünkü bahçe ... çiçekler açtı.' Boşlukları sırasıyla doğru yazım hangisidir?", c:["de, deki","da, ki","de, ki","da, de ki"], a:"Sen de: bağlaç, ayrı; bahçedeki: ilgi eki, bitişik."}
- ]}
-]},
-{ad:"Okuma ve Anlama", konular:[
+ ]},
+    {id:"tr3-kisaltma-sayi", ad:"Kısaltmalar ve Sayıların Yazımı", e:"🔠",
+     anlat:[
+      {b:"Kısaltma", m:"Uzun sözcük ya da söz öbeklerinin kısa yazılışına kısaltma denir. Kurum kısaltmaları büyük harfle yazılır.", o:"TBMM, TDK, TRT"},
+      {b:"Noktalı kısaltmalar", m:"Bazı kısaltmaların sonuna nokta konur.", o:"Dr., Prof., vb., Cad., Sok."},
+      {b:"Ölçü birimleri", m:"Ölçü birimlerinin kısaltmalarında nokta kullanılmaz. Küçük harfle yazılırlar.", o:"kg, cm, km, m"},
+      {b:"Sayıların yazımı", m:"Yazıyla yazılan sayılar ayrı yazılır. Rakamlara gelen ekler kesme işaretiyle ayrılır.", o:"yüz yirmi üç; 1923'te"}
+     ],
+     ipucu:"Kurum kısaltması büyük harf, ölçü birimi küçük harf: kg, cm, km!",
+     kartlar:[["TBMM açılımı","Türkiye Büyük Millet Meclisi"],["TDK açılımı","Türk Dil Kurumu"],["kg neyin kısaltmasıdır?","kilogram"],["cm neyin kısaltmasıdır?","santimetre"],["vb. açılımı","ve benzeri"],["Dr. açılımı","Doktor"],["Yazıyla sayılar nasıl yazılır?","Ayrı yazılır"]],
+     sorular:[
+      {s:"'TBMM' kısaltmasının açılımı nedir?", c:["Türkiye Büyük Millet Meclisi","Türk Büyük Milli Meclis","Türkiye Bilim Merkezi"], a:"TBMM: Türkiye Büyük Millet Meclisi."},
+      {s:"'kg' neyin kısaltmasıdır?", c:["Kilogram","Kilometre","Kutu"], a:"kg kilogramdır."},
+      {s:"Hangisi santimetrenin doğru kısaltmasıdır?", c:["cm","Cm.","Sm"], a:"Ölçü birimleri küçük harfle ve noktasız yazılır."},
+      {s:"'vb.' kısaltması ne demektir?", c:["ve benzeri","ve başkası","veya bazen"], a:"vb.: ve benzeri."},
+      {s:"Hangi sayı doğru yazılmıştır?", c:["yüz yirmi üç","yüzyirmiüç","yüz yirmiüç"], a:"Yazıyla sayılar ayrı yazılır."},
+      {s:"Hangisi doğru yazılmıştır?", c:["1923'te","1923te","1923 'te"], a:"Rakamdan sonra gelen ek kesme ile ayrılır."},
+      {s:"'Dr.' kısaltması hangi unvan içindir?", c:["Doktor","Dedektif","Direktör"], a:"Dr. doktorun kısaltmasıdır."},
+      {s:"Hangisi bir kurum kısaltmasıdır?", c:["TRT","kg","vb."], a:"TRT bir kurum adı kısaltmasıdır."},
+      {s:"'Sok.' kısaltması neyi gösterir?", c:["Sokak","Soğuk","Sonuç"], a:"Adreslerde Sok. sokaktır."},
+      {s:"Hangi tarih doğru yazılmıştır?", c:["23 Nisan 1920","23 Nisan1920","23Nisan 1920"], a:"Gün, ay ve yıl aralarında boşlukla yazılır."}
+     ]}
+  ]},
+  {ad:"Okuma ve Anlama", konular:[
 {id:"tr3-okuma-anlama", ad:"Okuduğunu Anlama", e:"📖",
  anlat:[
   {b:"Konu nedir?", m:"Metnin kim ya da ne hakkında olduğuna metnin konusu denir. Metin hakkında 'Bu metin neyi anlatıyor?' diye sorarak konuyu buluruz.", o:"Metin ağaçların faydalarını anlatıyorsa konu: ağaçlar."},
@@ -216,6 +323,27 @@ HW.add({ders:"turkce", sinif:3, uniteler:[
   {s:"Metin: Defne sınıfta yeni bir arkadaşı olduğunu fark etti. Yanına gidip kendini tanıttı ve onunla oyun oynamayı önerdi. Bu parçadan Defne için hangisi çıkarılır?", c:["Arkadaş canlısıdır.","Utangaçtır.","Tembeldir.","Kıskançtır."], a:"Yeni arkadaşa yaklaşıp oyun önermesi arkadaş canlısı olduğunu gösterir."},
   {s:"Metin: Zeynep güzel bir resim yaptı. Resmi duvara astı. Annesi resmi çok beğendi. Aşağıdakilerden hangisi metinde yoktur?", c:["Resmin adı","Resmi yapan kişi","Resmin asıldığı yer","Annenin tepkisi"], a:"Resmin adı metinde verilmemiştir."}
  ]},
+    {id:"tr3-okuma-stratejileri", ad:"Okuma Stratejileri: Tahmin ve Özet", e:"🔍",
+     anlat:[
+      {b:"Okumadan önce", m:"Başlığa ve resimlere bakarak metnin konusunu tahmin ederiz. Okuduktan sonra tahminimizi kontrol ederiz."},
+      {b:"Anahtar sözcük", m:"Metni anlamak için önemli sözcükleri belirleriz. Bu sözcükler konuyu anlatır."},
+      {b:"Çıkarım", m:"Yazar her şeyi açıkça yazmayabilir. İpuçlarından yola çıkarak sonucu buluruz.", o:"Yerler ıslak, şemsiyeler açık. → Yağmur yağmış."},
+      {b:"Özetleme", m:"Özet, metnin önemli bilgilerini kısa ve kendi sözlerimizle yazmaktır. Gereksiz ayrıntıları atarız."}
+     ],
+     ipucu:"Tahmin et, anahtar sözcüğü bul, ipucundan çıkarım yap, kısaca özetle!",
+     kartlar:[["Okumadan önce ne yaparız?","Başlıktan tahmin ederiz"],["Anahtar sözcük nedir?","Konuyu anlatan önemli sözcük"],["Çıkarım nedir?","İpucundan sonuç bulmak"],["Özet nedir?","Metnin kısa anlatımı"],["Özette neleri atarız?","Gereksiz ayrıntıları"],["Tahmini ne zaman kontrol ederiz?","Okuduktan sonra"]],
+     sorular:[
+      {s:"Başlığa bakarak metnin konusunu düşünmeye ne denir?", c:["Tahmin","Özet","Dinleme"], a:"Bu strateji tahmindir."},
+      {s:"Metindeki önemli bilgileri kısa ve kendi sözlerimizle yazmaya ne denir?", c:["Özetleme","Boyama","Kopyalama"], a:"Buna özetleme denir."},
+      {s:"Yerler ıslak, insanlar şemsiye taşıyor. Ne olmuş olabilir?", c:["Yağmur yağmış","Güneş çıkmış","Rüzgâr esmemiş"], a:"İpuçları yağmuru gösterir."},
+      {s:"Özetlerken neyi atarız?", c:["Gereksiz ayrıntıları","Ana düşünceyi","Metnin konusunu"], a:"Özette yalnızca önemli bilgiler kalır."},
+      {s:"Anahtar sözcükler neyi gösterir?", c:["Metnin konusunu","Sayfa sayısını","Yazarın yaşını"], a:"Anahtar sözcükler konuyu anlatır."},
+      {s:"Elif tahminini okuduktan sonra ne yapmalıdır?", c:["Metinle karşılaştırmalı","Tahmini unutmalı","Metni yırtmalı"], a:"Tahmin metinle kontrol edilir."},
+      {s:"Ali'nin yüzü kızarmıştı, elleri titriyordu. Ali nasıl hissediyor olabilir?", c:["Heyecanlı ya da utangaç","Uykulu","Aç"], a:"Kızarma ve titreme heyecan ya da utanç ipucudur."},
+      {s:"Hangisi iyi bir özetin özelliğidir?", c:["Kısa ve öz olması","Metinden uzun olması","Konudan sapması"], a:"Özet kısa olur."},
+      {s:"Çıkarım yaparken neye dayanırız?", c:["Metindeki ipuçlarına","Rastgele düşünceye","Hiçbir şeye"], a:"İpuçlarından sonuç çıkarılır."},
+      {s:"Metni okumadan önce hangisini yapmak yararlıdır?", c:["Başlığa ve görsellere bakmak","Metni silmek","Son cümleyi atlamak"], a:"Başlık ve görseller konuyu tahmin ettirir."}
+     ]},
 {id:"tr3-hikaye-sebep-sonuc", ad:"Hikâye, Sebep-Sonuç, Karşılaştırma", e:"📚",
  anlat:[
   {b:"Hikâye unsurları", m:"Bir hikâyede kişi (kahraman), yer, zaman ve olay bulunur. Olay başlangıç, gelişme ve sonuç bölümlerinden oluşur.", o:"Kişi: Ayşe. Yer: orman. Zaman: bir sabah. Olay: kaybolan kedi."},
@@ -236,6 +364,71 @@ HW.add({ders:"turkce", sinif:3, uniteler:[
   {s:"'Fil, fareden çok daha büyüktür.' cümlesinde hangi iki varlık karşılaştırılmıştır?", c:["Fil ve fare","Fil ve kedi","Fare ve kedi","Fil ve aslan"], a:"Cümlede fil ve fare karşılaştırılıyor."},
   {s:"Hangi cümle sebep bildirmektedir?", c:["Kapı açıldı, çünkü rüzgâr esiyordu.","Kapı açıldı.","Kapıyı kapattım.","Kapıdan çıktım."], a:"Çünkü sözcüğü sebep bildirir."},
   {s:"'Kedi çok acıkmıştı, bu yüzden mutfağa girip yemek aradı.' cümlesinde sebep hangisidir?", c:["Kedinin acıkması","Mutfağa girmesi","Yemek araması","Mutfağın kapısı"], a:"Bu yüzden sözcüğünden önceki bölüm sebebi, sonraki bölüm sonucu bildirir."}
- ]}
-]}
+ ]},
+    {id:"tr3-metin-turleri", ad:"Metin Türleri", e:"📰",
+     anlat:[
+      {b:"Hikâye", m:"Hikâye (öykü), kişi, yer, zaman ve olay unsurlarıyla anlatılan metindir. Gerçek ya da hayalî olabilir."},
+      {b:"Masal ve fabl", m:"Masallar hayalî olaylar anlatır; 'Bir varmış, bir yokmuş' diye başlar. Fabllarda hayvanlar insan gibi konuşur ve bir ders verilir."},
+      {b:"Şiir ve bilgilendirici metin", m:"Şiir dizelerle yazılır. Bilgilendirici metin gerçek bilgiler verir, olayları hayal ürünü değildir."},
+      {b:"Haber ve mektup", m:"Haber metni güncel bir olayı kim, ne, nerede, ne zaman sorularına cevap vererek anlatır. Mektup ise birine yazılır."}
+     ],
+     ipucu:"Hikâye olay anlatır, masal hayalîdir, fabl ders verir, şiir dizelerle yazılır!",
+     kartlar:[["Hikâye nedir?","Olay anlatan metin"],["Masal nasıl başlar?","Bir varmış, bir yokmuş"],["Fabllarda kimler konuşur?","Hayvanlar"],["Fabl ne verir?","Ders"],["Şiir hangi birimlerle yazılır?","Dizelerle"],["Bilgi veren metin","Bilgilendirici metin"]],
+     sorular:[
+      {s:"'Bir varmış, bir yokmuş...' sözleriyle başlayan metin türü hangisidir?", c:["Masal","Haber","Şiir"], a:"Masallar bu sözle başlar."},
+      {s:"Hayvanların insan gibi konuşup ders verdiği metin türü hangisidir?", c:["Fabl","Haber","Mektup"], a:"Fabllarda hayvanlar konuşur ve ders verilir."},
+      {s:"Dizelerle yazılan metin hangisidir?", c:["Şiir","Hikâye","Bilgilendirici metin"], a:"Şiir dizelerden oluşur."},
+      {s:"Kişi, yer, zaman ve olay unsurlarını içeren metin türü hangisidir?", c:["Hikâye","Şiir","Tarif"], a:"Hikâyenin unsurları bunlardır."},
+      {s:"Hangisi bilgilendirici metindir?", c:["Bitkilerin nasıl büyüdüğünü anlatan yazı","Aslan ile tavşanın konuştuğu öykü","Sevgiyi anlatan dörtlük"], a:"Gerçek bilgi veren yazı bilgilendiricidir."},
+      {s:"Haber metni hangi soruların cevabını verir?", c:["Ne oldu, kim, nerede, ne zaman?","Kaç kilo?","Hangi renk?"], a:"Haber olayı kim, ne, nerede, ne zaman sorularıyla anlatır."},
+      {s:"Masalların genel özelliği nedir?", c:["Hayalî olaylar anlatır","Yalnızca gerçek olayları anlatır","Yalnızca sayılardan oluşur"], a:"Masallar hayal ürünüdür."},
+      {s:"Fabl okuyan Elif ne elde eder?", c:["Bir ders çıkarır","Matematik kuralı","Şarkı sözü"], a:"Fabllarda öğüt/ders vardır."},
+      {s:"Birine duygularını anlatmak için yazılan metin hangisidir?", c:["Mektup","Fabl","Haber"], a:"Mektup birine yazılır."},
+      {s:"Gazetede yer alan, güncel olayı anlatan yazı hangisidir?", c:["Haber","Masal","Şiir"], a:"Güncel olayı haber anlatır."}
+     ]},
+    {id:"tr3-tablo-gorsel", ad:"Tablo ve Liste Okuma", e:"📊",
+     anlat:[
+      {b:"Tablo nedir?", m:"Tablo, bilgileri satır ve sütunlarla düzenli gösterir. Satır yatay, sütun dikey sıradır."},
+      {b:"Tablodan bilgi bulma", m:"Önce tablonun başlığına bakarız. Sonra ilgili satır ve sütunun kesiştiği yeri okuruz.", o:"Elif satırı ile kitap sütunu"},
+      {b:"Karşılaştırma", m:"Tablodaki sayıları karşılaştırarak en çok, en az, toplam ve farkı buluruz."},
+      {b:"Liste", m:"Liste, bilgileri alt alta sıralar. Alışveriş listesi buna örnektir."}
+     ],
+     ipucu:"Başlığa bak, satır ve sütunu bul, sayıları karşılaştır!",
+     kartlar:[["Yatay sıraya ne denir?","Satır"],["Dikey sıraya ne denir?","Sütun"],["Tabloda önce neye bakılır?","Başlığa"],["En çok olan nasıl bulunur?","En büyük sayıya bakılır"],["Fark nasıl bulunur?","Çıkarma ile"],["Liste nedir?","Alt alta sıralı bilgi"]],
+     sorular:[
+      {s:"Tabloda yatay sıralara ne denir?", c:["Satır","Sütun","Başlık"], a:"Yatay sıra satırdır."},
+      {s:"Tabloda dikey sıralara ne denir?", c:["Sütun","Satır","Not"], a:"Dikey sıra sütundur."},
+      {s:"Okunan kitaplar: Ali 5, Elif 8, Mert 3, Zeynep 6. En çok kitabı kim okumuştur?", c:["Elif","Ali","Mert"], a:"8 en büyük sayıdır."},
+      {s:"Okunan kitaplar: Ali 5, Elif 8, Mert 3, Zeynep 6. En az kitabı kim okumuştur?", c:["Mert","Ali","Zeynep"], a:"3 en küçük sayıdır."},
+      {s:"Okunan kitaplar: Ali 5, Elif 8, Mert 3, Zeynep 6. Ali ile Zeynep toplam kaç kitap okumuştur?", c:["11","9","13"], a:"5 + 6 = 11."},
+      {s:"Okunan kitaplar: Ali 5, Elif 8, Mert 3, Zeynep 6. Elif, Mert'ten kaç kitap fazla okumuştur?", c:["5","3","11"], a:"8 - 3 = 5."},
+      {s:"Ders sayısı: Pazartesi 3, Salı 4, Çarşamba 5. Hangi gün en çok ders vardır?", c:["Çarşamba","Salı","Pazartesi"], a:"5 en büyük sayıdır."},
+      {s:"Ders sayısı: Pazartesi 3, Salı 4, Çarşamba 5. Üç günde toplam kaç ders vardır?", c:["12","11","13"], a:"3 + 4 + 5 = 12."},
+      {s:"Tablodan bilgi bulmak için önce neye bakarız?", c:["Başlığa","Rengine","Kenarına"], a:"Başlık tablonun konusunu söyler."},
+      {s:"Alt alta sıralanmış bilgiye ne denir?", c:["Liste","Dörtlük","Mektup"], a:"Alt alta sıralı bilgi listedir."}
+     ]}
+  ]},
+  {ad:"Yazılı Anlatım", konular:[
+    {id:"tr3-yazili-anlatim", ad:"Yazılı Anlatım: Günlük, Anı, Duyuru", e:"📝",
+     anlat:[
+      {b:"Günlük", m:"Günlük, yaşadığımız olayları tarih atarak yazdığımız kişisel yazıdır.", o:"12 Mart. Bugün okulda resim yaptık."},
+      {b:"Anı", m:"Anı, geçmişte yaşanmış ve unutulmayan bir olayın anlatılmasıdır. Genellikle 'ben' diliyle yazılır."},
+      {b:"Duyuru", m:"Duyuru, herkese bilgi vermek için yazılır. Ne, ne zaman ve nerede sorularının cevabı bulunur.", o:"Gezi cuma günü saat 09.00'da başlayacaktır."},
+      {b:"Düzenli yazma", m:"Yazarken giriş, gelişme ve sonuç bölümleri oluştururuz. Cümleleri bağlantılı kurar, yazım ve noktalama kurallarına uyarız."}
+     ],
+     ipucu:"Günlük tarihli, anı geçmişten, duyuru herkese; giriş-gelişme-sonuç unutma!",
+     kartlar:[["Günlük nasıl yazılır?","Tarih atılarak"],["Anı neyi anlatır?","Geçmişte yaşananı"],["Duyuru kimler için yazılır?","Herkes için"],["Duyuruda hangi bilgiler olur?","Ne, ne zaman, nerede"],["Yazının bölümleri","Giriş, gelişme, sonuç"],["Anı hangi kişiyle yazılır?","Genellikle 'ben'"]],
+     sorular:[
+      {s:"Yaşadıklarımızı tarih atarak yazdığımız yazı hangisidir?", c:["Günlük","Duyuru","Fabl"], a:"Günlük tarihle yazılır."},
+      {s:"Geçmişte yaşanan unutulmaz bir olayın anlatılmasına ne denir?", c:["Anı","Duyuru","Tarif"], a:"Bu yazıya anı denir."},
+      {s:"Herkese bilgi vermek için yazılan yazı hangisidir?", c:["Duyuru","Anı","Günlük"], a:"Duyuru herkese bilgi verir."},
+      {s:"Duyuruda hangisi bulunmalıdır?", c:["Etkinliğin yeri ve zamanı","Gizli düşünceler","Hikâye kahramanı"], a:"Yer ve zaman bilgisi gerekir."},
+      {s:"Hangi cümle günlüğe uygundur?", c:["Bugün okulda çok güzel bir gün geçirdim.","Hepinizi toplantıya bekliyoruz.","Bir varmış, bir yokmuş."], a:"Günlükte kişisel yaşantı anlatılır."},
+      {s:"Yazının bölümleri hangi sıradadır?", c:["Giriş, gelişme, sonuç","Sonuç, giriş, gelişme","Gelişme, sonuç, giriş"], a:"Yazı bu sırayla ilerler."},
+      {s:"'Yarın saat 10.00'da kütüphane gezisi var.' hangi türdür?", c:["Duyuru","Anı","Masal"], a:"Bilgi veren bu yazı duyurudur."},
+      {s:"Anı yazarken genellikle hangi anlatım kullanılır?", c:["'Ben' diye anlatmak","Hiç olay anlatmamak","Yalnızca sayı yazmak"], a:"Anı kişinin kendi yaşantısıdır."},
+      {s:"Günlüğe ilk olarak ne yazarız?", c:["Tarihi","Sonucu","Adresi"], a:"Günlük tarihle başlar."},
+      {s:"Yazarken yazım ve noktalama kurallarına neden uyarız?", c:["Okuyanın kolay anlaması için","Yazı uzasın diye","Kalem bitsin diye"], a:"Doğru yazım anlamı netleştirir."}
+     ]}
+  ]}
 ]});

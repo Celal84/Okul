@@ -7,12 +7,14 @@
 - **iPhone / web:** GitHub Pages adresi Safari'de açılır → Paylaş → *Ana Ekrana Ekle* ile uygulama gibi kullanılır.
 
 ## İçerik
-13 ders: Türkçe, Matematik, Hayat Bilgisi (1-3), Fen Bilimleri (3-4), Sosyal Bilgiler (4), İngilizce (1-4),
-Din Kültürü (4), İnsan Hakları (4), Trafik Güvenliği (4), Müzik, Görsel Sanatlar, Satranç, Kodlama.
+14 ders: Türkçe, Matematik, Hayat Bilgisi (1-3), Fen Bilimleri (3-4), Sosyal Bilgiler (4), İngilizce (1-4),
+Din Kültürü (4), İnsan Hakları (4), Trafik Güvenliği (4), Müzik, Görsel Sanatlar, Beden Eğitimi ve Oyun, Satranç, Kodlama.
+İçerik MEB öğretim programlarına göre denetlenir (1-3. sınıf: Türkiye Yüzyılı Maarif Modeli; 4. sınıf: 2018 programı).
 
 Her konuda: **Konu Anlatımı** (hafıza ipuçlu) → **Bilgi Kartları** → **Eşleştir** → **Test** → matematikte **Sınırsız Alıştırma**.
 Yanlış yapılan sorular **Akıllı Tekrar**'a düşer (1-2-4-7-14 gün aralıklı tekrar); çalışılan konular 1-3-7-14-30 gün sonra hatırlatılır.
-Günlük hedef, seri, puan/seviye ve **Karne** ile ilerleme izlenir.
+Günlük ve haftalık **görevler**, jeton, rozet, seviye, karakter/tema dükkânı ile ödüllendirme; her derste okul takvimine göre **müfredat yolu**.
+**Veli ekranı** (çarpım sorusuyla açılır): süre, başarı, ders tablosu, zayıf konular, uyarı ve öneriler, süre sınırı, yedek.
 
 ### Gömülü oyunlar (eski uygulamaların tamamı)
 | Klasör | Uygulama | Kaynak depo |
@@ -29,7 +31,7 @@ Bir oyunu güncellemek için kaynak deposunda derlenen web çıktısını ilgili
 
 ## Yapı
 - `VERSION` — sürüm numarası (X.Y.Z). Başlıkta, APK adında ve sürüm etiketinde kullanılır.
-- `src/template.html`, `src/style.css`, `src/app.js` — ana uygulama
+- `src/template.html`, `src/style.css`, `src/app.js` — ana uygulama; `src/ekstra.js` — görevler, ödüller, müfredat takibi, veli ekranı, ayarlar; `src/basla.js` — açılış
 - `src/data/<ders>-<sınıf>.js` — ders içerikleri (biçim ve kurallar: `tools/ICERIK.md`)
 - `android/` — birleşik WebView kabuğu (Türkçe/İngilizce seslendirme, ses tanıma, hatırlatma). Paket: `com.celal.homework` — **değiştirmeyin**, kayıtlar silinir.
 - `tools/build.py` — web derlemesi → `dist/www`

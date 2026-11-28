@@ -58,5 +58,26 @@ HW.add({ders:"gorsel", sinif:2, uniteler:[
        {s:"Müzede neden flaşlı fotoğraf çekmeyiz?", c:["Eserlerin zarar görmemesi için","Müze karanlık olduğu için","Fotoğraf makinesi bozulur diye","Müzede ışık sevilmediği için"], a:"Güçlü ışık eski eserlerin renklerine zarar verebilir."},
        {s:"Hangi eşleştirme doğrudur?", c:["Çini - süslü karo","Ebru - heykel","Hat - müzik","Minyatür - büyük duvar resmi"], a:"Çini süslü karodur; ebru su sanatı, hat yazı sanatıdır."}
      ]}
+  ]},
+  {ad:"Desen ve Simetri", konular:[
+    {id:"gs2-desen-simetri", ad:"Desen, Tekrar ve Simetri", e:"🦋",
+     anlat:[
+       {b:"Desen nedir?", m:"Çizgi, biçim ve renklerin tekrar edilmesiyle oluşan süslemeye desen denir. Kumaşlarda, halılarda, çinilerde ve duvar kâğıtlarında desen görürüz.", o:"Çizgili, benekli ve ekose desen."},
+       {b:"Tekrar ve ritim", m:"Aynı biçimi ya da rengi düzenli tekrar edersek ritim oluşur. Daire-üçgen-daire-üçgen gibi. Ritim görsel sanatta gözün hareketini yönlendirir.", o:"🔴🔺🔴🔺🔴🔺"},
+       {b:"Simetri", m:"Bir şekli ortadan katladığımızda iki yarım birbirinin aynısı oluyorsa buna simetri denir. Kelebek, yaprak ve insan yüzü simetriktir. Katlama çizgisine simetri ekseni denir.", o:"Kelebeğin iki kanadı aynıdır."},
+       {b:"Simetrik resim yapalım", m:"Kâğıdı ikiye katlar, bir yarısına boya damlatır, sonra kapatıp bastırırız. Açınca iki tarafı da aynı bir şekil elde ederiz. Buna katlama baskısı denir.", o:"Kapat, bastır, aç: şaşır!"}
+     ],
+     ipucu:"Simetri = ayna! Ortadan katla; iki yarısı birbirinin aynısıysa simetriktir.",
+     kartlar:[["Desen","Tekrar eden süsleme"],["Tekrar","Aynı biçimi düzenli kullanmak"],["Ritim","Düzenli tekrar duygusu"],["Simetri","İki yarımın aynı olması"],["Simetri ekseni","Katlama çizgisi"],["Simetrik canlı","Kelebek"],["Katlama baskısı","Katla, boyayı bastır"],["Desenli kumaş","Çizgili veya benekli"]],
+     sorular:[
+       {s:"Çizgi, biçim ve renklerin tekrar edilmesiyle oluşan süslemeye ne denir?", c:["Desen","Kolaj","Heykel","Müze"], a:"Tekrar eden süsleme desendir."},
+       {s:"Simetri ekseni nedir?", c:["Şekli iki eş parçaya bölen çizgi","Şeklin dış çizgisi","Şeklin rengi","Şeklin gölgesi"], a:"Şekli ikiye bölen katlama çizgisidir."},
+       {s:"🔴🔺🔴🔺🔴 ? Sıradaki şekil hangisidir?", c:["🔺","🔴","🟦","⭐"], a:"Desen: daire-üçgen şeklinde tekrar eder; sıradaki üçgen."},
+       {s:"Hangisinde desen yoktur?", c:["Düz beyaz kâğıt","Çizgili kumaş","Çini","Halı"], a:"Düz beyaz kâğıtta tekrar eden bir süsleme yoktur."},
+       {s:"Katlama baskısı yaparken ne yaparız?", c:["Kâğıdı katlayıp boyayı bastırırız","Kâğıdı yırtarız","Boyaları karıştırıp atarız","Kâğıdı yakarız"], a:"Katlayıp bastırınca iki yarım aynı olur."},
+       {s:"Ritim sanatta neye yardımcı olur?", c:["Gözümüzün düzenli gezmesine","Boyaların kurumasına","Kâğıdın yırtılmasına","Müzik açmaya"], a:"Tekrar edilen öğeler ritim yaratır ve gözü yönlendirir."},
+       {s:"Bir halıda aynı çiçek biçimi tekrar ediyorsa bu neyi gösterir?", c:["Desen ve ritim","Heykel","Baskı makinesi","Fotoğraf"], a:"Tekrar eden öğeler desen ve ritim oluşturur."},
+       {s:"Hangisi simetri örneği değildir?", c:["Rastgele dökülen lekeler","Yaprak","İnsan yüzü","Kelebek"], a:"Rastgele leke ortadan katlanınca aynı olmaz."}
+     ]}
   ]}
 ]});

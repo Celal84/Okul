@@ -25,7 +25,7 @@ HW.add({ders:"matematik", sinif:2, uniteler:[
 ```
 
 ## Alanlar
-- `ders`: turkce, matematik, hayat, fen, sosyal, ingilizce, din, insan, trafik, muzik, gorsel, satranc, kodlama
+- `ders`: turkce, matematik, hayat, fen, sosyal, ingilizce, din, insan, trafik, muzik, gorsel, satranc, kodlama, beden
 - `id`: yalnızca küçük harf/rakam/tire, tüm uygulamada benzersiz; `<kısaltma><sınıf>-<konu>` (ör. `tr1-sesli-harfler`).
 - `e`: konuyu simgeleyen tek emoji.
 - `anlat`: 3-5 kart. `b` başlık (≤50), `m` açıklama (≤300 karakter, çocuğa hitap eden sade dil), `o` isteğe bağlı örnek (≤200). Düz metin; yalnızca `<b>` kullanılabilir.

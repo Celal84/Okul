@@ -76,5 +76,26 @@ HW.add({ders:"muzik", sinif:2, uniteler:[
        {s:"Hangisi zeybek ile ilgilidir?", c:["Ege yöresi oyunu","Karadeniz oyunu","Bebek uyutma şarkısı","Bayram marşı"], a:"Zeybek Ege yöresinin oyunudur."},
        {s:"Hem birlikte oynanan hem hızlı olan müzik türü hangisidir?", c:["Halay","Ninni","Dua","Fısıltı"], a:"Halay hızlı ve topluca oynanır."}
      ]}
+  ]},
+  {ad:"Dinleme ve Birlikte Müzik", konular:[
+    {id:"muz2-dinleme-konser", ad:"Konser, Koro ve Orkestra", e:"🎻",
+     anlat:[
+       {b:"Konser nedir?", m:"Müzisyenlerin dinleyicilere müzik sunduğu etkinliğe konser denir. Konser salonunda sessiz oluruz. Müzik bitince alkışlayarak teşekkür ederiz. Telefon ve gürültü yapmayız.", o:"Konserde önce dinleriz, sonra alkışlarız."},
+       {b:"Koro", m:"Birçok kişinin birlikte şarkı söylemesine koro denir. Koroyu yöneten kişiye şef denir. Koroda herkes birbirini dinler ve uyum içinde söyler.", o:"Okul korosu şarkı söyler."},
+       {b:"Orkestra", m:"Birçok çalgıcının birlikte çaldığı topluluğa orkestra denir. Orkestrayı da şef yönetir. Orkestrada yaylı, nefesli ve vurmalı çalgılar vardır.", o:"Keman, flüt ve davul orkestrada olabilir."},
+       {b:"Solo ve topluluk", m:"Tek kişinin söylemesine ya da çalmasına solo denir. İki kişi birlikte yaparsa düet olur. Çok kişi birlikte yaparsa topluluk olur.", o:"Solo = tek, düet = iki."}
+     ],
+     ipucu:"Solo = 1 kişi, düet = 2 kişi, koro = çok kişi söyler, orkestra = çok kişi çalar!",
+     kartlar:[["Konser","Müzik sunulan etkinlik"],["Koro","Birlikte şarkı söyleyen topluluk"],["Orkestra","Birlikte çalan topluluk"],["Şef","Koroyu veya orkestrayı yöneten"],["Solo","Tek kişi söyler veya çalar"],["Düet","İki kişi birlikte"],["Konser sonunda","Alkışlarız"],["Konserde","Sessiz oluruz"]],
+     sorular:[
+       {s:"Müzisyenlerin dinleyicilere müzik sunduğu etkinliğe ne denir?", c:["Konser","Sınav","Pazar","Maç"], a:"Müzik sunulan etkinlik konserdir."},
+       {s:"Birlikte şarkı söyleyen topluluğa ne denir?", c:["Koro","Orkestra","Düet","Solo"], a:"Birlikte şarkı söyleyen topluluk koroyla adlandırılır."},
+       {s:"Birlikte çalgı çalan topluluğa ne denir?", c:["Orkestra","Koro","Solo","Okul"], a:"Çalgıcılar topluluğu orkestradır."},
+       {s:"Koroyu veya orkestrayı kim yönetir?", c:["Şef","Bekçi","Garson","Şoför"], a:"Koroyu ve orkestrayı şef yönetir."},
+       {s:"İki kişi birlikte söylerse ne olur?", c:["Düet","Solo","Koro","Orkestra"], a:"İki kişilik topluluk düettir."},
+       {s:"Tek kişinin söylemesine ne denir?", c:["Solo","Düet","Koro","Orkestra"], a:"Tek kişi söylerse solodur."},
+       {s:"Konserde nasıl davranmalıyız?", c:["Sessiz dinlemeliyiz","Konuşmalıyız","Koşmalıyız","Bağırmalıyız"], a:"Konserde sessiz dinleriz."},
+       {s:"Konser bitince ne yaparız?", c:["Alkışlarız","Hemen bağırırız","Salonu terk ederken koşarız","Çalgıları çalarız"], a:"Teşekkür etmek için alkışlarız."}
+     ]}
   ]}
 ]});

@@ -59,5 +59,47 @@ HW.add({ders:"gorsel", sinif:4, uniteler:[
        {s:"Geleneksel sanatlardan hangisi pişmiş toprak karolar üzerine yapılır?", c:["Çini","Ebru","Hat","Minyatür"], a:"Çini, süslü pişmiş toprak karolara yapılır."},
        {s:"Bir arkadaşın 'Minyatür büyük duvar resmidir' dedi. Bu doğru mu?", c:["Yanlış; minyatür küçük ve ayrıntılı kitap resmidir","Doğru","Yanlış; minyatür su üstünde yapılan sanattır","Yanlış; minyatür bir tür heykeldir"], a:"Minyatür, kitap sayfalarına yapılan küçük, ayrıntılı resimdir."}
      ]}
+  ]},
+  {ad:"Karikatür, Fotoğraf ve Animasyon", konular:[
+    {id:"gs4-karikatur-animasyon", ad:"Karikatür, Fotoğraf ve Animasyon", e:"🎞️",
+     anlat:[
+       {b:"Karikatür", m:"Karikatür, bir kişinin ya da olayın özelliklerini abartarak ve genelde güldürerek anlatan resimdir. Gazetelerde ve dergilerde bulunur. Karikatürde çizgi sade ve anlatım kısadır.", o:"Büyük burun, küçük ayak gibi abartılar."},
+       {b:"Fotoğraf", m:"Fotoğraf, ışık sayesinde fotoğraf makinesi ya da telefonla çekilen görüntüdür. İyi bir fotoğrafta konu net, ışık yeterli ve kadraj düzgündür. Yakın çekim ve uzak çekim farklı duygular verir.", o:"Kadraj = fotoğrafa girecek alan."},
+       {b:"Animasyon", m:"Birbirine çok benzeyen ama küçük farkları olan çizimlerin art arda gösterilmesiyle hareket illüzyonu oluşur. Buna animasyon denir. Çizgi filmler animasyondur.", o:"Her saniyede 12 veya daha fazla resim."},
+       {b:"Hikâye anlatma", m:"Bu sanatların hepsi hikâye anlatır. Hikâye panolarında (storyboard) olay sahnelere bölünür. Önce giriş, sonra gelişme, en sonda sonuç çizilir. Resimler arası bağ kurulur.", o:"Üç kare ile bir hikâye anlatılabilir."}
+     ],
+     ipucu:"Karikatür = abart ve güldür. Fotoğraf = ışıkla yazmak. Animasyon = art arda resimler = hareket!",
+     kartlar:[["Karikatür","Abartarak güldüren çizim"],["Fotoğraf","Işıkla elde edilen görüntü"],["Animasyon","Art arda resimle hareket"],["Çizgi film","Animasyon örneği"],["Kadraj","Fotoğrafa giren alan"],["Storyboard","Hikâye panosu"],["Karikatürde","Özellikler abartılır"],["Kare","Animasyonun tek resmi"]],
+     sorular:[
+       {s:"Özellikleri abartarak güldüren çizime ne denir?", c:["Karikatür","Afiş","Heykel","Mozaik"], a:"Abartılı, güldürücü çizim karikatürdür."},
+       {s:"Çizgi filmler hangi sanat dalına girer?", c:["Animasyon","Karikatür","Seramik","Baskı"], a:"Çizgi filmler animasyondur."},
+       {s:"Animasyonda hareket nasıl oluşur?", c:["Art arda gösterilen çizimlerle","Bir çizim kıpırdatılarak","Sadece sesle","Boya dökülerek"], a:"Birçok çizimin art arda gösterilmesiyle hareket illüzyonu oluşur."},
+       {s:"Fotoğrafa girecek alanı seçmeye ne denir?", c:["Kadraj","Ton","Simetri","Baskı"], a:"Fotoğrafa girecek alanı seçmek kadraj yapmaktır."},
+       {s:"Hangisi karikatürün özelliğidir?", c:["Abartı","Gerçeğe birebir benzemek","Hiç komik olmamak","Hep renkli olmak"], a:"Karikatürde özellikler abartılır."},
+       {s:"Hangisi animasyon yapmak için gereklidir?", c:["Çok sayıda çizim","Tek resim","Sadece yazı","Sadece ses"], a:"Hareket için çok sayıda çizim gerekir."},
+       {s:"Kısa bir hikâyeyi üç karede anlatırken sıra nasıl olmalı?", c:["Giriş, gelişme, sonuç","Sonuç, giriş, gelişme","Rastgele","Gelişme, sonuç, giriş"], a:"Hikâye giriş-gelişme-sonuç sırasıyla anlatılır."},
+       {s:"Gazetede bir kişi kocaman kulaklı ve çok komik çizilmiş. Bu çizim hangisidir?", c:["Karikatür","Fotoğraf","Animasyon","Heykel"], a:"Abartılı kişi çizimi karikatürdür."}
+     ]}
+  ]},
+  {ad:"Çevre ve Ürün Tasarımı", konular:[
+    {id:"gs4-cevre-tasarim", ad:"Tasarım: Atıktan Ürüne", e:"🛠️",
+     anlat:[
+       {b:"Tasarım nedir?", m:"Bir ihtiyaca çözüm bulmak için yeni bir ürün düşünmeye ve çizmeye tasarım denir. Önce ihtiyacı belirleriz, sonra fikirleri çizeriz, en sonda ürünü yaparız.", o:"Kalemlik, çanta, oyuncak, mobilya tasarımı."},
+       {b:"Tasarım adımları", m:"1) Sorun nedir? 2) Fikir üret ve çiz. 3) Malzeme seç. 4) Yap. 5) Dene ve geliştir. Her adımda arkadaşlarımızdan geri bildirim alabiliriz.", o:"Çizim, ürünün ilk halidir."},
+       {b:"Atıktan tasarım", m:"Atık malzemelerden yeni ürünler tasarlayabiliriz. Şişeden saksı, kavanozdan lamba, karton kutudan organizer yapılabilir. Böylece doğayı koruruz ve çöp azalır.", o:"Plastik şişe → saksı."},
+       {b:"İyi tasarımın özellikleri", m:"İyi tasarım kullanışlı, dayanıklı, güzel ve çevre dostudur. Hem işe yarar hem de göze hoş görünür. Tasarımcı kullanıcıyı düşünür.", o:"Kullanışlı + güzel = iyi tasarım."}
+     ],
+     ipucu:"Sorun → Fikir → Malzeme → Yap → Dene. 'S-F-M-Y-D' ile tasarım yap!",
+     kartlar:[["Tasarım","İhtiyaca çözüm düşünmek"],["Atık","Yeniden kullanılabilir malzeme"],["Çevre dostu","Doğaya zarar vermeyen"],["Kullanışlı","İşe yarayan"],["İlk adım","Sorunu belirlemek"],["Son adım","Dene ve geliştir"],["Şişeden saksı","Atıktan tasarım"],["Geri bildirim","Başkalarının görüşü"]],
+     sorular:[
+       {s:"Bir ihtiyaca çözüm üretmek için ürün düşünmeye ne denir?", c:["Tasarım","Baskı","Karikatür","Desen"], a:"İhtiyaca çözüm bulan fikir tasarımdır."},
+       {s:"Atık plastik şişeden ne tasarlanabilir?", c:["Saksı","Heykel taşı","Müzik notası","Duvar boyası"], a:"Plastik şişeden saksı yapılabilir."},
+       {s:"Çevre dostu tasarım ne demektir?", c:["Doğaya zarar vermeyen tasarım","Çok pahalı tasarım","Plastiğe dayalı tasarım","Sadece süslü tasarım"], a:"Çevre dostu tasarım doğaya zarar vermez."},
+       {s:"Bir tasarımın iyi olması için hangisi gerekir?", c:["Kullanışlı ve güzel olması","Sadece renkli olması","Çok büyük olması","Kimseye yaramaması"], a:"İyi tasarım hem işe yarar hem güzeldir."},
+       {s:"Hangisi doğru sıradır?", c:["Sorun, fikir, malzeme, yapma, deneme","Yapma, deneme, sorun, fikir","Deneme, fikir, sorun, yapma","Fikir, deneme, yapma, sorun"], a:"Tasarım sorundan başlar, denemeyle biter."},
+       {s:"Kavanozdan lamba yapmak hangi amaca hizmet eder?", c:["Atığı yeniden kullanıp çöpü azaltmak","Daha çok çöp üretmek","Kavanozu kırmak","Işığı kapatmak"], a:"Yeniden kullanım çöpü azaltır."},
+       {s:"Arkadaşın tasarladığı kalemliğin ağzı çok dar. Ne yaparsın?", c:["Nazikçe geri bildirim verip önerimi söylerim","Alay ederim","Hiçbir şey söylemem","Kalemliği atarım"], a:"Yapıcı geri bildirim tasarımın gelişmesine yardım eder."},
+       {s:"Kullanıcıyı düşünen tasarımcı hangisini önemser?", c:["Ürünün rahat ve güvenli kullanılmasını","Sadece pahalı olmasını","Çok az kişiye hitap etmesini","Yalnızca renkli olmasını"], a:"Tasarımcı kullanıcıyı ve kullanım rahatlığını düşünür."}
+     ]}
   ]}
 ]});

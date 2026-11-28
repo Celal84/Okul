@@ -228,5 +228,143 @@ HW.add({ders:"ingilizce", sinif:4, uniteler:[
        {s:"Which sentence is NOT correct?", c:["She goes always to school by bus.","She always goes to school by bus.","She is always late.","She never goes by taxi."], a:"Sıklık zarfı fiilden önce gelir: She always goes."}
      ]
     }
+  ]},
+  {ad:"Classroom Rules / Sınıf Kuralları", konular:[
+    {id:"en4-classroom-rules", ad:"Classroom rules – Sınıf kuralları", e:"📏",
+     anlat:[
+       {b:"Do / Don't", m:"Emir ve yasak kalıpları fiille başlar: <b>Listen to the teacher. Raise your hand. Be quiet.</b> Yasak için <b>Don't</b>: <b>Don't run. Don't shout. Don't be late.</b>", o:"Don't eat in class."},
+       {b:"Must / Mustn't", m:"<b>You must ...</b> = ...-meli. <b>You mustn't ...</b> = ...-memeli (yasak). Fiilin yalın hali gelir.", o:"You must wear your uniform. You mustn't run in the corridor."},
+       {b:"Polite words", m:"Kibar olmak için: <b>Please, thank you, sorry, excuse me.</b> <b>Can I go to the toilet, please?</b> / <b>May I come in?</b>", o:"Excuse me, may I ask a question?"},
+       {b:"Classroom rules", m:"respect (saygı göstermek), share (paylaşmak), tidy up (toplamak), take turns (sırayla yapmak), listen (dinlemek), line up (sıraya girmek).", o:"We must take turns and share."}
+     ],
+     ipucu:"MUST = yap! 🟢  MUSTN'T = yapma! 🔴  Fiil yalın kalır: must go, mustn't run (must goes değil!).",
+     kartlar:[["Don't run!","Koşma!"],["Be quiet.","Sessiz ol."],["Raise your hand.","Elini kaldır."],["You must share.","Paylaşmalısın."],["You mustn't shout.","Bağırmamalısın."],["take turns","sırayla yapmak"],["line up","sıraya girmek"],["tidy up","toplamak"]],
+     sorular:[
+       {s:"'Be quiet.' ne demektir?", c:["Sessiz ol.","Koş.","Otur.","Yaz."], a:"Be quiet = sessiz ol."},
+       {s:"'Don't run!' ne demektir?", c:["Koşma!","Koş!","Yürü!","Bak!"], a:"Don't + fiil = yasak."},
+       {s:"You ___ listen to your teacher. (zorunluluk)", c:["must","mustn't","don't","can't"], a:"Öğretmeni dinlemek gerekir: must."},
+       {s:"You ___ eat in the library. (yasak)", c:["mustn't","must","can","do"], a:"Yasak için mustn't kullanılır."},
+       {s:"Choose the correct sentence.", c:["You must be quiet.","You must to be quiet.","You musts be quiet.","You must being quiet."], a:"Must'tan sonra fiilin yalın hali gelir."},
+       {s:"Which one is a rule?", c:["Don't shout in class.","I like shouting.","Shouting is fun.","He shouts a lot."], a:"Kural, emir ya da yasak kalıbıyla söylenir."},
+       {s:"You want to ask the teacher something politely.", c:["Excuse me, may I ask a question?","Give me a pen!","I'm hungry.","Be quiet!"], a:"Kibarca sormak için: Excuse me, may I ...?"},
+       {s:"'take turns' ne demektir?", c:["sırayla yapmak","kavga etmek","bağırmak","kaçmak"], a:"Take turns = sırayla yapmak."},
+       {s:"Read: 'In our class we raise our hands before we speak. We don't shout. We share our pencils.' What must children do before speaking?", c:["Raise their hands","Shout","Share pencils","Stand up"], a:"Metinde 'we raise our hands before we speak' yazıyor."},
+       {s:"Which sentence is a good classroom rule?", c:["We must respect our friends.","We mustn't respect our friends.","We must shout in class.","We must run in the corridor."], a:"Arkadaşlarımıza saygı göstermeliyiz."}
+     ]}
+  ]},
+  {ad:"Cartoon Characters / Çizgi Film Kahramanları", konular:[
+    {id:"en4-appearance-personality", ad:"Appearance & personality – Görünüş ve kişilik", e:"🦸",
+     anlat:[
+       {b:"Appearance", m:"tall (uzun boylu), short (kısa boylu), thin (zayıf), strong (güçlü), curly / straight hair (kıvırcık / düz saç), long / short hair (uzun / kısa saç), blue eyes (mavi gözler).", o:"He is tall. She has got curly hair."},
+       {b:"Has got / is", m:"Görünüşü anlatırken <b>He/She has got ...</b> (saç, göz) veya <b>He/She is ...</b> (boy, kilo) kullanırız.", o:"She is short. She has got long hair."},
+       {b:"Personality", m:"funny (komik), brave (cesur), clever (zeki), kind (nazik), shy (utangaç), lazy (tembel), friendly (cana yakın), strong (güçlü).", o:"Superman is brave and strong."},
+       {b:"What is he like?", m:"Kişiliği sormak için <b>What is he like?</b> deriz. Görünüşü sormak için <b>What does he look like?</b> Cevap: <b>He is funny. / He is tall with brown hair.</b>", o:"What is she like? – She is kind."}
+     ],
+     ipucu:"What is he LIKE? = nasıl biri? (kişilik). What does he LOOK like? = neye benziyor? (görünüş).",
+     kartlar:[["tall","uzun boylu"],["short","kısa boylu"],["curly hair","kıvırcık saç"],["straight hair","düz saç"],["brave","cesur"],["clever","zeki"],["shy","utangaç"],["lazy","tembel"]],
+     sorular:[
+       {s:"'cesur' İngilizce nedir?", c:["brave","shy","lazy","funny"], a:"Cesur = brave."},
+       {s:"'shy' ne demektir?", c:["utangaç","komik","güçlü","zeki"], a:"Shy = utangaç."},
+       {s:"She ___ got long curly hair.", c:["has","have","is","does"], a:"She ile 'has got' kullanılır."},
+       {s:"He is not short. He is ___.", c:["tall","curly","blue","kind"], a:"Short'un zıttı tall (uzun boylu)."},
+       {s:"Which word describes personality?", c:["funny","curly","tall","blonde"], a:"Funny kişiliği anlatır; diğerleri görünüştür."},
+       {s:"Which word describes appearance?", c:["straight hair","brave","kind","clever"], a:"Straight hair (düz saç) görünüşü anlatır."},
+       {s:"What is he like?  He is ___.", c:["friendly","tall with brown eyes","a cartoon","in the park"], a:"What is he like? kişiliği sorar: friendly."},
+       {s:"Choose the correct sentence.", c:["My favourite character is funny and clever.","My favourite character are funny and clever.","My favourite character funny is.","Funny my favourite is character."], a:"Tekil özne ile 'is' kullanılır."},
+       {s:"Read: 'Pepe is a cartoon cat. He is small and has got big green eyes. He is brave but sometimes lazy.' What colour are Pepe's eyes?", c:["Green","Blue","Brown","Black"], a:"Metinde 'big green eyes' yazıyor."},
+       {s:"Which sentence is true? 'Maya is tall and strong. She isn't shy.'", c:["Maya isn't shy.","Maya is short.","Maya is weak.","Maya is lazy."], a:"Metinde 'She isn't shy.' yazıyor."}
+     ]}
+  ]},
+  {ad:"Fun with Science / Bilimle Eğlence", konular:[
+    {id:"en4-science-fun", ad:"Fun with science – Bilimle eğlence", e:"🔬",
+     anlat:[
+       {b:"Science words", m:"plant (bitki), seed (tohum), water (su), light (ışık), magnet (mıknatıs), ice (buz), air (hava), experiment (deney), scientist (bilim insanı).", o:"A seed needs water and light."},
+       {b:"What happens?", m:"melt (erimek), freeze (donmak), float (yüzmek), sink (batmak), grow (büyümek), boil (kaynamak). Ice <b>melts</b> in the sun. A stone <b>sinks</b>. A ball <b>floats</b>.", o:"Water freezes in the freezer."},
+       {b:"Instructions", m:"Deney anlatırken sıra kelimeleri: <b>First, next, then, finally</b>. <b>First, put water in a glass. Then add a seed.</b>", o:"First, take a cup. Finally, write the result."},
+       {b:"What do we need?", m:"<b>We need ...</b> (ihtiyacımız var). <b>Plants need water, light and air.</b> Soru: <b>What do plants need?</b>", o:"We need a magnet and some paper clips."}
+     ],
+     ipucu:"Ice melts 🧊➡️💧, water freezes 💧➡️🧊. 'Melt' = erime, 'freeze' = donma. Zıt anlamlıdır!",
+     kartlar:[["seed","tohum"],["magnet","mıknatıs"],["melt","erimek"],["freeze","donmak"],["float","yüzmek"],["sink","batmak"],["experiment","deney"],["scientist","bilim insanı"]],
+     sorular:[
+       {s:"'mıknatıs' İngilizce nedir?", c:["magnet","seed","plant","ice"], a:"Mıknatıs = magnet."},
+       {s:"'sink' ne demektir?", c:["batmak","yüzmek","erimek","donmak"], a:"Sink = batmak."},
+       {s:"Ice ___ in the sun.", c:["melts","freezes","grows","sinks"], a:"Buz güneşte erir: melts."},
+       {s:"Water ___ in the freezer.", c:["freezes","melts","floats","boils"], a:"Dondurucuda su donar: freezes."},
+       {s:"A leaf ___ on the water.", c:["floats","sinks","melts","freezes"], a:"Yaprak su üstünde yüzer: floats."},
+       {s:"What do plants need?", c:["Water, light and air","Sugar and salt","Toys and books","Ice and snow"], a:"Bitkiler su, ışık ve havaya ihtiyaç duyar."},
+       {s:"Which word means the first step of an experiment?", c:["First","Finally","Then","Next"], a:"İlk adım: first."},
+       {s:"Choose the correct sentence.", c:["A magnet attracts metal.","A magnet attract metal.","Magnet a attracts metal.","A magnet attracting metal is."], a:"Tekil özne (a magnet) + fiil -s: attracts."},
+       {s:"Read: 'First, put a seed in a pot. Then add soil and water. Finally, put the pot near a window. After some days, the seed grows.' What do we do after adding soil and water?", c:["Put the pot near a window","Throw the seed","Add ice","Freeze the pot"], a:"Metinde 'Finally, put the pot near a window.' yazıyor."},
+       {s:"Which one is a scientist's job?", c:["Doing experiments","Baking bread","Driving a bus","Teaching music"], a:"Bilim insanı deney yapar."}
+     ]}
+  ]},
+  {ad:"Jobs / Meslekler", konular:[
+    {id:"en4-jobs", ad:"Jobs & workplaces – Meslekler", e:"👩‍🔧",
+     anlat:[
+       {b:"Jobs", m:"doctor, nurse, teacher, pilot, farmer, vet (veteriner), chef (aşçı), mechanic (tamirci), police officer, firefighter (itfaiyeci), dentist (diş hekimi), baker (fırıncı).", o:"My uncle is a pilot."},
+       {b:"What does he do?", m:"Mesleği sormak için <b>What does he/she do?</b> deriz. Cevap: <b>He is a ... / She is a ...</b>  Ünlüyle başlayan mesleklerde <b>an</b>: an engineer.", o:"What does your mother do? – She is a dentist."},
+       {b:"Where does he work?", m:"<b>Where does she work?</b> – <b>She works in a hospital / at a school / on a farm.</b>", o:"A chef works in a restaurant."},
+       {b:"What do they do?", m:"Ne yaparlar? <b>A vet helps animals. A firefighter puts out fires. A baker makes bread. A farmer grows vegetables.</b>", o:"A doctor helps sick people."}
+     ],
+     ipucu:"He/She için fiile -s: 'works', 'helps', 'makes'. 'What does he DO?' içinde zaten 'does' var, o yüzden 'do' yalın kalır!",
+     kartlar:[["vet","veteriner"],["chef","aşçı"],["mechanic","tamirci"],["firefighter","itfaiyeci"],["dentist","diş hekimi"],["baker","fırıncı"],["farmer","çiftçi"],["pilot","pilot"]],
+     sorular:[
+       {s:"'itfaiyeci' İngilizce nedir?", c:["firefighter","farmer","baker","chef"], a:"İtfaiyeci = firefighter."},
+       {s:"A ___ helps sick animals.", c:["vet","baker","pilot","mechanic"], a:"Hasta hayvanlara veteriner (vet) bakar."},
+       {s:"A baker makes ___.", c:["bread","cars","medicine","houses"], a:"Fırıncı ekmek yapar."},
+       {s:"What does your father do?  He ___ a mechanic.", c:["is","does","has","are"], a:"Meslek söylerken 'is' kullanılır."},
+       {s:"She ___ in a hospital. (çalışıyor)", c:["works","work","working","is work"], a:"She ile fiile -s gelir: works."},
+       {s:"He is ___ engineer.", c:["an","a","the","some"], a:"Engineer ünlüyle başlar, bu yüzden 'an'."},
+       {s:"Where does a farmer work?", c:["On a farm","In a hospital","At a bank","In a restaurant"], a:"Çiftçi çiftlikte çalışır."},
+       {s:"Choose the correct question.", c:["What does she do?","What do she do?","What she does?","What does she does?"], a:"Doğru kalıp: What does she do?"},
+       {s:"Read: 'My aunt is a chef. She works in a big restaurant. She makes soup and cakes.' What does the aunt make?", c:["Soup and cakes","Bread","Medicine","Pizza only"], a:"Metinde 'She makes soup and cakes.' yazıyor."},
+       {s:"Which job is NOT correctly matched with its workplace?", c:["a pilot – in a school","a teacher – in a school","a nurse – in a hospital","a chef – in a restaurant"], a:"Pilot okulda değil, uçakta çalışır."}
+     ]}
+  ]},
+  {ad:"My Clothes / Giysilerim", konular:[
+    {id:"en4-clothes-shopping", ad:"Clothes & shopping – Giysiler ve alışveriş", e:"👕",
+     anlat:[
+       {b:"Clothes", m:"shirt (gömlek), T-shirt, jacket (ceket), coat (mont), trousers (pantolon), skirt (etek), dress (elbise), socks (çorap), shoes (ayakkabı), scarf (atkı), gloves (eldiven), hat (şapka).", o:"I wear a coat in winter."},
+       {b:"Wearing now", m:"Şu an giydiğimizi <b>is/are wearing</b> ile söyleriz. <b>What is she wearing?</b> – <b>She is wearing a red dress.</b>", o:"I am wearing blue jeans."},
+       {b:"Shopping", m:"<b>How much is it?</b> (tek şey) – <b>It's ten liras.</b> <b>How much are they?</b> (çoğul) – <b>They're twenty liras.</b> Fiyat: <b>lira</b>.", o:"How much are these shoes? – They're fifty liras."},
+       {b:"In a shop", m:"<b>Can I try it on?</b> (Deneyebilir miyim?) – <b>It's too big / too small.</b> (çok büyük / küçük) – <b>Do you have a bigger size?</b> – <b>I'll take it.</b> (Alıyorum.)", o:"It's too small. Do you have a bigger one?"}
+     ],
+     ipucu:"Pantolon, ayakkabı, çorap çiftlerdir: trousers, shoes, socks → ARE. 'How much ARE they?'. Tek parça: shirt, dress → IS.",
+     kartlar:[["scarf","atkı"],["gloves","eldiven"],["trousers","pantolon"],["skirt","etek"],["How much is it?","Ne kadar?"],["Can I try it on?","Deneyebilir miyim?"],["too big","çok büyük"],["too small","çok küçük"]],
+     sorular:[
+       {s:"'atkı' İngilizce nedir?", c:["scarf","gloves","hat","socks"], a:"Atkı = scarf."},
+       {s:"We wear ___ on our hands in winter.", c:["gloves","socks","shoes","skirts"], a:"Ellere eldiven (gloves) giyilir."},
+       {s:"What is she wearing?  She ___ wearing a dress.", c:["is","are","am","do"], a:"She ile 'is wearing' kullanılır."},
+       {s:"They ___ wearing white shoes.", c:["are","is","am","does"], a:"They ile 'are wearing'."},
+       {s:"How much ___ this shirt? (tek parça)", c:["is","are","do","does"], a:"Tekil şey için 'How much is ...?'"},
+       {s:"How much ___ these socks? (çoğul)", c:["are","is","do","does"], a:"Çoğul için 'How much are ...?'"},
+       {s:"The shoes are too small. What can you say?", c:["Do you have a bigger size?","I'll take them.","They are cheap.","I like my hat."], a:"Küçükse daha büyük beden sorulur."},
+       {s:"'Can I try it on?' kim kime söyler?", c:["Müşteri satıcıya","Öğretmen öğrenciye","Doktor hastaya","Aşçı garsona"], a:"Giysi denemek için müşteri satıcıya söyler."},
+       {s:"Read: 'It is cold today. Mia is wearing a coat, a scarf and gloves. Her brother is wearing a jacket.' What is Mia NOT wearing?", c:["A hat","A coat","A scarf","Gloves"], a:"Metinde Mia için şapka (hat) söylenmiyor."},
+       {s:"You have 30 liras. A skirt is 25 liras and a T-shirt is 10 liras. Can you buy both?", c:["No, they cost 35 liras.","Yes, they cost 30 liras.","Yes, they cost 25 liras.","No, they cost 40 liras."], a:"25 + 10 = 35 lira. 30 lira yetmez."}
+     ]}
+  ]},
+  {ad:"Food and Drink / Yiyecek ve İçecek", konular:[
+    {id:"en4-food-order", ad:"Ordering food & healthy eating – Sipariş", e:"🍽️",
+     anlat:[
+       {b:"Meals", m:"breakfast (kahvaltı), lunch (öğle yemeği), dinner (akşam yemeği), snack (atıştırmalık). <b>I have breakfast at seven.</b> Menü: starter, main course, dessert (tatlı), drink.", o:"I have lunch at school."},
+       {b:"Would you like...?", m:"Kibarca teklif: <b>Would you like some soup?</b> – <b>Yes, please. / No, thanks.</b> İstek: <b>I'd like a salad, please.</b> (I'd like = I would like)", o:"I'd like a glass of water, please."},
+       {b:"Healthy food", m:"healthy (sağlıklı): fruit, vegetables, milk, fish. unhealthy / junk food (sağlıksız): chips, sweets, fizzy drinks. <b>You should eat more vegetables.</b>", o:"Fruit is healthy. Sweets are unhealthy."},
+       {b:"At a restaurant", m:"waiter (garson), menu, bill (hesap). <b>Can I have the menu, please?</b> / <b>Can I have the bill, please?</b> / <b>Here you are.</b> (Buyurun.)", o:"Waiter: Here you are. Customer: Thank you."}
+     ],
+     ipucu:"Would you like...? = teklif eder. I'd like... = isterim. İkisi de kibar! 'I want...' kaba durabilir.",
+     kartlar:[["breakfast","kahvaltı"],["dinner","akşam yemeği"],["dessert","tatlı"],["healthy","sağlıklı"],["unhealthy","sağlıksız"],["waiter","garson"],["bill","hesap"],["I'd like...","...isterim"]],
+     sorular:[
+       {s:"'kahvaltı' İngilizce nedir?", c:["breakfast","lunch","dinner","snack"], a:"Kahvaltı = breakfast."},
+       {s:"'dessert' ne demektir?", c:["tatlı","çorba","içecek","salata"], a:"Dessert = tatlı."},
+       {s:"Which one is healthy?", c:["fruit","chips","sweets","fizzy drinks"], a:"Meyve sağlıklıdır; diğerleri sağlıksızdır."},
+       {s:"___ you like some soup?", c:["Would","Do","Are","Have"], a:"Kibar teklif: Would you like ...?"},
+       {s:"I ___ a salad, please. (kibarca istek)", c:["would like","like am","would likes","am like"], a:"I'd like = I would like (isterim)."},
+       {s:"You want to pay at a restaurant. What do you say?", c:["Can I have the bill, please?","Can I have the menu, please?","Here you are.","I'm hungry."], a:"Hesap istemek için: the bill."},
+       {s:"The waiter gives you your food. He says:", c:["Here you are.","Would you like the bill?","I'm tired.","Good night."], a:"Bir şey verirken: Here you are."},
+       {s:"Choose the correct sentence.", c:["Would you like some water?","Would you likes some water?","You would like some water?","Would like you some water?"], a:"Kalıp: Would you like ...?"},
+       {s:"Read: 'For breakfast, Ece has bread, cheese and milk. For dinner, she has soup and fish. She doesn't eat sweets before bed.' What does Ece drink at breakfast?", c:["Milk","Juice","Water","Tea"], a:"Metinde 'bread, cheese and milk' yazıyor."},
+       {s:"Your friend eats chips and sweets every day. What should you say?", c:["You should eat more fruit and vegetables.","You should eat more sweets.","You mustn't drink water.","You should never eat breakfast."], a:"Sağlıklı beslenme önerisi: more fruit and vegetables."}
+     ]}
   ]}
 ]});

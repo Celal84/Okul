@@ -114,6 +114,28 @@ HW.add({ders:"matematik", sinif:4, uniteler:[
        {s:"Bir çiftçi 5 sandığın her birine 48 elma koydu. Sonra bütün elmaları 12'şerli poşetlere paylaştırdı. Kaç poşet doldu?", c:["20","4","5","240"], a:"5 × 48 = 240 elma. 240 ÷ 12 = 20 poşet."}
      ],
      uret:["bol",12]
+    },
+    {id:"mat4-problem", ad:"Problem Çözme ve Problem Kurma", e:"🧩",
+     anlat:[
+       {b:"Çözüm planı", m:"Önce problemi anla, sonra plan yap, işlemleri yap ve sonucu kontrol et. Gerekirse şema ya da tablo çiz."},
+       {b:"Çok adımlı problemler", m:"Önce ara sonucu buluruz, sonra bu sonuçla ikinci işlemi yaparız.", o:"3 kutuda 24'er kalem var, 20 kalem dağıtıldı: 3 × 24 = 72, 72 − 20 = 52"},
+       {b:"Gereksiz bilgi", m:"Bazı problemlerde çözümde kullanılmayan bilgiler olabilir. Soruyu dikkatle okuyup gerekenleri seçeriz."},
+       {b:"Problem kurma", m:"Verilen bir işleme uygun bir hikâye yazarak problem kurabiliriz.", o:"48 ÷ 6 = 8 için: 48 bilye 6 çocuğa eşit paylaştırılırsa her çocuğa 8 bilye düşer."}
+     ],
+     ipucu:"Anla, planla, çöz, kontrol et: APÇK!",
+     kartlar:[["Problemin ilk adımı","Soruyu anlamak"],["Çözümden sonra son adım","Kontrol etmek"],["24 × 5 − 30","90"],["360 ÷ 6 + 40","100"],["Soruda gereksiz bilgi varsa","Kullanmayız"],["Problem kurmak için","İşleme uygun hikâye yazarız"],["Ara sonuç nedir?","İlk işlemin sonucu"]],
+     sorular:[
+       {s:"Bir kitap 250 sayfadır. Ali ilk gün 45, ikinci gün 60 sayfa okudu. Okumadığı kaç sayfa kalmıştır?", c:["145","155","195","105"], a:"45 + 60 = 105 sayfa okudu. 250 − 105 = 145 sayfa kalmıştır."},
+       {s:"Bir kutuda 24 kalem var. 15 kutuda kaç kalem vardır?", c:["360","39","320","300"], a:"24 × 15 = 360 kalem."},
+       {s:"Bir otobüs seferinde 45 yolcu taşıyor. Günde 6 sefer yaparsa kaç yolcu taşır?", c:["270","51","240","300"], a:"45 × 6 = 270 yolcu."},
+       {s:"432 elma 6 kasaya eşit olarak konulursa her kasada kaç elma olur?", c:["72","62","76","426"], a:"432 ÷ 6 = 72 elma."},
+       {s:"Bir ayakkabı 185 TL, bir çanta 240 TL'dir. 500 TL ile ikisini alan kişinin kaç TL'si kalır?", c:["75","85","65","925"], a:"185 + 240 = 425 TL. 500 − 425 = 75 TL."},
+       {s:"Bir bahçede 12 sıra var, her sırada 15 elma ağacı bulunuyor. 40 ağaç kesilirse kaç ağaç kalır?", c:["140","180","100","220"], a:"12 × 15 = 180 ağaç. 180 − 40 = 140 ağaç."},
+       {s:"Sınıftaki 28 öğrenci 4'erli gruplara ayrılıyor. Her gruba 3 kitap verilirse kaç kitap gerekir?", c:["21","12","84","7"], a:"28 ÷ 4 = 7 grup. 7 × 3 = 21 kitap."},
+       {s:"Ayşe'nin 5 kardeşi var. Ayşe'nin 120 TL'si var ve 45 TL'lik bir kitap aldı. Kaç TL'si kaldığını bulmak için hangi bilgi gereksizdir?", c:["Kardeş sayısı","Ayşe'nin parası","Kitabın fiyatı","Soru cümlesi"], a:"Kalan parayı bulmak için 120 − 45 yeterlidir. Kardeş sayısı gereksizdir."},
+       {s:"'48 bilye 6 çocuğa eşit paylaştırılırsa her çocuğa kaç bilye düşer?' problemi hangi işlemle çözülür?", c:["48 ÷ 6","48 × 6","48 + 6","48 − 6"], a:"Eşit paylaştırma bölme işlemidir: 48 ÷ 6 = 8."},
+       {s:"Bir bakkal 3 koliye 24'er paket süt koydu. 18 paketi satınca kalan sütleri 6'şar paketlik gruplara ayırdı. Kaç grup oldu?", c:["9","12","54","6"], a:"3 × 24 = 72 paket. 72 − 18 = 54 paket kaldı. 54 ÷ 6 = 9 grup."}
+     ]
     }
   ]},
   {ad:"Kesirler", konular:[
@@ -162,6 +184,28 @@ HW.add({ders:"matematik", sinif:4, uniteler:[
        {s:"Bir tankın 2/9'u doludur. Önce tankın 3/9'u kadar su eklendi, sonra 1/9'u kadar su boşaltıldı. Tankın kaçta kaçı doludur?", c:["4/9","6/9","5/9","3/9"], a:"2/9 + 3/9 = 5/9, sonra 5/9 − 1/9 = 4/9."}
      ],
      uret:["kesir",10]
+    },
+    {id:"mat4-ondalik", ad:"Ondalık Gösterim", e:"🔟",
+     anlat:[
+       {b:"Onda bir", m:"Paydası 10 olan kesirleri virgül kullanarak yazabiliriz. Virgülden sonraki ilk basamak onda birler basamağıdır.", o:"1/10 = 0,1 ve 3/10 = 0,3"},
+       {b:"Yüzde bir", m:"Paydası 100 olan kesirler virgülden sonra iki basamakla yazılır. İkinci basamak yüzde birler basamağıdır.", o:"25/100 = 0,25 ve 7/100 = 0,07"},
+       {b:"Okuma ve yazma", m:"Virgülden önceki kısım tam kısımdır. 2,35 sayısı iki tam yüzde otuz beş diye okunur.", o:"0,5 = sıfır tam onda beş"},
+       {b:"Karşılaştırma ve para", m:"Ondalık gösterimleri karşılaştırırken önce tam kısımlara, sonra onda birlere, sonra yüzde birlere bakarız. Paralarda 0,50 TL = 50 kuruştur.", o:"1,2 > 0,9"}
+     ],
+     ipucu:"Virgülden sonra ilk basamak ONDA BİR, ikinci basamak YÜZDE BİR!",
+     kartlar:[["1/10","0,1"],["3/10","0,3"],["25/100","0,25"],["7/100","0,07"],["0,5 TL kaç kuruştur?","50 kuruş"],["0,75 kesir olarak","75/100"],["Virgülden sonraki ilk basamak","Onda birler"]],
+     sorular:[
+       {s:"3/10 kesrinin ondalık gösterimi hangisidir?", c:["0,3","3,0","0,03","30"], a:"Paydası 10 olan kesirde pay virgülden sonraki ilk basamağa yazılır: 0,3."},
+       {s:"0,7 ondalık gösterimi hangi kesre eşittir?", c:["7/10","7/100","70/10","1/7"], a:"0,7, onda yedi demektir: 7/10."},
+       {s:"25/100 kesrinin ondalık gösterimi hangisidir?", c:["0,25","2,5","0,025","25"], a:"Paydası 100 olan kesirde pay iki basamakla yazılır: 0,25."},
+       {s:"0,05 sayısı hangi kesre eşittir?", c:["5/100","5/10","50/100","1/5"], a:"0,05 yüzde beş demektir: 5/100."},
+       {s:"Hangisi en büyüktür?", c:["0,8","0,6","0,08","0,5"], a:"Onda birler basamağı en büyük olan 0,8'dir."},
+       {s:"1,5 TL kaç kuruştur?", c:["150","15","105","1500"], a:"1 TL = 100 kuruştur. 0,5 TL = 50 kuruştur. Toplam 150 kuruş."},
+       {s:"2,35 sayısındaki 3 hangi basamaktadır?", c:["Onda birler","Yüzde birler","Birler","Onlar"], a:"Virgülden sonraki ilk basamak onda birlerdir. 3 buradadır."},
+       {s:"Bir pizzanın 10 eşit diliminden 6'sı yendi. Yenen kısmın ondalık gösterimi nedir?", c:["0,6","6,0","0,06","0,4"], a:"6/10 kesri 0,6 diye yazılır."},
+       {s:"Hangi sıralama küçükten büyüğedir?", c:["0,09 < 0,5 < 1,2","0,5 < 0,09 < 1,2","1,2 < 0,5 < 0,09","0,09 < 1,2 < 0,5"], a:"0,09 yüzde dokuz, 0,5 onda beş, 1,2 ise 1'den büyüktür."},
+       {s:"0,35 m kaç santimetredir?", c:["35","3,5","350","0,35"], a:"1 m = 100 cm olduğundan 0,35 m, 100 cm'in 35/100'üdür: 35 cm."}
+     ]
     }
   ]},
   {ad:"Ölçme", konular:[
@@ -188,6 +232,74 @@ HW.add({ders:"matematik", sinif:4, uniteler:[
      ],
      uret:["saat",12]
     },
+    {id:"mat4-uzunluk-birim", ad:"Uzunluk Ölçme: km, m, cm, mm Dönüşümleri", e:"📏",
+     anlat:[
+       {b:"Birimler arası ilişki", m:"1 km = 1000 m, 1 m = 100 cm, 1 cm = 10 mm, 1 m = 1000 mm'dir."},
+       {b:"Dönüşüm kuralı", m:"Büyük birimden küçük birime geçerken çarparız. Küçük birimden büyüğe geçerken böleriz.", o:"4500 m = 4 km 500 m"},
+       {b:"Uzunluklarla işlem", m:"Toplama ve çıkarma yapmadan önce uzunlukları aynı birime çeviririz.", o:"3 m 20 cm + 1 m 85 cm = 320 cm + 185 cm = 505 cm = 5 m 5 cm"},
+       {b:"Problemler", m:"Yol, ip, kumaş gibi problemlerde birimlere dikkat ederiz."}
+     ],
+     ipucu:"Büyük birime çevirirken böl, küçük birime çevirirken çarp!",
+     kartlar:[["1 km","1000 m"],["1 m","100 cm"],["1 cm","10 mm"],["2500 m","2 km 500 m"],["3 m 20 cm + 1 m 85 cm","5 m 5 cm"],["4 m kaç mm?","4000 mm"]],
+     sorular:[
+       {s:"6 km kaç metredir?", c:["6000","600","60","60000"], a:"6 × 1000 = 6000 m."},
+       {s:"3500 m kaç km kaç m'dir?", c:["3 km 500 m","35 km","3 km 50 m","350 km"], a:"3000 m = 3 km. Kalan 500 m. Toplam 3 km 500 m."},
+       {s:"7 m kaç santimetredir?", c:["700","70","7000","107"], a:"7 × 100 = 700 cm."},
+       {s:"Hangisi en uzundur?", c:["2 m","150 cm","1900 mm","1 m 80 cm"], a:"2 m = 2000 mm; 1900 mm; 1 m 80 cm = 1800 mm; 150 cm = 1500 mm. En uzun 2 m'dir."},
+       {s:"5 cm kaç milimetredir?", c:["50","500","5","15"], a:"5 × 10 = 50 mm."},
+       {s:"Bir yol 2 km 300 m uzunluğundadır. Ali yolun 1 km 800 m'sini yürüdü. Kaç metre yolu kaldı?", c:["500","1500","4100","100"], a:"2300 − 1800 = 500 m."},
+       {s:"3 m 20 cm + 1 m 85 cm toplamı kaçtır?", c:["5 m 5 cm","4 m 5 cm","5 m 50 cm","4 m 95 cm"], a:"320 + 185 = 505 cm = 5 m 5 cm."},
+       {s:"4 m uzunluğundaki ip 25 cm'lik parçalara kesilirse kaç parça olur?", c:["16","15","25","100"], a:"4 m = 400 cm. 400 ÷ 25 = 16 parça."},
+       {s:"Okul bahçesinin etrafını bir kez dolaşmak 600 m'dir. 5 tur kaç km eder?", c:["3","30","5","600"], a:"5 × 600 = 3000 m = 3 km."},
+       {s:"Ela'nın boyu 1 m 35 cm, kardeşinin boyu 98 cm'dir. Ela kardeşinden kaç cm uzundur?", c:["37","47","33","43"], a:"135 − 98 = 37 cm."}
+     ]
+    },
+    {id:"mat4-cevre", ad:"Çevre Ölçme", e:"🔲",
+     anlat:[
+       {b:"Çevre nedir?", m:"Bir şeklin kenar uzunluklarının toplamına çevre denir. Çevreyi cm, m, km gibi uzunluk birimleriyle ölçeriz.", o:"Kenarları 3, 4, 5 cm olan üçgenin çevresi 12 cm'dir."},
+       {b:"Karenin çevresi", m:"Karenin 4 kenarı eşittir. Çevre = 4 × bir kenar.", o:"Kenarı 6 cm olan karenin çevresi 24 cm'dir."},
+       {b:"Dikdörtgenin çevresi", m:"Dikdörtgende karşılıklı kenarlar eşittir. Çevre = 2 × (kısa kenar + uzun kenar).", o:"5 cm ve 8 cm kenarlı dikdörtgen: 2 × 13 = 26 cm"},
+       {b:"Bilinmeyen kenar", m:"Çevre ve bazı kenarlar biliniyorsa eksik kenarı çıkarma ve bölme ile buluruz.", o:"Çevresi 30 cm, kısa kenarı 6 cm: 30 ÷ 2 = 15, 15 − 6 = 9 cm uzun kenar"}
+     ],
+     ipucu:"Çevre, şeklin etrafında yürürken kat ettiğin yoldur: kenarları topla!",
+     kartlar:[["Çevre nedir?","Kenarların toplamı"],["Karenin çevresi","4 × kenar"],["Dikdörtgenin çevresi","2 × (a + b)"],["Kenarı 7 cm olan karenin çevresi","28 cm"],["5 cm ve 8 cm'lik dikdörtgenin çevresi","26 cm"],["Çevre hangi birimle ölçülür?","cm, m, km"]],
+     sorular:[
+       {s:"Kenarı 9 cm olan karenin çevresi kaç cm'dir?", c:["36","18","81","27"], a:"4 × 9 = 36 cm."},
+       {s:"Kenarları 5 cm ve 8 cm olan dikdörtgenin çevresi kaç cm'dir?", c:["26","13","40","18"], a:"2 × (5 + 8) = 2 × 13 = 26 cm."},
+       {s:"Kenarları 6 cm, 7 cm ve 9 cm olan üçgenin çevresi kaç cm'dir?", c:["22","42","16","13"], a:"6 + 7 + 9 = 22 cm."},
+       {s:"Çevresi 40 cm olan karenin bir kenarı kaç cm'dir?", c:["10","20","8","160"], a:"40 ÷ 4 = 10 cm."},
+       {s:"Kısa kenarı 6 cm, çevresi 30 cm olan dikdörtgenin uzun kenarı kaç cm'dir?", c:["9","15","24","18"], a:"30 ÷ 2 = 15. 15 − 6 = 9 cm."},
+       {s:"Kenarları 12 m ve 8 m olan dikdörtgen bir bahçenin etrafına tel çekilecek. Kaç metre tel gerekir?", c:["40","20","96","32"], a:"2 × (12 + 8) = 40 m."},
+       {s:"Çevresi 36 cm olan bir karenin kenarı 5 cm artırılırsa yeni çevre kaç cm olur?", c:["56","41","45","61"], a:"Eski kenar 9 cm. Yeni kenar 14 cm. 4 × 14 = 56 cm."},
+       {s:"Bir kenarı 8 cm olan eşkenar üçgenin çevresi kaç cm'dir?", c:["24","16","32","64"], a:"3 × 8 = 24 cm."},
+       {s:"Bir kenarı 15 m olan kare şeklindeki bahçenin çevresi kaç metredir?", c:["60","30","225","45"], a:"4 × 15 = 60 m."},
+       {s:"Çevresi 28 cm olan dikdörtgenin bir kenarı 5 cm'dir. Diğer kenarı kaç cm'dir?", c:["9","23","14","19"], a:"28 ÷ 2 = 14. 14 − 5 = 9 cm."}
+     ],
+     uret:["cevre",20]
+    },
+    {id:"mat4-alan", ad:"Alan Ölçme", e:"🟦",
+     anlat:[
+       {b:"Alan nedir?", m:"Bir yüzeyin kapladığı yere alan denir. Alanı birim karelerle ölçeriz."},
+       {b:"Santimetrekare ve metrekare", m:"Kenarı 1 cm olan karenin alanı 1 santimetrekaredir (cm²). Kenarı 1 m olan karenin alanı 1 metrekaredir (m²)."},
+       {b:"Dikdörtgenin alanı", m:"Dikdörtgenin alanı, kısa kenar ile uzun kenarın çarpımıdır.", o:"4 cm × 6 cm = 24 cm²"},
+       {b:"Karenin alanı", m:"Karenin alanı, bir kenarın kendisiyle çarpımıdır.", o:"Kenarı 5 cm olan karenin alanı 25 cm²"}
+     ],
+     ipucu:"Alan içini doldurur (cm²), çevre etrafını dolaşır (cm)!",
+     kartlar:[["Alan nedir?","Yüzeyin kapladığı yer"],["Dikdörtgenin alanı","Kısa × uzun kenar"],["Karenin alanı","Kenar × kenar"],["6 cm kenarlı karenin alanı","36 cm²"],["4 cm × 7 cm'lik alan","28 cm²"],["Alan birimi","Santimetrekare"]],
+     sorular:[
+       {s:"Kenarları 4 cm ve 6 cm olan dikdörtgenin alanı kaç cm²'dir?", c:["24","20","10","48"], a:"4 × 6 = 24 cm²."},
+       {s:"Kenarı 5 cm olan karenin alanı kaç cm²'dir?", c:["25","20","10","15"], a:"5 × 5 = 25 cm²."},
+       {s:"Kenarları 3 m ve 9 m olan dikdörtgen bahçenin alanı kaç m²'dir?", c:["27","12","24","36"], a:"3 × 9 = 27 m²."},
+       {s:"Alan hangi birimle ölçülür?", c:["Santimetrekare","Santimetre","Litre","Kilogram"], a:"Alan birim karelerle ölçülür: santimetrekare, metrekare."},
+       {s:"Alanı 48 cm² olan dikdörtgenin kısa kenarı 6 cm ise uzun kenarı kaç cm'dir?", c:["8","42","54","288"], a:"48 ÷ 6 = 8 cm."},
+       {s:"Kenarı 10 m olan kare şeklindeki arsanın alanı kaç m²'dir?", c:["100","40","20","1000"], a:"10 × 10 = 100 m²."},
+       {s:"Kenarları 5 cm ve 8 cm olan dikdörtgenin alanı ve çevresi sırasıyla nedir?", c:["40 cm², 26 cm","26 cm², 40 cm","13 cm², 40 cm","40 cm, 26 cm²"], a:"Alan 5 × 8 = 40 cm². Çevre 2 × 13 = 26 cm."},
+       {s:"12 tane 1 cm²'lik birim kare 3 satır olacak şekilde dikdörtgen biçiminde dizilirse her satırda kaç birim kare olur?", c:["4","9","36","15"], a:"12 ÷ 3 = 4 birim kare."},
+       {s:"Alanı 36 cm² olan karenin bir kenarı kaç cm'dir?", c:["6","9","18","12"], a:"6 × 6 = 36 olduğundan kenar 6 cm'dir."},
+       {s:"Kenarları 7 m ve 4 m olan dikdörtgen biçimindeki odaya 1 m²'lik halılardan kaç tane serilebilir?", c:["28","22","11","14"], a:"Oda alanı 7 × 4 = 28 m²'dir. 28 halı gerekir."}
+     ],
+     uret:["alan",20]
+    },
     {id:"mat4-uzunluk-cevre-alan", ad:"Uzunluk, Çevre ve Alan", e:"📏",
      anlat:[
        {b:"Uzunluk birimleri", m:"1 km = 1000 m, 1 m = 100 cm, 1 cm = 10 mm, 1 m = 1000 mm. Büyük birimden küçüğe geçerken çarparız, küçükten büyüğe geçerken böleriz.", o:"3 km 250 m = 3250 m, 7 cm = 70 mm"},
@@ -210,6 +322,50 @@ HW.add({ders:"matematik", sinif:4, uniteler:[
        {s:"Dikdörtgen bir odanın zemini 6 m × 5 m'dir. Zemin, her biri 1 m² olan karolarla döşenecek ve bir karonun fiyatı 40 liradır. Toplam maliyet kaç liradır?", c:["1 200 lira","440 lira","220 lira","3 000 lira"], a:"Alan 6 × 5 = 30 m², yani 30 karo. 30 × 40 = 1 200 lira."}
      ],
      uret:["alan",20]
+    },
+    {id:"mat4-kutle", ad:"Kütle Ölçme: ton, kg, g", e:"⚖️",
+     anlat:[
+       {b:"Kütle birimleri", m:"Kütle birimleri gram (g), kilogram (kg) ve tondur (t). 1 kg = 1000 g ve 1 ton = 1000 kg'dır."},
+       {b:"Uygun birim seçme", m:"Baharat, ilaç gibi küçük şeyleri gramla; meyve, sebze, un gibi şeyleri kilogramla; kamyon yükü gibi büyük şeyleri tonla ölçeriz."},
+       {b:"Birim dönüşümü", m:"Büyükten küçüğe çarparız, küçükten büyüğe böleriz.", o:"3 t = 3000 kg, 4500 g = 4 kg 500 g"},
+       {b:"Kütle problemleri", m:"Toplama ve çıkarmadan önce kütleleri aynı birime çeviririz.", o:"2 kg 400 g + 1 kg 700 g = 2400 g + 1700 g = 4100 g = 4 kg 100 g"}
+     ],
+     ipucu:"Ton, kilo, gram: her basamakta 1000 var!",
+     kartlar:[["1 ton","1000 kg"],["1 kg","1000 g"],["Yarım ton","500 kg"],["3 t","3000 kg"],["2 kg 400 g + 1 kg 700 g","4 kg 100 g"],["Kamyon yükü hangi birimle?","Ton"]],
+     sorular:[
+       {s:"1 ton kaç kilogramdır?", c:["1000","100","10","10000"], a:"1 ton = 1000 kg."},
+       {s:"5 kg kaç gramdır?", c:["5000","500","50","50000"], a:"5 × 1000 = 5000 g."},
+       {s:"4000 kg kaç tondur?", c:["4","40","400","4000"], a:"4000 ÷ 1000 = 4 ton."},
+       {s:"2 kg 400 g + 1 kg 700 g toplamı kaçtır?", c:["4 kg 100 g","3 kg 100 g","4 kg 1000 g","3 kg 700 g"], a:"2400 + 1700 = 4100 g = 4 kg 100 g."},
+       {s:"Bir kamyon 3 ton 500 kg yük taşıyor. Bu yük kaç kilogramdır?", c:["3500","350","35000","3050"], a:"3 ton = 3000 kg. 3000 + 500 = 3500 kg."},
+       {s:"Hangisi en ağırdır?", c:["2 kg","1900 g","1 kg 800 g","1700 g"], a:"2 kg = 2000 g. Diğerleri 1900, 1800 ve 1700 g'dır."},
+       {s:"Bir çuval 25 kg un alıyor. 40 çuval kaç ton un alır?", c:["1","10","100","4"], a:"25 × 40 = 1000 kg = 1 ton."},
+       {s:"Elif 3 kg elma aldı. Kek için 750 g elma kullandı. Kaç gram elması kaldı?", c:["2250","2750","2350","750"], a:"3 kg = 3000 g. 3000 − 750 = 2250 g."},
+       {s:"Bir pakette 250 g çay var. 12 paket kaç kilogram çay eder?", c:["3","30","25","300"], a:"250 × 12 = 3000 g = 3 kg."},
+       {s:"Bir kasada 18 kg 500 g domates var. Aynı iki kasa kaç kilogram domates eder?", c:["37","36","38","35"], a:"18 kg 500 g + 18 kg 500 g = 36 kg 1000 g = 37 kg."}
+     ]
+    },
+    {id:"mat4-sivi", ad:"Sıvı Ölçme: L, mL", e:"🧴",
+     anlat:[
+       {b:"Litre ve mililitre", m:"Sıvı ölçme birimleri litre (L) ve mililitredir (mL). 1 L = 1000 mL'dir.", o:"Yarım litre = 500 mL, çeyrek litre = 250 mL"},
+       {b:"Uygun birim seçme", m:"Kaşık, bardak, ilaç şişesi gibi küçük miktarları mL ile; bidon, depo, havuz gibi büyük miktarları litre ile ölçeriz."},
+       {b:"Dönüşüm", m:"Litreden mL'ye geçerken 1000 ile çarparız. mL'den litreye geçerken 1000'e böleriz.", o:"3 L = 3000 mL, 2500 mL = 2 L 500 mL"},
+       {b:"Sıvı problemleri", m:"İşlem yapmadan önce miktarları aynı birime çeviririz.", o:"1 L 250 mL + 750 mL = 1250 mL + 750 mL = 2000 mL = 2 L"}
+     ],
+     ipucu:"Litreden mL'ye çarp 1000, geri dönerken böl 1000!",
+     kartlar:[["1 L","1000 mL"],["Yarım L","500 mL"],["Çeyrek L","250 mL"],["3 L","3000 mL"],["2500 mL","2 L 500 mL"],["Şurup kaşığı hangi birimle?","mL"]],
+     sorular:[
+       {s:"4 L kaç mL'dir?", c:["4000","400","40","4100"], a:"4 × 1000 = 4000 mL."},
+       {s:"3500 mL kaç litre kaç mL'dir?", c:["3 L 500 mL","35 L","3 L 50 mL","350 L"], a:"3000 mL = 3 L. Kalan 500 mL."},
+       {s:"1 L 250 mL + 750 mL toplamı kaç litredir?", c:["2 L","1 L","3 L","2 L 500 mL"], a:"1250 + 750 = 2000 mL = 2 L."},
+       {s:"Bir şişede 1500 mL su var. 600 mL su içilirse kaç mL su kalır?", c:["900","2100","600","1100"], a:"1500 − 600 = 900 mL."},
+       {s:"Hangisi en çoktur?", c:["3 L","2900 mL","2 L 800 mL","2500 mL"], a:"3 L = 3000 mL. Diğerleri 2900, 2800 ve 2500 mL'dir."},
+       {s:"Bir sürahi 2 L su alıyor. 250 mL'lik bardaklarla kaç bardak doldurulur?", c:["8","4","10","12"], a:"2 L = 2000 mL. 2000 ÷ 250 = 8 bardak."},
+       {s:"Her biri 500 mL olan 6 şişe suyun toplamı kaç litredir?", c:["3","30","6","5"], a:"500 × 6 = 3000 mL = 3 L."},
+       {s:"Bir bidonda 5 L zeytinyağı var. 750 mL yağ kullanılırsa kaç mL yağ kalır?", c:["4250","4750","4350","750"], a:"5 L = 5000 mL. 5000 − 750 = 4250 mL."},
+       {s:"Hangisini ölçmek için mL kullanmak daha uygundur?", c:["Bir kaşık şurup","Yüzme havuzu","Okul su deposu","Bir gölün suyu"], a:"Bir kaşık şurup çok az sıvıdır; mL ile ölçülür."},
+       {s:"Annem 2 L 500 mL süt aldı. Sabah 750 mL, akşam 600 mL kullandı. Kaç mL süt kaldı?", c:["1150","1350","1250","1750"], a:"2500 − (750 + 600) = 2500 − 1350 = 1150 mL."}
+     ]
     },
     {id:"mat4-tartma-sivi", ad:"Tartma ve Sıvı Ölçme", e:"⚖️",
      anlat:[
@@ -235,6 +391,72 @@ HW.add({ders:"matematik", sinif:4, uniteler:[
     }
   ]},
   {ad:"Geometri ve Veri", konular:[
+    {id:"mat4-aci-olcme", ad:"Açı Ölçme: Derece ve İletki", e:"📐",
+     anlat:[
+       {b:"Açı nedir?", m:"Başlangıç noktaları aynı olan iki ışının oluşturduğu şekle açı denir. Ortak noktaya köşe, ışınlara kol denir."},
+       {b:"Açı çeşitleri", m:"Dik açı 90°dir. 90°den küçük açı dar açı, 90°den büyük 180°den küçük açı geniş açıdır. 180° doğru açıdır."},
+       {b:"İletki ile ölçme", m:"İletkinin ortasını açının köşesine, 0 çizgisini bir kola getiririz. Diğer kolun gösterdiği sayıyı okuruz. Açının birimi derecedir (°)."},
+       {b:"Saatte açı", m:"Saat tam 3 iken akrep ile yelkovan arasındaki açı 90°, tam 6 iken 180°dir.", o:"Saat 3: dik açı, saat 6: doğru açı"}
+     ],
+     ipucu:"Dar açı sivri, dik açı köşebent, geniş açı açılmış. Dik açı = 90°!",
+     kartlar:[["Dik açının ölçüsü","90°"],["Dar açı","90°'den küçük"],["Geniş açı","90°'den büyük, 180°'den küçük"],["Doğru açı","180°"],["Açıyı ölçen araç","İletki"],["Açının ölçü birimi","Derece"]],
+     sorular:[
+       {s:"Dik açı kaç derecedir?", c:["90°","45°","180°","60°"], a:"Dik açı 90°dir."},
+       {s:"Ölçüsü 35° olan açı hangi açıdır?", c:["Dar açı","Dik açı","Geniş açı","Doğru açı"], a:"35°, 90°den küçüktür. Dar açıdır."},
+       {s:"Ölçüsü 120° olan açı hangi açıdır?", c:["Geniş açı","Dar açı","Dik açı","Doğru açı"], a:"120°, 90°den büyük ve 180°den küçüktür. Geniş açıdır."},
+       {s:"Açıları ölçmek için hangi araç kullanılır?", c:["İletki","Cetvel","Terazi","Saat"], a:"Açıyı iletkiyle ölçeriz."},
+       {s:"Saat tam 3'te akrep ile yelkovan arasındaki açı kaç derecedir?", c:["90°","30°","60°","180°"], a:"Saat 3'te akrep 3'te, yelkovan 12'dedir. Aralarında dik açı vardır."},
+       {s:"Hangi açı en büyüktür?", c:["110°","85°","90°","45°"], a:"110°, diğerlerinden büyüktür."},
+       {s:"Doğru açı kaç derecedir?", c:["180°","90°","360°","100°"], a:"Doğru açı 180°dir."},
+       {s:"Bir dik açı iki açıya ayrılmıştır. Açılardan biri 50° ise diğeri kaç derecedir?", c:["40°","140°","50°","90°"], a:"90° − 50° = 40°."},
+       {s:"Saat tam 6'da akrep ile yelkovan arasındaki açı kaç derecedir?", c:["180°","90°","60°","120°"], a:"Saat 6'da yelkovan 12'de, akrep 6'dadır. Doğru açı oluşur: 180°."},
+       {s:"Hangi ölçü bir dar açıya aittir?", c:["89°","90°","91°","180°"], a:"Dar açı 90°den küçüktür. 89° dar açıdır."}
+     ]
+    },
+    {id:"mat4-ucgen-cesitleri", ad:"Üçgen Çeşitleri", e:"🔺",
+     anlat:[
+       {b:"Üçgenin elemanları", m:"Üçgenin 3 kenarı, 3 köşesi ve 3 açısı vardır. Çevresi, üç kenarın uzunlukları toplamıdır."},
+       {b:"Kenarlarına göre", m:"Üç kenarı eşit olan üçgen eşkenardır. İki kenarı eşit olan üçgen ikizkenardır. Üç kenarı da farklı olan üçgen çeşitkenardır.", o:"5, 5, 8 cm: ikizkenar"},
+       {b:"Açılarına göre", m:"Üç açısı dar olan üçgen dar açılıdır. Bir açısı 90° olan üçgen dik açılıdır. Bir açısı geniş olan üçgen geniş açılıdır."},
+       {b:"Çevre hesabı", m:"Üçgenin çevresi kenarların toplamıdır. Eşkenar üçgende çevre 3 × kenardır.", o:"Kenarı 6 cm olan eşkenar üçgenin çevresi 18 cm"}
+     ],
+     ipucu:"Eşkenar: 3 eşit. İkizkenar: ikiz kenar eşit. Çeşitkenar: üçü de çeşit çeşit!",
+     kartlar:[["Üç kenarı eşit üçgen","Eşkenar üçgen"],["İki kenarı eşit üçgen","İkizkenar üçgen"],["Üç kenarı farklı üçgen","Çeşitkenar üçgen"],["Bir açısı 90° olan üçgen","Dik açılı üçgen"],["Bir açısı geniş olan üçgen","Geniş açılı üçgen"],["Üçgenin kaç kenarı vardır?","3 kenar"]],
+     sorular:[
+       {s:"Üç kenarı da eşit olan üçgene ne denir?", c:["Eşkenar üçgen","İkizkenar üçgen","Çeşitkenar üçgen","Dik üçgen"], a:"Üç kenarı eşit olan üçgen eşkenardır."},
+       {s:"Kenar uzunlukları 5 cm, 5 cm ve 8 cm olan üçgen hangisidir?", c:["İkizkenar üçgen","Eşkenar üçgen","Çeşitkenar üçgen","Dik açılı üçgen"], a:"İki kenarı eşit olduğundan ikizkenardır."},
+       {s:"Kenar uzunlukları 4 cm, 6 cm ve 7 cm olan üçgen kenarlarına göre hangisidir?", c:["Çeşitkenar üçgen","İkizkenar üçgen","Eşkenar üçgen","Dikdörtgen"], a:"Üç kenarı da farklıdır. Çeşitkenardır."},
+       {s:"Bir açısı 90° olan üçgene ne denir?", c:["Dik açılı üçgen","Dar açılı üçgen","Geniş açılı üçgen","Eşkenar üçgen"], a:"Bir açısı dik olan üçgen dik açılıdır."},
+       {s:"Bir açısı 110° olan üçgen için hangisi doğrudur?", c:["Geniş açılı üçgendir","Dar açılı üçgendir","Dik açılı üçgendir","Eşkenar üçgendir"], a:"110°, 90°den büyük olduğundan üçgen geniş açılıdır."},
+       {s:"Bir kenarı 6 cm olan eşkenar üçgenin çevresi kaç cm'dir?", c:["18","12","36","9"], a:"3 × 6 = 18 cm."},
+       {s:"Kenarları 7 cm, 7 cm ve 5 cm olan üçgenin çevresi kaç cm'dir?", c:["19","14","12","35"], a:"7 + 7 + 5 = 19 cm."},
+       {s:"Bir ikizkenar üçgenin eşit kenarları 9 cm'dir, çevresi 25 cm'dir. Üçüncü kenarı kaç cm'dir?", c:["7","16","9","34"], a:"9 + 9 = 18 cm. 25 − 18 = 7 cm."},
+       {s:"Hangisinin üç açısı da dardır?", c:["Dar açılı üçgen","Dik açılı üçgen","Geniş açılı üçgen","Dörtgen"], a:"Dar açılı üçgenin üç açısı da 90°den küçüktür."},
+       {s:"Çevresi 30 cm olan eşkenar üçgenin bir kenarı kaç cm'dir?", c:["10","15","90","6"], a:"Üç kenar eşittir. 30 ÷ 3 = 10 cm."}
+     ]
+    },
+    {id:"mat4-dortgen-simetri", ad:"Kare, Dikdörtgen ve Simetri", e:"🪞",
+     anlat:[
+       {b:"Kare", m:"Karenin 4 kenarı eşittir ve 4 açısı da diktir (90°).", o:"Çevresi = 4 × kenar"},
+       {b:"Dikdörtgen", m:"Dikdörtgenin karşılıklı kenarları eşittir ve 4 açısı da diktir.", o:"Çevresi = 2 × (kısa kenar + uzun kenar)"},
+       {b:"Simetri doğrusu", m:"Bir şekli, üst üste çakışan iki eşit parçaya ayıran doğruya simetri doğrusu denir. Şekli bu doğru boyunca katlayınca iki yarısı çakışır."},
+       {b:"Simetri doğrusu sayıları", m:"Karenin 4, dikdörtgenin (kare değilse) 2, eşkenar üçgenin 3 simetri doğrusu vardır."}
+     ],
+     ipucu:"Katla, çakışıyorsa simetri doğrusu! Kare 4, dikdörtgen 2, eşkenar üçgen 3.",
+     kartlar:[["Karenin simetri doğrusu sayısı","4"],["Dikdörtgenin simetri doğrusu sayısı","2"],["Eşkenar üçgenin simetri doğrusu sayısı","3"],["Karenin kenarları","4 eşit kenar"],["Dikdörtgenin açıları","4 dik açı"],["Simetri doğrusu şekli nasıl böler?","İki eşit parçaya"]],
+     sorular:[
+       {s:"Karenin kaç simetri doğrusu vardır?", c:["4","2","1","8"], a:"Kare 4 farklı doğru boyunca katlanabilir."},
+       {s:"Kare olmayan bir dikdörtgenin kaç simetri doğrusu vardır?", c:["2","4","1","3"], a:"Dikdörtgen yalnızca iki doğru boyunca katlanınca çakışır."},
+       {s:"Eşkenar üçgenin kaç simetri doğrusu vardır?", c:["3","1","2","6"], a:"Eşkenar üçgenin her köşesinden geçen 3 simetri doğrusu vardır."},
+       {s:"Kare için hangisi doğrudur?", c:["4 kenarı eşit ve 4 açısı diktir","Yalnızca karşılıklı kenarları eşittir","Açıları dar açıdır","3 kenarı vardır"], a:"Karenin 4 kenarı eşit, 4 açısı dik açıdır."},
+       {s:"Dikdörtgen için hangisi doğrudur?", c:["Karşılıklı kenarları eşit, 4 açısı diktir","Dört kenarı da farklıdır","Açıları geniş açıdır","Üç köşesi vardır"], a:"Dikdörtgenin karşılıklı kenarları eşit, tüm açıları dik açıdır."},
+       {s:"Kenarları 8 cm ve 3 cm olan dikdörtgenin çevresi kaç cm'dir?", c:["22","11","24","16"], a:"2 × (8 + 3) = 22 cm."},
+       {s:"Hangi harfin simetri doğrusu yoktur?", c:["F","A","H","O"], a:"A'nın 1, H ve O'nun 2 simetri doğrusu vardır. F'nin yoktur."},
+       {s:"Bir karenin çevresi 28 cm ise bir kenarı kaç cm'dir?", c:["7","14","4","24"], a:"28 ÷ 4 = 7 cm."},
+       {s:"Bir şekil simetri doğrusu boyunca katlanırsa iki parça nasıl olur?", c:["Tam olarak çakışır","Biri daha büyük kalır","Çakışmaz","Biri eksik kalır"], a:"Simetri doğrusu boyunca katlanınca iki yarı çakışır."},
+       {s:"Kenarı 5 cm olan karenin alanı ve çevresi sırasıyla nedir?", c:["25 cm², 20 cm","20 cm², 25 cm","10 cm², 20 cm","25 cm², 10 cm"], a:"Alan 5 × 5 = 25 cm². Çevre 4 × 5 = 20 cm."}
+     ]
+    },
     {id:"mat4-aci-geometri", ad:"Açılar, Üçgen, Dörtgen, Simetri", e:"📐",
      anlat:[
        {b:"Açı ve ölçüsü", m:"Açı iki ışının ortak başlangıç noktasıyla oluşur. Açılar iletkiyle derece (°) cinsinden ölçülür. Dik açı 90°, dar açı 90°'den küçük, geniş açı 90°'den büyük ve 180°'den küçüktür.", o:"35° dar açı, 90° dik açı, 120° geniş açıdır."},

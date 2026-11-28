@@ -76,5 +76,26 @@ HW.add({ders:"muzik", sinif:4, uniteler:[
        {s:"“Dört Mevsim” eseri hangi bestecinin?", c:["Vivaldi","Beethoven","Bach","Aşık Veysel"], a:"Vivaldi “Dört Mevsim” eserini bestelemiştir."},
        {s:"Sahnede sözlü şarkılarla anlatılan, oyun gibi sunulan müzik türü hangisidir?", c:["Opera","Ninni","Türkü","Mehter"], a:"Opera, şarkıyla anlatılan sahne eseridir."}
      ]}
+  ]},
+  {ad:"İnsan Sesi ve Koro", konular:[
+    {id:"muz4-ses-turleri", ad:"İnsan Sesi Türleri ve Koro", e:"🎼",
+     anlat:[
+       {b:"İnsan sesi bir çalgıdır", m:"İnsan sesi ses tellerinden çıkar. Herkesin sesi farklıdır. Sesi korumak için bağırmayız, şarkıdan önce ısınırız. Şarkı söylerken dik durur, derin nefes alırız.", o:"Şarkı söylemeden önce ses ısıtma çalışması yapılır."},
+       {b:"Dört temel ses", m:"Kadın ve çocuk sesleri: <b>soprano</b> (ince) ve <b>alto</b> (kalın). Erkek sesleri: <b>tenor</b> (ince) ve <b>bas</b> (kalın). Ses türleri ince-kalın ayrımıyla sıralanır.", o:"Soprano en ince, bas en kalın sestir."},
+       {b:"Koro türleri", m:"Çocuklar korosu, kadın korosu, erkek korosu ve karma koro vardır. Karma koro hem kadın hem erkek seslerinden oluşur. Her sesin söylediği kısma ses partisi denir.", o:"Karma koro: soprano, alto, tenor ve bas."},
+       {b:"Solist ve eşlik", m:"Korodan öne çıkıp tek başına söyleyene <b>solist</b> denir. Çalgı eşliğinde söylenebilir ya da çalgısız söylenebilir. Çalgısız söylemeye <b>a cappella</b> (a kapella) denir.", o:"Bir solist ve koro birlikte şarkı söyler."}
+     ],
+     ipucu:"İnceden kalına: Soprano, Alto, Tenor, Bas. 'SAT-B' diye ezberle! Soprano en ince, bas en kalın.",
+     kartlar:[["Soprano","En ince kadın sesi"],["Alto","Kalın kadın sesi"],["Tenor","İnce erkek sesi"],["Bas","Kalın erkek sesi"],["Karma koro","Kadın ve erkek sesleri"],["Solist","Tek başına öne çıkan"],["A cappella","Çalgısız söylemek"],["Ses partisi","Her sesin söylediği kısım"]],
+     sorular:[
+       {s:"En ince kadın sesi hangisidir?", c:["Soprano","Alto","Tenor","Bas"], a:"Soprano en ince kadın sesidir."},
+       {s:"Kalın kadın sesi hangisidir?", c:["Alto","Soprano","Tenor","Bas"], a:"Alto kalın kadın sesidir."},
+       {s:"İnce erkek sesi hangisidir?", c:["Tenor","Alto","Soprano","Bas"], a:"Tenor ince erkek sesidir."},
+       {s:"Kadın ve erkek seslerinin birlikte oluşturduğu koroya ne denir?", c:["Karma koro","Kadın korosu","Erkek korosu","Orkestra"], a:"Karışık sesli koro: karma koro."},
+       {s:"Çalgısız söylemeye ne denir?", c:["A cappella","Solo çalgı","Tempo","Dinamik"], a:"Çalgı olmadan söylemek: a cappella."},
+       {s:"Sesimizi korumak için hangisi doğrudur?", c:["Çok bağırmamak","Çok bağırmak","Hiç su içmemek","Gece boyu konuşmak"], a:"Sesi korumak için gereksiz bağırmaktan kaçınırız."},
+       {s:"Hangi sıralama inceden kalına doğrudur?", c:["Soprano, alto, tenor, bas","Bas, tenor, alto, soprano","Alto, soprano, bas, tenor","Tenor, soprano, bas, alto"], a:"İnceden kalına: soprano, alto, tenor, bas."},
+       {s:"Bir koroda ince kadın sesleri hangi partiyi söyler?", c:["Soprano","Bas","Tenor","Davul"], a:"İnce kadın sesleri soprano partisidir."}
+     ]}
   ]}
 ]});
