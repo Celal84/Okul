@@ -68,6 +68,29 @@ HW.add({ders:"matematik", sinif:1, uniteler:[
        {s:"Hangi sayı 1 onluktan fazla, 2 onluktan azdır ve birliği 6'dır?", c:["16","26","6"], a:"1 onluk ile 2 onluk arasında 6 birlikli sayı 16'dır."}
      ],
      uret:["basamak",20]
+    },
+    {id:"mat1-ritmik-sayma", ad:"Ritmik Sayma: İkişer, Beşer, Onar", e:"🪜",
+     anlat:[
+       {b:"Atlayarak sayma", m:"Sayıları belli sayıda atlayarak saymaya ritmik sayma denir. Her adımda aynı sayıyı ekleriz.", o:"İkişer: 2, 4, 6, 8, 10"},
+       {b:"İkişer sayma", m:"İkişer sayarken her seferinde 2 ekleriz. Eldivenler, ayakkabılar ikişer ikişer sayılır.", o:"2, 4, 6, 8, 10, 12"},
+       {b:"Beşer ve onar sayma", m:"Beşer sayarken 5, 10, 15, 20 deriz. Onar sayarken 10, 20, 30, 40 deriz.", o:"Onar: 10, 20, 30, 40, 50"},
+       {b:"Ne işe yarar?", m:"Çok nesneyi hızlı saymak için gruplayıp ritmik sayarız. Sepetlerde 5'er elma varsa 5'er sayarız.", o:"3 sepet, her birinde 5 elma: 5, 10, 15"}
+     ],
+     ipucu:"İkişer: ayakkabı çifti! Beşer: bir elin parmakları! Onar: iki elin parmakları!",
+     kartlar:[["2, 4, 6, ?","8"],["5, 10, 15, ?","20"],["10, 20, 30, ?","40"],["İkişer saymada 10'dan sonra","12"],["Beşer saymada 20'den sonra","25"],["Onar saymada 50'den sonra","60"],["Bir elde kaç parmak var?","5 parmak"]],
+     sorular:[
+       {s:"2, 4, 6, 8, ? Sıradaki sayı kaçtır?", c:["10","9","12"], a:"Her adımda 2 artar. 8'den sonra 10 gelir."},
+       {s:"5, 10, 15, ? Sıradaki sayı kaçtır?", c:["20","16","25"], a:"Her adımda 5 artar. 15'ten sonra 20 gelir."},
+       {s:"10, 20, 30, ? Sıradaki sayı kaçtır?", c:["40","31","35"], a:"Her adımda 10 artar. 30'dan sonra 40 gelir."},
+       {s:"İkişer sayarken 12'den sonra hangi sayı gelir?", c:["14","13","15"], a:"12 + 2 = 14."},
+       {s:"Beşer sayarken 25'ten sonra hangi sayı gelir?", c:["30","26","35"], a:"25 + 5 = 30."},
+       {s:"Her sepette 2 elma var. 3 sepette kaç elma vardır?", c:["6","5","8"], a:"İkişer sayarız: 2, 4, 6. Toplam 6 elma."},
+       {s:"Onar sayarken 60'tan önce hangi sayı gelir?", c:["50","59","40"], a:"Onar saymada 60'tan önce 50 gelir."},
+       {s:"İkişer sayarken hangi sayı söylenmez?", c:["7","6","8"], a:"2, 4, 6, 8 diye sayarız. 7 söylenmez."},
+       {s:"Bir elde 5 parmak var. 4 elde kaç parmak vardır?", c:["20","15","25"], a:"Beşer sayarız: 5, 10, 15, 20."},
+       {s:"Ali kumbarasına her gün 5 lira atıyor. 4 gün sonra kumbarada kaç lira olur?", c:["20","15","25"], a:"5, 10, 15, 20. Kumbarada 20 lira olur."}
+     ],
+     uret:["ritmik",2]
     }
   ]},
   {ad:"İşlemler", konular:[
@@ -117,6 +140,29 @@ HW.add({ders:"matematik", sinif:1, uniteler:[
        {s:"Hangi sayıdan 6 çıkarırsak 7 kalır?", c:["13","12","14"], a:"13 − 6 = 7. Kontrol: 7 + 6 = 13."}
      ],
      uret:["cikar",20]
+    },
+    {id:"mat1-tamamlama", ad:"10'a Tamamlama ve Zihinden İşlem", e:"🧠",
+     anlat:[
+       {b:"10'a tamamlama", m:"Toplamı 10 eden sayı çiftlerini bilirsek işlemleri çabuk yaparız.", o:"1 + 9, 2 + 8, 3 + 7, 4 + 6, 5 + 5"},
+       {b:"Yer değiştirme", m:"Toplarken sayıların yeri değişirse sonuç değişmez.", o:"3 + 5 = 5 + 3 = 8"},
+       {b:"Sıfır ile işlem", m:"Bir sayıya 0 eklersek ya da sayıdan 0 çıkarırsak sayı değişmez.", o:"7 + 0 = 7 ve 7 − 0 = 7"},
+       {b:"Büyük sayıdan başla", m:"Toplarken büyük sayıdan başlayıp küçüğü kadar ileri sayarız.", o:"2 + 6: 6'dan başla, 7, 8. Sonuç 8."}
+     ],
+     ipucu:"İki elin 10 parmak. 6 parmağı açarsan 4'ü kapalı kalır: 6 + 4 = 10!",
+     kartlar:[["7 + ? = 10","3"],["4 + ? = 10","6"],["9 + ? = 10","1"],["8 + 0 = ?","8"],["3 + 5 ile 5 + 3","Aynı sonuç"],["10'a tamamlayan: 5 +","5"],["2 + 8 = ?","10"]],
+     sorular:[
+       {s:"6 + 4 = ?", c:["10","9","11"], a:"6 + 4 = 10."},
+       {s:"7 + ▢ = 10 olması için kutuya hangi sayı gelmelidir?", c:["3","4","2"], a:"7'ye 3 eklersek 10 olur."},
+       {s:"9 + 0 = ?", c:["9","0","10"], a:"Bir sayıya 0 eklenirse sayı değişmez."},
+       {s:"3 + 5 = 5 + ▢ olması için kutuya hangi sayı gelmelidir?", c:["3","8","2"], a:"Toplamada yer değişince sonuç değişmez: 3 + 5 = 5 + 3."},
+       {s:"Hangi toplamın sonucu 10'dur?", c:["2 + 8","3 + 6","5 + 4"], a:"2 + 8 = 10. Diğerleri 9 eder."},
+       {s:"8 − 0 = ?", c:["8","0","7"], a:"Bir sayıdan 0 çıkarılırsa sayı değişmez."},
+       {s:"Elimde 10 bilye var. 4 tanesi kırmızı, kalanı mavi. Kaç mavi bilye var?", c:["6","5","7"], a:"4 + 6 = 10 olduğundan 6 bilye mavidir."},
+       {s:"1 + ▢ = 10 olması için kutuya hangi sayı gelmelidir?", c:["9","8","10"], a:"1 + 9 = 10."},
+       {s:"Hangi işlemin sonucu diğerlerinden farklıdır?", c:["5 + 5","4 + 5","6 + 3"], a:"4 + 5 ve 6 + 3, 9 eder. 5 + 5 ise 10 eder."},
+       {s:"Ayşe 6 sayfa kitap okudu. 10 sayfaya tamamlaması için kaç sayfa daha okumalı?", c:["4","5","3"], a:"6 + 4 = 10. Ayşe 4 sayfa daha okumalı."}
+     ],
+     uret:["eksik",10]
     },
     {id:"mat1-problemler", ad:"Toplama ve Çıkarma Problemleri", e:"🧩",
      anlat:[
@@ -188,6 +234,50 @@ HW.add({ders:"matematik", sinif:1, uniteler:[
      ],
      uret:["oruntu",20]
     },
+    {id:"mat1-uzunluk", ad:"Uzunluk Ölçme", e:"📏",
+     anlat:[
+       {b:"Uzunluğu ölçmek", m:"Bir şeyin uzunluğunu ölçerken adım, karış, ataç, kalem gibi aynı boyda nesneler kullanırız.", o:"Sıram 5 karış uzunluğunda."},
+       {b:"Aynı birimi kullanalım", m:"Karşılaştırmak için hep aynı şeyle ölçmeliyiz. Büyük karışla az, küçük karışla çok karış çıkar.", o:"Büyük ayak az adım, küçük ayak çok adım atar."},
+       {b:"Uzun ve kısa", m:"Aynı birimle ölçünce daha çok birim çıkan şey daha uzundur.", o:"8 kalem boyunda masa, 5 kalem boyundaki dolaptan uzundur."},
+       {b:"Cetvel", m:"Cetvel uzunluk ölçmeye yarar. Cetvelle ölçerken 0 (sıfır) çizgisinden başlarız."}
+     ],
+     ipucu:"Ölçerken hep aynı birimi kullan. Boşluk bırakma, üst üste bindirme!",
+     kartlar:[["Ölçmeden önce neyi seçeriz?","Bir birim"],["7 ataç mı 5 ataç mı uzun?","7 ataç"],["Cetvelde nereden başlarız?","Sıfırdan"],["Uzunluğu neyle ölçeriz?","Karış, adım"],["Daha kısa şeyde birim sayısı","Daha az çıkar"],["Daha uzun şeyde birim sayısı","Daha çok çıkar"]],
+     sorular:[
+       {s:"Hangisiyle uzunluk ölçülür?", c:["Cetvel","Terazi","Bardak"], a:"Uzunluğu cetvelle ölçeriz."},
+       {s:"Masa 8 kalem, dolap 5 kalem boyundadır. Hangisi daha uzundur?", c:["Masa","Dolap","İkisi eşit"], a:"8, 5'ten büyüktür. Masa daha uzundur."},
+       {s:"Cetvelle ölçerken nereden başlanır?", c:["0 (sıfır) çizgisinden","5 çizgisinden","Herhangi bir yerden"], a:"Cetvelde ölçmeye 0 çizgisinden başlarız."},
+       {s:"Aynı sırayı Ali 6 karışla, Ece 8 karışla ölçtü. Karışı daha büyük olan kimdir?", c:["Ali","Ece","İkisi aynı"], a:"Karışı büyük olan daha az karış sayar. Ali'nin karışı daha büyüktür."},
+       {s:"Hangisi uzunluk ölçmek için kullanılabilir?", c:["Adım","Kova","Terazi"], a:"Adımla uzunluk ölçebiliriz."},
+       {s:"Hangisinin boyu en uzundur?", c:["Fil","Karınca","Kedi"], a:"Fil, bu hayvanların en uzun boylusudur."},
+       {s:"Bir ip 3 kalem boyundadır. 4 kalem uç uca konursa ipten daha mı uzun daha mı kısa olur?", c:["Daha uzun","Daha kısa","Aynı"], a:"4 kalem, 3 kalemden uzundur."},
+       {s:"Kalem 5 ataç, silgi 2 ataç uzunluğundadır. Kalem silgiden kaç ataç uzundur?", c:["3","7","2"], a:"5 − 2 = 3 ataç."},
+       {s:"Ölçerken neden herkes aynı birimi kullanmalıdır?", c:["Sonuçlar karşılaştırılabilsin diye","Daha çabuk bitsin diye","Cetvel kırılmasın diye"], a:"Aynı birimle ölçersek sonuçları doğru karşılaştırırız."},
+       {s:"Bir kalemi 4 ataçla ölçtük. Ataçlardan iki kat uzun olanlarla ölçersek kaç tane çıkar?", c:["2","8","4"], a:"Birim iki kat uzunsa sayı yarıya iner: 4'ün yarısı 2."}
+     ]
+    },
+    {id:"mat1-tartma-sivi", ad:"Tartma ve Sıvı Ölçme", e:"⚖️",
+     anlat:[
+       {b:"Ağır ve hafif", m:"Terazi ile tartarız. Terazide aşağı inen kefedeki şey daha ağırdır, yukarı çıkan daha hafiftir.", o:"Taş tüyden ağırdır."},
+       {b:"Tartma birimleri", m:"Nesneleri bilye ya da küp gibi aynı şeylerle tartabiliriz. Daha çok küp çeken daha ağırdır.", o:"Elma 4 bilye, armut 6 bilye ağırlığında. Armut daha ağırdır."},
+       {b:"Sıvı ölçme", m:"Sıvıları bardak, kaşık, şişe gibi kaplarla ölçeriz. Kaç bardak olduğunu sayarız.", o:"Sürahide 3 bardak su var."},
+       {b:"Dolu, yarım, boş", m:"Kap tam doluysa dolu, yarısı doluysa yarım dolu, içinde hiçbir şey yoksa boştur."}
+     ],
+     ipucu:"Terazide aşağı inen ağır, yukarı çıkan hafif. Sıvıyı kapla ölçeriz, say say!",
+     kartlar:[["Terazide aşağı inen kefe","Daha ağır"],["Terazide yukarı çıkan kefe","Daha hafif"],["Sıvıyı neyle ölçeriz?","Bardakla"],["Tartma aleti","Terazi"],["Yarısı dolu kap","Yarım dolu"],["İçinde hiç su yok","Boş"]],
+     sorular:[
+       {s:"Hangisi tartma aletidir?", c:["Terazi","Cetvel","Saat"], a:"Tartmak için terazi kullanılır."},
+       {s:"Terazide sol kefe aşağıdaysa hangisi daha ağırdır?", c:["Sol kefedeki","Sağ kefedeki","İkisi eşit"], a:"Aşağı inen kefedeki daha ağırdır."},
+       {s:"Hangisi daha hafiftir?", c:["Tüy","Karpuz","Demir top"], a:"Tüy, bunların en hafifidir."},
+       {s:"Sıvı ölçmek için hangisi kullanılır?", c:["Bardak","Cetvel","Terazi"], a:"Sıvıları bardak gibi kaplarla ölçeriz."},
+       {s:"Sürahide 5 bardak su var. 2 bardak su içildi. Kaç bardak su kaldı?", c:["3","7","2"], a:"5 − 2 = 3 bardak."},
+       {s:"Bir kefede 3 küp, diğerinde 5 küp var. Hangi kefe aşağı iner?", c:["5 küplü kefe","3 küplü kefe","İkisi de yerinde kalır"], a:"Daha çok küp olan kefe daha ağırdır, aşağı iner."},
+       {s:"Terazinin iki kefesi aynı seviyedeyse ne söyleriz?", c:["Eşit ağırlıktalar","Biri çok ağırdır","Terazi bozuktur"], a:"Kefeler aynı seviyedeyse nesneler eşit ağırlıktadır."},
+       {s:"Elma 4 bilye, armut 6 bilye ağırlığındadır. Hangisi daha ağırdır?", c:["Armut","Elma","İkisi aynı"], a:"6, 4'ten büyüktür. Armut daha ağırdır."},
+       {s:"Dolu bir bardağın yarısını içtik. Bardak nasıl olur?", c:["Yarım dolu","Boş","Taşar"], a:"Yarısı içilince bardak yarım dolu kalır."},
+       {s:"Kova 6 bardak su alıyor. Kovada 2 bardak su var. Kovayı doldurmak için kaç bardak su daha lazım?", c:["4","8","6"], a:"2 + 4 = 6. 4 bardak su daha lazım."}
+     ]
+    },
     {id:"mat1-olcme", ad:"Ölçme: Uzunluk, Tartma, Sıvı", e:"📏",
      anlat:[
        {b:"Uzunluk ölçme", m:"Uzunluğu adım, karış, kalem gibi araçlarla ölçeriz. Bunlara standart olmayan birimler denir.", o:"Sıra 6 kalem boyundadır."},
@@ -258,6 +348,51 @@ HW.add({ders:"matematik", sinif:1, uniteler:[
      ],
      uret:["saat",12]
     },
+    {id:"mat1-saat", ad:"Saat: Tam ve Buçuk", e:"⏰",
+     anlat:[
+       {b:"Saatin parçaları", m:"Saatte kısa ibre akrep, uzun ibre yelkovandır. Akrep saati, yelkovan dakikayı gösterir."},
+       {b:"Tam saat", m:"Yelkovan 12'yi gösteriyorsa saat tamdır. Akrep hangi sayıdaysa saat odur.", o:"Akrep 3'te, yelkovan 12'de: saat 3."},
+       {b:"Buçuk", m:"Yelkovan 6'yı gösteriyorsa saat buçuktur. Akrep iki sayının arasındadır.", o:"Akrep 4 ile 5 arasında, yelkovan 6'da: saat 4 buçuk."},
+       {b:"Saat geçince", m:"Saat ilerlerken akrep bir sayıdan sonraki sayıya gider. 1 saat sonra saat 1 artar.", o:"Saat 3 iken 1 saat sonra saat 4 olur."}
+     ],
+     ipucu:"Kısa akrep saati, uzun yelkovan dakikayı gösterir. Yelkovan 12'de TAM, 6'da BUÇUK!",
+     kartlar:[["Saati gösteren ibre","Akrep"],["Dakikayı gösteren ibre","Yelkovan"],["Yelkovan 12'de ise","Saat tamdır"],["Yelkovan 6'da ise","Saat buçuktur"],["Akrep 5'te, yelkovan 12'de","Saat 5"],["Saatte uzun ibre hangisi?","Uzun ibre yelkovan"]],
+     sorular:[
+       {s:"Saatte kısa olan ibre hangisidir?", c:["Akrep","Yelkovan","Kadran"], a:"Kısa ibre akreptir."},
+       {s:"Yelkovan 12'de, akrep 7'de. Saat kaçtır?", c:["7","12","6"], a:"Yelkovan 12'deyse saat tamdır. Akrep 7'de olduğundan saat 7'dir."},
+       {s:"Saat 10 olduğunda yelkovan hangi sayıyı gösterir?", c:["12","6","10"], a:"Tam saatlerde yelkovan 12'dedir."},
+       {s:"Yelkovan 6'yı gösteriyorsa saat nasıldır?", c:["Buçuk","Tam","Eksik"], a:"Yelkovan 6'dayken saat buçuktur."},
+       {s:"Akrep 2 ile 3 arasında, yelkovan 6'da. Saat kaçtır?", c:["2 buçuk","3 buçuk","3 tam"], a:"Akrep 2'yi geçmiş, 3'e varmamış. Saat 2 buçuktur."},
+       {s:"Okul saat 8'de başlıyor. Saat 8 iken yelkovan nerededir?", c:["12'de","6'da","8'de"], a:"Tam saatte yelkovan 12'dedir."},
+       {s:"Saat 3'ten 4'e gelmesi için ne kadar zaman geçer?", c:["1 saat","2 saat","3 saat"], a:"3'ten 4'e 1 saat geçer."},
+       {s:"Ela saat 7'de uyandı. 1 saat sonra kahvaltı yaptı. Kahvaltı saat kaçtaydı?", c:["8","6","9"], a:"7'den 1 saat sonra saat 8 olur."},
+       {s:"Akrep 4'te, yelkovan 12'de. 2 saat sonra akrep hangi sayıyı gösterir?", c:["6","5","2"], a:"4'ten 2 saat sonra 5, 6 diye gider: saat 6."},
+       {s:"Saat 9 buçuktur. Yarım saat sonra saat kaç olur?", c:["10","9","11"], a:"9 buçuktan yarım saat sonra yelkovan yine 12'ye gelir: saat 10."}
+     ],
+     uret:["saat",12]
+    },
+    {id:"mat1-takvim", ad:"Günler, Haftalar, Aylar, Mevsimler", e:"📅",
+     anlat:[
+       {b:"Hafta", m:"Bir haftada 7 gün vardır: Pazartesi, Salı, Çarşamba, Perşembe, Cuma, Cumartesi, Pazar."},
+       {b:"Aylar", m:"Bir yılda 12 ay vardır: Ocak, Şubat, Mart, Nisan, Mayıs, Haziran, Temmuz, Ağustos, Eylül, Ekim, Kasım, Aralık."},
+       {b:"Mevsimler", m:"4 mevsim vardır: ilkbahar, yaz, sonbahar, kış. Her mevsim 3 ay sürer.", o:"Kış: Aralık, Ocak, Şubat"},
+       {b:"Dün, bugün, yarın", m:"Bugünden bir gün önceki gün dündür. Bugünden bir gün sonraki gün yarındır.", o:"Bugün Salı ise dün Pazartesi, yarın Çarşamba."}
+     ],
+     ipucu:"Haftada 7 gün, yılda 12 ay, 4 mevsim ve her mevsim 3 ay!",
+     kartlar:[["Bir haftada kaç gün var?","7 gün"],["Bir yılda kaç ay var?","12 ay"],["Yılın ilk ayı","Ocak"],["Pazartesi'den sonraki gün","Salı"],["Kaç mevsim vardır?","4 mevsim"],["Cumartesi'den sonraki gün","Pazar"],["Yılın son ayı","Aralık"]],
+     sorular:[
+       {s:"Bir haftada kaç gün vardır?", c:["7","5","12"], a:"Bir hafta 7 gündür."},
+       {s:"Bir yılda kaç ay vardır?", c:["12","7","10"], a:"Bir yıl 12 aydır."},
+       {s:"Pazartesi'den sonra hangi gün gelir?", c:["Salı","Çarşamba","Pazar"], a:"Pazartesi'den sonra Salı gelir."},
+       {s:"Bugün Çarşamba ise yarın hangi gündür?", c:["Perşembe","Salı","Cuma"], a:"Çarşamba'dan sonra Perşembe gelir."},
+       {s:"Bugün Cuma ise dün hangi gündü?", c:["Perşembe","Cumartesi","Pazartesi"], a:"Cuma'dan önce Perşembe gelir."},
+       {s:"Kar yağan mevsim hangisidir?", c:["Kış","Yaz","İlkbahar"], a:"Kar en çok kışın yağar."},
+       {s:"Yılın ilk ayı hangisidir?", c:["Ocak","Şubat","Eylül"], a:"Yıl Ocak ayıyla başlar."},
+       {s:"Bir mevsim kaç ay sürer?", c:["3","4","6"], a:"12 ay, 4 mevsime bölünür. Her mevsim 3 ay sürer."},
+       {s:"Hafta sonu hangi günlerdir?", c:["Cumartesi ve Pazar","Pazartesi ve Salı","Cuma ve Cumartesi"], a:"Hafta sonu Cumartesi ve Pazar'dır."},
+       {s:"Bugün Pazar. 3 gün sonra hangi gün olur?", c:["Çarşamba","Salı","Perşembe"], a:"Pazar'dan sonra Pazartesi, Salı, Çarşamba gelir. 3 gün sonra Çarşamba olur."}
+     ]
+    },
     {id:"mat1-veri-yarim", ad:"Veri Toplama, Bütün ve Yarım", e:"📊",
      anlat:[
        {b:"Veri toplama", m:"Sorular sorarak bilgi toplarız. Topladığımız bilgilere veri denir."},
@@ -278,6 +413,50 @@ HW.add({ders:"matematik", sinif:1, uniteler:[
        {s:"Bir pizza eşit 2 parçaya bölündü. Ali 1 parçayı yedi. Pizzanın ne kadarı kaldı?", c:["Yarısı","Tamamı","Hiç kalmadı"], a:"2 parçadan 1'i kaldı. Pizzanın yarısı kaldı."},
        {s:"Bir ipi eşit iki parçaya böldük. Parçalar aynı uzunlukta mıdır?", c:["Evet, aynı uzunlukta","Hayır, biri daha uzun","Bilinemez"], a:"Eşit bölünce iki parça aynı uzunluktadır."},
        {s:"Çetele: Futbol ||||, Basket ||, Voleybol |||. Futbol, basketten kaç kişi fazla seçildi?", c:["2","6","1"], a:"4 − 2 = 2 kişi."}
+     ]
+    },
+    {id:"mat1-yarim-butun", ad:"Bütün ve Yarım", e:"🍕",
+     anlat:[
+       {b:"Bütün", m:"Hiç bölünmemiş, eksiksiz şeye bütün denir.", o:"Bütün bir elma"},
+       {b:"Yarım", m:"Bir bütünü 2 eşit parçaya bölersek her parçaya yarım denir.", o:"Pizzayı 2 eşit parçaya böl. Her parça yarımdır."},
+       {b:"Parçalar eşit olmalı", m:"Parçalar aynı büyüklükte değilse bu parçalara yarım diyemeyiz."},
+       {b:"İki yarım", m:"İki yarım bir araya gelirse bir bütün olur. Bir bütün de iki yarımdır.", o:"Yarım ekmek + yarım ekmek = 1 ekmek"}
+     ],
+     ipucu:"2 yarım = 1 bütün. Eşit olmayan parça yarım değildir!",
+     kartlar:[["2 yarım kaç bütün eder?","1 bütün"],["Bütünün 2 eşit parçasından biri","Yarım"],["Hiç bölünmemiş şey","Bütün"],["1 bütün kaç yarımdır?","2 yarım"],["Yarımlar eşit midir?","Evet, eşittir"],["10'un yarısı","5"]],
+     sorular:[
+       {s:"Bir bütünü 2 eşit parçaya bölünce her parça neyi gösterir?", c:["Yarım","Bütün","İki bütün"], a:"Eşit iki parçadan her biri yarımdır."},
+       {s:"2 yarım ne eder?", c:["1 bütün","2 bütün","Yarım"], a:"İki yarım bir bütün eder."},
+       {s:"Bir elmayı iki arkadaş eşit paylaşırsa her biri elmanın neyini alır?", c:["Yarısını","Tamamını","Üçte birini"], a:"Elma 2 eşit parçaya bölünür, herkes yarısını alır."},
+       {s:"Yarım ekmek ile yarım ekmek birleşirse ne olur?", c:["Bütün ekmek","Yarım ekmek","İki ekmek"], a:"Yarım ve yarım bir bütün eder."},
+       {s:"12 bilyenin yarısı kaç bilyedir?", c:["6","5","7"], a:"12 bilye iki eşit gruba ayrılır. Her grup 6 bilye olur."},
+       {s:"Bir kâğıdı 2 parçaya böldük ama bir parça diğerinden büyük. Bu parçalara yarım denir mi?", c:["Hayır, çünkü eşit değiller","Evet","Bazen"], a:"Yarım için parçaların eşit olması gerekir."},
+       {s:"8 kalemin yarısı kaç kalemdir?", c:["4","3","16"], a:"8 kalem iki eşit gruba ayrılırsa her grup 4 kalem olur."},
+       {s:"Elif pizzanın yarısını yedi. Geriye pizzanın ne kadarı kaldı?", c:["Yarısı","Tamamı","Dörtte biri"], a:"Bütünün yarısı yenince diğer yarısı kalır."},
+       {s:"Bir sepetteki elmaların yarısı 5 elmadır. Sepette kaç elma vardır?", c:["10","5","2"], a:"İki yarım bir bütün eder: 5 + 5 = 10 elma."},
+       {s:"Ayşe 6 kurabiyenin yarısını arkadaşına verdi. Ayşe'nin kaç kurabiyesi kaldı?", c:["3","6","2"], a:"6 kurabiyenin yarısı 3'tür. Ayşe'de 3 kurabiye kaldı."}
+     ]
+    },
+    {id:"mat1-cetele-grafik", ad:"Çetele ve Nesne Grafiği", e:"📊",
+     anlat:[
+       {b:"Veri toplama", m:"Sorular sorarak bilgi toplarız. Örneğin sınıfta en sevilen meyveyi sorarız.", o:"5 kişi elma, 3 kişi muz seçti."},
+       {b:"Çetele tutma", m:"Her cevap için bir çizgi çizeriz. 5. çizgiyi, ilk dört çizginin üstünden çapraz çizeriz. Böylece beşer sayarız."},
+       {b:"Nesne grafiği", m:"Her cevap için bir resim ya da kutu koyarız. En çok olan en uzun sırayı oluşturur.", o:"🍎🍎🍎 elma, 🍌🍌 muz"},
+       {b:"Grafiği okuyalım", m:"Grafiğe bakarak en çok olanı, en az olanı ve kaç tane olduğunu söyleriz."}
+     ],
+     ipucu:"Çetele: dört çizgi, beşincisi çapraz! En uzun sıra, en çok olandır.",
+     kartlar:[["Veri nasıl toplanır?","Soru sorarak"],["Çetelede 5. çizgi nasıl çizilir?","Çapraz çizilir"],["En uzun sıra neyi gösterir?","En çok olanı"],["En kısa sıra neyi gösterir?","En az olanı"],["Resimlerle gösterim nedir?","Nesne grafiği"],["|||| ile 1 çapraz çizgi","5"]],
+     sorular:[
+       {s:"Çetelede 4 çizgi ve üstünden geçen 1 çapraz çizgi kaç eder?", c:["5","4","6"], a:"4 çizgi ve 1 çapraz çizgi 5 eder."},
+       {s:"🍎🍎🍎🍌🍌 Grafikte kaç elma vardır?", c:["3","2","5"], a:"Üç elma vardır."},
+       {s:"🍎🍎🍎🍌🍌 Hangi meyve daha çoktur?", c:["Elma","Muz","İkisi eşit"], a:"3 elma, 2 muzdan fazladır."},
+       {s:"🍎🍎🍎🍌🍌 Elma muzdan kaç tane fazladır?", c:["1","2","3"], a:"3 − 2 = 1 tane fazladır."},
+       {s:"Çetelede ||| kaç eder?", c:["3","4","1"], a:"Üç çizgi, 3 eder."},
+       {s:"Grafikte en kısa sıra neyi gösterir?", c:["En az seçileni","En çok seçileni","Eşit olanı"], a:"En kısa sıra, en az olanı gösterir."},
+       {s:"Sınıfta 4 kişi mavi, 6 kişi kırmızı rengi seçti. Her çocuk bir renk seçtiyse kaç çocuğa soruldu?", c:["10","2","9"], a:"4 + 6 = 10 çocuğa sorulmuştur."},
+       {s:"⚽⚽⚽⚽ 🏀🏀 Futbol topu basket topundan kaç tane fazladır?", c:["2","4","6"], a:"4 − 2 = 2 tane fazladır."},
+       {s:"Çetelede neden her 5. çizgiyi çapraz çizeriz?", c:["Beşer sayıp kolay saymak için","Daha güzel görünsün diye","Çizgiler bitsin diye"], a:"Beşerli gruplar saymayı kolaylaştırır."},
+       {s:"Çetelede bir grupta 5 çizgi, diğer grupta 2 çizgi var. Toplam kaç çizgi vardır?", c:["7","5","10"], a:"5 + 2 = 7 çizgi."}
      ]
     }
   ]}

@@ -1,4 +1,69 @@
 HW.add({ders:"turkce", sinif:1, uniteler:[
+  {ad:"Okul Heyecanı: Dinleme ve Konuşma", konular:[
+    {id:"tr1-gorgu-dinleme", ad:"Görgü İfadeleri ve Dinleme", e:"🤝",
+     anlat:[
+       {b:"Nazik sözler", m:"Güzel sözler insanları mutlu eder. 'Lütfen', 'teşekkür ederim', 'rica ederim' ve 'özür dilerim' nazik sözlerdir.", o:"Lütfen su verir misin?"},
+       {b:"Selamlaşma", m:"Sabah birini görünce 'Günaydın' deriz. Yemeğe başlayanlara 'Afiyet olsun', hasta olana 'Geçmiş olsun' deriz.", o:"Günaydın! Afiyet olsun!"},
+       {b:"Dinleme kuralları", m:"Biri konuşurken onu dikkatle dinleriz. Konuşanın gözlerine bakarız ve araya girmeyiz.", o:"Dinle, bekle, sonra konuş."},
+       {b:"Söz alma", m:"Konuşmak istediğimizde parmak kaldırırız ve sıramızı bekleriz. Böylece herkes birbirini duyar.", o:"Parmak kaldır, sıranı bekle."}
+     ],
+     ipucu:"Lütfen, teşekkür, özür: üç sihirli söz!",
+     kartlar:[["Hediye alınca ne deriz?","Teşekkür ederim"],["Teşekkür edene ne deriz?","Rica ederim"],["Sabah selamı","Günaydın"],["Yemekten önce","Afiyet olsun"],["Hasta olana","Geçmiş olsun"],["Hata yapınca","Özür dilerim"],["Bir şey isterken","Lütfen"]],
+     sorular:[
+       {s:"Biri sana hediye verince ne dersin?", c:["Teşekkür ederim","Rica ederim","Güle güle"], a:"Hediye verene teşekkür ederiz."},
+       {s:"Biri sana teşekkür edince ne dersin?", c:["Rica ederim","Günaydın","Afiyet olsun"], a:"Teşekkür edene 'Rica ederim' deriz."},
+       {s:"Sabah arkadaşını görünce ne dersin?", c:["Günaydın","İyi geceler","Güle güle"], a:"Sabah 'Günaydın' deriz."},
+       {s:"Yemeğe başlayanlara ne denir?", c:["Afiyet olsun","Geçmiş olsun","Güle güle"], a:"Yemekte 'Afiyet olsun' deriz."},
+       {s:"Hasta olan arkadaşına ne dersin?", c:["Geçmiş olsun","Afiyet olsun","Günaydın"], a:"Hastaya 'Geçmiş olsun' deriz."},
+       {s:"Öğretmen konuşurken ne yaparız?", c:["Dikkatle dinleriz","Hemen konuşuruz","Kalkıp gideriz"], a:"Konuşanı dikkatle dinleriz."},
+       {s:"Bir şey isterken hangi sözü kullanırız?", c:["Lütfen","Hadi","Çabuk"], a:"'Lütfen' nazik bir sözdür."},
+       {s:"Yanlışlıkla birine çarptın. Ne dersin?", c:["Özür dilerim","Rica ederim","Afiyet olsun"], a:"Hata yapınca özür dileriz."},
+       {s:"Konuşmak isteyen kişi ne yapmalıdır?", c:["Parmak kaldırıp sırasını beklemeli","Hemen araya girmeli","Bağırmalı"], a:"Söz almak için parmak kaldırılır."},
+       {s:"Hangisi iyi bir dinleyici davranışıdır?", c:["Konuşanın gözlerine bakmak","Arkadaşıyla fısıldaşmak","Başka işle uğraşmak"], a:"İyi dinleyici konuşana bakar ve onu dinler."}
+     ]},
+    {id:"tr1-kendini-tanitma", ad:"Kendimi Tanıtırım ve Konuşurum", e:"🙋",
+     anlat:[
+      {b:"Kendini tanıtma", m:"Kendimizi tanıtırken önce adımızı söyleriz. Yaşımızı, sınıfımızı ve sevdiğimiz şeyleri de anlatabiliriz.", o:"Adım Zeynep. Yedi yaşındayım."},
+      {b:"Selamlaşma", m:"Birini görünce selam veririz. Sabah 'Günaydın', akşam 'İyi akşamlar', yatarken 'İyi geceler' deriz."},
+      {b:"Duygularını anlat", m:"Duygularımızı kelimelerle söyleriz: mutluyum, üzgünüm, kızgınım. Duygumuzu anlatmak bize iyi gelir."},
+      {b:"Güzel konuşma", m:"Konuşurken anlaşılır bir sesle konuşuruz. Karşımızdakine bakarız. Sırayla konuşuruz, sözü kesmeyiz."}
+     ],
+     ipucu:"Önce adını söyle; sesin anlaşılır olsun, karşındakine bak!",
+     kartlar:[["Kendimizi tanıtırken önce ne söyleriz?","Adımızı"],["Sabah selamı","Günaydın"],["Akşam selamı","İyi akşamlar"],["Yatmadan önce ne deriz?","İyi geceler"],["Biri teşekkür edince ne deriz?","Rica ederim"],["Mutlu olunca ne diyebiliriz?","Mutluyum"]],
+     sorular:[
+      {s:"Kendimizi tanıtırken önce neyi söyleriz?", c:["Adımızı","Eşyalarımızı","Ödevimizi"], a:"Önce adımızı söyleriz."},
+      {s:"Sabah birini görünce ne deriz?", c:["Günaydın","İyi geceler","İyi akşamlar"], a:"Sabah 'Günaydın' denir."},
+      {s:"Akşam karşılaşınca ne deriz?", c:["İyi akşamlar","Günaydın","Hoş geldin"], a:"Akşam 'İyi akşamlar' denir."},
+      {s:"Hangisi kendini tanıtma cümlesidir?", c:["Adım Deniz, yedi yaşındayım.","Hava çok sıcak.","Yarın okul var."], a:"Ad ve yaşı söylemek tanıtmadır."},
+      {s:"Biri 'Teşekkür ederim.' derse ne deriz?", c:["Rica ederim.","Güle güle.","Günaydın."], a:"Teşekküre 'Rica ederim' deriz."},
+      {s:"Hangisi bir duyguyu anlatır?", c:["Mutluyum.","Evdeyim.","Sekiz yaşındayım."], a:"Mutluyum bir duygudur."},
+      {s:"Konuşurken hangisini yapmalıyız?", c:["Karşımızdakine bakmalıyız","Arkamızı dönmeliyiz","Bağırmalıyız"], a:"Karşımızdakine bakarak konuşuruz."},
+      {s:"Ali bir arkadaşıyla konuşmak istiyor. Arkadaşı konuşuyor. Ali ne yapmalı?", c:["Konuşmasını bitirmesini beklemeli","Sözünü kesmeli","Başka yere bakmalı"], a:"Sözü kesmeyiz, sırayı bekleriz."},
+      {s:"Yatmadan önce ailemize ne deriz?", c:["İyi geceler","Günaydın","Afiyet olsun"], a:"Yatarken 'İyi geceler' deriz."},
+      {s:"Üzgün bir arkadaşa ne dersin?", c:["Neyin var, yardım edebilir miyim?","Beni ilgilendirmez.","Hemen git."], a:"Nazik ve yardımsever olmalıyız."}
+     ]},
+    {id:"tr1-yazi-hazirlik", ad:"Doğru Oturma ve Yazı Yazma", e:"✏️",
+     anlat:[
+      {b:"Doğru oturuş", m:"Yazarken sırtın dik olmalı. Ayakların yere basmalı. Defter masanın önünde dengeli durmalı."},
+      {b:"Kalemi tutma", m:"Kalemi baş, işaret ve orta parmağımızla tutarız. Çok sıkmayız, çünkü elimiz yorulur."},
+      {b:"Satır ve çizgi", m:"Harfleri çizgili deftere satır çizgisinin üzerine yazarız. Harfler satırdan taşmamalı."},
+      {b:"Güzel yazı", m:"Harflerin boyu birbirine benzemeli. Kelimeler arasında bir parmak boşluk bırakırız. Soldan sağa yazarız.", o:"Ali okula gitti."}
+     ],
+     ipucu:"Dik otur, kalemi hafif tut, soldan sağa yaz!",
+     kartlar:[["Yazı hangi yönde yazılır?","Soldan sağa"],["Kalem kaç parmakla tutulur?","Üç parmakla"],["Yazarken sırt nasıl olmalı?","Dik olmalı"],["Kelimeler arasında ne bırakılır?","Bir parmak boşluk"],["Harfler nereye yazılır?","Satır çizgisinin üzerine"],["Kalemi sıkarsak ne olur?","Elimiz yorulur"]],
+     sorular:[
+      {s:"Yazı yazarken nasıl otururuz?", c:["Sırtımız dik, ayaklarımız yerde","Sırtımız eğri, ayaklarımız havada","Masaya uzanarak"], a:"Dik oturmak yazıyı düzgün yapar."},
+      {s:"Yazı hangi yönde yazılır?", c:["Soldan sağa","Sağdan sola","Aşağıdan yukarıya"], a:"Türkçe soldan sağa yazılır."},
+      {s:"Kalem hangi parmaklarla tutulur?", c:["Baş, işaret ve orta parmakla","Yalnızca küçük parmakla","Bütün yumrukla"], a:"Kalemi üç parmakla rahatça tutarız."},
+      {s:"Kelimeler arasında ne kadar boşluk bırakılır?", c:["Bir parmak kadar","Hiç bırakılmaz","Bir satır kadar"], a:"Kelimeler birbirine karışmasın diye bir parmak boşluk bırakılır."},
+      {s:"Kalemi çok sıkarsak ne olur?", c:["Elimiz çabuk yorulur","Yazımız hızlanır","Kalem uzar"], a:"Sıkı tutmak eli yorar."},
+      {s:"Hangisi güzel yazının özelliğidir?", c:["Harfler satırın üzerinde ve düzenlidir","Harfler satırdan taşar","Harfler iç içe geçer"], a:"Düzenli yazı kolay okunur."},
+      {s:"Defterde yazıya nereden başlarız?", c:["Satırın sol başından","Sayfanın ortasından","Satırın sağ ucundan"], a:"Soldan başlarız."},
+      {s:"Elif'in yazısı satırdan taşıyor. Ne yapmalıdır?", c:["Harflerini satır çizgisine göre yazmalı","Kalemi daha sıkı tutmalı","Yazmayı bırakmalı"], a:"Harfler çizgiye göre yazılırsa taşmaz."},
+      {s:"Hangisi yapılmamalıdır?", c:["Başı masaya yaslayarak yazmak","Kalemi rahat tutmak","Sırtı dik tutmak"], a:"Başı masaya yaslamak duruşu bozar."},
+      {s:"Neden düzenli yazmalıyız?", c:["Başkaları yazımızı kolayca okusun diye","Defter çabuk dolsun diye","Kalem bitsin diye"], a:"Düzenli yazı okunaklı olur."}
+     ]}
+  ]},
   {ad:"Sesler ve Harfler", konular:[
     {id:"tr1-sesler-harfler", ad:"Sesler ve Harfler", e:"🔤",
      anlat:[
@@ -63,6 +128,27 @@ HW.add({ders:"turkce", sinif:1, uniteler:[
        {s:"Hangi harf S ile T arasında yer alır?", c:["Ş","R","U"], a:"S, Ş, T diye gider."},
        {s:"Kelimeler alfabe sırasına dizildi. Hangisi doğrudur?", c:["elma, kedi, masa","masa, kedi, elma","kedi, elma, masa"], a:"E, K, M alfabede bu sırayla gelir."}
      ]},
+    {id:"tr1-harf-eslestirme", ad:"Büyük ve Küçük Harfler", e:"🔡",
+     anlat:[
+      {b:"Büyük harf, küçük harf", m:"Her harfin büyük ve küçük biçimi vardır. Büyük harf A, küçük harf a'dır.", o:"A-a, B-b, C-c"},
+      {b:"Eşleştirme", m:"Büyük harfle küçük harf aynı sesi gösterir. Yalnızca biri büyük, biri küçüktür.", o:"M-m, S-s, T-t"},
+      {b:"Dikkat: İ ve I", m:"Noktalı büyük İ'nin küçüğü noktalı i'dir. Noktasız büyük I'nın küçüğü noktasız ı'dır.", o:"İ-i, I-ı"},
+      {b:"Nerede büyük harf?", m:"Cümlenin ilk harfi ve adların ilk harfi büyük yazılır.", o:"Ali okula gitti."}
+     ],
+     ipucu:"Noktalı İ noktalı i ile, noktasız I noktasız ı ile arkadaştır!",
+     kartlar:[["A harfinin küçüğü","a"],["B harfinin küçüğü","b"],["İ harfinin küçüğü","i"],["I harfinin küçüğü","ı"],["Ş harfinin küçüğü","ş"],["ğ harfinin büyüğü","Ğ"],["ö harfinin büyüğü","Ö"]],
+     sorular:[
+      {s:"K harfinin küçük biçimi hangisidir?", c:["k","l","h"], a:"K'nin küçüğü k'dir."},
+      {s:"m harfinin büyük biçimi hangisidir?", c:["M","N","W"], a:"m harfinin büyüğü M'dir."},
+      {s:"Noktalı büyük İ'nin küçüğü hangisidir?", c:["i","ı","l"], a:"İ harfinin küçüğü noktalı i'dir."},
+      {s:"Noktasız büyük I'nın küçüğü hangisidir?", c:["ı","i","j"], a:"I harfinin küçüğü noktasız ı'dır."},
+      {s:"Hangi eşleştirme doğrudur?", c:["S - s","B - d","G - q"], a:"S'nin küçüğü s'dir."},
+      {s:"Hangi cümle doğru yazılmıştır?", c:["Ali okula gitti.","Ali okula gitti","Ali okula gitti?"], a:"Cümle büyük harfle başlar, bu cümle nokta ile biter."},
+      {s:"ş harfinin büyük biçimi hangisidir?", c:["Ş","S","Ç"], a:"ş harfinin büyüğü Ş'dir."},
+      {s:"Hangi harf çifti aynı harfin büyük ve küçük biçimidir?", c:["Ö - ö","Ü - o","O - ö"], a:"Ö'nün küçüğü ö'dür."},
+      {s:"KAPI sözcüğünün küçük harfle yazılışı hangisidir?", c:["kapı","kapi","kabı"], a:"I harfinin küçüğü ı'dır: kapı."},
+      {s:"Şehir adı olan İZMİR'in doğru yazılışı hangisidir?", c:["İzmir","Izmir","İzmil"], a:"Özel ad büyük harfle başlar ve İ noktalı yazılır: İzmir."}
+     ]},
     {id:"tr1-hece", ad:"Hece", e:"👏",
      anlat:[
        {b:"Hece nedir?", m:"Bir kelimeyi söylerken ağzımızın tek hamlede çıkardığı ses grubuna hece denir. Kelimeyi alkışlayarak söylersek her alkış bir hecedir.", o:"ka-lem → 2 alkış"},
@@ -83,6 +169,27 @@ HW.add({ders:"turkce", sinif:1, uniteler:[
        {s:"Hangi kelime tek hecelidir?", c:["kuş","kapı","balık"], a:"kuş tek sesli harf içerir: 1 hece."},
        {s:"'kelebek' kelimesi kaç hecelidir?", c:["3","2","4"], a:"ke-le-bek: 3 hece."},
        {s:"Defne 'a-ra-ba' derken her hecede elini çırpıyor. Kaç kez çırpar?", c:["3","2","4"], a:"3 hece olduğu için 3 kez çırpar."}
+     ]},
+    {id:"tr1-hece-kelime-kurma", ad:"Hecelerden Kelime Kurma", e:"🧩",
+     anlat:[
+      {b:"Hece birleşir", m:"Heceler yan yana gelince kelime olur. Önce heceleri oku, sonra birleştir.", o:"ka + pı = kapı"},
+      {b:"Hece sırası", m:"Hecelerin sırası önemlidir. Sıra değişirse anlamsız bir söz çıkabilir.", o:"ke + di = kedi; di + ke anlamsız"},
+      {b:"Her hecede bir ünlü", m:"Her hecede bir sesli harf vardır. Sesli harfleri sayarak hece sayısını buluruz.", o:"ba-lık: 2 sesli, 2 hece"},
+      {b:"Kelime kurma oyunu", m:"Hece kartlarıyla kelime kurabiliriz. Doğru heceleri sırayla yan yana koyarız.", o:"a + ra + ba = araba"}
+     ],
+     ipucu:"Heceleri yan yana koy, hızlı söyle: kelime çıkar!",
+     kartlar:[["ka + pı","kapı"],["o + kul","okul"],["a + ra + ba","araba"],["ke + di","kedi"],["ba + lık","balık"],["el + ma","elma"],["Her hecede ne vardır?","Bir sesli harf"]],
+     sorular:[
+      {s:"'ka' ve 'pı' hecelerini birleştirince hangi kelime olur?", c:["kapı","pıka","kap"], a:"ka + pı = kapı."},
+      {s:"'o' ve 'kul' hecelerinden hangi kelime olur?", c:["okul","kulo","oku"], a:"o + kul = okul."},
+      {s:"'a-ra-ba' hecelerinden hangi kelime olur?", c:["araba","abara","rabaa"], a:"a + ra + ba = araba."},
+      {s:"Hangi heceler 'kedi' kelimesini oluşturur?", c:["ke - di","ked - i","k - edi"], a:"ke-di doğru hecelenişidir."},
+      {s:"'el-___' kelimesini 'elma' yapmak için hangi hece gelmelidir?", c:["ma","sa","ta"], a:"el + ma = elma."},
+      {s:"'ma' + 'sa' hangi kelimeyi oluşturur?", c:["masa","mas","asm"], a:"ma + sa = masa."},
+      {s:"Kaç hece birleşince 'araba' olur?", c:["3","2","4"], a:"a-ra-ba: 3 hece."},
+      {s:"'ke-le-bek' heceleri birleşirse hangi kelime olur?", c:["kelebek","bekkele","lekebek"], a:"Heceler sırayla birleşir: kelebek."},
+      {s:"Hangisi 'balık' kelimesinin doğru hecelenişidir?", c:["ba-lık","bal-ık","b-alık"], a:"balık: ba-lık."},
+      {s:"Elif 'o-ku-ma' hecelerini birleştirdi. Hangi kelimeyi buldu?", c:["okuma","okum","kumo"], a:"o + ku + ma = okuma."}
      ]}
   ]},
   {ad:"Kelime ve Cümle", konular:[
@@ -106,6 +213,48 @@ HW.add({ders:"turkce", sinif:1, uniteler:[
        {s:"Kelimeler yan yana gelerek neyi oluşturur?", c:["Cümle","Harf","Hece"], a:"Kelimeler birleşince cümle olur."},
        {s:"Hangisi tam bir cümledir?", c:["Bahçede çiçekler açtı.","Bahçede güzel","Çiçekler ve"], a:"Bahçede çiçekler açtı. bir olayı tam anlatır."},
        {s:"'Sınıfımızda yirmi öğrenci var.' cümlesinde kaç kelime vardır?", c:["4","3","5"], a:"Sınıfımızda, yirmi, öğrenci, var: 4 kelime."}
+     ]},
+    {id:"tr1-kelime-gruplama", ad:"Kelimeleri Gruplama", e:"🗂️",
+     anlat:[
+      {b:"Aynı gruptaki kelimeler", m:"Bazı kelimeler aynı gruba girer. Elma, armut ve muz meyvedir. Kedi, köpek ve at hayvandır.", o:"meyve: elma, armut, muz"},
+      {b:"Eşya adları", m:"Etrafımızdaki eşyaların da adı vardır. Masa, sandalye ve dolap evde kullandığımız eşyalardır.", o:"masa, sandalye, dolap"},
+      {b:"Farklı olanı bul", m:"Bir grupta gruba uymayan kelime olabilir. Önce grubun adını düşünürüz, sonra uymayanı buluruz.", o:"elma, armut, kedi: kedi farklı"},
+      {b:"Grup adı", m:"Birkaç kelimeyi tek sözcükle anlatabiliriz. Kırmızı, mavi ve sarı renk grubundadır.", o:"renkler"}
+     ],
+     ipucu:"Önce grubun adını bul, sonra uymayanı ayıkla!",
+     kartlar:[["elma, armut, muz","Meyve"],["kedi, köpek, at","Hayvan"],["kırmızı, mavi, sarı","Renk"],["masa, sandalye, dolap","Eşya"],["Ankara, İzmir, Bursa","Şehir"],["havuç, domates, patates","Sebze"],["anne, baba, kardeş","Aile"]],
+     sorular:[
+      {s:"Hangi kelime meyvedir?", c:["elma","masa","kedi"], a:"Elma bir meyvedir."},
+      {s:"Hangi kelime hayvandır?", c:["köpek","kalem","muz"], a:"Köpek bir hayvandır."},
+      {s:"'Kırmızı, mavi, sarı' hangi gruptadır?", c:["Renk","Meyve","Hayvan"], a:"Bunlar renk adlarıdır."},
+      {s:"Hangi kelime diğerlerinden farklıdır? elma, armut, kedi, muz", c:["kedi","elma","armut"], a:"Kedi hayvandır; diğerleri meyvedir."},
+      {s:"Hangisi bir şehir adıdır?", c:["Ankara","Karpuz","Kalem"], a:"Ankara bir şehirdir."},
+      {s:"Hangi grup yalnızca eşyalardan oluşur?", c:["masa, sandalye, dolap","kedi, masa, muz","elma, kalem, kuş"], a:"Masa, sandalye ve dolap eşyadır."},
+      {s:"'Havuç, domates, patates' kelimelerinin grup adı nedir?", c:["Sebze","Meyve","Hayvan"], a:"Bunlar sebzedir."},
+      {s:"Hangi kelime kuş değildir? serçe, kartal, güvercin, balık", c:["balık","serçe","kartal"], a:"Balık suda yaşar, kuş değildir."},
+      {s:"'Anne, baba, kardeş' hangi gruba girer?", c:["Aile","Okul","Mevsim"], a:"Bunlar aile üyeleridir."},
+      {s:"Hangi kelime mevsim adıdır?", c:["kış","pazartesi","ocak"], a:"Kış bir mevsimdir; pazartesi gün, ocak aydır."}
+     ]},
+    {id:"tr1-tekil-cogul", ad:"Tek ve Çok Varlık", e:"🔢",
+     anlat:[
+      {b:"Tek ve çok", m:"Bir tane olan varlık tektir. Birden çok olan varlık çoktur.", o:"bir kedi, üç kedi"},
+      {b:"-lar, -ler eki", m:"Çok varlığı anlatmak için kelimenin sonuna -lar ya da -ler ekleriz.", o:"kitap → kitaplar; ev → evler"},
+      {b:"Hangisini ekleriz?", m:"Son sesli harf a, ı, o, u ise -lar; e, i, ö, ü ise -ler getiririz.", o:"kuş → kuşlar; kedi → kediler"},
+      {b:"Sayıdan sonra", m:"Sayıdan sonra çoğul eki gerekmez.", o:"iki elma"}
+     ],
+     ipucu:"Kalın sesli: -lar. İnce sesli: -ler.",
+     kartlar:[["ev sözcüğünün çoğulu","evler"],["kitap sözcüğünün çoğulu","kitaplar"],["kuş sözcüğünün çoğulu","kuşlar"],["kedi sözcüğünün çoğulu","kediler"],["göz sözcüğünün çoğulu","gözler"],["okul sözcüğünün çoğulu","okullar"],["Çoğul eki nedir?","-lar, -ler"]],
+     sorular:[
+      {s:"'Kalem' sözcüğünün çoğulu hangisidir?", c:["kalemler","kalemlar","kalemlr"], a:"Son sesli e olduğu için -ler gelir."},
+      {s:"'Kuş' sözcüğünün çoğulu hangisidir?", c:["kuşlar","kuşler","kuşlir"], a:"Son sesli u olduğu için -lar gelir."},
+      {s:"Hangi sözcük çok varlık bildirir?", c:["balıklar","balık","bir balık"], a:"-lar eki çokluk bildirir."},
+      {s:"'Ev' sözcüğüne hangi ek gelir?", c:["-ler","-lar","-lan"], a:"Son sesli e: evler."},
+      {s:"'Araba' sözcüğünün çoğulu hangisidir?", c:["arabalar","arabaler","arabalr"], a:"Son sesli a: arabalar."},
+      {s:"Hangi sözcük tek varlığı gösterir?", c:["çiçek","çiçekler","çiçekleri"], a:"Çoğul eki olmayan sözcük tektir."},
+      {s:"'Göz' sözcüğünün çoğulu hangisidir?", c:["gözler","gözlar","gözlir"], a:"Son sesli ö: gözler."},
+      {s:"Hangi cümlede çoğul eki vardır?", c:["Kuşlar uçtu.","Kuş uçtu.","Bir kuş uçtu."], a:"Kuşlar sözcüğünde -lar eki vardır."},
+      {s:"'Okul' sözcüğünün çoğulu hangisidir?", c:["okullar","okuller","okullır"], a:"Son sesli u: okullar."},
+      {s:"Hangisi doğru yazılmıştır?", c:["iki kalem","iki kalemler","iki kalemlar"], a:"Sayıdan sonra çoğul eki gerekmez."}
      ]},
     {id:"tr1-buyuk-harf", ad:"Büyük Harf Kullanımı", e:"🅰️",
      anlat:[
@@ -149,6 +298,27 @@ HW.add({ders:"turkce", sinif:1, uniteler:[
        {s:"Ece 'Anne ne yapıyorsun' diye yazdı. Sonuna hangi işaret konmalı?", c:["Soru işareti","Nokta","Virgül"], a:"Ece bir şey soruyor, bu yüzden soru işareti konur."},
        {s:"Nokta işaretini cümlenin neresine koyarız?", c:["Sonuna","Başına","Ortasına"], a:"Nokta cümlenin sonuna konur."}
      ]},
+    {id:"tr1-soru-sozcukleri", ad:"Soru Sözcükleri", e:"❔",
+     anlat:[
+      {b:"Soru sormak", m:"Merak ettiğimiz şeyleri soru sözcükleriyle sorarız. Soru cümlesinin sonuna soru işareti koyarız.", o:"Adın ne?"},
+      {b:"Kim? Ne?", m:"Kim? kişiyi sorar. Ne? şeyi sorar.", o:"Kim geldi? Ali geldi. Ne yedin? Elma."},
+      {b:"Nerede? Ne zaman?", m:"Nerede? yeri sorar. Ne zaman? zamanı sorar.", o:"Nerede oturuyorsun? Ne zaman geleceksin?"},
+      {b:"Neden? Nasıl?", m:"Neden? sebebi sorar. Nasıl? durumu sorar.", o:"Neden güldün? Nasılsın?"}
+     ],
+     ipucu:"Kim kişi, ne şey, nerede yer, ne zaman zaman!",
+     kartlar:[["Kim?","Kişiyi sorar"],["Ne?","Şeyi sorar"],["Nerede?","Yeri sorar"],["Ne zaman?","Zamanı sorar"],["Neden?","Sebebi sorar"],["Nasıl?","Durumu sorar"],["Soru cümlesinin sonuna ne konur?","Soru işareti"]],
+     sorular:[
+      {s:"Kişiyi sormak için hangi soru sözcüğü kullanılır?", c:["Kim","Nerede","Ne zaman"], a:"Kişiyi 'kim' ile sorarız."},
+      {s:"'Nerede?' neyi sorar?", c:["Yeri","Zamanı","Sebebi"], a:"Nerede? yeri sorar."},
+      {s:"'Ne zaman?' neyi sorar?", c:["Zamanı","Kişiyi","Yeri"], a:"Ne zaman? zamanı sorar."},
+      {s:"Hangisi bir soru cümlesidir?", c:["Adın ne?","Adım Ali.","Okula gittim."], a:"Soru cümlesi soru işaretiyle biter."},
+      {s:"'Kapıyı kim açtı?' sorusunun cevabı hangisidir?", c:["Babam açtı.","Evde.","Yarın."], a:"Kim? kişiyi sorar."},
+      {s:"'Okul nerede?' sorusunun cevabı hangisidir?", c:["Parkın yanında.","Dün.","Ayşe."], a:"Nerede? yer sorar."},
+      {s:"'Neden ağlıyorsun?' sorusuna hangisi uygun cevaptır?", c:["Çünkü düştüm.","Ankara'da.","Kırmızı."], a:"Neden? sebebi sorar."},
+      {s:"'Ne zaman tatile gideceğiz?' sorusuna hangi cevap uygundur?", c:["Yarın.","Annem.","Bahçede."], a:"Ne zaman? zaman sorar."},
+      {s:"Soru cümlesinin sonuna hangi işaret konur?", c:["?",".","!"], a:"Soru işareti (?) konur."},
+      {s:"'Okuldan ne zaman çıktın?' sorusuna hangisi cevaptır?", c:["Öğleden sonra.","Mavi.","Elif."], a:"Ne zaman? zamanı sorar."}
+     ]},
     {id:"tr1-es-zit", ad:"Eş ve Zıt Anlamlı Kelimeler", e:"↔️",
      anlat:[
        {b:"Eş anlamlı kelimeler", m:"Yazılışı farklı ama anlamı aynı ya da çok yakın olan kelimelere eş anlamlı kelimeler denir.", o:"çabuk = hızlı, ev = konut"},
@@ -171,7 +341,7 @@ HW.add({ders:"turkce", sinif:1, uniteler:[
        {s:"Bu çanta ağır değil, ...... . Cümleyi hangi kelime tamamlar?", c:["hafif","kalın","büyük"], a:"Ağır değilse hafiftir."}
      ]}
   ]},
-  {ad:"Anlama ve Görgü", konular:[
+  {ad:"Anlama ve Söz Varlığı", konular:[
     {id:"tr1-okuma-anlama", ad:"Okuduğunu Anlama", e:"📖",
      anlat:[
        {b:"Dikkatle oku", m:"Okuduğunu anlamak için metni dikkatle ve sonuna kadar okumalısın. Acele edersen önemli bir bilgiyi kaçırabilirsin.", o:"Önce oku, sonra soruya bak."},
@@ -214,26 +384,47 @@ HW.add({ders:"turkce", sinif:1, uniteler:[
        {s:"Olayları anlatırken 'en son' sözü neyi gösterir?", c:["Sıranın sonunu","Sıranın başını","Sıranın ortasını"], a:"En son, sıranın sonudur."},
        {s:"Ece kapıyı çaldı. Anne kapıyı açtı. Ece içeri girdi. Ece içeri girmeden önce ne oldu?", c:["Anne kapıyı açtı.","Ece odasına gitti.","Ece çantasını bıraktı."], a:"Metinde girmeden önce kapının açıldığı yazar."}
      ]},
-    {id:"tr1-gorgu-dinleme", ad:"Görgü İfadeleri ve Dinleme", e:"🤝",
+    {id:"tr1-hikaye-unsurlari", ad:"Kim, Nerede, Ne Zaman?", e:"🏞️",
      anlat:[
-       {b:"Nazik sözler", m:"Güzel sözler insanları mutlu eder. 'Lütfen', 'teşekkür ederim', 'rica ederim' ve 'özür dilerim' nazik sözlerdir.", o:"Lütfen su verir misin?"},
-       {b:"Selamlaşma", m:"Sabah birini görünce 'Günaydın' deriz. Yemeğe başlayanlara 'Afiyet olsun', hasta olana 'Geçmiş olsun' deriz.", o:"Günaydın! Afiyet olsun!"},
-       {b:"Dinleme kuralları", m:"Biri konuşurken onu dikkatle dinleriz. Konuşanın gözlerine bakarız ve araya girmeyiz.", o:"Dinle, bekle, sonra konuş."},
-       {b:"Söz alma", m:"Konuşmak istediğimizde parmak kaldırırız ve sıramızı bekleriz. Böylece herkes birbirini duyar.", o:"Parmak kaldır, sıranı bekle."}
+      {b:"Hikâyenin kişileri", m:"Hikâyede olayı yaşayanlara kişi ya da kahraman denir. Hayvanlar da kahraman olabilir.", o:"Ayşe ve kedisi Pamuk"},
+      {b:"Yer", m:"Olayın geçtiği yere mekân denir.", o:"bahçe, okul, orman"},
+      {b:"Zaman", m:"Olayın ne zaman geçtiğine zaman denir.", o:"Bir yaz sabahı..."},
+      {b:"Olay", m:"Hikâyede olan şeye olay denir. Olay başlar, gelişir ve biter.", o:"Ali topu kaybetti, aradı, buldu."}
      ],
-     ipucu:"Lütfen, teşekkür, özür: üç sihirli söz!",
-     kartlar:[["Hediye alınca ne deriz?","Teşekkür ederim"],["Teşekkür edene ne deriz?","Rica ederim"],["Sabah selamı","Günaydın"],["Yemekten önce","Afiyet olsun"],["Hasta olana","Geçmiş olsun"],["Hata yapınca","Özür dilerim"],["Bir şey isterken","Lütfen"]],
+     ipucu:"Kim, nerede, ne zaman, ne oldu? Hikâyenin dört sorusu!",
+     kartlar:[["Hikâyedeki kahramana ne denir?","Kişi"],["Olayın geçtiği yer","Mekân"],["Olayın zamanı","Zaman"],["Hikâyede olan şey","Olay"],["Olay hangi sırayla ilerler?","Başlar, gelişir, biter"],["Hayvanlar kahraman olabilir mi?","Evet"]],
      sorular:[
-       {s:"Biri sana hediye verince ne dersin?", c:["Teşekkür ederim","Rica ederim","Güle güle"], a:"Hediye verene teşekkür ederiz."},
-       {s:"Biri sana teşekkür edince ne dersin?", c:["Rica ederim","Günaydın","Afiyet olsun"], a:"Teşekkür edene 'Rica ederim' deriz."},
-       {s:"Sabah arkadaşını görünce ne dersin?", c:["Günaydın","İyi geceler","Güle güle"], a:"Sabah 'Günaydın' deriz."},
-       {s:"Yemeğe başlayanlara ne denir?", c:["Afiyet olsun","Geçmiş olsun","Güle güle"], a:"Yemekte 'Afiyet olsun' deriz."},
-       {s:"Hasta olan arkadaşına ne dersin?", c:["Geçmiş olsun","Afiyet olsun","Günaydın"], a:"Hastaya 'Geçmiş olsun' deriz."},
-       {s:"Öğretmen konuşurken ne yaparız?", c:["Dikkatle dinleriz","Hemen konuşuruz","Kalkıp gideriz"], a:"Konuşanı dikkatle dinleriz."},
-       {s:"Bir şey isterken hangi sözü kullanırız?", c:["Lütfen","Hadi","Çabuk"], a:"'Lütfen' nazik bir sözdür."},
-       {s:"Yanlışlıkla birine çarptın. Ne dersin?", c:["Özür dilerim","Rica ederim","Afiyet olsun"], a:"Hata yapınca özür dileriz."},
-       {s:"Konuşmak isteyen kişi ne yapmalıdır?", c:["Parmak kaldırıp sırasını beklemeli","Hemen araya girmeli","Bağırmalı"], a:"Söz almak için parmak kaldırılır."},
-       {s:"Hangisi iyi bir dinleyici davranışıdır?", c:["Konuşanın gözlerine bakmak","Arkadaşıyla fısıldaşmak","Başka işle uğraşmak"], a:"İyi dinleyici konuşana bakar ve onu dinler."}
+      {s:"Elif bir yaz sabahı bahçede kedisiyle oynadı. Bu hikâyede kişi kimdir?", c:["Elif","Bahçe","Yaz"], a:"Olayı yaşayan Elif'tir."},
+      {s:"Elif bir yaz sabahı bahçede kedisiyle oynadı. Olay nerede geçti?", c:["Bahçede","Okulda","Denizde"], a:"Mekân bahçedir."},
+      {s:"Elif bir yaz sabahı bahçede kedisiyle oynadı. Olay ne zaman geçti?", c:["Bir yaz sabahı","Bir kış akşamı","Gece"], a:"Zaman bir yaz sabahıdır."},
+      {s:"Hikâyedeki yere ne denir?", c:["Mekân","Zaman","Kişi"], a:"Olayın geçtiği yer mekândır."},
+      {s:"'Akşam eve geldik.' cümlesinde zamanı gösteren sözcük hangisidir?", c:["Akşam","eve","geldik"], a:"Akşam zaman bildirir."},
+      {s:"Kahraman kime denir?", c:["Hikâyedeki kişilere","Hikâyenin yerine","Hikâyenin zamanına"], a:"Olayı yaşayanlar kahramandır."},
+      {s:"Mert dün parkta topuyla oynadı. 'Mert' hikâyenin neyidir?", c:["Kişisi","Yeri","Zamanı"], a:"Mert, olayı yaşayan kişidir."},
+      {s:"Mert dün parkta topuyla oynadı. 'Dün' hikâyenin neyidir?", c:["Zamanı","Yeri","Kişisi"], a:"Dün zamanı bildirir."},
+      {s:"Hangisi bir mekân değildir? orman, ev, okul, sabah", c:["sabah","orman","okul"], a:"Sabah bir zamandır."},
+      {s:"Hikâyenin olayı hangi sırayla ilerler?", c:["Başlar, gelişir, biter","Biter, başlar, gelişir","Gelişir, biter, başlar"], a:"Olay önce başlar, sonra gelişir, en son biter."}
+     ]},
+    {id:"tr1-tekerleme-bilmece", ad:"Tekerleme, Bilmece ve Ninni", e:"🎶",
+     anlat:[
+      {b:"Tekerleme", m:"Tekerleme, söylemesi eğlenceli, kısa ve hızlı söylenen sözlerdir. Dilimizi çalıştırır.", o:"Şu köşe yeşil şişe, şu köşe pembe şişe."},
+      {b:"Bilmece", m:"Bilmece, cevabı bulunmaya çalışılan sorudur. İpuçlarından cevabı tahmin ederiz.", o:"Çerçevesi, camı var; içinden dışarıyı görürüz. (pencere)"},
+      {b:"Ninni", m:"Ninni, bebekleri uyutmak için söylenen yumuşak şarkıdır.", o:"Uyusun da büyüsün."},
+      {b:"Sayışma", m:"Sayışma, oyunda ebeyi ya da sırayı belirlemek için söylenen kısa sözlerdir.", o:"Sayışmayla ebe seçilir."}
+     ],
+     ipucu:"Tekerleme hızlı, bilmece düşündürür, ninni uyutur!",
+     kartlar:[["Tekerleme nedir?","Eğlenceli, hızlı söylenen söz"],["Bilmece nedir?","Cevabı bulunan soru"],["Ninni ne için söylenir?","Bebeği uyutmak için"],["Sayışma ne işe yarar?","Oyunda sırayı belirler"],["Dili çalıştıran söz","Tekerleme"],["İpuçlarından bulunan cevap","Bilmece"]],
+     sorular:[
+      {s:"Bebeği uyutmak için söylenen yumuşak şarkıya ne denir?", c:["Ninni","Bilmece","Tekerleme"], a:"Bebekler için söylenen şarkıya ninni denir."},
+      {s:"Cevabı bulunmaya çalışılan soruya ne denir?", c:["Bilmece","Ninni","Sayışma"], a:"Bu soruya bilmece denir."},
+      {s:"Hızlı söylenen, dil dolaştıran eğlenceli söze ne denir?", c:["Tekerleme","Bilmece","Ninni"], a:"Buna tekerleme denir."},
+      {s:"Oyunda ebeyi seçmek için ne söyleriz?", c:["Sayışma","Ninni","Bilmece"], a:"Ebe sayışmayla seçilir."},
+      {s:"'Çerçevesi, camı var; içinden dışarıyı görürüz.' bilmecesinin cevabı nedir?", c:["Pencere","Kapı","Ayna"], a:"Dışarıyı görmemizi sağlayan pencere."},
+      {s:"'Uyusun da büyüsün' sözleri hangi türdendir?", c:["Ninni","Bilmece","Tekerleme"], a:"Bebek uyutan sözler ninnidir."},
+      {s:"Hangisi bir tekerlemedir?", c:["Şu köşe yeşil şişe, şu köşe pembe şişe.","Bugün hava çok güzel.","Okula gittim."], a:"Ses oyunlarıyla dolu hızlı söz tekerlemedir."},
+      {s:"Hangisi bilmece olabilir?", c:["Dört ayağı var, yürümez; üstünde yemek yeriz. Nedir?","Dün parka gittik.","Annem yemek yaptı."], a:"Cevabı aranan soru bilmecedir (masa)."},
+      {s:"Tekerlemenin amacı nedir?", c:["Eğlendirmek ve dili çalıştırmak","Bebeği uyutmak","Soru çözmek"], a:"Tekerleme eğlendirir."},
+      {s:"Ninni söyleyen kişi ne ister?", c:["Bebeğin rahat uyumasını","Oyun başlatmayı","Bilmece sormayı"], a:"Ninni bebeği uyutmak içindir."}
      ]}
   ]}
 ]});
