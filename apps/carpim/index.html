@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+html,body{margin:0;height:100%;font-family:"Comic Sans MS","Chalkboard SE",sans-serif;background:linear-gradient(#8fd3ff,#d9b8ff 60%,#ffc2e6);overflow:hidden;color:#4a2a7a}
+#app{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2vmin;text-align:center}
+h1{margin:0 0 1vmin;font-size:7vmin;text-shadow:0 .5vmin #fff}
+.btn{border:0;border-radius:4vmin;padding:2.2vmin 5vmin;font:inherit;font-size:5.5vmin;color:#fff;background:#ff5fa8;box-shadow:0 1vmin #c23a7d;margin:1.2vmin;cursor:pointer}
+.btn:active{transform:translateY(.8vmin);box-shadow:0 .2vmin #c23a7d}
+.btn.b{background:#4aa8ff;box-shadow:0 1vmin #2a72c0}.btn.g{background:#3ec97a;box-shadow:0 1vmin #1f8f50}.btn.y{background:#ffb627;box-shadow:0 1vmin #c48410}
+.row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}
+.pony{width:22vmin;height:22vmin}.pony.big{width:34vmin;height:34vmin}
+.pick{border-radius:50%;background:#ffffffaa;margin:.8vmin;border:1vmin solid transparent}.pick.sel{border-color:#ff5fa8;background:#fff}
+.num{width:13vmin;height:13vmin;font-size:7vmin;padding:0}
+.q{font-size:14vmin;font-weight:bold;margin:1vmin;text-shadow:0 .6vmin #fff}
+.ans{font-size:11vmin;min-width:26vmin}
+.bar{font-size:5vmin;display:flex;gap:4vmin;align-items:center}
+.line{font-size:6.5vmin;background:#fffc;border-radius:3vmin;padding:.8vmin 4vmin;margin:.6vmin;cursor:pointer}
+.col{display:grid;grid-template-columns:1fr 1fr;gap:0 3vmin}
+@keyframes jump{0%,100%{transform:translateY(0)}40%{transform:translateY(-9vmin) rotate(-6deg)}70%{transform:translateY(-3vmin) rotate(6deg)}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-3vmin)}75%{transform:translateX(3vmin)}}
+.jump{animation:jump .7s}.shake{animation:shake .5s}
+.fall{position:fixed;top:-8vmin;font-size:8vmin;animation:f 2.2s linear forwards;pointer-events:none}
+@keyframes f{to{transform:translateY(115vh) rotate(360deg)}}
+.small{font-size:4.5vmin}
+.tip{background:#fff7c2;border-radius:3vmin;padding:1vmin 3vmin;font-size:4.2vmin;margin:.5vmin;max-width:95vw}
+.split{display:flex;gap:2vmin;align-items:flex-start;max-width:98vw}
+.col1 .line{font-size:4.6vmin;padding:.3vmin 3vmin;margin:.4vmin}
+.vz{background:#ffffffcc;border-radius:3vmin;padding:1.5vmin;min-width:55vmin;max-width:60vw;min-height:40vmin}
+.grp{display:inline-flex;flex-wrap:wrap;width:15vmin;border:.6vmin dashed #ff5fa8;border-radius:2vmin;margin:.6vmin;padding:.5vmin;justify-content:center;animation:pop .4s both}
+.grp i{font-style:normal;font-size:3.4vmin}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+.chip{display:inline-block;min-width:8vmin;margin:.4vmin;padding:.8vmin;border-radius:2vmin;background:#ddd;font-size:4.5vmin;transition:.3s}
+.chip.on{background:#3ec97a;color:#fff;transform:scale(1.15)}
+.hpony{position:absolute;top:0;left:0;width:9vmin;height:9vmin;transition:left .4s}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2vmin}
+.kb{width:16vmin;height:14vmin;padding:0;margin:0;font-size:8vmin}
+.avs{display:inline-block;min-width:18vmin;border-bottom:.8vmin solid #ff5fa8}
+.split2{display:flex;gap:6vmin;align-items:center;justify-content:center}
+.card{background:#fffd;border-radius:3vmin;padding:1.2vmin 2.5vmin;margin:.8vmin;min-width:19vmin;cursor:pointer;box-shadow:0 .8vmin #0002}
+.meter{height:2vmin;background:#ddd;border-radius:1vmin;overflow:hidden}.meter i{display:block;height:100%;background:#3ec97a}
+.par{width:100%;height:100%;overflow-y:auto;padding:1vmin}
+.hm{border-collapse:collapse;margin:auto}.hm th,.hm td{width:6.5vmin;height:5.2vmin;font-size:2.8vmin;text-align:center;border:.3vmin solid #fff}.hm th{color:#4a2a7a}
+.c0{background:#ddd}.c1{background:#ffe08a}.c2{background:#7fdc9e}.c3{background:#ff9a9a}
+.lg span{display:inline-block;padding:.3vmin 1.5vmin;margin:.8vmin;border-radius:1vmin;font-size:3vmin}
+.stat{background:#fffd;border-radius:3vmin;padding:2vmin 3vmin;font-size:4vmin;text-align:left;min-width:50vmin}
+.bars{display:flex;gap:1.5vmin;align-items:flex-end;height:20vmin}.bars div{display:flex;flex-direction:column;align-items:center;font-size:2.8vmin}.bars i{display:block;width:5vmin;background:#4aa8ff;border-radius:1vmin 1vmin 0 0;min-height:.5vmin}
+.pick.pony{width:17vmin;height:17vmin}
+.sky{position:relative;width:94vw;height:52vmin}
+.bln{position:absolute;top:6vmin;width:24vmin;height:28vmin;border-radius:50% 50% 48% 48%;color:#fff;font-size:10vmin;font-weight:bold;display:flex;align-items:center;justify-content:center;cursor:pointer;animation:bob 3s ease-in-out infinite;box-shadow:inset -2vmin -2vmin #0002}
+.bln:after{content:"";position:absolute;bottom:-9vmin;width:.4vmin;height:9vmin;background:#888}
+@keyframes bob{50%{transform:translateY(-6vmin) rotate(4deg)}}
+.bln.pop{animation:pp .5s forwards}@keyframes pp{to{transform:scale(1.8);opacity:0}}
+.bln.wob{animation:shake .5s;opacity:.4}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5vmin}
+.mc{width:21vmin;height:20vmin;border-radius:3vmin;background:#ff5fa8;color:#fff;font-size:8vmin;display:flex;align-items:center;justify-content:center;box-shadow:0 1vmin #c23a7d;cursor:pointer}
+.mc.up{background:#fff;color:#4a2a7a;animation:pop .3s}.mc.done{background:#7fdc9e;color:#064}
+.lane{position:relative;width:94vw;height:14vmin;margin:1vmin;background:#ffffff88;border-radius:3vmin;border-bottom:1vmin dashed #fff}
+.lane:after{content:"🏁";position:absolute;right:2vmin;top:2vmin;font-size:9vmin}
+.lp{position:absolute;top:1vmin;width:12vmin;height:12vmin;font-size:10vmin;transition:left .9s}
+.riv{position:relative;width:94vw;background:#5cc8ff;border-radius:3vmin;padding:2vmin;display:flex;flex-wrap:wrap;justify-content:center;gap:2vmin}
+.st{width:17vmin;height:12vmin;border-radius:5vmin;background:#bbb;font-size:6.5vmin;display:flex;align-items:center;justify-content:center;color:#333;box-shadow:0 1vmin #777;cursor:pointer}
+.st.on{background:#7fdc9e}.st.sp{animation:shake .4s;background:#ffb3b3}
+.alb{display:grid;grid-template-columns:repeat(6,1fr);gap:1.5vmin}.alb div{font-size:9vmin;background:#fffd;border-radius:3vmin;padding:1vmin 2vmin}
+.nd{width:20vmin;margin:1.2vmin;text-align:center;border-radius:4vmin;padding:1.2vmin;cursor:pointer;background:#fffd}
+.nn{font-size:9vmin;font-weight:bold}.ns{font-size:4vmin}.nl{font-size:3.2vmin}
+.nd.dn{background:#bff2d0}.nd.lk{opacity:.5}.nd.cu{background:#ffe08a;animation:jump 1.4s infinite}
+.lockb{opacity:.45}
+.hint{background:#fff7c2;border-radius:3vmin;padding:1vmin 3vmin;font-size:4.5vmin}
+</style></head><body><div id="app"></div>
+<script>
+const $=document.getElementById('app');
+// ---- Ponies (özgün çizimler) ----
+const P=[
+{n:'Pamuk',b:'#ffd1e8',m:'#ff4fa0',h:1,w:0,c:'♥'},
+{n:'Işıl',b:'#e6d2ff',m:'#7b3fe4',h:1,w:0,c:'★'},
+{n:'Gökçe',b:'#bfe6ff',m:'#ff5a5a',h:0,w:1,c:'⚡'},
+{n:'Elmas',b:'#fff3b0',m:'#ff9f1c',h:0,w:0,c:'🍎'},
+{n:'Bulut',b:'#ffffff',m:'#58b8ff',h:1,w:1,c:'☁'},
+{n:'Nane',b:'#c9f5d6',m:'#2ec27e',h:0,w:1,c:'🍀'}];
+function pony(i,mood){const p=P[i],m=p.m,sad=false;
+return `<svg viewBox="0 0 200 200">
+<path d="M150 95Q195 90 185 150Q175 185 160 160Q175 130 140 120Z" fill="${m}"/>
+${p.w?`<path d="M70 95Q20 40 50 20Q55 70 95 85Z" fill="#fff" stroke="${m}" stroke-width="3"/>`:''}
+<g fill="${p.b}" stroke="#0002" stroke-width="2"><rect x="62" y="125" width="16" height="50" rx="8"/><rect x="82" y="128" width="16" height="48" rx="8"/><rect x="118" y="128" width="16" height="48" rx="8"/><rect x="138" y="125" width="16" height="50" rx="8"/></g>
+<ellipse cx="105" cy="115" rx="55" ry="38" fill="${p.b}" stroke="#0002" stroke-width="2"/>
+<text x="120" y="125" font-size="22" text-anchor="middle">${p.c}</text>
+<path d="M55 95Q40 40 70 35L100 70Z" fill="${p.b}"/>
+<circle cx="62" cy="62" r="38" fill="${p.b}" stroke="#0002" stroke-width="2"/>
+<path d="M36 40L40 8L58 28Z M70 26L82 6L90 34Z" fill="${p.b}" stroke="#0002" stroke-width="2"/>
+${p.h?`<path d="M52 28L58 -2L64 28Z" fill="#ffd700" stroke="#c9a000" stroke-width="2"/>`:''}
+<path d="M30 45Q20 90 38 105Q36 70 52 40Q70 25 95 45Q80 15 50 18Q35 25 30 45Z" fill="${m}"/>
+<ellipse cx="50" cy="66" rx="10" ry="${sad?9:13}" fill="#fff" stroke="#333" stroke-width="2"/><ellipse cx="52" cy="68" rx="6" ry="8" fill="#7a2fd0"/><circle cx="54" cy="64" r="3" fill="#fff"/>
+<ellipse cx="82" cy="66" rx="10" ry="${sad?9:13}" fill="#fff" stroke="#333" stroke-width="2"/><ellipse cx="84" cy="68" rx="6" ry="8" fill="#7a2fd0"/><circle cx="86" cy="64" r="3" fill="#fff"/>
+<circle cx="38" cy="84" r="6" fill="#ff8fb8" opacity=".6"/>
+<path d="${sad?'M52 96Q66 86 80 96':'M52 88Q66 104 80 88'}" fill="none" stroke="#b03060" stroke-width="3" stroke-linecap="round"/>
+</svg>`}
+// ---- Durum ----
+let me=0,stars=0,ac;try{me=+localStorage.pm||0;stars=+localStorage.ps||0}catch(e){}
+const sv=(k,v)=>{try{localStorage[k]=v}catch(e){}};
+const say=t=>{try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='tr-TR';u.rate=.9;speechSynthesis.speak(u)}catch(e){}};
+function snd(f,d=.15){try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f;o.type='triangle';g.gain.setValueAtTime(.2,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+d);o.connect(g);g.connect(ac.destination);o.start();o.stop(ac.currentTime+d)}catch(e){}}
+const ok=()=>{[523,659,784,1047].forEach((f,i)=>setTimeout(()=>snd(f),i*90))},bad=()=>{snd(200,.3)};
+function rain(){for(let i=0;i<18;i++){const e=document.createElement('div');e.className='fall';e.textContent=['⭐','💖','🌈','✨','🦄'][i%5];e.style.left=Math.random()*95+'vw';e.style.animationDelay=Math.random()*.6+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),3200)}}
+const ptxt=['Harika!','Süpersin!','Bravo!','Muhteşem!','Çok güzel!'];
+// ---- Ekranlar ----
+function home(){LV=null;$.innerHTML=`<h1>🌈 Midilli Çarpım Tablosu Macerası 🦄</h1>
+<div class="small">Arkadaşını seç!</div><div class="row">${P.map((p,i)=>`<div class="pick pony ${i==me?'sel':''}" onclick="me=${i};sv('pm',me);say('${p.n}');home()">${pony(i)}</div>`).join('')}</div>
+<div class="small">⭐ ${stars} · 🔥 ${streak()} gün · 🎁 ${(S.st||[]).length}/30</div>
+<div class="row"><button class="btn" style="background:#ff8a00;box-shadow:0 1vmin #b35f00" onclick="map()">🗺 Macera %${pctM()}</button><button class="btn b" onclick="learnMenu()">📖 Öğren</button><button class="btn" onclick="games()">🎮 Oyunlar</button><button class="btn g" onclick="exam()">🏆 Sınav</button></div><div class="row"><button class="btn y" onclick="${S.m===dstr(Date.now())?`say('Bugünün görevi tamam')`:'startExam(dl(),0);E.daily=1'}">${S.m===dstr(Date.now())?'✅ Görev tamam':'🎯 Günün Görevi'}</button><button class="btn b" onclick="album()">🎁 Albüm</button><button class="btn" onclick="quizMenu()">❓ Soru Oyunu</button></div><button class="btn y" style="font-size:3.5vmin;padding:1vmin 3vmin;margin:0" onclick="gate()">🔒 Ebeveyn</button>`}
+function nums(fn,all){return `<div class="row">${[1,2,3,4,5,6,7,8,9,10].map(n=>`<button class="btn num y" onclick="${fn}(${n})">${n}</button>`).join('')}</div>`+(all?`<button class="btn g" onclick="${fn}(0)">🎲 Karışık</button>`:'')+`<button class="btn b" onclick="home()">🏠 Geri</button>`}
+function learnMenu(){$.innerHTML=`<h1>Hangi tablo?</h1>`+nums('learn')}
+function quizMenu(){$.innerHTML=`<h1>Hangi tabloyu oynayalım?</h1>`+nums('quiz',1)}
+const TIP={1:'Bir ile çarpınca sayı aynen kalır! 1 × 7 = 7',2:'İkiye katla! Aynı sayıyı iki kere topla: 6 × 2 = 6 + 6',3:'Üçer üçer say: 3, 6, 9, 12 ...',4:'İki kere ikiye katla! 4 × 3 = 3 → 6 → 12',5:'Sonuç hep 0 ya da 5 ile biter. Beşer beşer say, bir elin parmakları gibi!',6:'6 ×, 5 × ün üstüne bir tane daha: 6 × 4 = 5 × 4 + 4 = 24',7:'Bildiğin tablodan yararla! 7 × 3 = 3 × 7. Yerleri değişince sonuç aynı!',8:'8 ×, 4 × ün iki katı. 8 × 3 = 12 + 12 = 24',9:'Parmak hilesi: 9 × k için k. parmağını kıvır. Solundakiler onlar, sağındakiler birler! Rakamlar toplamı hep 9!',10:'Sayının sonuna 0 koy! 10 × 7 = 70'};
+let vt=[];
+function viz(n,k){vt.forEach(clearTimeout);vt=[];const r=n*k,V=document.getElementById('viz');say(n+' çarpı '+k+' eşittir '+r);
+let g='';for(let i=0;i<k;i++){g+=`<span class="grp" style="animation-delay:${i*.35}s">${'<i>⭐</i>'.repeat(n)}</span>`}
+let ch='';for(let i=1;i<=k;i++)ch+=`<span class="chip" id="c${i}">${n*i}</span>`;
+V.innerHTML=`<div class="small"><b>${k} grup</b>, her grupta <b>${n}</b> ⭐ var:</div><div class="row">${g}</div>
+<div class="small">${Array(k).fill(n).join(' + ')} = <b>${r}</b></div><div class="small">Zıplayarak say:</div>
+<div class="row" style="position:relative;padding-top:9vmin" id="hop"><div id="hp" class="hpony">${pony(me)}</div>${ch}</div>
+<div class="small">🔄 ${n} × ${k} = ${k} × ${n} = ${r}</div><div class="small" style="color:#c2185b">${mm(n,k)}</div>`;
+for(let i=1;i<=k;i++)vt.push(setTimeout(()=>{const c=document.getElementById('c'+i),h=document.getElementById('hp');if(!c||!h)return;c.classList.add('on');h.style.left=c.offsetLeft+'px';snd(400+i*70,.2)},i*450+k*350));}
+function learn(n){lv(n).l=1;save();say(n+' çarpım tablosu');$.innerHTML=`<div class="row"><div class="pony" style="width:14vmin;height:14vmin">${pony(me)}</div><h1 style="font-size:6vmin">${n} Çarpım Tablosu</h1></div>
+<div class="tip">💡 ${TIP[n]}</div>
+<div class="split"><div class="col1">${[1,2,3,4,5,6,7,8,9,10].map(k=>`<div class="line" onclick="viz(${n},${k})">${n} × ${k} = <b>${n*k}</b></div>`).join('')}</div><div id="viz" class="vz small">👈 Bir satıra dokun, midilli sana göstersin!</div></div>
+<div class="row"><button class="btn b" onclick="${LV!=null?'lvl(LV)':'learnMenu()'}">⬅ Geri</button>${LV!=null?`<button class="btn g" onclick="lgame(${n})">🎮 Oyna</button>`:`<button class="btn" onclick="quiz(${n})">🎮 Oyna</button>`}</div>`}
+let Q;
+function quiz(n){Q={n,i:0,s:0,list:[]};for(let k=0;k<10;k++){const a=n||1+Math.floor(Math.random()*10);Q.list.push([a,1+Math.floor(Math.random()*10)])}ask()}
+function ask(){if(Q.i>=Q.list.length)return end();Q.bad=0;Q.r=0;Q.t=Date.now();const[a,b]=Q.list[Q.i],r=a*b;let o=new Set([r]);while(o.size<3){let d=r+(Math.floor(Math.random()*7)-3)*(Math.random()<.5?1:a);if(d>0&&d!=r)o.add(d)}
+o=[...o].sort(()=>Math.random()-.5);
+$.innerHTML=`<div class="bar"><span>Soru ${Q.i+1}/${Q.list.length}</span><span>⭐ ${Q.s}</span><button class="btn b small" style="font-size:4vmin;padding:1vmin 3vmin" onclick="home()">🏠</button></div>
+<div class="pony big" id="pp">${pony(me)}</div><div class="q">${a} × ${b} = ?</div>
+<div class="row">${o.map(v=>`<button class="btn ans" onclick="pick(${v},${r},this)">${v}</button>`).join('')}</div><div id="ht" class="hint" style="visibility:hidden">.</div>`;say(a+' çarpı '+b+' kaç eder')}
+function pick(v,r,el){const pp=document.getElementById('pp');if(!Q.r){Q.r=1;const[x,y]=Q.list[Q.i];rec(x,y,v===r,Date.now()-Q.t,0)}
+if(v===r){ok();rain();if(!Q.bad)Q.s++;pp.className='pony big jump';el.classList.add('g');say(ptxt[Q.i%5]);Q.i++;setTimeout(ask,1400)}
+else{bad();pp.innerHTML=pony(me,'sad');pp.className='pony big shake';el.style.opacity=.3;el.disabled=1;if(!Q.bad)Q.list.push(Q.list[Q.i]);Q.bad=1;const[a,b]=Q.list[Q.i],h=document.getElementById('ht');h.style.visibility='visible';h.innerHTML='💡 '+a+' × '+b+' = '+Array(b).fill(a).join(' + ')+' <span style="font-size:3.5vmin">(sayarak dene!)</span> '+mm(a,b);setTimeout(()=>{pp.innerHTML=pony(me);pp.className='pony big'},700)}}
+function end(){stars+=Q.s;sv('ps',stars);ok();rain();say('Tebrikler! '+Q.s+' yıldız kazandın');
+$.innerHTML=`<h1>🎉 Tebrikler! 🎉</h1><div class="pony big jump">${pony(me)}</div><div class="q">⭐ ${Q.s} yıldız</div><div class="row"><button class="btn" onclick="quiz(${Q.n})">🔁 Tekrar</button><button class="btn b" onclick="home()">🏠 Ana Sayfa</button></div>`}
+// ---- İlerleme takibi ----
+let S={};try{S=JSON.parse(localStorage.pst||'{}')}catch(e){}
+S.f=S.f||{};S.d=S.d||{};S.q=S.q||0;S.ok=S.ok||0;
+const save=()=>sv('pst',JSON.stringify(S)),key=(a,b)=>Math.min(a,b)+'x'+Math.max(a,b),dstr=t=>new Date(t).toISOString().slice(0,10);
+function rec(a,b,o,ms,typed){const f=S.f[key(a,b)]=S.f[key(a,b)]||{h:[]};f.h.push([o?1:0,Math.min(ms,60000),typed?1:0]);if(f.h.length>8)f.h.shift();S.q++;if(o)S.ok++;const d=dstr(Date.now());S.d[d]=(S.d[d]||0)+1;save()}
+// 0 yeni, 1 öğreniyor, 2 öğrendi, 3 zayıf
+function st(a,b){const f=S.f[key(a,b)];if(!f)return 0;const t=f.h.filter(x=>x[2]).slice(-2);if(t.length==2&&t.every(x=>x[0]&&x[1]<=10000))return 2;if(f.h.slice(-3).filter(x=>!x[0]).length>=2)return 3;return 1}
+const wr=(a,b)=>{const f=S.f[key(a,b)];return f?f.h.filter(x=>!x[0]).length:0};
+const R10=[1,2,3,4,5,6,7,8,9,10];
+const tblPct=n=>R10.filter(k=>st(n,k)==2).length*10;
+const ALL=()=>{const r=[];for(let a=1;a<=10;a++)for(let b=a;b<=10;b++)r.push([a,b]);return r};
+const mastered=()=>ALL().filter(([a,b])=>st(a,b)==2).length;
+const wk=()=>ALL().filter(([a,b])=>S.f[key(a,b)]&&st(a,b)!=2).sort((x,y)=>wr(...y)-wr(...x));
+// ---- Klavye ----
+let E,ans='',kok;
+const KP=()=>`<div class="kp">${[1,2,3,4,5,6,7,8,9].map(d=>`<button class="btn kb" onclick="kd(${d})">${d}</button>`).join('')}<button class="btn kb y" onclick="kx()">⌫</button><button class="btn kb" onclick="kd(0)">0</button><button class="btn kb g" onclick="kok()">✔</button></div>`;
+const kd=d=>{if(ans.length<3){ans+=d;snd(300+d*40,.08);document.getElementById('av').textContent=ans}},kx=()=>{ans=ans.slice(0,-1);document.getElementById('av').textContent=ans||'?'};
+// ---- Sınav ----
+function examSet(n){const L=n?R10.map(k=>[n,k]):ALL().sort(()=>Math.random()-.5).sort((x,y)=>(st(...x)==2)-(st(...y)==2)).slice(0,10);return L.sort(()=>Math.random()-.5).map(([a,b])=>Math.random()<.5?[a,b]:[b,a])}
+function weakSet(){const w=wk();if(!w.length)return examSet(0);const L=[];for(let i=0;i<10;i++)L.push(w[i%w.length]);return L}
+function exam(){$.innerHTML=`<h1>🏆 Sınav & Başarılar</h1><div class="tip">Sınavda cevabı klavyeyle yazarsın. Bir işlemi 10 saniyeden kısa sürede iki kez doğru yazarsan öğrenmiş sayılırsın!</div>
+<div class="row">${R10.map(n=>{const p=tblPct(n);return `<div class="card" onclick="startExam(examSet(${n}),${n})"><div style="font-size:7vmin">${p==100?'🏅':n}</div><div class="small">${n} Tablosu</div><div class="meter"><i style="width:${p}%"></i></div></div>`}).join('')}</div>
+<div class="row"><button class="btn g" onclick="startExam(examSet(0),0)">🎲 Karışık Sınav</button><button class="btn b" onclick="home()">🏠 Geri</button></div>`}
+function startExam(l,n){E={l,n,i:0,ok:0,ms:0};nextQ()}
+function nextQ(){if(E.i>=E.l.length)return examEnd();ans='';const[a,b]=E.l[E.i];E.t=Date.now();E.lock=0;kok=submit;
+$.innerHTML=`<div class="bar"><span>📝 Sınav ${E.i+1}/${E.l.length}</span><span>✅ ${E.ok}</span><button class="btn b" style="font-size:4vmin;padding:1vmin 3vmin" onclick="exam()">⬅</button></div>
+<div class="split2"><div><div class="pony" id="pp" style="width:22vmin;height:22vmin">${pony(me)}</div><div class="q" style="font-size:11vmin">${a} × ${b} = <span id="av" class="avs">?</span></div></div>${KP()}</div>`;say(a+' çarpı '+b+' kaç eder')}
+function submit(){if(E.lock||!ans)return;E.lock=1;const[a,b]=E.l[E.i],ms=Date.now()-E.t,o=+ans===a*b,pp=document.getElementById('pp');rec(a,b,o,ms,1);E.ms+=ms;
+if(o){E.ok++;ok();rain();pp.className='pony jump'}else{bad();pp.innerHTML=pony(me,'sad');pp.className='pony shake';document.getElementById('av').innerHTML=`<s>${ans}</s> <b style="color:#2a9d5c">${a*b}</b>`}
+E.i++;setTimeout(nextQ,o?1200:2200)}
+function examEnd(){const n=E.n,L=E.l.length,pass=E.final?E.ok>=L-2:E.ok>=L-1,avg=Math.round(E.ms/L/100)/10,mt=n&&tblPct(n)==100;let sk='',adv='';if(E.final){if(pass){S.fin=1;save();adv='champ'}}else if(n&&pass&&L==10){const was=lv(n).e;lv(n).e=1;save();adv=was?'':'lvl'}if(E.daily){S.m=dstr(Date.now());sk=win();save()}if(E.ok>=L-1&&!sk&&n)sk=win();stars+=E.ok;sv('ps',stars);if(pass){ok();rain()}
+say(mt?n+' tablosunu tamamen öğrendin! Tablo ustası oldun':pass?'Harika bir sınav!':'Biraz daha çalışalım');
+$.innerHTML=`<h1>${adv=='champ'?'👑 ÇARPIM ŞAMPİYONU! 👑':mt?'🏅 Tablo Ustası! 🏅':pass?'🎉 Harika!':'💪 Biraz daha çalışalım'}</h1><div class="pony big ${pass?'jump':''}">${pony(me,pass?'':'sad')}</div>
+<div class="q" style="font-size:8vmin">${E.ok}/${L} doğru · ortalama ${avg} sn</div>
+${adv=='champ'?'<div class="tip">👑 Bütün çarpım tablosunu bitirdin, şampiyon oldun!</div>':adv=='lvl'?'<div class="tip">🔓 Bölümü geçtin, yeni bölüm açıldı!</div>':''}${sk?`<div class="tip">🎁 Yeni çıkartma: <span style="font-size:8vmin">${sk}</span></div>`:''}<div class="tip">${mt?n+' çarpım tablosunu tamamen öğrendin!':pass?'Çok iyi! Tekrar çözerek bütün işlemleri ustalaşmaya yaklaştır.':'Önce Öğren bölümüne bakıp sonra tekrar dene.'}</div>
+<div class="row">${LV!=null||E.final?'<button class="btn y" onclick="map()">🗺 Harita</button>':''}<button class="btn" onclick="exam()">🏆 Sınavlar</button>${n?`<button class="btn g" onclick="learn(${n})">📖 Öğren</button>`:''}<button class="btn b" onclick="home()">🏠</button></div>`}
+// ---- Ebeveyn ----
+function gate(){const x=11+Math.floor(Math.random()*30),y=11+Math.floor(Math.random()*30);ans='';kok=()=>{if(+ans===x+y)parent();else{ans='';document.getElementById('av').textContent='?';snd(200,.3)}};
+$.innerHTML=`<h1>🔒 Ebeveyn Girişi</h1><div class="small">Doğrulama: sonucu yazın</div><div class="split2"><div><div class="q" style="font-size:10vmin">${x} + ${y} = <span id="av" class="avs">?</span></div><button class="btn b" onclick="home()">🏠 Geri</button></div>${KP()}</div>`}
+function rs(el){if(el.dataset.c){S={f:{},d:{},q:0,ok:0};save();stars=0;sv('ps',0);parent()}else{el.dataset.c=1;el.textContent='⚠️ Emin misin? Tekrar dokun'}}
+function parent(){const m=mastered(),pc=Math.round(m/55*100),acc=S.q?Math.round(S.ok/S.q*100):0,days=Object.keys(S.d).sort(),
+l7=[...Array(7)].map((_,i)=>{const d=dstr(Date.now()-(6-i)*864e5);return[d.slice(5),S.d[d]||0]}),mx=Math.max(1,...l7.map(x=>x[1])),
+v=pc>=90?'✅ Çarpım tablosunu öğrenmiş görünüyor!':pc>=50?'🙂 İyi gidiyor, devam edin.':'🌱 Öğrenme sürüyor, her gün 10 dakika yeterli.',
+grid='<table class="hm"><tr><th></th>'+R10.map(b=>`<th>${b}</th>`).join('')+'</tr>'+R10.map(a=>`<tr><th>${a}</th>`+R10.map(b=>`<td class="c${st(a,b)}">${a*b}</td>`).join('')+'</tr>').join('')+'</table>',
+w=wk().slice(0,8).map(([a,b])=>`${a}×${b}${wr(a,b)?' ('+wr(a,b)+' yanlış)':''}`).join(' · ')||'Henüz zayıf işlem yok 🎉';
+$.innerHTML=`<div class="par"><h1 style="font-size:5.5vmin">👨‍👩‍👧 Ebeveyn Paneli</h1><div class="tip"><b>${v}</b> — Öğrenilen: <b>${m}/55</b> işlem (%${pc})</div>
+<div class="split2" style="align-items:flex-start;flex-wrap:wrap"><div>${grid}<div class="lg"><span class="c2">öğrendi</span><span class="c1">öğreniyor</span><span class="c3">zayıf</span><span class="c0">yeni</span></div></div>
+<div class="stat"><div>📊 Toplam soru: <b>${S.q}</b></div><div>🎯 Doğruluk: <b>%${acc}</b></div><div>📅 Çalıştığı gün: <b>${days.length}</b></div><div>🕒 Son: <b>${days.length?days[days.length-1]:'-'}</b></div><div>⭐ Yıldız: <b>${stars}</b></div><div>🗺 Macera: <b>%${pctM()}</b>${S.fin?' 👑':''}</div><div>🏅 Usta tablo: <b>${R10.filter(n=>tblPct(n)==100).length}/10</b></div>
+<div class="small" style="margin-top:1vmin">Son 7 gün (soru):</div><div class="bars">${l7.map(([d,c])=>`<div><i style="height:${c/mx*10}vmin"></i><span>${c}</span><small>${d}</small></div>`).join('')}</div></div></div>
+<div class="tip" style="font-size:3.4vmin">🔧 Zayıf işlemler: ${w}</div>
+<div class="tip" style="font-size:3vmin">ℹ️ "Öğrendi": işlem klavyeyle yazılarak, 10 sn içinde üst üste 2 kez doğru yanıtlanmıştır (3×7 ile 7×3 aynı sayılır). Çoktan seçmeli oyun bunu etkilemez.</div>
+<div class="row"><button class="btn b" style="font-size:4vmin" onclick="home()">🏠 Geri</button><button class="btn g" style="font-size:4vmin" onclick="startExam(weakSet(),0)">🎯 Zayıfları Çalıştır</button><button class="btn y" style="font-size:4vmin" onclick="rs(this)">🗑 Sıfırla</button></div></div>`}
+// ---- Eğlenceli oyunlar ----
+const MEM={'6x6':'Altı altı otuz altı!','6x7':'Altı yedi kırk iki!','7x7':'Yedi yedi kırk dokuz!','7x8':'5-6-7-8 → 56 = 7 × 8','8x8':'Sekiz sekiz altmış dört!','6x8':'Altı sekiz kırk sekiz!','6x9':'Altı dokuz elli dört!','7x9':'Yedi dokuz altmış üç!','8x9':'Sekiz dokuz yetmiş iki!','4x7':'Dört yedi yirmi sekiz!','3x7':'Üç yedi yirmi bir!','4x8':'Dört sekiz otuz iki!','3x8':'Üç sekiz yirmi dört!','9x9':'Dokuz dokuz seksen bir!'};
+const mm=(a,b)=>MEM[key(a,b)]?'🎵 '+MEM[key(a,b)]:'';
+const STK=['🦄','🌈','⭐','🍭','🎀','🦋','🌸','🍰','🎈','🧁','🐱','🐰','🍓','🌟','👑','💎','🍩','🐬','🌻','🎠','🧸','🪄','🍀','🐥','☁️','🍉','🎨','🚀','🎁','🏰'];
+const streak=()=>{let n=0,t=Date.now();if(!S.d[dstr(t)])t-=864e5;while(S.d[dstr(t)]){n++;t-=864e5}return n};
+function win(){S.st=S.st||[];const l=STK.filter(s=>!S.st.includes(s));if(!l.length)return '';const s=l[Math.floor(Math.random()*l.length)];S.st.push(s);save();return s}
+function album(){S.st=S.st||[];$.innerHTML=`<h1>🎁 Çıkartma Albümü ${S.st.length}/30</h1><div class="tip">Oyunları ve sınavları iyi bitirince yeni çıkartma kazanırsın!</div><div class="alb">${STK.map(s=>`<div>${S.st.includes(s)?s:'🔒'}</div>`).join('')}</div><button class="btn b" onclick="home()">🏠 Geri</button>`}
+const FS=n=>(n?R10.map(k=>[n,k]):ALL().sort(()=>Math.random()-.5).sort((x,y)=>(st(...x)==2)-(st(...y)==2))).map(([a,b])=>Math.random()<.5?[a,b]:[b,a]);
+function dl(){const w=wk().slice(0,3),rv=ALL().filter(([a,b])=>st(a,b)==2).sort(()=>Math.random()-.5).slice(0,5-w.length),nw=ALL().filter(([a,b])=>!S.f[key(a,b)]).sort(()=>Math.random()-.5);let l=w.concat(rv);for(const f of nw){if(l.length>=5)break;l.push(f)}while(l.length<5)l.push(ALL()[Math.floor(Math.random()*55)]);return l.map(([a,b])=>Math.random()<.5?[a,b]:[b,a])}
+const pick3=(r,a)=>{let o=new Set([r]);while(o.size<3){const d=r+(Math.floor(Math.random()*7)-3)*(Math.random()<.5?1:a);if(d>0&&d!=r)o.add(d)}return[...o].sort(()=>Math.random()-.5)};
+let G;
+function games(){if(G&&G.iv)clearInterval(G.iv);$.innerHTML=`<h1>🎮 Oyunlar</h1><div class="row">
+<div class="card" onclick="pickT('bal')"><div style="font-size:11vmin">🎈</div><div class="small">Balon Patlat</div></div>
+<div class="card" onclick="pickT('mem')"><div style="font-size:11vmin">🧩</div><div class="small">Hafıza Kartları</div></div>
+<div class="card" onclick="pickT('race')"><div style="font-size:11vmin">🏁</div><div class="small">Pony Yarışı</div></div>
+<div class="card" onclick="pickT('river')"><div style="font-size:11vmin">🐸</div><div class="small">Nehir Taşları</div></div></div>
+<button class="btn b" onclick="home()">🏠 Geri</button>`}
+function pickT(f){$.innerHTML=`<h1>Hangi tablo?</h1>`+nums(f,1).replace(/<button class="btn b" onclick="home\(\)">🏠 Geri<\/button>/,'<button class="btn b" onclick="games()">⬅ Geri</button>')}
+function gend(c,tot,again){const pass=c>=tot*.7,s=pass?win():'';if(pass&&G&&G.n){lv(G.n).g=1;save()}stars+=c;sv('ps',stars);if(pass){ok();rain()}else bad();say(pass?'Harika oyun!':'Biraz daha deneyelim');
+$.innerHTML=`<h1>${pass?'🎉 Harika!':'💪 Tekrar deneyelim'}</h1><div class="pony big ${pass?'jump':''}">${pony(me,pass?'':'sad')}</div><div class="q" style="font-size:8vmin">${c}/${tot}</div>${s?`<div class="tip">🎁 Yeni çıkartma: <span style="font-size:8vmin">${s}</span></div>`:''}<div class="row">${LV!=null?'<button class="btn y" onclick="lvl(LV)">🗺 Bölüm</button>':''}<button class="btn" onclick="${again}">🔁 Tekrar</button><button class="btn g" onclick="games()">🎮 Oyunlar</button><button class="btn b" onclick="home()">🏠</button></div>`}
+const bar=t=>`<div class="bar"><span>${t}</span><button class="btn b" style="font-size:4vmin;padding:1vmin 3vmin" onclick="games()">⬅</button></div>`;
+// 1) Balon Patlat
+function bal(n){G={l:FS(n).slice(0,10),i:0,c:0,n};balQ()}
+function balQ(){if(G.i>=G.l.length)return gend(G.c,G.l.length,`bal(${G.n})`);const[a,b]=G.l[G.i],r=a*b,o=pick3(r,a),cl=['#ff5fa8','#4aa8ff','#3ec97a','#ffb627','#a66bff'];G.t=Date.now();G.d=0;G.w=0;
+$.innerHTML=bar(`🎈 ${G.i+1}/${G.l.length} · ⭐ ${G.c}`)+`<div class="q" style="font-size:11vmin">${a} × ${b} = ?</div><div class="sky">${o.map((v,i)=>`<div class="bln" style="left:${8+i*30}%;background:${cl[(i+G.i)%5]};animation-delay:${i*.5}s" onclick="balP(${v},${r},this,${a},${b})">${v}</div>`).join('')}</div>`;say(a+' çarpı '+b)}
+function balP(v,r,el,a,b){if(G.d)return;if(v===r){G.d=1;rec(a,b,!G.w,Date.now()-G.t,0);if(!G.w)G.c++;el.className='bln pop';el.textContent='💥';ok();G.i++;setTimeout(balQ,700)}else{G.w=1;bad();el.className='bln wob'}}
+// 2) Hafıza Kartları
+function mem(n){const l=FS(n).sort(()=>Math.random()-.5).slice(0,6);G={l,n,o:[],m:0,miss:0,lock:0,cards:[]};l.forEach(([a,b],i)=>{G.cards.push({i,t:a+'×'+b},{i,t:''+a*b})});G.cards.sort(()=>Math.random()-.5);
+$.innerHTML=bar('🧩 İşlemi sonucuyla eşleştir!')+`<div class="mg">${G.cards.map((c,k)=>`<div class="mc" id="mc${k}" onclick="mflip(${k})">?</div>`).join('')}</div>`}
+function mflip(k){const c=G.cards[k],e=document.getElementById('mc'+k);if(G.lock||c.up||c.done)return;c.up=1;e.className='mc up';e.textContent=c.t;snd(500,.08);G.o.push(k);if(G.o.length<2)return;
+const[x,y]=G.o.map(j=>G.cards[j]),ks=G.o;G.o=[];
+if(x.i===y.i){x.done=y.done=1;ks.forEach(j=>document.getElementById('mc'+j).className='mc done');G.m++;ok();const[a,b]=G.l[x.i];rec(a,b,true,0,0);say(a+' çarpı '+b+' eşittir '+a*b);if(G.m==6)setTimeout(()=>gend(Math.max(0,6-Math.floor(G.miss/2)),6,`mem(${G.n})`),1200)}
+else{G.lock=1;G.miss++;bad();setTimeout(()=>{ks.forEach(j=>{G.cards[j].up=0;const e=document.getElementById('mc'+j);if(e){e.className='mc';e.textContent='?'}});G.lock=0},900)}}
+// 3) Pony Yarışı
+function race(n){if(G&&G.iv)clearInterval(G.iv);const g=G={l:FS(n).slice(0,10),n,p:0,r:0};
+$.innerHTML=bar('🏁 Tilkiyi geç!')+`<div class="lane"><div id="pv" class="lp">${pony(me)}</div></div><div class="lane"><div id="rv" class="lp">🦊</div></div><div id="rq"></div>`;
+g.iv=setInterval(()=>{const e=document.getElementById('rv');if(g!==G||!e||g.end){clearInterval(g.iv);return}g.r++;e.style.left=g.r*8+'%';if(g.r>=10){g.end=1;clearInterval(g.iv);say('Tilki kazandı');gend(Math.min(g.p,6),10,`race(${g.n})`)}},7000);rQ()}
+function rQ(){const[a,b]=G.l[G.p],r=a*b;G.t=Date.now();G.w=0;document.getElementById('rq').innerHTML=`<div class="q" style="font-size:10vmin">${a} × ${b} = ?</div><div class="row">${pick3(r,a).map(v=>`<button class="btn" style="font-size:8vmin;min-width:22vmin" onclick="rP(${v},${r},this,${a},${b})">${v}</button>`).join('')}</div>`;say(a+' çarpı '+b)}
+function rP(v,r,el,a,b){if(G.end)return;if(v===r){rec(a,b,!G.w,Date.now()-G.t,0);ok();G.p++;const e=document.getElementById('pv');e.style.left=G.p*8+'%';e.className='lp jump';if(G.p>=10){G.end=1;clearInterval(G.iv);setTimeout(()=>{say('Yarışı kazandın');gend(10,10,`race(${G.n})`)},900)}else setTimeout(rQ,700)}else{G.w=1;bad();el.style.opacity=.3;el.disabled=1}}
+// 4) Nehir Taşları (atlayarak sayma)
+function river(n){n=n||2+Math.floor(Math.random()*8);G={n,k:1,miss:0};const v=R10.map(i=>n*i).sort(()=>Math.random()-.5);
+$.innerHTML=bar(`🐸 ${n}'er ${n}'er say: ${n}, ${2*n}, ${3*n} ...`)+`<div class="riv" id="rvr"><div class="lp" id="rp" style="left:1vmin;top:-9vmin;transition:all .5s;z-index:2">${pony(me)}</div>${v.map(x=>`<div class="st" onclick="stp(${x},this)">${x}</div>`).join('')}</div><div class="small">Sıradaki sayıyı bul ve taşa bas!</div>`;say(n+' ar '+n+' ar sayalım')}
+function stp(v,el){if(el.classList.contains('on'))return;if(v===G.n*G.k){el.classList.add('on');snd(400+G.k*60,.2);say(''+v);const p=document.getElementById('rp');p.style.left=el.offsetLeft+'px';p.style.top=(el.offsetTop-10*8)+'px';p.className='lp jump';G.k++;if(G.k>10){const n=G.n;setTimeout(()=>gend(Math.max(0,10-G.miss),10,`river(${n})`),1000)}}else{G.miss++;bad();el.classList.add('sp');setTimeout(()=>el.classList.remove('sp'),500)}}
+// ---- Macera: sıralı bölümler ----
+const ORD=[1,2,10,5,3,4,9,6,7,8];let LV=null;
+const lv=n=>((S.lv=S.lv||{})[n]=S.lv[n]||{}),unl=i=>i==0||!!lv(ORD[i-1]).e,cur=()=>{const i=ORD.findIndex(n=>!lv(n).e);return i<0?10:i},
+pctM=()=>Math.round((ORD.filter(n=>lv(n).e).length+(S.fin?1:0))/11*100);
+function map(){LV=null;const c=cur(),fu=ORD.every(n=>lv(n).e);
+const nodes=ORD.map((n,i)=>{const L=lv(n),u=unl(i),s=(L.l?1:0)+(L.g?1:0)+(L.e?1:0);return `<div class="nd ${L.e?'dn':u?(i==c?'cu':''):'lk'}" onclick="${u?`lvl(${i})`:'bad()'}"><div class="nn">${u?n:'🔒'}</div><div class="ns">${'⭐'.repeat(s)}${'☆'.repeat(3-s)}</div><div class="nl">Bölüm ${i+1}</div></div>`}).join('');
+$.innerHTML=`<h1 style="font-size:5.5vmin">🗺 Macera Haritası</h1><div class="meter" style="width:80vw;height:3vmin"><i style="width:${pctM()}%"></i></div><div class="small">%${pctM()} tamamlandı</div><div class="row">${nodes}<div class="nd ${S.fin?'dn':fu?'cu':'lk'}" onclick="${fu?'final()':'bad()'}"><div class="nn">${fu?'👑':'🔒'}</div><div class="ns">${S.fin?'⭐⭐⭐':'☆☆☆'}</div><div class="nl">Büyük Final</div></div></div><button class="btn b" onclick="home()">🏠 Geri</button>`}
+function lvl(i){LV=i;const n=ORD[i],L=lv(n);
+$.innerHTML=`<h1 style="font-size:6vmin">Bölüm ${i+1}: ${n} Çarpım Tablosu</h1><div class="pony" style="width:18vmin;height:18vmin">${pony(me)}</div><div class="row">
+<button class="btn b" onclick="learn(${n})">📖 1. Öğren ${L.l?'✅':''}</button>
+<button class="btn ${L.l?'':'lockb'}" onclick="${L.l?`lgame(${n})`:'bad()'}">🎮 2. Oyna ${L.g?'✅':L.l?'':'🔒'}</button>
+<button class="btn g ${L.g?'':'lockb'}" onclick="${L.g?`startExam(examSet(${n}),${n})`:'bad()'}">🏆 3. Sınav ${L.e?'✅':L.g?'':'🔒'}</button></div>
+<div class="tip">${L.e?'Bu bölümü bitirdin! 🎉':'Sırayla yap: önce öğren, sonra oyna, en sonda sınavı geç (10 sorudan en az 9 doğru).'}</div><button class="btn b" onclick="map()">🗺 Harita</button>`}
+function lgame(n){[bal,mem,race,river][Math.floor(Math.random()*4)](n)}
+function final(){startExam(examSet(0).concat(examSet(0)),0);E.final=1}
+home();
+</script></body></html>
