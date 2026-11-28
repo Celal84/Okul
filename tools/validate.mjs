@@ -1,6 +1,6 @@
 // İçerik dosyalarını denetler: node tools/validate.mjs [dosya...]  (boşsa src/data/*.js)
 import fs from 'node:fs'; import path from 'node:path'; import vm from 'node:vm';
-const DERS = ['turkce','matematik','hayat','fen','sosyal','ingilizce','din','insan','trafik','muzik','gorsel','satranc','kodlama'];
+const DERS = ['turkce','matematik','hayat','fen','sosyal','ingilizce','din','insan','trafik','muzik','gorsel','satranc','kodlama','beden'];
 const URET = ['say','topla','cikar','carp','bol','karsilastir','oruntu','eksik','basamak','yuvarla','ritmik','kesir','saat','para','cevre','alan'];
 let files = process.argv.slice(2);
 if (!files.length) files = fs.readdirSync('src/data').filter(f => f.endsWith('.js')).map(f => path.join('src/data', f));

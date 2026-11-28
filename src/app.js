@@ -7,7 +7,7 @@ const DERS = {
   din: { ad: 'Din Kültürü', e: '🕌', r: '#0d9488' }, insan: { ad: 'İnsan Hakları', e: '🤝', r: '#db2777' },
   trafik: { ad: 'Trafik Güvenliği', e: '🚦', r: '#dc2626' }, muzik: { ad: 'Müzik', e: '🎵', r: '#9333ea' },
   gorsel: { ad: 'Görsel Sanatlar', e: '🎨', r: '#ea580c' }, satranc: { ad: 'Satranç', e: '♟️', r: '#475569' },
-  kodlama: { ad: 'Kodlama', e: '💻', r: '#4f46e5' },
+  kodlama: { ad: 'Kodlama', e: '💻', r: '#4f46e5' }, beden: { ad: 'Beden Eğitimi', e: '🤸', r: '#0ea5e9' },
 };
 const APPS = [
   { id: 'roket', ad: 'Hızlı Okuma Roketi', e: '🚀', d: ['turkce'], ac: 'Akıcı ve hızlı okuma' },
@@ -39,10 +39,12 @@ let S = { ad: '', sinif: 0, av: '🦊', xp: 0, hedef: 20, seri: 0, sonGun: '', s
 try { Object.assign(S, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) { /* ilk açılış */ }
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* dolu */ } };
 const kayit = id => S.konu[id] || (S.konu[id] = {});
-function islem(dogru) {
+function seriGuncelle() { const g = gun(); if (S.sonGun !== g) { S.seri = S.sonGun === gunEkle(-1) ? S.seri + 1 : 1; S.sonGun = g; } }
+function islem(dogru, ders) {
   const g = gun(), l = S.log[g] || (S.log[g] = { n: 0, d: 0 });
-  l.n++; if (dogru) { l.d++; S.xp += 10; }
-  if (S.sonGun !== g) { S.seri = S.sonGun === gunEkle(-1) ? S.seri + 1 : 1; S.sonGun = g; }
+  l.n = (l.n || 0) + 1; if (dogru) { l.d = (l.d || 0) + 1; S.xp += 10; }
+  if (ders) { const x = S.dlog[ders] || (S.dlog[ders] = { n: 0, d: 0 }); x.n++; if (dogru) x.d++; (l.ders || (l.ders = {}))[ders] = 1; }
+  seriGuncelle();
 }
 
 /* ---------- içerik dizini ---------- */
@@ -66,32 +68,20 @@ const ingMi = (s, ders) => ders === 'ingilizce' && !/[çğıöşüÇĞİÖŞÜ]/
 function soyle(metin, en) {
   const t = temiz(metin); if (!t) return;
   try {
-    if (en && window.AndroidBridge) return AndroidBridge.speak(t, 'hw' + (++ttsN), 'en-US', 0.85, 1.0);
+    if (en && window.AndroidBridge) return AndroidBridge.speak(t, 'hw' + (++ttsN), 'en-US', 0.85 * HIZ[S.okuHiz], 1.0);
+    if (window.Android && Android.speakRate && S.okuHiz !== 2) return Android.speakRate(t, HIZ[S.okuHiz]);
     if (window.Android && Android.speak) return Android.speak(t);
     if ('speechSynthesis' in window) {
       speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(t); u.lang = en ? 'en-US' : 'tr-TR'; u.rate = en ? 0.85 : 0.95;
+      const u = new SpeechSynthesisUtterance(t); u.lang = en ? 'en-US' : 'tr-TR'; u.rate = (en ? 0.85 : 0.95) * HIZ[S.okuHiz];
       const v = speechSynthesis.getVoices().find(x => x.lang.replace('_', '-').startsWith(en ? 'en' : 'tr')); if (v) u.voice = v;
       speechSynthesis.speak(u);
     }
   } catch (e) { /* ses yok */ }
 }
 function sus() { try { if (window.Android && Android.stop) Android.stop(); else if ('speechSynthesis' in window) speechSynthesis.cancel(); } catch (e) { /* yok */ } }
-function bip(ok) {
-  if (!S.ses) return;
-  try {
-    actx = actx || new (window.AudioContext || window.webkitAudioContext)();
-    const t = actx.currentTime;
-    (ok ? [660, 880] : [220, 180]).forEach((f, i) => {
-      const o = actx.createOscillator(), g = actx.createGain();
-      o.type = ok ? 'sine' : 'triangle'; o.frequency.value = f; o.connect(g); g.connect(actx.destination);
-      g.gain.setValueAtTime(0.0001, t + i * 0.11); g.gain.exponentialRampToValueAtTime(0.18, t + i * 0.11 + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, t + i * 0.11 + 0.18);
-      o.start(t + i * 0.11); o.stop(t + i * 0.11 + 0.2);
-    });
-  } catch (e) { /* ses yok */ }
-}
 let toastT;
-function toast(m) { const t = $('#toast'); t.textContent = m; t.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('on'), 2200); }
+function toast(m) { const t = $('#toast'); t.textContent = m; t.classList.remove('odul'); t.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('on'), 2200); }
 
 /* ---------- matematik soru üreticileri ---------- */
 function sayiSec(d, yay) {
@@ -147,6 +137,7 @@ function ciz() {
   rota = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
   const [a, b, c] = rota;
   if (!S.sinif || !S.ad) return hosgeldin();
+  if (molaVar() && rota[0] !== 'veli') { $('#app').innerHTML = molaSayfa(); return; }
   let html, full = false;
   if (!a) html = evim();
   else if (a === 'd' && DERS[b]) html = dersSayfa(b);
@@ -155,6 +146,9 @@ function ciz() {
   else if (a === 'tekrar') html = tekrarSayfa();
   else if (a === 'karne') html = karneSayfa();
   else if (a === 'ayar') html = ayarSayfa();
+  else if (a === 'gorev') html = gorevSayfa();
+  else if (a === 'odul') html = odulSayfa();
+  else if (a === 'veli') html = veliSayfa();
   else return git('#/');
   document.body.classList.add('full');
   $('#app').innerHTML = html;
@@ -188,30 +182,10 @@ ACT.fbasla = () => {
   S.ad = ad; S.sinif = F.sinif; S.av = F.av || '🦊'; S.oku = S.sinif === 1; save(); git('#/');
 };
 
-/* ---------- ana sayfa ---------- */
-function evim() {
-  const n = bekleyen().length + tekrarKonu().length;
-  const son = KONU[S.son] && KONU[S.son].sinif === S.sinif ? KONU[S.son] : null;
-  const kisa = n ? `<button class="card cta" data-go="#/tekrar"><span class="em">🔁</span><span class="sp"><b>Tekrar zamanı</b><span class="mut sm">Unutmamak için ${n} tekrar seni bekliyor</span></span><span class="badge">${n}</span></button>`
-    : son ? `<button class="card cta" style="--c:${DERS[son.ders].r}" data-go="#/k/${son.id}"><span class="em">${son.e}</span><span class="sp"><b>Kaldığın yerden devam et</b><span class="mut sm">${DERS[son.ders].ad} · ${esc(son.ad)}</span></span><span>›</span></button>` : '';
-  return `<div class="top"><span class="av">${S.av}</span><div class="sp"><h1>Merhaba ${esc(S.ad)}!</h1><div class="mut sm">${S.sinif}. sınıf · Homework v${HW.VER}</div></div><button class="ib" data-go="#/ayar" aria-label="Ayarlar">⚙️</button></div>
-  ${adim(0)}<p class="lead">Bugün hangi dersi çalışalım?</p>
-  ${kisa}
-  <div class="grid">${dersler(S.sinif).map(d => { const y = dersYuzde(S.sinif, d); return `<button class="tile" style="--c:${DERS[d].r}" data-go="#/d/${d}"><span class="em">${DERS[d].e}</span><b>${DERS[d].ad}</b>${oyunlar(d).length ? '<span class="mut sm">🎮 oyunlu</span>' : ''}<div class="bar"><i style="width:${y}%"></i></div></button>`; }).join('')}</div>
-  <button class="link" data-go="#/karne">📊 Karnemi gör</button>`;
-}
 const appKart = a => `<button class="tile app" data-act="app" data-v="${a.id}"><span class="em">${a.e}</span><span><b>${a.ad}</b><br><span class="mut sm">${a.ac}</span></span></button>`;
 ACT.app = id => { S.donus = location.hash; save(); location.href = 'apps/' + id + '/index.html'; };
 
 /* ---------- ders ve konu ---------- */
-function dersSayfa(d) {
-  const D = DERS[d], ps = paketler(S.sinif, d), apps = oyunlar(d);
-  if (!ps.length) return baslik(D.ad) + `<div class="card">Bu ders ${S.sinif}. sınıfta yok.</div>`;
-  return `<div style="--c:${D.r}">${baslik(D.e + ' ' + D.ad)}${adim(1)}<p class="lead">Bir konu seç</p>
-  ${apps.length ? `<div class="games">${apps.map(a => `<button class="game" data-act="app" data-v="${a.id}"><span class="em">${a.e}</span><b>${a.ad}</b><span class="mut sm">${a.ac}</span></button>`).join('')}</div>` : ''}
-  ${ps.map(p => p.uniteler.map(u => `<div class="sec">${esc(u.ad)}</div>${u.konular.map(k => { const y = yildizSay(k.id); return `<button class="li" data-go="#/k/${k.id}"><span class="em">${k.e}</span><span class="sp"><b>${esc(k.ad)}</b></span>${y ? yildiz(y) : konuYuzde(k.id) ? '<span class="mut sm">devam</span>' : '<span class="mut">›</span>'}</button>`; }).join('')}`).join('')).join('')}
-  <button class="btn ghost" style="margin-top:16px" data-act="deneme" data-v="${d}">🎯 Tüm konulardan deneme sınavı</button></div>`;
-}
 ACT.deneme = d => { const hv = konular(S.sinif, d).flatMap(k => k.sorular.map((_, i) => soruAl(k, i))); testAc({ ad: DERS[d].ad + ' Denemesi', sorular: shuffle(hv).slice(0, 15), geri: '#/d/' + d }); };
 function konuSayfa(id) {
   const k = KONU[id], r = S.konu[id] || {}, D = DERS[k.ders];
@@ -243,7 +217,7 @@ ACT.oku = () => O && O.metin && soyle(O.metin, O.en);
 ACT.anlatGeri = () => { O.i--; sus(); $('#app').innerHTML = anlatCiz(); };
 ACT.anlatIleri = () => {
   O.i++; sus();
-  if (O.i === KONU[O.id].anlat.length) { const r = kayit(O.id); if (!r.a) { r.a = 1; S.xp += 20; } r.son = r.son || gun(); save(); }
+  if (O.i === KONU[O.id].anlat.length) { const r = kayit(O.id); if (!r.a) { r.a = 1; S.xp += 20; } r.son = r.son || gun(); olay('a', KONU[O.id].ders); }
   $('#app').innerHTML = anlatCiz(); window.scrollTo(0, 0);
 };
 
@@ -252,7 +226,7 @@ function kartBasla(id) { const k = KONU[id]; O = { tur: 'kart', id, sira: shuffl
 function kartCiz() {
   const k = KONU[O.id], D = DERS[k.ders];
   if (!O.sira.length) {
-    const r = kayit(O.id); if (!r.k) { r.k = 1; S.xp += 20; } save();
+    const r = kayit(O.id); if (!r.k) { r.k = 1; S.xp += 20; } if (!O.bitti) { O.bitti = 1; olay('k', k.ders); }
     return `<div style="--c:${D.r}">${baslik('Bilgi Kartları', '#/k/' + O.id)}<div class="card res pop"><div class="big">🃏</div><h2>Tüm kartları öğrendin!</h2><p class="mut">Şimdi eşleştirme oyununda hızını dene.</p>
     <div class="two"><button class="btn ghost" data-go="#/k/${O.id}">Konuya dön</button><button class="btn" style="background:${D.r}" data-go="#/k/${O.id}/esle">Eşleştir →</button></div></div></div>`;
   }
@@ -277,7 +251,7 @@ function esleBasla(id) {
 function esleCiz() {
   const k = KONU[O.id], D = DERS[k.ders];
   if (O.tamam.length === O.sol.length) {
-    const sn = Math.round((Date.now() - O.t0) / 1000), r = kayit(O.id); if (!r.e) { r.e = 1; S.xp += 20; } save();
+    const sn = Math.round((Date.now() - O.t0) / 1000), r = kayit(O.id); if (!r.e) { r.e = 1; S.xp += 20; } if (!O.bitti) { O.bitti = 1; olay('e', k.ders); }
     return `<div style="--c:${D.r}">${baslik('Eşleştir', '#/k/' + O.id)}<div class="card res pop"><div class="big">🧩</div><h2>Hepsini eşleştirdin!</h2><div class="kv"><div><b>${sn} sn</b><span class="mut sm">süre</span></div><div><b>${O.hata}</b><span class="mut sm">hata</span></div></div>
     <div class="two"><button class="btn ghost" data-go="#/k/${O.id}/esle" data-act="yeniden">Tekrar oyna</button><button class="btn" style="background:${D.r}" data-go="#/k/${O.id}/test">Teste geç →</button></div></div></div>`;
   }
@@ -314,21 +288,21 @@ function soruCiz() {
 }
 ACT.cevap = v => {
   if (O.sec != null) return;
-  const q = O.sorular[O.i], ok = +v === q.d; O.sec = +v; sus(); bip(ok); islem(ok);
+  const q = O.sorular[O.i], ok = +v === q.d; O.sec = +v; sus(); bip(ok); islem(ok, q.ders); if (S.tit && !ok) titre(60);
   if (ok) O.dogru++; else O.yanlis.push(q);
   if (q.qid) {
     const s = S.srs[q.qid];
     if (!ok) S.srs[q.qid] = { b: 1, t: gunEkle(1) };
-    else if (s && s.t <= gun()) { if (s.b >= 5) delete S.srs[q.qid]; else S.srs[q.qid] = { b: s.b + 1, t: gunEkle(ARALIK[s.b + 1]) }; }
+    else if (s && s.t <= gun()) { if (s.b >= 5) { delete S.srs[q.qid]; S.ogr = (S.ogr || 0) + 1; } else S.srs[q.qid] = { b: s.b + 1, t: gunEkle(ARALIK[s.b + 1]) }; }
   }
-  save(); $('#app').innerHTML = soruCiz();
+  gorevKontrol(); save(); $('#app').innerHTML = soruCiz();
   const e = document.querySelector('.exp'); if (e && e.scrollIntoView) e.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
 };
 ACT.sonraki = () => { O.i++; O.sec = null; $('#app').innerHTML = soruCiz(); window.scrollTo(0, 0); };
 function sonucCiz() {
   const n = O.sorular.length, y = Math.round(O.dogru / n * 100), st = y >= 90 ? 3 : y >= 70 ? 2 : y >= 50 ? 1 : 0;
-  if (O.konu && !O.bitti) { const r = kayit(O.konu); r.t = Math.max(r.t || 0, y); r.tk = r.son && r.son !== gun() ? Math.min((r.tk || 0) + 1, 4) : (r.tk || 0); r.son = gun(); r.n = (r.n || 0) + 1; }
-  if (!O.bitti) { S.xp += st * 10; O.bitti = 1; save(); }
+  if (O.konu && !O.bitti) { O.once = yildizSay(O.konu); const r = kayit(O.konu); r.t = Math.max(r.t || 0, y); r.tk = r.son && r.son !== gun() ? Math.min((r.tk || 0) + 1, 4) : (r.tk || 0); r.son = gun(); r.n = (r.n || 0) + 1; }
+  if (!O.bitti) { S.xp += st * 10; O.bitti = 1; olay('t', O.sorular[0].ders, { y, yeni: !!O.konu && !O.once && yildizSay(O.konu) > 0 }); }
   sekmeler('');
   return `<div class="card res pop"><div class="big">${y >= 90 ? '🏆' : y >= 70 ? '🎉' : y >= 50 ? '👍' : '💪'}</div><h2>${y >= 90 ? 'Mükemmel!' : y >= 70 ? 'Çok iyi!' : y >= 50 ? 'İyi gidiyorsun!' : 'Biraz daha çalışalım'}</h2><div>${yildiz(st)}</div>
   <div class="kv"><div><b style="color:var(--ok)">${O.dogru}</b><span class="mut sm">doğru</span></div><div><b style="color:var(--no)">${n - O.dogru}</b><span class="mut sm">yanlış</span></div><div><b>%${y}</b><span class="mut sm">başarı</span></div></div>
@@ -363,27 +337,8 @@ function karneSayfa() {
   <div class="sec">Son 7 gün</div><div class="card"><div class="days">${gunler.map(g => { const n = (S.log[g] || {}).n || 0; return `<div>${n || ''}<i style="height:${n / mx * 82}%;${n >= S.hedef ? 'background:var(--ok)' : ''}"></i>${['Paz', 'Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt'][new Date(g).getDay()]}</div>`; }).join('')}</div><div class="mut sm" style="margin-top:8px">Yeşil sütun: günlük ${S.hedef} soru hedefi tamamlandı.</div></div>
   <div class="sec">${S.sinif}. sınıf dersleri</div><div class="card">${dersler(S.sinif).map(d => { const y = dersYuzde(S.sinif, d); return `<div class="prow" style="--c:${DERS[d].r}"><span>${DERS[d].e} ${DERS[d].ad}</span><div class="bar"><i style="width:${y}%"></i></div><em>%${y}</em></div>`; }).join('')}</div>`;
 }
-function ayarSayfa() {
-  const p = (act, cur, list) => `<div class="pick">${list.map(([v, t]) => `<button data-act="${act}" data-v="${v}" class="${String(cur) === String(v) ? 'on' : ''}">${t}</button>`).join('')}</div>`;
-  return `${baslik('⚙️ Ayarlar')}
-  <div class="card"><label class="f" style="margin-top:0">Ad</label><div class="row"><input type="text" id="aad" maxlength="20" value="${esc(S.ad)}"><button class="btn sm" data-act="adKaydet">Kaydet</button></div>
-  <label class="f">Sınıf</label>${p('aSinif', S.sinif, [1, 2, 3, 4].map(n => [n, n + '. sınıf']))}
-  <label class="f">Karakter</label><div class="pick av">${AVATAR.map(a => `<button data-act="aAv" data-v="${a}" class="${a === S.av ? 'on' : ''}">${a}</button>`).join('')}</div>
-  <label class="f">Günlük soru hedefi</label>${p('aHedef', S.hedef, [[10, '10'], [20, '20'], [30, '30'], [50, '50']])}
-  <label class="f">Soruları ve konuları sesli oku</label>${p('aOku', S.oku ? 1 : 0, [[1, 'Açık'], [0, 'Kapalı']])}
-  <label class="f">Ses efektleri</label>${p('aSes', S.ses ? 1 : 0, [[1, 'Açık'], [0, 'Kapalı']])}</div>
-  <div class="sec">Veli</div><div class="card"><p class="mut sm" style="margin-bottom:10px">İlerleme yalnızca bu cihazda saklanır. Yedek almak için dışa aktarabilirsiniz.</p>
-  <div class="two" style="margin-top:0"><button class="btn alt" data-act="yedek">Yedeği kopyala</button><button class="btn alt" data-act="yukle">Yedek yükle</button></div>
-  <button class="btn ghost" style="margin-top:10px;color:var(--no)" data-act="sifirla">Tüm ilerlemeyi sıfırla</button></div>
-  <p class="mut sm" style="text-align:center;margin-top:18px">Homework v${HW.VER} · ${HW.packs.length} ders paketi · ${Object.keys(KONU).length} konu · ${Object.values(KONU).reduce((t, k) => t + k.sorular.length, 0)} soru</p>`;
-}
-const ayar = (k, f) => v => { S[k] = f(v); save(); ciz(); };
-ACT.aSinif = ayar('sinif', Number); ACT.aAv = ayar('av', String); ACT.aHedef = ayar('hedef', Number); ACT.aOku = ayar('oku', v => v === '1'); ACT.aSes = ayar('ses', v => v === '1');
 ACT.adKaydet = () => { const a = $('#aad').value.trim(); if (a) { S.ad = a; save(); toast('Kaydedildi'); } };
 ACT.yedek = () => { const t = JSON.stringify(S); (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast('Yedek panoya kopyalandı'), () => prompt('Yedeği kopyalayın:', t)); };
-ACT.yukle = () => { const t = prompt('Yedek metnini yapıştırın:'); if (!t) return; try { const o = JSON.parse(t); if (!o || typeof o !== 'object' || !o.sinif) throw 0; S = Object.assign({ konu: {}, srs: {}, log: {} }, o); save(); toast('Yedek yüklendi'); ciz(); } catch (e) { toast('Yedek okunamadı'); } };
+ACT.yukle = () => { const t = prompt('Yedek metnini yapıştırın:'); if (!t) return; try { const o = JSON.parse(t); if (!o || typeof o !== 'object' || !o.sinif) throw 0; S = Object.assign({ konu: {}, srs: {}, log: {} }, o); varsayilan(); save(); toast('Yedek yüklendi'); ciz(); } catch (e) { toast('Yedek okunamadı'); } };
 ACT.sifirla = () => { if (confirm('Tüm ilerleme silinsin mi? Bu işlem geri alınamaz.')) { localStorage.removeItem(KEY); location.hash = ''; location.reload(); } };
 
-if (S.donus && !location.hash) { const d = S.donus; S.donus = ''; save(); history.replaceState(null, '', d); }
-if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(() => { });
-ciz();
