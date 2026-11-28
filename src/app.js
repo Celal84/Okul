@@ -12,11 +12,12 @@ const DERS = {
 const APPS = [
   { id: 'roket', ad: 'Hızlı Okuma Roketi', e: '🚀', d: ['turkce'], ac: 'Akıcı ve hızlı okuma' },
   { id: 'bilmece', ad: 'Bilmece Deyim Atasözü', e: '🧩', d: ['turkce'], ac: 'Bilmece, deyim, atasözü, tekerleme' },
-  { id: 'matematik', ad: 'Matematik Adaları', e: '🏝️', d: ['matematik'], ac: '2-3-4. sınıf matematik oyunları' },
-  { id: 'carpim', ad: 'Midilli Çarpım Macerası', e: '🦄', d: ['matematik'], ac: 'Çarpım tablosu' },
+  { id: 'matematik', ad: 'Matematik Adaları', e: '🏝️', d: ['matematik'], s: [2, 3, 4], ac: 'Konu oyunları ve sınavlar' },
+  { id: 'carpim', ad: 'Midilli Çarpım Macerası', e: '🦄', d: ['matematik'], s: [2, 3, 4], ac: 'Çarpım tablosu' },
   { id: 'bubu', ad: 'Bubu English', e: '🦉', d: ['ingilizce'], ac: 'Dinle, oku, konuş' },
   { id: 'atlas', ad: 'Dünya ve Türkiye Atlası', e: '🗺️', d: ['hayat', 'sosyal'], ac: 'Ülkeler, iller, bayraklar' },
 ];
+const oyunlar = d => APPS.filter(a => a.d.includes(d) && (!a.s || a.s.includes(S.sinif)));
 const AVATAR = ['🦊', '🐼', '🦁', '🐯', '🐨', '🐸', '🦄', '🐙', '🦉', '🐬', '🚀', '⭐'];
 const ARALIK = [0, 1, 2, 4, 7, 14]; // akıllı tekrar kutuları (gün)
 const KONU_ARALIK = [1, 3, 7, 14, 30];
@@ -152,21 +153,19 @@ function ciz() {
   else if (a === 'k' && KONU[b]) { full = true; if (c === 'anlat') html = anlatBasla(b); else if (c === 'kart') html = kartBasla(b); else if (c === 'esle') html = esleBasla(b); else if (c === 'test') html = testBasla(konuTest(b)); else if (c === 'alis') html = testBasla(alisTest(b)); else html = konuSayfa(b); }
   else if (a === 'q' && O) { full = true; html = O.ciz(); }
   else if (a === 'tekrar') html = tekrarSayfa();
-  else if (a === 'oyun') html = oyunSayfa();
   else if (a === 'karne') html = karneSayfa();
   else if (a === 'ayar') html = ayarSayfa();
   else return git('#/');
-  document.body.classList.toggle('full', full);
+  document.body.classList.add('full');
   $('#app').innerHTML = html;
   sekmeler(a || '');
   window.scrollTo(0, 0);
 }
-function sekmeler(a) {
-  const n = bekleyen().length;
-  $('#tabs').innerHTML = [['', '🏠', 'Ana Sayfa'], ['tekrar', '🔁', 'Tekrar'], ['oyun', '🎮', 'Oyunlar'], ['karne', '📊', 'Karne'], ['ayar', '⚙️', 'Ayarlar']]
-    .map(([r, e, t]) => `<button class="${(a === r || (r === '' && a === 'd')) ? 'on' : ''}" data-go="#/${r}"><span class="em">${e}</span>${t}${r === 'tekrar' && n ? `<span class="badge">${n}</span>` : ''}</button>`).join('');
-}
-const baslik = (t, geri, sag) => `<div class="top">${geri ? `<button class="ib" data-go="${geri}" aria-label="Geri">←</button>` : ''}<h1>${t}</h1>${sag || ''}</div>`;
+function sekmeler() { $('#tabs').innerHTML = ''; }
+const baslik = (t, geri = '#/', sag) => `<div class="top">${geri ? `<button class="ib" data-go="${geri}" aria-label="Geri">←</button>` : ''}<h1>${t}</h1>${sag || ''}</div>`;
+
+const ADIM = ['Ders', 'Konu', 'Çalış'];
+const adim = n => `<div class="stepper">${ADIM.map((t, i) => `<span class="${i < n ? 'ok' : i === n ? 'on' : ''}"><i>${i < n ? '✓' : i + 1}</i>${t}</span>`).join('<b></b>')}</div>`;
 
 /* ---------- karşılama ---------- */
 let F = {};
@@ -191,42 +190,41 @@ ACT.fbasla = () => {
 
 /* ---------- ana sayfa ---------- */
 function evim() {
-  const l = S.log[gun()] || { n: 0, d: 0 }, n = bekleyen().length, tk = tekrarKonu(), sv = Math.floor(S.xp / 200) + 1;
+  const n = bekleyen().length + tekrarKonu().length;
   const son = KONU[S.son] && KONU[S.son].sinif === S.sinif ? KONU[S.son] : null;
-  const seri = S.sonGun === gun() || S.sonGun === gunEkle(-1) ? S.seri : 0;
-  return `<div class="top"><div class="brand" style="flex:1">Homework<small>v${HW.VER}</small></div><button class="chip" data-go="#/ayar">${S.av} ${S.sinif}. sınıf</button></div>
-  <div class="hero"><h2>Merhaba ${esc(S.ad)}! 👋</h2><div class="sm" style="opacity:.92">Bugünkü hedef: ${Math.min(l.n, S.hedef)} / ${S.hedef} soru</div>
-  <div class="bar"><i style="width:${Math.min(100, l.n / S.hedef * 100)}%"></i></div>
-  <div class="stats"><div class="st"><b>🔥 ${seri}</b><span>gün seri</span></div><div class="st"><b>⭐ ${S.xp}</b><span>puan</span></div><div class="st"><b>🏅 ${sv}</b><span>seviye</span></div></div></div>
-  ${n || tk.length ? `<button class="card cta" data-go="#/tekrar"><span class="em">🔁</span><span class="sp"><b>Akıllı Tekrar</b><span class="mut sm">${n ? n + ' soru' : ''}${n && tk.length ? ' ve ' : ''}${tk.length ? tk.length + ' konu' : ''} tekrar bekliyor</span></span><span class="badge">${n + tk.length}</span></button>` : ''}
-  ${son ? `<button class="card cta" data-go="#/k/${son.id}"><span class="em">${son.e}</span><span class="sp"><b>Kaldığın yerden devam et</b><span class="mut sm">${DERS[son.ders].ad} · ${esc(son.ad)}</span></span><span>›</span></button>` : ''}
-  <button class="card cta" data-act="karma"><span class="em">🎯</span><span class="sp"><b>Günün Karma Testi</b><span class="mut sm">Tüm derslerden 10 soru</span></span><span>›</span></button>
-  <div class="sec">Derslerim</div><div class="grid">${dersler(S.sinif).map(d => { const y = dersYuzde(S.sinif, d); return `<button class="tile" style="--c:${DERS[d].r}" data-go="#/d/${d}"><span class="em">${DERS[d].e}</span><b>${DERS[d].ad}</b><span class="mut sm">${konular(S.sinif, d).length} konu · %${y}</span><div class="bar"><i style="width:${y}%"></i></div></button>`; }).join('')}</div>
-  <div class="sec">Oyunlarım</div><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">${APPS.map(appKart).join('')}</div>`;
+  const kisa = n ? `<button class="card cta" data-go="#/tekrar"><span class="em">🔁</span><span class="sp"><b>Tekrar zamanı</b><span class="mut sm">Unutmamak için ${n} tekrar seni bekliyor</span></span><span class="badge">${n}</span></button>`
+    : son ? `<button class="card cta" style="--c:${DERS[son.ders].r}" data-go="#/k/${son.id}"><span class="em">${son.e}</span><span class="sp"><b>Kaldığın yerden devam et</b><span class="mut sm">${DERS[son.ders].ad} · ${esc(son.ad)}</span></span><span>›</span></button>` : '';
+  return `<div class="top"><span class="av">${S.av}</span><div class="sp"><h1>Merhaba ${esc(S.ad)}!</h1><div class="mut sm">${S.sinif}. sınıf · Homework v${HW.VER}</div></div><button class="ib" data-go="#/ayar" aria-label="Ayarlar">⚙️</button></div>
+  ${adim(0)}<p class="lead">Bugün hangi dersi çalışalım?</p>
+  ${kisa}
+  <div class="grid">${dersler(S.sinif).map(d => { const y = dersYuzde(S.sinif, d); return `<button class="tile" style="--c:${DERS[d].r}" data-go="#/d/${d}"><span class="em">${DERS[d].e}</span><b>${DERS[d].ad}</b>${oyunlar(d).length ? '<span class="mut sm">🎮 oyunlu</span>' : ''}<div class="bar"><i style="width:${y}%"></i></div></button>`; }).join('')}</div>
+  <button class="link" data-go="#/karne">📊 Karnemi gör</button>`;
 }
 const appKart = a => `<button class="tile app" data-act="app" data-v="${a.id}"><span class="em">${a.e}</span><span><b>${a.ad}</b><br><span class="mut sm">${a.ac}</span></span></button>`;
-ACT.app = id => { save(); location.href = 'apps/' + id + '/index.html'; };
-ACT.karma = () => { const hv = konular(S.sinif).flatMap(k => k.sorular.map((_, i) => soruAl(k, i))); testAc({ ad: 'Günün Karma Testi', sorular: shuffle(hv).slice(0, 10), geri: '#/' }); };
+ACT.app = id => { S.donus = location.hash; save(); location.href = 'apps/' + id + '/index.html'; };
 
 /* ---------- ders ve konu ---------- */
 function dersSayfa(d) {
-  const D = DERS[d], ps = paketler(S.sinif, d), apps = APPS.filter(a => a.d.includes(d));
-  if (!ps.length) return baslik(D.ad, '#/') + `<div class="card">Bu ders ${S.sinif}. sınıfta yok.</div>`;
-  return `<div style="--c:${D.r}">${baslik(D.e + ' ' + D.ad, '#/')}
-  <div class="card"><div class="row"><b class="sp">${S.sinif}. sınıf ilerlemen</b><b>%${dersYuzde(S.sinif, d)}</b></div><div class="bar" style="margin-top:8px"><i style="width:${dersYuzde(S.sinif, d)}%"></i></div>
-  <div class="two"><button class="btn sm sp" style="background:${D.r}" data-act="deneme" data-v="${d}">🎯 Ders Denemesi (15 soru)</button></div></div>
-  ${apps.length ? `<div class="sec">Bu dersin oyunları</div><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">${apps.map(appKart).join('')}</div>` : ''}
-  ${ps.map(p => p.uniteler.map(u => `<div class="sec">${esc(u.ad)}</div>${u.konular.map(k => `<button class="li" data-go="#/k/${k.id}"><span class="em">${k.e}</span><span class="sp"><b>${esc(k.ad)}</b><span class="mut sm">%${konuYuzde(k.id)} tamamlandı</span></span>${yildiz(yildizSay(k.id))}</button>`).join('')}`).join('')).join('')}</div>`;
+  const D = DERS[d], ps = paketler(S.sinif, d), apps = oyunlar(d);
+  if (!ps.length) return baslik(D.ad) + `<div class="card">Bu ders ${S.sinif}. sınıfta yok.</div>`;
+  return `<div style="--c:${D.r}">${baslik(D.e + ' ' + D.ad)}${adim(1)}<p class="lead">Bir konu seç</p>
+  ${apps.length ? `<div class="games">${apps.map(a => `<button class="game" data-act="app" data-v="${a.id}"><span class="em">${a.e}</span><b>${a.ad}</b><span class="mut sm">${a.ac}</span></button>`).join('')}</div>` : ''}
+  ${ps.map(p => p.uniteler.map(u => `<div class="sec">${esc(u.ad)}</div>${u.konular.map(k => { const y = yildizSay(k.id); return `<button class="li" data-go="#/k/${k.id}"><span class="em">${k.e}</span><span class="sp"><b>${esc(k.ad)}</b></span>${y ? yildiz(y) : konuYuzde(k.id) ? '<span class="mut sm">devam</span>' : '<span class="mut">›</span>'}</button>`; }).join('')}`).join('')).join('')}
+  <button class="btn ghost" style="margin-top:16px" data-act="deneme" data-v="${d}">🎯 Tüm konulardan deneme sınavı</button></div>`;
 }
 ACT.deneme = d => { const hv = konular(S.sinif, d).flatMap(k => k.sorular.map((_, i) => soruAl(k, i))); testAc({ ad: DERS[d].ad + ' Denemesi', sorular: shuffle(hv).slice(0, 15), geri: '#/d/' + d }); };
 function konuSayfa(id) {
   const k = KONU[id], r = S.konu[id] || {}, D = DERS[k.ders];
   S.son = id; save();
-  const m = (h, e, t, alt, ok) => `<button class="mode" data-go="#/k/${id}/${h}"><span class="em">${e}</span><b>${t}</b><span class="mut sm">${alt}</span>${ok ? '<span class="tick">✓</span>' : ''}</button>`;
-  return `<div style="--c:${D.r}">${baslik(esc(k.ad), '#/d/' + k.ders)}
-  <div class="card" style="text-align:center;margin-bottom:14px"><div style="font-size:54px;line-height:1.1">${k.e}</div><b style="display:block;font-size:18px;margin:4px 0 2px">${esc(k.ad)}</b><div class="mut sm">${D.ad} · ${k.sinif}. sınıf</div><div style="margin:6px 0;font-size:24px">${yildiz(yildizSay(id))}</div>
-  <div class="bar"><i style="width:${konuYuzde(id)}%"></i></div>${r.t != null ? `<div class="mut sm" style="margin-top:6px">En iyi test sonucun: %${r.t}</div>` : ''}</div>
-  <div class="modes">${m('anlat', '📖', 'Konu Anlatımı', k.anlat.length + ' adım', r.a)}${m('kart', '🃏', 'Bilgi Kartları', k.kartlar.length + ' kart', r.k)}${m('esle', '🧩', 'Eşleştir', 'Hafıza oyunu', r.e)}${m('test', '✅', 'Test', k.sorular.length + ' soru', r.t >= 50)}${k.uret && GEN[k.uret[0]] ? m('alis', '♾️', 'Sınırsız Alıştırma', 'Her seferinde yeni', 0) : ''}</div></div>`;
+  const adimlar = [['anlat', '📖', 'Öğren', 'Konu anlatımı ve hafıza ipucu', r.a], ['kart', '🃏', 'Hatırla', 'Bilgi kartları', r.k], ['esle', '🧩', 'Eşleştir', 'Kartları eşini bul', r.e], ['test', '✅', 'Test', k.sorular.length + ' soru', r.t >= 50]];
+  const sira = adimlar.findIndex(a => !a[4]), bitti = sira < 0;
+  const hedef = bitti ? (k.uret && GEN[k.uret[0]] ? 'alis' : 'test') : adimlar[sira][0];
+  const etiket = bitti ? (hedef === 'alis' ? '♾️ Alıştırma yap' : '🔁 Testi yeniden çöz') : (sira ? 'Devam: ' : 'Başla: ') + adimlar[sira][2];
+  return `<div style="--c:${D.r}">${baslik(esc(k.ad), '#/d/' + k.ders)}${adim(2)}
+  <div class="card" style="text-align:center"><div style="font-size:50px;line-height:1.1">${k.e}</div><div class="mut sm" style="margin-top:4px">${D.ad} · ${k.sinif}. sınıf</div><div style="font-size:22px">${yildiz(yildizSay(id))}</div>${bitti ? '<div class="mut sm">Bu konuyu tamamladın 🎉</div>' : ''}</div>
+  <div class="steps">${adimlar.map(([h, e, t, alt, ok], i) => `<button class="${ok ? 'ok' : i === sira ? 'on' : ''}" data-go="#/k/${id}/${h}"><i>${ok ? '✓' : i + 1}</i><span class="sp"><b>${e} ${t}</b><span class="mut sm">${alt}</span></span></button>`).join('')}
+  ${k.uret && GEN[k.uret[0]] ? `<button data-go="#/k/${id}/alis"><i>♾️</i><span class="sp"><b>Sınırsız alıştırma</b><span class="mut sm">Her seferinde yeni sorular</span></span></button>` : ''}</div>
+  <button class="btn big" style="background:${D.r}" data-go="#/k/${id}/${hedef}">${etiket} →</button></div>`;
 }
 
 /* ---------- konu anlatımı ---------- */
@@ -356,12 +354,11 @@ ACT.tumYanlis = () => testAc({ ad: 'Yanlışlarım', sorular: shuffle(Object.key
 ACT.konuTekrar = id => { const k = KONU[id]; testAc({ ad: k.ad, konu: id, sorular: shuffle(k.sorular.map((_, i) => soruAl(k, i))).slice(0, 5), geri: '#/tekrar' }); };
 
 /* ---------- oyunlar, karne, ayarlar ---------- */
-const oyunSayfa = () => `${baslik('🎮 Oyunlarım')}<p class="mut" style="margin-bottom:12px">Daha önce ayrı ayrı kullandığın altı uygulamanın tamamı burada. Oyundan çıkmak için köşedeki 🎒 düğmesine dokun.</p><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">${APPS.map(appKart).join('')}</div>`;
 function karneSayfa() {
   const gunler = Array.from({ length: 7 }, (_, i) => gunEkle(i - 6)), mx = Math.max(S.hedef, ...gunler.map(g => (S.log[g] || {}).n || 0));
   const top = Object.values(S.log).reduce((t, l) => ({ n: t.n + l.n, d: t.d + l.d }), { n: 0, d: 0 });
   const biten = konular(S.sinif).filter(k => yildizSay(k.id) > 0).length, hepsi = konular(S.sinif).length;
-  return `${baslik('📊 Karne')}
+  return `${baslik('📊 Karnem')}
   <div class="card"><div class="kv" style="margin:0"><div><b>${top.n}</b><span class="mut sm">çözülen soru</span></div><div><b>%${top.n ? Math.round(top.d / top.n * 100) : 0}</b><span class="mut sm">başarı</span></div><div><b>${biten}/${hepsi}</b><span class="mut sm">konu</span></div></div></div>
   <div class="sec">Son 7 gün</div><div class="card"><div class="days">${gunler.map(g => { const n = (S.log[g] || {}).n || 0; return `<div>${n || ''}<i style="height:${n / mx * 82}%;${n >= S.hedef ? 'background:var(--ok)' : ''}"></i>${['Paz', 'Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt'][new Date(g).getDay()]}</div>`; }).join('')}</div><div class="mut sm" style="margin-top:8px">Yeşil sütun: günlük ${S.hedef} soru hedefi tamamlandı.</div></div>
   <div class="sec">${S.sinif}. sınıf dersleri</div><div class="card">${dersler(S.sinif).map(d => { const y = dersYuzde(S.sinif, d); return `<div class="prow" style="--c:${DERS[d].r}"><span>${DERS[d].e} ${DERS[d].ad}</span><div class="bar"><i style="width:${y}%"></i></div><em>%${y}</em></div>`; }).join('')}</div>`;
@@ -387,5 +384,6 @@ ACT.yedek = () => { const t = JSON.stringify(S); (navigator.clipboard ? navigato
 ACT.yukle = () => { const t = prompt('Yedek metnini yapıştırın:'); if (!t) return; try { const o = JSON.parse(t); if (!o || typeof o !== 'object' || !o.sinif) throw 0; S = Object.assign({ konu: {}, srs: {}, log: {} }, o); save(); toast('Yedek yüklendi'); ciz(); } catch (e) { toast('Yedek okunamadı'); } };
 ACT.sifirla = () => { if (confirm('Tüm ilerleme silinsin mi? Bu işlem geri alınamaz.')) { localStorage.removeItem(KEY); location.hash = ''; location.reload(); } };
 
+if (S.donus && !location.hash) { const d = S.donus; S.donus = ''; save(); history.replaceState(null, '', d); }
 if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(() => { });
 ciz();
