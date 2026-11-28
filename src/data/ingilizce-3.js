@@ -228,5 +228,120 @@ HW.add({ders:"ingilizce", sinif:3, uniteler:[
        {s:"A museum rule: photos are forbidden. Which sentence is correct?", c:["You mustn't take photos here.","You must take photos here.","You can't taking photos here.","You mustn't to take photos here."], a:"Yasak için mustn't + yalın fiil kullanılır."}
      ]
     }
+  ]},
+  {ad:"Hello! / Merhaba!", konular:[
+    {id:"en3-introduce-family", ad:"Introductions & family – Tanışma ve aile", e:"🤝",
+     anlat:[
+       {b:"Introducing yourself", m:"Tanışırken: <b>Hello, I'm Ali. I'm nine. I'm from Turkey.</b> Karşı tarafa: <b>What's your name? How old are you? Where are you from?</b> Sonunda: <b>Nice to meet you!</b>", o:"Nice to meet you. – Nice to meet you, too."},
+       {b:"Family tree", m:"grandmother, grandfather, mother, father, brother, sister, uncle (amca/dayı), aunt (teyze/hala), cousin (kuzen). Anne ve babaya birlikte <b>parents</b> denir.", o:"This is my uncle. He is my father's brother."},
+       {b:"His / Her", m:"<b>his</b> = onun (erkek), <b>her</b> = onun (kadın). <b>He is Tom. His mother is a nurse.</b> <b>She is Mia. Her father is a pilot.</b>", o:"Her name is Mia. His name is Tom."},
+       {b:"Possessive 's", m:"Birinin sahip olduğunu <b>'s</b> ile gösteririz: <b>Ali's sister</b> = Ali'nin kız kardeşi. <b>Who is she? She is Ali's sister.</b>", o:"This is Deniz's cousin."}
+     ],
+     ipucu:"HE → HIS, SHE → HER. 'Hers' değil 'her'! Kız = her, erkek = his.",
+     kartlar:[["Nice to meet you.","Tanıştığımıza memnun oldum."],["Where are you from?","Nerelisin?"],["uncle","amca / dayı"],["aunt","teyze / hala"],["cousin","kuzen"],["parents","anne ve baba"],["his","onun (erkek)"],["her","onun (kadın)"]],
+     sorular:[
+       {s:"'Nice to meet you.' ne demektir?", c:["Tanıştığımıza memnun oldum.","Günaydın.","Hoşça kal.","Teşekkür ederim."], a:"Tanışırken söylenen kalıptır."},
+       {s:"Where are you from?  I'm ___ Turkey.", c:["from","at","in the","on"], a:"I'm from Turkey = Türkiye'denim."},
+       {s:"'cousin' ne demektir?", c:["kuzen","amca","büyükanne","kardeş"], a:"Cousin = kuzen."},
+       {s:"My father's brother is my ___.", c:["uncle","cousin","grandfather","brother"], a:"Babanın erkek kardeşi amcandır: uncle."},
+       {s:"This is Mia. ___ mother is a doctor.", c:["Her","His","He","She"], a:"Kız için sahiplik: her."},
+       {s:"This is Tom. ___ sister is eight.", c:["His","Her","She","Him"], a:"Erkek için sahiplik: his."},
+       {s:"'parents' kimdir?", c:["Anne ve baba","Kardeşler","Dede ve nine","Arkadaşlar"], a:"Parents = anne ve baba."},
+       {s:"Choose the correct sentence.", c:["Ali's sister is ten.","Ali sister's is ten.","Ali is sister's ten.","Sister Ali's ten is."], a:"Sahiplik: Ali's sister."},
+       {s:"Read: 'My name is Defne. I'm nine. I live in Izmir. My cousin Efe is ten. He lives in Ankara.' Where does Efe live?", c:["In Ankara","In Izmir","In Istanbul","In Bursa"], a:"Metinde 'He lives in Ankara.' yazıyor."},
+       {s:"Who is your mother's sister? She is your ___.", c:["aunt","uncle","cousin","grandmother"], a:"Annenin kız kardeşi teyzendir: aunt."}
+     ]}
+  ]},
+  {ad:"Feelings / Duygular", konular:[
+    {id:"en3-feelings", ad:"Feelings & emotions – Duygular", e:"😃",
+     anlat:[
+       {b:"Feeling words", m:"happy (mutlu), sad (üzgün), angry (kızgın), excited (heyecanlı), scared (korkmuş), worried (endişeli), proud (gururlu), bored (sıkılmış), tired (yorgun), surprised (şaşırmış).", o:"I'm excited about the trip."},
+       {b:"How do you feel?", m:"Duyguyu sormak: <b>How do you feel?</b> / <b>What's the matter?</b> (Sorun ne?). Cevap: <b>I feel sad.</b> / <b>I'm scared.</b>", o:"What's the matter? – I'm worried."},
+       {b:"Why? Because...", m:"Nedenini <b>Why?</b> diye sorarız, <b>because</b> (çünkü) ile cevap veririz.", o:"Why are you happy? – Because it's my birthday."},
+       {b:"Helping friends", m:"Üzgün birine: <b>Don't worry. Are you OK? Let's play together!</b> deriz.", o:"Don't be sad. I'm here."}
+     ],
+     ipucu:"Why? ile sorarsan Because ile cevapla: 'Neden?' – 'Çünkü...'. İkisi hep birlikte gider!",
+     kartlar:[["excited","heyecanlı"],["scared","korkmuş"],["worried","endişeli"],["proud","gururlu"],["bored","sıkılmış"],["surprised","şaşırmış"],["What's the matter?","Sorun ne?"],["because","çünkü"]],
+     sorular:[
+       {s:"'heyecanlı' İngilizce nedir?", c:["excited","bored","angry","tired"], a:"Heyecanlı = excited."},
+       {s:"'bored' ne demektir?", c:["sıkılmış","korkmuş","gururlu","mutlu"], a:"Bored = sıkılmış."},
+       {s:"There is a big dog. I'm ___.", c:["scared","proud","happy","bored"], a:"Büyük köpekten korkulur: scared."},
+       {s:"I won the game! I'm ___.", c:["proud","sad","scared","worried"], a:"Kazanınca gururlu olunur: proud."},
+       {s:"What's the matter?  I'm ___. I have an exam tomorrow.", c:["worried","excited","proud","surprised"], a:"Yarın sınav varsa endişeli olunur: worried."},
+       {s:"Why are you sad?  ___ my toy is broken.", c:["Because","So","But","And"], a:"Neden sorusuna 'because' ile cevap verilir."},
+       {s:"Choose the correct sentence.", c:["She is angry because he took her toy.","She angry is because.","Because she is angry he.","She is because angry."], a:"Doğru cümle sırası: She is angry because ..."},
+       {s:"Your friend is sad. What can you say?", c:["Don't worry. Let's play together!","Go away!","I'm bored.","You are tired."], a:"Üzgün arkadaşa iyi davranırız: Don't worry."},
+       {s:"Read: 'Eda is excited. Today is her birthday. Her friends come to her party.' Why is Eda excited?", c:["It is her birthday.","She is tired.","She has an exam.","She is sad."], a:"Metinde 'Today is her birthday.' yazıyor."},
+       {s:"Which pair has opposite meanings?", c:["happy – sad","tired – sleepy","angry – cross","scared – afraid"], a:"Happy (mutlu) ve sad (üzgün) zıt anlamlıdır."}
+     ]}
+  ]},
+  {ad:"Toys & Games / Oyuncaklar ve Oyunlar", konular:[
+    {id:"en3-toys-have-got", ad:"Toys & games: have got – Oyuncaklar", e:"🎲",
+     anlat:[
+       {b:"Have got / has got", m:"Sahip olmak: <b>I / you / we / they have got</b>, <b>he / she / it has got</b>. Olumsuz: haven't got / hasn't got.", o:"She has got a new bike. I haven't got a robot."},
+       {b:"Questions", m:"<b>Have you got a puzzle?</b> – Yes, I have. / No, I haven't. <b>Has he got a kite?</b> – Yes, he has. / No, he hasn't.", o:"Has she got a doll? – Yes, she has."},
+       {b:"Whose is it?", m:"Kimin olduğunu sorarız: <b>Whose ball is it?</b> Cevap: <b>It's mine.</b> (Benim.) / <b>It's Ali's.</b> / <b>It's hers.</b> (Onun.)", o:"Whose kite is this? – It's mine."},
+       {b:"Games", m:"board game (kutu oyunu), hide and seek (saklambaç), hopscotch (seksek), tag (yakalamaca), cards (kâğıt), jump rope (ip atlama). <b>Let's play!</b> = Hadi oynayalım!", o:"Let's play hide and seek!"}
+     ],
+     ipucu:"I/you/we/they → HAVE. He/she/it → HAS. 'He has' diye tek 's' ile bağlanır: He Has, She Has, It Has.",
+     kartlar:[["have got","sahip olmak"],["has got","sahip olmak (he/she/it)"],["Whose is it?","Kimin?"],["mine","benimki"],["hide and seek","saklambaç"],["hopscotch","seksek"],["board game","kutu oyunu"],["Let's play!","Hadi oynayalım!"]],
+     sorular:[
+       {s:"'saklambaç' İngilizce nedir?", c:["hide and seek","hopscotch","board game","tag"], a:"Saklambaç = hide and seek."},
+       {s:"She ___ a new bike.", c:["has got","have got","is got","are got"], a:"She ile 'has got' kullanılır."},
+       {s:"They ___ two balls.", c:["have got","has got","is got","got has"], a:"They ile 'have got' kullanılır."},
+       {s:"I ___ a robot. (Robotum yok.)", c:["haven't got","hasn't got","don't has","not have"], a:"I ile olumsuz: haven't got."},
+       {s:"Has he got a kite?  No, ___.", c:["he hasn't","he haven't","he isn't","he doesn't have not"], a:"He ile kısa cevap: No, he hasn't."},
+       {s:"Whose book is this?  It's ___. (benim)", c:["mine","my","me","I"], a:"Sahiplik yalnız kullanılırsa 'mine' denir."},
+       {s:"'Whose ball is it?' sorusuna hangisi uygun cevaptır?", c:["It's Ali's.","It is red.","Yes, it is.","It's a ball."], a:"Whose? sorusu sahibi sorar: It's Ali's."},
+       {s:"Choose the correct sentence.", c:["My brother has got a train.","My brother have got a train.","My brother has a got train.","My brother got has a train."], a:"My brother = he, bu yüzden 'has got'."},
+       {s:"Read: 'Leyla has got two dolls and a puzzle. She hasn't got a robot.' What hasn't Leyla got?", c:["A robot","A doll","A puzzle","A kite"], a:"Metinde 'She hasn't got a robot.' yazıyor."},
+       {s:"Which one is NOT a game?", c:["pencil case","hopscotch","hide and seek","tag"], a:"Pencil case (kalem kutusu) oyun değildir."}
+     ]}
+  ]},
+  {ad:"In My City / Şehrimde", konular:[
+    {id:"en3-city-transport", ad:"In my city & transportation – Şehir ve ulaşım", e:"🚌",
+     anlat:[
+       {b:"Places in a city", m:"bridge (köprü), hospital (hastane), library (kütüphane), museum (müze), post office (postane), bank (banka), market (market), police station (karakol), bus stop (otobüs durağı).", o:"The museum is next to the park."},
+       {b:"Where is it?", m:"<b>Where is the library?</b> – <b>It's next to the bank.</b> / <b>It's opposite the park.</b> (karşısında) / <b>It's between the bank and the market.</b> (arasında)", o:"The bank is opposite the school."},
+       {b:"Transportation", m:"bus (otobüs), train (tren), ship (gemi), plane (uçak), taxi, bike (bisiklet), underground / metro. <b>By</b> ile söyleriz: <b>by bus, by train, by plane</b>. Yürümek için: <b>on foot</b>.", o:"I go to school by bus."},
+       {b:"How do you go?", m:"<b>How do you go to school?</b> – <b>I go by bus.</b> / <b>I walk.</b> Gideceğimiz yeri sorarken: <b>Where do you go?</b>", o:"How does she go to work? – By train."}
+     ],
+     ipucu:"By + araç: by bus, by taxi. Ama yürüyerek: on foot! ('by foot' yanlıştır.)",
+     kartlar:[["bridge","köprü"],["library","kütüphane"],["museum","müze"],["post office","postane"],["opposite","karşısında"],["between","arasında"],["by plane","uçakla"],["on foot","yürüyerek"]],
+     sorular:[
+       {s:"'kütüphane' İngilizce nedir?", c:["library","museum","bank","bridge"], a:"Kütüphane = library."},
+       {s:"Where do you borrow books?", c:["At the library","At the bank","At the post office","At the bridge"], a:"Kitap ödünç almak için kütüphaneye gideriz."},
+       {s:"I go to school ___ bus.", c:["by","on","with the","in by"], a:"Araçla gitmek: by + araç (by bus)."},
+       {s:"'on foot' ne demektir?", c:["yürüyerek","uçakla","trenle","bisikletle"], a:"On foot = yürüyerek."},
+       {s:"The bank is ___ the school. (karşısında)", c:["opposite","between","under","on foot"], a:"Karşısında = opposite."},
+       {s:"The market is ___ the bank and the library. (ikisinin arasında)", c:["between","opposite","next","by"], a:"Arasında = between."},
+       {s:"How do you go to your grandmother's house? It's far away. (uçak)", c:["By plane","On plane","With plane","By foot"], a:"Uçakla = by plane."},
+       {s:"Choose the correct sentence.", c:["She goes to work by train.","She go to work by train.","She goes to work on train by.","She goes by train to works."], a:"She ile fiile -s gelir: goes."},
+       {s:"Read: 'My school is next to the museum. It's opposite the post office. I go there on foot.' How does the writer go to school?", c:["On foot","By bus","By taxi","By bike"], a:"Metinde 'I go there on foot.' yazıyor."},
+       {s:"Which one is NOT a place in a city?", c:["taxi","hospital","bank","library"], a:"Taxi bir taşıttır; diğerleri şehirdeki yerlerdir."}
+     ]}
+  ]},
+  {ad:"Numbers & Order / Sayılar ve Sıra", konular:[
+    {id:"en3-numbers-ordinals", ad:"Numbers 20-100 & ordinals – Sayılar ve sıra", e:"💯",
+     anlat:[
+       {b:"Tens", m:"20 twenty, 30 thirty, 40 forty, 50 fifty, 60 sixty, 70 seventy, 80 eighty, 90 ninety, 100 one hundred. Dikkat: forty (fourty değil!).", o:"thirty, forty, fifty"},
+       {b:"In between", m:"Arada tire koyarız: <b>21 twenty-one</b>, <b>35 thirty-five</b>, <b>99 ninety-nine</b>.", o:"47 = forty-seven"},
+       {b:"Ordinal numbers", m:"Sıra sayıları: 1st first, 2nd second, 3rd third, 4th fourth, 5th fifth, 6th sixth, 7th seventh, 8th eighth, 9th ninth, 10th tenth.", o:"He is first. She is third."},
+       {b:"Using ordinals", m:"<b>What floor do you live on?</b> – <b>I live on the fifth floor.</b> <b>Today is the second of May.</b> Yarışta: <b>first place</b>.", o:"My birthday is on the tenth of June."}
+     ],
+     ipucu:"Thirteen–thirty karışmasın! -teen sonu vurgulu (13-19), -ty ilk hece vurgulu (30, 40...). Forty'de 'u' yoktur!",
+     kartlar:[["30","thirty"],["40","forty"],["50","fifty"],["70","seventy"],["100","one hundred"],["1st","first"],["2nd","second"],["3rd","third"]],
+     sorular:[
+       {s:"40 sayısının İngilizcesi nedir?", c:["forty","fourteen","fourty","four"], a:"40 = forty ('u' yok)."},
+       {s:"'seventy' kaçtır?", c:["70","17","7","77"], a:"Seventy = 70, seventeen = 17."},
+       {s:"Which one is 90?", c:["ninety","nineteen","nine","nine-nine"], a:"90 = ninety, 19 = nineteen."},
+       {s:"How do we write 45?", c:["forty-five","fourteen-five","four-five","forty and fifteen"], a:"45 = forty-five."},
+       {s:"100 İngilizce nedir?", c:["one hundred","one thousand","ten","hundred ten"], a:"100 = one hundred."},
+       {s:"'third' hangi sayıdır?", c:["3rd","2nd","5th","1st"], a:"Third = 3. (üçüncü)."},
+       {s:"He is the ___ runner. (1. sırada)", c:["first","one","once","oneth"], a:"1. sıra: first."},
+       {s:"Complete: first, second, third, ___, fifth", c:["fourth","forth","four","fiveth"], a:"4. sıra: fourth."},
+       {s:"Which is the biggest number?", c:["ninety","seventy","sixty","fifty"], a:"90 en büyüktür."},
+       {s:"Read: 'Ayşe lives on the 6th floor. Her friend Can lives on the 8th floor.' Which floor does Can live on?", c:["Eighth","Sixth","Seventh","Tenth"], a:"8th = eighth."}
+     ]}
   ]}
 ]});

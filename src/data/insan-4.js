@@ -103,5 +103,47 @@ HW.add({ders:"insan", sinif:4, uniteler:[
        {s:"Sınıf başkanı oylamayla seçildi. Kaybeden adayın hangi tutumu demokratik davranıştır?", c:["Sonucu kabul edip kazananı desteklemek","Sonucu tanımamak","Oylamayı bozmak","Kazanana küsmek"], a:"Demokraside sonuca saygı gösterilir."},
        {s:"Aşağıdakilerden hangisi bir yurttaşlık sorumluluğudur?", c:["Yasalara uymak","Her istediğini yapmak","Çevreyi kirletmek","Kuralları yok saymak"], a:"Yasalara uymak yurttaşlık sorumluluğudur."}
      ]}
+  ]},
+  {ad:"Farklılıklara Saygı", konular:[
+    {id:"ih4-farkliliklara-saygi", ad:"Farklılıklara Saygı ve Empati", e:"🌈",
+     anlat:[
+       {b:"Herkes farklıdır", m:"İnsanlar boy, renk, dil, inanç, yaşam biçimi ve ilgi alanlarıyla birbirinden farklıdır. Bu farklılıklar bizi zenginleştirir. Farklı olmak kötü ya da yanlış olmak demek değildir.", o:"Bir sınıfta herkes aynı olsaydı ne kadar sıkıcı olurdu!"},
+       {b:"Empati", m:"<b>Empati</b>, kendimizi karşımızdakinin yerine koyup onun neler hissettiğini anlamaya çalışmaktır. Bir arkadaşımız dışlanınca üzülür. Onun yerine kendimizi koyarsak onu dışlamayız.", o:"“Ben olsam ne hissederdim?” diye düşünmek."},
+       {b:"Hoşgörü ve ayrımcılık", m:"<b>Hoşgörü</b>, farklı düşünce ve davranışlara saygı göstermektir. <b>Ayrımcılık</b> ise insanlara dil, din, renk, cinsiyet veya engel durumu yüzünden kötü davranmaktır. Çocuk Hakları Sözleşmesi ayrımcılığı yasaklar.", o:"Her çocuk eşit haklara sahiptir."},
+       {b:"Nasıl davranırız?", m:"Farklı olan arkadaşlarımızla alay etmeyiz. Onları oyunlarımıza katarız. Engelli bir arkadaşımıza gerektiğinde yardım ederiz ama ona acımayız; onunla eşit davranırız.", o:"“Seninle oynayabilir miyiz?” demek."}
+     ],
+     ipucu:"Empati = kendini onun yerine koy. Hoşgörü = farklılığa saygı. Ayrımcılık = yok! Her insan değerlidir.",
+     kartlar:[["Empati","Kendini başkasının yerine koymak"],["Hoşgörü","Farklılığa saygı göstermek"],["Ayrımcılık","İnsanlara eşit davranmamak"],["Farklılık","İnsanları zenginleştirir"],["Alay etmek","Yapılmaması gereken davranış"],["Dışlanan arkadaş","Oyuna katılmak ister"],["Ayrımcılık yasağı","Çocuk Hakları Sözleşmesi’nde var"],["Herkes","Eşit değerdedir"]],
+     sorular:[
+       {s:"Empati ne demektir?", c:["Kendini başkasının yerine koymak","Herkesle kavga etmek","Her istediğini yapmak","Yalnız oynamak"], a:"Empati, karşımızdakinin duygusunu anlamaya çalışmaktır."},
+       {s:"Hangisi ayrımcılıktır?", c:["Renginden dolayı bir çocuğu oyuna almamak","Herkese eşit davranmak","Yeni arkadaşa yardım etmek","Sırayla konuşmak"], a:"İnsana özelliğinden dolayı kötü davranmak ayrımcılıktır."},
+       {s:"Sınıfa yeni gelen arkadaşın Türkçesi az. Ne yaparsın?", c:["Yavaş konuşup oyuna katarım","Onunla alay ederim","Yalnız bırakırım","Onu görmezden gelirim"], a:"Farklılığa saygı ve empati: onu dahil ederiz."},
+       {s:"Farklılıklar topluma ne katar?", c:["Zenginlik","Kavga","Yalnızlık","Sıkıntı"], a:"Farklılıklar renkli ve zengin bir toplum oluşturur."},
+       {s:"Çocuk Hakları Sözleşmesi’ne göre hangisi doğrudur?", c:["Her çocuk, farklılığına bakılmaksızın eşit haklara sahiptir","Bazı çocukların hakları daha fazladır","Hakları sadece zengin çocuklar kullanır","Hakları sadece erkek çocuklar kullanır"], a:"Haklar herkes için eşittir; ayrımcılık yapılamaz."},
+       {s:"Bir arkadaşın ağlıyor. Empati yapan çocuk ne söyler?", c:["“Ne oldu, yardım edebilir miyim?”","“Ağlama, çok sıkıcısın.”","“Beni ilgilendirmez.”","“Hadi gülelim.”"], a:"Empati yapan kişi arkadaşının yerine kendini koyar ve yardım etmek ister."},
+       {s:"“Benim kıyafetim sende yok, o yüzden seninle oynamam.” Bu söz neden doğru değildir?", c:["Çünkü insanlara maddi durumlarına göre ayrım yapılmamalıdır","Çünkü kıyafetler önemlidir","Çünkü oyun oynamak yasaktır","Çünkü kuralı öğretmen koyar"], a:"Ayrımcılık yapmamalıyız; herkes eşit değerdedir."},
+       {s:"Farklı fikirleri dinlemek neden önemlidir?", c:["Birbirimizi anlar, daha iyi çözümler buluruz","Daha fazla tartışmak için","Kendi fikrimizi bırakmak için","Hiçbir önemi yoktur"], a:"Farklı fikirleri dinlemek uzlaşmayı ve anlayışı artırır."}
+     ]}
+  ]},
+  {ad:"Dayanışma ve Gönüllülük", konular:[
+    {id:"ih4-dayanisma-gonulluluk", ad:"Yardımlaşma, Dayanışma ve Gönüllülük", e:"🤲",
+     anlat:[
+       {b:"Yardımlaşma ve dayanışma", m:"Birbirimize destek olmaya <b>yardımlaşma</b> denir. Zor durumdaki insanlara birlikte el uzatmak <b>dayanışmadır</b>. Deprem, sel, yangın gibi afetlerde insanlar dayanışmayla yaralarını sarar.", o:"Komşusunun evine yardım eden insanlar."},
+       {b:"Gönüllülük", m:"Karşılık beklemeden, kendi isteğimizle başkalarına yardım etmek <b>gönüllülüktür</b>. Gönüllü olmak için çok büyük olmak gerekmez: okulda arkadaşına ders çalıştırmak, çevreyi temizlemek de gönüllülüktür.", o:"Sahipsiz hayvanlara su koymak."},
+       {b:"Kuruluşlar", m:"<b>Kızılay</b>: afetlerde yardım eder, kan bağışı toplar. <b>AFAD</b>: afet ve acil durumlara müdahale eder. <b>UNICEF</b>: dünya çocuklarının haklarını korur. <b>TEMA</b>: toprağı ve ağaçları korur.", o:"Kızılay, afetlerde çadır ve yemek dağıtır."},
+       {b:"Biz neler yapabiliriz?", m:"Eski kitaplarımızı ve oyuncaklarımızı ihtiyacı olana verebiliriz. Kumbaramızdan bağış yapabiliriz. Yaşlı komşuya alışveriş yardımı edebilir, çevreyi temiz tutabiliriz. Küçük iyilikler büyük fark yaratır.", o:"Bir damla bir damla göl olur."}
+     ],
+     ipucu:"Yardımlaşma = el ele. Gönüllülük = karşılıksız. Kızılay = Kırmızı Ay (Kızıl Ay) yardım eder; AFAD = afette ilk koşar!",
+     kartlar:[["Gönüllülük","Karşılık beklemeden yardım"],["Dayanışma","Zor durumda el ele vermek"],["Kızılay","Kan bağışı ve afet yardımı"],["AFAD","Afet ve acil durum kurumu"],["UNICEF","Çocuk haklarını koruyan kuruluş"],["Bağış","İsteyerek yardım vermek"],["Afet","Deprem, sel, yangın gibi olay"],["Yardımlaşma","Birbirine destek olmak"]],
+     sorular:[
+       {s:"Gönüllülük ne demektir?", c:["Karşılık beklemeden isteyerek yardım etmek","Para karşılığı çalışmak","Zorla yardım etmek","Hiçbir şey yapmamak"], a:"Gönüllü olmak, kendi isteğimizle karşılıksız yardım etmektir."},
+       {s:"Hangisi dayanışma örneğidir?", c:["Deprem bölgesine yardım göndermek","Oyuncağını saklamak","Kavga etmek","Yalnız kalmak"], a:"Zor durumdakilere birlikte yardım etmek dayanışmadır."},
+       {s:"Çocukların haklarını korumak için çalışan kuruluş hangisidir?", c:["UNICEF","AFAD","Kızılay","TEMA"], a:"UNICEF dünya çocukları için çalışır."},
+       {s:"AFAD hangi konuda çalışır?", c:["Afet ve acil durumlar","Sinema","Spor müsabakaları","Alışveriş"], a:"AFAD, afet ve acil durumlara müdahale eder."},
+       {s:"Bir çocuk yeni oyuncağını ihtiyacı olan birine verdi. Bu davranış neyi gösterir?", c:["Paylaşma ve yardımseverlik","Cimrilik","Kıskançlık","Unutkanlık"], a:"İhtiyacı olanla paylaşmak yardımseverliktir."},
+       {s:"Afette yardıma koşmak hangi değeri güçlendirir?", c:["Dayanışma","Bencillik","Rekabet","Kayıtsızlık"], a:"Birlikte hareket etmek dayanışmayı güçlendirir."},
+       {s:"“Bir damla bir damla göl olur.” sözü neyi anlatır?", c:["Küçük yardımlar birleşince büyür","Su içmek önemlidir","Göller büyüktür","Damla küçüktür"], a:"Küçük iyilikler birleşince büyük işler yapılır."},
+       {s:"Okul bahçesini temizleyen öğrenci grubu hangi sorumluluğu üstlenmiştir?", c:["Çevre ve toplum sorumluluğu","Alışveriş sorumluluğu","Yarışma sorumluluğu","Yönetim sorumluluğu"], a:"Çevreyi temiz tutmak toplum için gönüllü sorumluluktur."}
+     ]}
   ]}
 ]});

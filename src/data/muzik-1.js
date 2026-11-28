@@ -76,5 +76,47 @@ HW.add({ders:"muzik", sinif:1, uniteler:[
        {s:"Şarkıyı sözlerle söyleriz. Hangisi şarkıdır?", c:["Sözlü müzik","Sessiz resim","Boş sayfa"], a:"Şarkılar sözlerle söylenir."},
        {s:"Hızlı bir oyun şarkısında ne yapabiliriz?", c:["Dans ederiz","Uyuruz","Sadece susarız"], a:"Hızlı şarkıda dans edebiliriz."}
      ]}
+  ]},
+  {ad:"Sesleri Dinleyelim ve Hareket Edelim", konular:[
+    {id:"muz1-cevre-sesleri", ad:"Doğa ve Çevre Sesleri", e:"🐦",
+     anlat:[
+       {b:"Her yerde ses var", m:"Kuş cıvıltısı, yağmur, rüzgâr, kapı zili, araba kornası bize ses verir. Bunlar doğa ve çevre seslerdir. Gözlerimizi kapatıp dinleyince hepsini duyabiliriz.", o:"🐦 cik cik, 🌧️ şıp şıp"},
+       {b:"Ses kaynağı", m:"Sesi çıkaran şeye ses kaynağı denir. Kuş, çalgı, zil ve davul birer ses kaynağıdır. Kendi sesimiz de bir ses kaynağıdır.", o:"Alkış, bizim ses kaynağımız."},
+       {b:"Güçlü ve hafif ses", m:"Bazı sesler güçlüdür: gök gürültüsü gibi. Bazı sesler hafiftir: yaprak hışırtısı gibi. Müzikte de güçlü ve hafif sesler kullanırız.", o:"Fısıltı hafif, bağırma güçlüdür."},
+       {b:"Sessizlik ve dinleme", m:"Güzel dinlemek için önce sessiz oluruz. Sessizlik de müziğin bir parçasıdır. Dinlerken arkadaşımızı rahatsız etmeyiz.", o:"Şşş! Dinleyelim."}
+     ],
+     ipucu:"Gözlerini kapat, kulağını aç! Hangi sesler duyuyorsun?",
+     kartlar:[["🐦 Kuş sesi","Doğa sesi"],["🚗 Korna sesi","Çevre sesi"],["Gök gürültüsü","Güçlü ses"],["Fısıltı","Hafif ses"],["Ses kaynağı","Sesi çıkaran şey"],["Dinlerken","Sessiz oluruz"]],
+     sorular:[
+       {s:"Hangisi bir doğa sesidir?", c:["Yağmur sesi","Davul sesi","Zil sesi"], a:"Yağmur doğada oluşan bir sestir."},
+       {s:"Sesi çıkaran şeye ne denir?", c:["Ses kaynağı","Ses duvarı","Ses rengi"], a:"Sesi çıkaran şey ses kaynağıdır."},
+       {s:"Hangisi güçlü bir sestir?", c:["Gök gürültüsü","Fısıltı","Yaprak sesi"], a:"Gök gürültüsü çok güçlüdür."},
+       {s:"Hangisi hafif bir sestir?", c:["Fısıltı","Korna","Havai fişek"], a:"Fısıltı hafif bir sestir."},
+       {s:"Müzik dinlerken ne yaparız?", c:["Sessiz oluruz","Bağırırız","Koşarız"], a:"Dinlerken sessiz oluruz."},
+       {s:"🐦 Hangi ses kaynağına aittir?", c:["Kuş","Araba","Zil"], a:"Cıvıltı kuştan gelir."},
+       {s:"Kendi vücudumuzla hangi sesi çıkarabiliriz?", c:["Alkış","Zil","Korna"], a:"Elimizle alkış yapabiliriz."},
+       {s:"Gözümüzü kapatınca neyi daha iyi duyarız?", c:["Çevre seslerini","Renkleri","Resimleri"], a:"Gözümüz kapalıyken sesleri daha iyi dinleriz."}
+     ]}
+  ]},
+  {ad:"Müzikle Hareket", konular:[
+    {id:"muz1-dans-hareket", ad:"Müzikle Hareket ve Oyun", e:"💃",
+     anlat:[
+       {b:"Müzik ve hareket", m:"Müzik dinleyince hareket etmek isteriz. Müzik hızlıysa hızlı yürürüz, yavaşsa yavaş yürürüz. Müzik durunca biz de duruz. Böylece müziği vücudumuzla anlarız.", o:"Hızlı müzik: koş koş! Yavaş müzik: ağır ağır."},
+       {b:"Ritim tutmak", m:"Şarkıyı söylerken el çırparız, ayağımızla yere vururuz ya da adımlarız. Böylece ritmi tutarız. Hepimiz aynı anda tutarsak güzel olur.", o:"tak - tak - tak - tak"},
+       {b:"Halay ve oyunlar", m:"Halay, el ele tutuşarak oynanan bir halk oyunudur. Oyun şarkıları birlikte söylenir. Oynarken sırayla hareket eder, arkadaşlarımızı itmeyiz.", o:"Çember olup birlikte oynarız."},
+       {b:"Kurallara uyalım", m:"Hareketli etkinliklerde önce öğretmenimizi dinleriz. Arkadaşlarımıza çarpmamak için yerimizde dikkatli oluruz. Bitince ellerimizi çırparak teşekkür ederiz.", o:"Dinle, hareket et, dur."}
+     ],
+     ipucu:"Hızlı müzik = hızlı adım, yavaş müzik = yavaş adım, müzik durdu = DUR!",
+     kartlar:[["Hızlı müzik","Hızlı adımlar"],["Yavaş müzik","Yavaş adımlar"],["Müzik durunca","Biz de duruz"],["Ritim tutmak","El çırpmak"],["Halay","El ele oynanan oyun"],["Oyun kuralı","Arkadaşa çarpmamak"]],
+     sorular:[
+       {s:"Müzik hızlıysa nasıl hareket ederiz?", c:["Hızlı","Yavaş","Hiç hareket etmeyiz"], a:"Hızlı müzikte hızlı hareket ederiz."},
+       {s:"Müzik yavaşsa nasıl yürürüz?", c:["Yavaş","Çok hızlı","Zıplayarak"], a:"Yavaş müzikte yavaş yürürüz."},
+       {s:"Müzik durunca ne yaparız?", c:["Dururuz","Koşarız","Bağırırız"], a:"Müzik durunca biz de duruz."},
+       {s:"Hangisi ritim tutmaktır?", c:["El çırpmak","Uyumak","Oturmak"], a:"El çırpmak ritim tutmaktır."},
+       {s:"Halay nasıl oynanır?", c:["El ele tutuşarak","Tek başına","Sırt sırta"], a:"Halay el ele tutuşarak oynanır."},
+       {s:"Oyun oynarken hangisini yapmayız?", c:["Arkadaşımızı iteriz","Öğretmeni dinleriz","Sırayla oynarız"], a:"Arkadaşlarımızı itmeyiz, kurallara uyarız."},
+       {s:"Ritmi birlikte tutarsak ne olur?", c:["Daha güzel olur","Daha kötü olur","Müzik biter"], a:"Birlikte tutulan ritim daha güzel olur."},
+       {s:"Şarkıyı söylerken ayağımızla ne yaparız?", c:["Ritim tutarız","Zıplamayı bırakırız","Uyuruz"], a:"Ayakla da ritim tutulabilir."}
+     ]}
   ]}
 ]});

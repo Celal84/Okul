@@ -99,5 +99,47 @@ HW.add({ders:"trafik", sinif:4, uniteler:[
        {s:"Küçük bir sıyrığı olan arkadaşına yardım etmek için ne yapabilirsin?", c:["Yetişkine haber verip temiz bezle durumu bildirmek","Yaranın üzerine toprak sürmek","Hemen oradan kaçmak","Onu azarlamak"], a:"Yetişkin yardımı ve temiz malzeme gerekir."},
        {s:"Trafik kültürü ne demektir?", c:["Trafikte saygılı ve kurallara uygun davranmak","Kuralları görmezden gelmek","Hızlı sürmek","Korna çalmak"], a:"Trafik kültürü, kurallara ve diğer insanlara saygıdır."}
      ]}
+  ]},
+  {ad:"Toplu Taşıma", konular:[
+    {id:"trf4-toplu-tasima", ad:"Toplu Taşıma Araçlarında Güvenlik", e:"🚇",
+     anlat:[
+       {b:"Toplu taşıma araçları", m:"Otobüs, minibüs, metro, tramvay, tren ve vapur toplu taşıma araçlarıdır. Aynı anda çok kişi taşır, yolları daha az kalabalık yapar ve havayı daha az kirletir.", o:"Bir otobüs onlarca arabanın yerini tutar."},
+       {b:"Durakta ve binerken", m:"Duraktan yola yaklaşmadan, kaldırımda sıra ile bekleriz. Araç tamamen durup kapı açılınca, önce inenlere yol verip sonra bineriz. İtişip kakışmayız, kapı önünde durmayız.", o:"Metroda sarı çizginin gerisinde bekleriz."},
+       {b:"Araç içinde", m:"Boş koltuk varsa otururuz; yoksa ayakta tutunacak yere sıkı tutunuruz. Koltukları ve camları kirletmeyiz, bağırmayız. Başımızı ve elimizi camdan dışarı çıkarmayız.", o:"Ayakta kalırken tutamak veya barı tutarız."},
+       {b:"Yer verme ve saygı", m:"Yaşlılara, hamile kadınlara, engellilere ve küçük çocuklu yolculara yerimizi veririz. Şoföre dikkat etmeyi bırakacak şekilde sesli konuşmayız; araç hareket halindeyken şoförle konuşmayız.", o:"“Buyurun, siz oturun.” demek."}
+     ],
+     ipucu:"Önce İNEN, sonra BİNEN! Sarı çizgi = sınır. Yaşlı, hamile, engelli = yer ver!",
+     kartlar:[["Durakta nerede beklenir?","Kaldırımda, sırada"],["Araca binme sırası","Önce inenler, sonra binenler"],["Metroda hangi çizgi?","Sarı çizgi"],["Ayakta ne yapılır?","Tutamağa tutunulur"],["Camdan ne çıkarılmaz?","Baş ve el"],["Kimlere yer verilir?","Yaşlı, hamile, engelli"],["Şoförle ne yapılmaz?","Konuşup dikkati dağıtılmaz"],["Toplu taşıma avantajı","Az kalabalık, temiz hava"]],
+     sorular:[
+       {s:"Otobüse binerken hangisi doğrudur?", c:["Araç durup kapı açılınca önce inenlere yol vermek","İtişip kakışmak","Hareket halindeki araca atlamak","Kapıyı kapatmak"], a:"Önce inenlere yol verilir, sıra ile binilir."},
+       {s:"Metroda sarı çizgi neyi gösterir?", c:["Beklerken geçilmemesi gereken sınırı","Oturma yerini","Kapı yerini","Satış yerini"], a:"Sarı çizginin gerisinde bekleriz."},
+       {s:"Araç yolculuğunda ayakta kalırsak ne yapmalıyız?", c:["Tutamağa sıkı tutunmalıyız","Kapıya yaslanmalıyız","Zıplamalıyız","Koşmalıyız"], a:"Ayakta tutunacak yere sıkı tutunulur."},
+       {s:"Aracın camından neden elimizi çıkarmamalıyız?", c:["Tehlikelidir, yaralanabiliriz","Camı kirletir","Güzel görünmez","Yasak değildir"], a:"Elimiz veya başımız yaralanabilir."},
+       {s:"Hangisi toplu taşımanın bir yararıdır?", c:["Trafiği azaltır ve havayı daha az kirletir","Daha çok gürültü yapar","Daha çok yakıt harcar","Daha çok park yeri ister"], a:"Çok kişi tek araçta seyahat eder."},
+       {s:"Otobüste boş koltuk yok. Küçük bir bebekle gelen yolcuya ne yaparsın?", c:["Yerimi veririm","Başımı çeviririm","Daha rahat otururum","Gülerim"], a:"Küçük çocuklu yolcuya yer vermek güzel bir davranıştır."},
+       {s:"Duraktan hangi mesafede beklemeliyiz?", c:["Kaldırımda, yoldan uzak","Yolun tam ortasında","Yolun kenarında araçların hemen önünde","Bisiklet yolunda"], a:"Yola yaklaşmadan, kaldırımda bekleriz."},
+       {s:"Ayşe okul servisinden indi ve karşıya geçmek istiyor. Ne yapmalıdır?", c:["Servis uzaklaşana kadar bekleyip görüş açılınca geçmelidir","Aracın önünden hemen geçmelidir","Koşarak geçmelidir","Servisin arkasından aniden çıkmalıdır"], a:"Aracın önünden veya arkasından aniden geçmek tehlikelidir; araç gidince geçilir."}
+     ]}
+  ]},
+  {ad:"Hava Koşulları ve Demiryolu", konular:[
+    {id:"trf4-hava-demiryolu", ad:"Kötü Havada ve Demiryolunda Güvenlik", e:"🚂",
+     anlat:[
+       {b:"Yağmur, kar ve sis", m:"Yağmurda, karda ve sisli havada yol kaygan ve görüş zayıf olur. Araçlar durmak için daha uzun mesafe ister. Bu yüzden yayalar ve sürücüler daha dikkatli olmalıdır.", o:"Islak yolda fren mesafesi uzar."},
+       {b:"Görünür olmak", m:"Gece ve sisli havada açık renkli veya yansıtıcı giysi giyeriz. Sürücü bizi uzaktan görebilir. Yağmurda şemsiyemiz görüşümüzü kapatmamalı; karşıya geçmeden önce iyice bakarız.", o:"Yansıtıcı bant, ışık altında parlar."},
+       {b:"Demiryolu ve hemzemin geçit", m:"Tren yolu ile karayolunun aynı seviyede kesiştiği yere <b>hemzemin geçit</b> denir. Işık yanıyorsa veya bariyer inmişse geçilmez. Tren hemen duramaz; yakınına yaklaşmak, rayda oynamak çok tehlikelidir.", o:"Bariyer iniyorsa dur!"},
+       {b:"Neler yapmalıyız?", m:"Tren yoluna yaklaşırken dur, bak, dinle. Rayların üzerinde yürümeyiz, oyun oynamayız. Işıklar yanıp sönerken geçmeye çalışmayız. Okula giderken tren yolu varsa mutlaka yetişkinle geçeriz.", o:"Raylar yürüyüş yolu değildir."}
+     ],
+     ipucu:"Tren yolunda: DUR – BAK – DİNLE! Işık yanıyorsa veya bariyer inikse asla geçme.",
+     kartlar:[["Hemzemin geçit","Karayolu ve tren yolu kesişimi"],["Bariyer inmişse","Geçilmez"],["Tren neden duramaz?","Çok ağırdır, geç durur"],["Sisli havada ne giyilir?","Açık renkli, yansıtıcı"],["Islak yolda fren mesafesi","Uzar"],["Rayda ne yapılmaz?","Oynanmaz, yürünmez"],["Tren yoluna yaklaşırken","Dur, bak, dinle"],["Sis nedir?","Görüşü azaltan nemli hava"]],
+     sorular:[
+       {s:"Hemzemin geçit nedir?", c:["Karayolu ile tren yolunun aynı seviyede kesiştiği yer","Üst geçit","Alt geçit","Yaya kaldırımı"], a:"Hemzemin geçit, aynı seviyede kesişen yoldur."},
+       {s:"Tren neden hemen duramaz?", c:["Çok ağırdır ve uzun mesafe ister","Küçüktür","Boştur","Yavaştır"], a:"Trenler ağırdır, durmaları zaman alır."},
+       {s:"Sisli havada hangi giysi daha güvenlidir?", c:["Açık renkli ve yansıtıcı","Siyah","Kahverengi","Koyu yeşil"], a:"Açık renk ve yansıtıcı giysi uzaktan görünür."},
+       {s:"Islak yolda arabalar neden daha geç durur?", c:["Yol kaygan olduğu için","Yol kuru olduğu için","Hava sıcak olduğu için","Yol geniş olduğu için"], a:"Kaygan yolda frenleme mesafesi uzar."},
+       {s:"Hangisi doğru davranıştır?", c:["Rayların yanında oynamamak","Rayda yürümek","Rayda top oynamak","Trenin önünden geçmek"], a:"Raylar tehlikelidir; yanında bile oynanmaz."},
+       {s:"Yağmurda yola çıkarken şemsiyemizi nasıl kullanırız?", c:["Görüşümüzü kapatmayacak şekilde","Gözümüzü kapatacak şekilde","Kapatıp koşarak","Sürücüye doğru tutarak"], a:"Karşıya geçerken etrafı görebilmeliyiz."},
+       {s:"Okul yolunda tren geçidi varsa ne yaparsın?", c:["Yetişkinle birlikte geçerim","Tek başıma koşarım","Ray üzerinde yürürüm","Işığa bakmam"], a:"Hemzemin geçitte güvenlik için yetişkinle geçilir."},
+       {s:"Geçitte ışıklar yanıp sönüyor, bariyer inmek üzere. Ece ne yapmalı?", c:["Geçmeye çalışmayıp beklemeli","Arkadan hemen geçmeli","Raya girmeli","Bariyeri kaldırmalı"], a:"Işık yanarken geçide girilmez, beklenir."}
+     ]}
   ]}
 ]});

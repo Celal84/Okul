@@ -23,6 +23,28 @@ HW.add({ders:"matematik", sinif:2, uniteler:[
      ],
      uret:["basamak",100]
     },
+    {id:"mat2-siralama-tek-cift", ad:"Karşılaştırma, Sıralama, Tek-Çift, Sıra Sayıları", e:"🔼",
+     anlat:[
+       {b:"Sayıları karşılaştırma", m:"Önce onlar basamağına bakarız; hangisinde onluk fazlaysa o sayı büyüktür. Onluklar eşitse birlere bakarız.", o:"47 > 39 çünkü 4 onluk, 3 onluktan fazladır."},
+       {b:"Sıralama", m:"Sayıları küçükten büyüğe ya da büyükten küçüğe dizebiliriz.", o:"Küçükten büyüğe: 18, 34, 56, 90"},
+       {b:"Tek ve çift sayılar", m:"Birler basamağı 0, 2, 4, 6, 8 olan sayılar çifttir. Birler basamağı 1, 3, 5, 7, 9 olan sayılar tektir.", o:"36 çift, 47 tek"},
+       {b:"Sıra sayıları", m:"Sıra bildiren sözcükler: birinci, ikinci, üçüncü, dördüncü, beşinci... Beşinci olan birinin önünde 4 kişi vardır."}
+     ],
+     ipucu:"Çiftlerin eşi vardır, teklerin yoktur! Tek mi çift mi diye sadece birler basamağına bak.",
+     kartlar:[["En büyük iki basamaklı sayı","99"],["En küçük iki basamaklı sayı","10"],["36 tek mi çift mi?","Çift"],["47 tek mi çift mi?","Tek"],["Birler basamağı 5 olan sayı","Tektir"],["7'nin sıra sayısı","Yedinci"],["Beşinci olanın önündeki kişi","4 kişi"]],
+     sorular:[
+       {s:"Hangi sayı en büyüktür?", c:["72","27","70","62"], a:"72'nin onlar basamağı 7, birler basamağı 2'dir. 70'ten de büyüktür."},
+       {s:"47 ile 39 sayılarından hangisi büyüktür?", c:["47","39","İkisi eşit","Karşılaştırılamaz"], a:"4 onluk 3 onluktan fazladır, 47 daha büyüktür."},
+       {s:"Hangisi çift sayıdır?", c:["58","57","59","61"], a:"Birler basamağı 8 olduğundan 58 çifttir."},
+       {s:"Hangisi tek sayıdır?", c:["83","84","86","90"], a:"Birler basamağı 3 olan 83 tektir."},
+       {s:"26 ile 29 arasında bulunan çift sayı hangisidir?", c:["28","27","29","30"], a:"26 ile 29 arasında 27 ve 28 vardır. Bunlardan çift olan 28'dir."},
+       {s:"Hangi sıralama küçükten büyüğedir?", c:["38, 45, 54","54, 45, 38","45, 38, 54","38, 54, 45"], a:"Küçükten büyüğe: 38, 45, 54."},
+       {s:"Kuyrukta Ece beşinci sıradadır. Ece'nin önünde kaç kişi vardır?", c:["4","5","6","3"], a:"Beşinci olan kişinin önünde 4 kişi bulunur."},
+       {s:"Yarışta Can üçüncü oldu. Ali, Can'dan hemen önce bitirdi. Ali kaçıncı oldu?", c:["İkinci","Dördüncü","Üçüncü","Birinci"], a:"Can'dan hemen önce bitiren ikinci olur."},
+       {s:"3, 7 ve 5 rakamlarından ikisini (her birini en fazla bir kez) kullanarak yazılabilecek en büyük iki basamaklı sayı kaçtır?", c:["75","73","57","37"], a:"En büyük iki rakam 7 ve 5'tir. Büyük rakam onlar basamağına yazılır: 75."},
+       {s:"Birler basamağı 4, onlar basamağı birler basamağından 3 fazla olan sayı hangisidir?", c:["74","71","47","44"], a:"Onlar basamağı 4 + 3 = 7'dir. Sayı 74'tür."}
+     ]
+    },
     {id:"mat2-yuvarlama-oruntu", ad:"Yuvarlama ve Sayı Örüntüleri", e:"🎯",
      anlat:[
        {b:"En yakın onluk", m:"Bir sayıyı en yakın onluğa yuvarlarken birlik basamağına bakarız. Sayı hangi onluğa daha yakınsa ona yuvarlarız."},
@@ -45,6 +67,29 @@ HW.add({ders:"matematik", sinif:2, uniteler:[
        {s:"Bir kitapta 38 sayfa var. Öğretmen sayfa sayısını en yakın onluğa yuvarlamamızı istedi. Cevap kaçtır?", c:["40","30","38","35"], a:"Birler basamağı 8'dir. Yukarı yuvarlarız: 40."}
      ],
      uret:["yuvarla",100]
+    },
+    {id:"mat2-ritmik-sayma", ad:"Ritmik Sayma", e:"🪜",
+     anlat:[
+       {b:"Atlayarak sayma", m:"Sayıları 2'şer, 3'er, 4'er, 5'er, 10'ar atlayarak sayabiliriz. Buna ritmik sayma denir.", o:"5'er: 5, 10, 15, 20, 25"},
+       {b:"Çarpmaya hazırlık", m:"Ritmik sayma, aynı sayıyı tekrar tekrar toplamaktır. 3'er sayarsak 3, 6, 9, 12 olur.", o:"3 + 3 + 3 + 3 = 12"},
+       {b:"Geriye doğru sayma", m:"Ritmik saymayı geriye doğru da yapabiliriz. Her adımda aynı sayıyı çıkarırız.", o:"10'ar geriye: 80, 70, 60, 50"},
+       {b:"Sayıların özelliği", m:"2'şer sayarken sayılar hep çift olur. 5'er sayarken sayılar 0 ya da 5 ile biter."}
+     ],
+     ipucu:"Ritmik sayma, merdiven çıkmak gibidir: her basamakta aynı kadar atlarsın!",
+     kartlar:[["3'er: 3, 6, 9, ?","12"],["4'er: 4, 8, 12, ?","16"],["5'er sayarken 35'ten sonra","40"],["10'ar geri sayarken 70'ten sonra","60"],["2'şer sayarken 18'den sonra","20"],["5 + 5 + 5 = ?","15"],["Ritmik sayma neye hazırlar?","Çarpmaya"]],
+     sorular:[
+       {s:"3, 6, 9, ? Sıradaki sayı kaçtır?", c:["12","10","11","13"], a:"Her adımda 3 artar. 9'dan sonra 12 gelir."},
+       {s:"5'er ritmik sayarken 35'ten sonra hangi sayı gelir?", c:["40","36","45","30"], a:"35 + 5 = 40."},
+       {s:"10'ar geriye doğru sayarken 70'ten sonra hangi sayı gelir?", c:["60","80","69","50"], a:"70 − 10 = 60."},
+       {s:"4, 8, 12, 16, ? Sıradaki sayı kaçtır?", c:["20","18","24","19"], a:"Her adımda 4 artar. 16 + 4 = 20."},
+       {s:"Her kutuda 5 kalem var. 4 kutuda kaç kalem vardır?", c:["20","9","25","15"], a:"Beşer sayarız: 5, 10, 15, 20."},
+       {s:"2'şer ritmik sayarken hangi sayı söylenmez?", c:["15","14","16","12"], a:"2'şer sayarken çift sayılar söylenir. 15 tek sayıdır."},
+       {s:"3'er ritmik sayarken 18'den önce hangi sayı söylenir?", c:["15","16","17","12"], a:"18 − 3 = 15."},
+       {s:"Hangi sayı 5'er ritmik sayarken söylenir?", c:["45","43","47","44"], a:"5'er sayarken sayılar 0 ya da 5 ile biter. 45 söylenir."},
+       {s:"Her sırada 4 öğrenci oturuyor. 5 sırada kaç öğrenci oturur?", c:["20","9","16","24"], a:"4'er sayarız: 4, 8, 12, 16, 20."},
+       {s:"Elif 8'den başlayıp 4'er ritmik sayıyor: 8, 12, 16... Kaçıncı söylediği sayı 24 olur?", c:["5","4","6","3"], a:"8 (1.), 12 (2.), 16 (3.), 20 (4.), 24 (5.). Beşinci sayı 24'tür."}
+     ],
+     uret:["ritmik",3]
     }
   ]},
   {ad:"Dört İşlem", konular:[
@@ -140,6 +185,29 @@ HW.add({ders:"matematik", sinif:2, uniteler:[
      ],
      uret:["carp",5]
     },
+    {id:"mat2-carpim-tablosu", ad:"Çarpım Tablosu: 2, 3, 4, 5 ve 10", e:"✖️",
+     anlat:[
+       {b:"2 ve 5 ile çarpma", m:"2'nin katları 2, 4, 6, 8... diye gider. 5'in katları 5, 10, 15, 20... diye gider.", o:"2 × 6 = 12 ve 5 × 7 = 35"},
+       {b:"3 ve 4 ile çarpma", m:"3'er ve 4'er ritmik sayarak çarpımı buluruz.", o:"3 × 4 = 12 (3, 6, 9, 12) ve 4 × 5 = 20"},
+       {b:"10 ile çarpma", m:"Bir sayıyı 10 ile çarpınca sayının sağına 0 yazarız.", o:"10 × 6 = 60"},
+       {b:"Yer değiştirme", m:"Çarpmada çarpanların yeri değişirse sonuç değişmez. Böylece tabloyu öğrenmek kolaylaşır.", o:"3 × 4 = 4 × 3 = 12"}
+     ],
+     ipucu:"5'in katları 0 ya da 5 ile biter. 10 ile çarparken sağa sıfır ekle!",
+     kartlar:[["2 × 6","12"],["3 × 7","21"],["4 × 8","32"],["5 × 9","45"],["10 × 7","70"],["3 × 4 ile 4 × 3","Aynı sonuç"],["5 × 0","0"]],
+     sorular:[
+       {s:"3 × 4 = ?", c:["12","7","9","16"], a:"3, 6, 9, 12 diye sayarız. 3 × 4 = 12."},
+       {s:"5 × 6 = ?", c:["30","11","25","35"], a:"5, 10, 15, 20, 25, 30. 5 × 6 = 30."},
+       {s:"10 × 7 = ?", c:["70","17","700","60"], a:"10 ile çarpınca sağa 0 yazarız: 70."},
+       {s:"4 × 5 = ?", c:["20","9","25","24"], a:"4, 8, 12, 16, 20. 4 × 5 = 20."},
+       {s:"2 × 9 = ?", c:["18","11","16","20"], a:"2'şer sayarız: 2, 4, ... 18. 2 × 9 = 18."},
+       {s:"Her pakette 4 balon var. 6 pakette kaç balon vardır?", c:["24","10","20","28"], a:"4 × 6 = 24 balon."},
+       {s:"Her kutuda 5 kalem var. 8 kutuda kaç kalem vardır?", c:["40","13","35","45"], a:"5 × 8 = 40 kalem."},
+       {s:"3 × 8 = 8 × ▢ olması için kutuya hangi sayı gelmelidir?", c:["3","8","24","5"], a:"Çarpanların yeri değişince sonuç değişmez. 3 × 8 = 8 × 3."},
+       {s:"Bir otobüste 10 sıra var, her sırada 3 kişi oturuyor. Otobüste kaç kişi oturur?", c:["30","13","20","33"], a:"10 × 3 = 30 kişi."},
+       {s:"Bir sayıyı 5 ile çarpınca 35 buluyoruz. Bu sayı kaçtır?", c:["7","30","40","6"], a:"5 × 7 = 35 olduğundan sayı 7'dir."}
+     ],
+     uret:["carp",5]
+    },
     {id:"mat2-bolme", ad:"Bölme İşlemi", e:"➗",
      anlat:[
        {b:"Paylaştırma", m:"Bir grubu eşit paylara ayırmaya bölme denir. İşareti ÷ dir.", o:"12 şekeri 3 kişiye paylaştırınca 12 ÷ 3 = 4"},
@@ -160,6 +228,29 @@ HW.add({ders:"matematik", sinif:2, uniteler:[
        {s:"12 kurabiyeyi 3 tabağa eşit paylaştırdık. Her tabakta kaç kurabiye olur?", c:["4","9","15","36"], a:"12 ÷ 3 = 4."},
        {s:"Hangi işlemin sonucu 4'tür?", c:["16 ÷ 4","8 ÷ 4","20 ÷ 4","12 ÷ 4"], a:"16 ÷ 4 = 4. Diğerleri 2, 5 ve 3 eder."},
        {s:"Ece 20 çiçeği 4 vazoya eşit koydu. Sonra bir vazodan 2 çiçek aldı. O vazoda kaç çiçek kaldı?", c:["3","5","7","18"], a:"Önce 20 ÷ 4 = 5. Sonra 5 − 2 = 3."}
+     ],
+     uret:["bol",5]
+    },
+    {id:"mat2-carpma-bolme-problem", ad:"Çarpma ve Bölme Problemleri", e:"🧮",
+     anlat:[
+       {b:"Çarpma problemleri", m:"Eşit sayıda şeyden oluşan gruplar varsa toplamı çarparak buluruz.", o:"4 tabakta 5'er kurabiye: 4 × 5 = 20"},
+       {b:"Bölme problemleri", m:"Bir çokluğu eşit paylaştırırken ya da eşit gruplara ayırırken bölme yaparız.", o:"12 bilye 3 kişiye: 12 ÷ 3 = 4"},
+       {b:"Çarpma ve bölme", m:"Çarpma ile bölme birbirinin tersidir. 3 × 4 = 12 ise 12 ÷ 3 = 4 ve 12 ÷ 4 = 3 olur."},
+       {b:"Problem çözme adımları", m:"Önce soruyu oku, ne istendiğini bul, işlemi seç, sonucu yaz ve kontrol et."}
+     ],
+     ipucu:"Eşit gruplar varsa ÇARP, eşit paylaşıyorsan BÖL!",
+     kartlar:[["12 ÷ 3","4"],["20 ÷ 4","5"],["18 ÷ 2","9"],["5 × 4","20"],["30 ÷ 10","3"],["Eşit paylaşma hangi işlemdir?","Bölme"],["Eşit gruplar hangi işlemdir?","Çarpma"]],
+     sorular:[
+       {s:"Bir sepette 3 elma var. 4 sepette kaç elma vardır?", c:["12","7","9","15"], a:"3 × 4 = 12 elma."},
+       {s:"12 şeker 4 çocuğa eşit paylaştırılırsa her çocuğa kaç şeker düşer?", c:["3","8","4","16"], a:"12 ÷ 4 = 3 şeker."},
+       {s:"Bir sınıfta 5 sıra var. Her sırada 2 öğrenci oturuyor. Sınıfta kaç öğrenci vardır?", c:["10","7","25","12"], a:"5 × 2 = 10 öğrenci."},
+       {s:"20 kalem 5 kutuya eşit dağıtılırsa her kutuya kaç kalem düşer?", c:["4","15","5","25"], a:"20 ÷ 5 = 4 kalem."},
+       {s:"3 × 6 = 18 olduğuna göre 18 ÷ 3 kaçtır?", c:["6","15","21","9"], a:"Bölme çarpmanın tersidir: 18 ÷ 3 = 6."},
+       {s:"Her torbada 5 bilye var. Toplam 30 bilye varsa kaç torba vardır?", c:["6","25","35","5"], a:"30 ÷ 5 = 6 torba."},
+       {s:"Ayşe 18 çiçeği 2 vazoya eşit olarak koydu. Bir vazoda kaç çiçek vardır?", c:["9","16","20","8"], a:"18 ÷ 2 = 9 çiçek."},
+       {s:"Bir kitap 4 liradır. 5 kitap kaç lira eder?", c:["20","9","25","16"], a:"4 × 5 = 20 lira."},
+       {s:"Mert 10 sayfalık kitabı her gün 2 sayfa okuyarak kaç günde bitirir?", c:["5","8","12","20"], a:"10 ÷ 2 = 5 gün."},
+       {s:"Bir pastane 3 tepside 6'şar kurabiye pişirdi. 8 kurabiye satıldı. Kaç kurabiye kaldı?", c:["10","12","18","8"], a:"3 × 6 = 18 kurabiye var. 18 − 8 = 10 kurabiye kaldı."}
      ],
      uret:["bol",5]
     },
@@ -210,6 +301,50 @@ HW.add({ders:"matematik", sinif:2, uniteler:[
        {s:"Kelebeğin bir kanadında 5 benek var. Kelebek simetrik olduğuna göre diğer kanadında kaç benek vardır?", c:["5","10","0","1"], a:"Simetride iki yan aynıdır. Diğer kanatta da 5 benek vardır."}
      ]
     },
+    {id:"mat2-uzunluk", ad:"Uzunluk Ölçme: Metre ve Santimetre", e:"📏",
+     anlat:[
+       {b:"Metre", m:"Uzun mesafeleri metre (m) ile ölçeriz. Oda boyu, bahçe uzunluğu ve yol metreyle ölçülür."},
+       {b:"Santimetre", m:"Kısa uzunlukları santimetre (cm) ile ölçeriz. Silgi, kalem ve defter santimetreyle ölçülür.", o:"Bir kalem yaklaşık 15 cm uzunluğundadır."},
+       {b:"Metre ve santimetre", m:"1 metre, 100 santimetredir. Metreyi santimetreye çevirirken 100 ile çarparız.", o:"2 m = 200 cm"},
+       {b:"Cetvelle ölçme", m:"Cetvelle ölçerken 0 çizgisinden başlarız. Bitiş çizgisinin sayısı uzunluğu verir. Başlangıç 0 değilse iki sayının farkını alırız."}
+     ],
+     ipucu:"1 metre = 100 santimetre. Kısa şeyler cm ile, uzun şeyler m ile ölçülür!",
+     kartlar:[["1 m kaç cm'dir?","100 cm"],["2 m kaç cm'dir?","200 cm"],["Kalemi neyle ölçeriz?","cm ile"],["Odanın boyunu neyle ölçeriz?","m ile"],["300 cm kaç m'dir?","3 m"],["Cetvelde nereden başlarız?","0'dan"]],
+     sorular:[
+       {s:"1 metre kaç santimetredir?", c:["100","10","1000","50"], a:"1 m = 100 cm."},
+       {s:"Hangisini ölçmek için santimetre kullanmak daha uygundur?", c:["Silgi","Okul bahçesi","Yolun uzunluğu","Sınıfın eni"], a:"Silgi kısa bir nesnedir, cm ile ölçülür."},
+       {s:"3 m kaç santimetredir?", c:["300","30","3000","103"], a:"3 × 100 = 300 cm."},
+       {s:"Bir kalemin başı cetvelde 0'dadır, ucu 12'dedir. Kalem kaç cm'dir?", c:["12","0","10","24"], a:"0'dan 12'ye kadar 12 cm'dir."},
+       {s:"400 cm kaç metredir?", c:["4","40","14","400"], a:"100 cm = 1 m olduğundan 400 cm = 4 m."},
+       {s:"Hangisi en uzundur?", c:["2 m","150 cm","190 cm","100 cm"], a:"2 m = 200 cm'dir. En uzun budur."},
+       {s:"Boyu 120 cm olan Ali, boyu 1 m olan kardeşinden kaç cm uzundur?", c:["20","21","100","1"], a:"1 m = 100 cm. 120 − 100 = 20 cm."},
+       {s:"Her biri 50 cm olan iki ip uç uca eklenirse kaç metre olur?", c:["1","2","50","100"], a:"50 + 50 = 100 cm. 100 cm = 1 m."},
+       {s:"Bir tahta 2 m uzunluğundadır. Tahtadan 30 cm kesildi. Geriye kaç cm kaldı?", c:["170","30","230","70"], a:"2 m = 200 cm. 200 − 30 = 170 cm."},
+       {s:"Cetvelde 3. santimetreden başlayan bir çizgi 11. santimetrede bitiyor. Çizgi kaç cm uzunluğundadır?", c:["8","14","11","3"], a:"Başlangıç 0 değil. 11 − 3 = 8 cm."}
+     ]
+    },
+    {id:"mat2-tartma-sivi", ad:"Tartma ve Sıvı Ölçme: Kilogram, Litre", e:"⚖️",
+     anlat:[
+       {b:"Kilogram", m:"Tartma birimi kilogramdır (kg). Meyve, sebze, un ve şeker kilogramla tartılır.", o:"2 kg elma, 3 kg portakal"},
+       {b:"Yarım kilogram", m:"Yarım kilogram, 1 kg'ın yarısıdır. İki tane yarım kilogram 1 kg eder.", o:"Yarım kg + yarım kg = 1 kg"},
+       {b:"Litre", m:"Sıvı ölçme birimi litredir (L). Su, süt, ayran, meyve suyu litreyle ölçülür.", o:"1 L süt, 2 L su"},
+       {b:"Yarım litre", m:"Yarım litre, 1 litrenin yarısıdır. İki tane yarım litre 1 litre eder."}
+     ],
+     ipucu:"Tartarken kilogram, sıvıyı ölçerken litre!",
+     kartlar:[["Tartma birimi","Kilogram (kg)"],["Sıvı ölçme birimi","Litre (L)"],["Yarım kg + yarım kg","1 kg"],["Yarım L + yarım L","1 litre"],["Un hangi birimle tartılır?","kg ile"],["Süt hangi birimle ölçülür?","Litreyle"]],
+     sorular:[
+       {s:"Hangisi tartma birimidir?", c:["Kilogram","Litre","Metre","Saat"], a:"Tartma birimi kilogramdır."},
+       {s:"Hangisi sıvı ölçme birimidir?", c:["Litre","Kilogram","Santimetre","Dakika"], a:"Sıvıları litreyle ölçeriz."},
+       {s:"Pazardan 2 kg elma ve 3 kg portakal aldık. Toplam kaç kg meyve aldık?", c:["5","6","1","23"], a:"2 + 3 = 5 kg."},
+       {s:"İki tane yarım kilogramlık şeker birleştirilirse kaç kg olur?", c:["1 kg","2 kg","3 kg","Yarım kg"], a:"Yarım kg + yarım kg = 1 kg."},
+       {s:"Sürahide 2 L su var. 1 L su içilirse kaç L su kalır?", c:["1","3","2","0"], a:"2 − 1 = 1 L."},
+       {s:"Ali'nin çantası 3 kg, Ece'nin çantası 5 kg'dır. Hangi çanta daha ağırdır?", c:["Ece'nin","Ali'nin","İkisi eşit","Bilinemez"], a:"5 kg, 3 kg'dan fazladır."},
+       {s:"Bir pakette 1 L süt var. 4 paket kaç litre süt eder?", c:["4","5","1","14"], a:"1 × 4 = 4 L."},
+       {s:"Hangisi litre ile ölçülür?", c:["Süt","Un","Boy","Süre"], a:"Süt bir sıvıdır, litreyle ölçülür."},
+       {s:"Her biri 2 kg olan 4 çuval patates kaç kg eder?", c:["8","6","24","2"], a:"2 × 4 = 8 kg."},
+       {s:"Annem 5 L su aldı. 2 L suyu içtik, 1 L suyla çay yaptık. Kaç litre su kaldı?", c:["2","3","4","1"], a:"2 + 1 = 3 L kullanıldı. 5 − 3 = 2 L kaldı."}
+     ]
+    },
     {id:"mat2-olcme", ad:"Uzunluk, Tartma ve Sıvı Ölçme", e:"📏",
      anlat:[
        {b:"Uzunluk", m:"Uzunluğu cetvel ve metreyle ölçeriz. Metre m, santimetre cm ile gösterilir. 1 m = 100 cm'dir.", o:"1 m = 100 cm"},
@@ -234,6 +369,29 @@ HW.add({ders:"matematik", sinif:2, uniteler:[
     }
   ]},
   {ad:"Günlük Yaşam ve Veri", konular:[
+    {id:"mat2-saat-takvim", ad:"Saat ve Takvim: Yarım, Çeyrek, Dakika", e:"⏰",
+     anlat:[
+       {b:"Tam, buçuk, çeyrek", m:"Yelkovan 12'deyse saat tamdır, 6'daysa buçuktur. Yelkovan 3'teyse saati çeyrek geçiyordur, 9'daysa saate çeyrek vardır.", o:"Akrep 5'te, yelkovan 3'te: saat 5'i çeyrek geçiyor."},
+       {b:"Saat ve dakika", m:"1 saat 60 dakikadır. Yarım saat 30 dakika, çeyrek saat 15 dakikadır.", o:"30 dakika + 15 dakika = 45 dakika"},
+       {b:"Takvim", m:"Bir haftada 7 gün, bir yılda 12 ay vardır. Ayların gün sayısı farklıdır. Şubat en kısa aydır."},
+       {b:"Süre bulma", m:"Bir işin başladığı ve bittiği saatlere bakarak kaç saat sürdüğünü buluruz.", o:"Saat 9'dan 10'a 1 saat geçer."}
+     ],
+     ipucu:"60 dakika = 1 saat, 30 dakika = yarım saat, 15 dakika = çeyrek saat!",
+     kartlar:[["1 saat kaç dakikadır?","60 dakika"],["Yarım saat","30 dakika"],["Çeyrek saat","15 dakika"],["1 hafta","7 gün"],["1 yıl","12 ay"],["Yelkovan 3'teyse","Çeyrek geçiyor"],["Yelkovan 9'daysa","Çeyrek var"]],
+     sorular:[
+       {s:"1 saat kaç dakikadır?", c:["60","30","100","12"], a:"1 saat = 60 dakikadır."},
+       {s:"Yarım saat kaç dakikadır?", c:["30","15","60","50"], a:"60 dakikanın yarısı 30 dakikadır."},
+       {s:"Çeyrek saat kaç dakikadır?", c:["15","25","10","45"], a:"Çeyrek saat, saatin dörtte biridir: 15 dakika."},
+       {s:"Yelkovan 6'yı gösterirken saat nasıldır?", c:["Buçuk","Tam","Çeyrek geçiyor","Çeyrek var"], a:"Yelkovan 6'dayken saat buçuktur."},
+       {s:"Akrep 4'te, yelkovan 3'tedir. Saat kaçtır?", c:["4'ü çeyrek geçiyor","4 buçuk","4'e çeyrek var","3'ü çeyrek geçiyor"], a:"Yelkovan 3'teyse çeyrek geçiyordur. Akrep 4'ü gösteriyor."},
+       {s:"Ders saat 9'da başlayıp 10'da bitiyor. Ders kaç saat sürer?", c:["1 saat","2 saat","10 saat","9 saat"], a:"9'dan 10'a 1 saat geçer."},
+       {s:"Yılın en kısa ayı hangisidir?", c:["Şubat","Mart","Nisan","Ocak"], a:"Şubat 28 ya da 29 gün çeker."},
+       {s:"Film 2 saat sürüyor. Saat 5'te başlayan film saat kaçta biter?", c:["7","3","8","6"], a:"5 + 2 = 7. Film saat 7'de biter."},
+       {s:"Ece yarım saat oynadı, sonra 15 dakika dinlendi. Toplam kaç dakika geçti?", c:["45","15","30","60"], a:"30 + 15 = 45 dakika."},
+       {s:"Saat 3 buçukta başlayan çizgi film yarım saat sürüyor. Film saat kaçta biter?", c:["4","3","5","4 buçuk"], a:"3 buçuktan yarım saat sonra saat tam 4 olur."}
+     ],
+     uret:["saat",12]
+    },
     {id:"mat2-para-zaman", ad:"Paralarımız ve Zaman", e:"💰",
      anlat:[
        {b:"Paralarımız", m:"Paramız Türk lirasıdır. 1 TL, 100 kuruştur. Madeni ve kâğıt paralar vardır."},
@@ -257,6 +415,29 @@ HW.add({ders:"matematik", sinif:2, uniteler:[
      ],
      uret:["para",100]
     },
+    {id:"mat2-para-alisveris", ad:"Paralarımız: TL, Kuruş ve Alışveriş", e:"💰",
+     anlat:[
+       {b:"TL ve kuruş", m:"Paramızın birimi Türk lirasıdır (TL). 1 TL = 100 kuruştur. 50 kuruş yarım liradır."},
+       {b:"Kâğıt ve madeni paralar", m:"Kâğıt paralar 5, 10, 20, 50, 100, 200 TL'dir. Madeni paralar 1 TL ve kuruş değerindedir."},
+       {b:"Alışverişte toplama", m:"Aldığımız şeylerin fiyatlarını toplayarak ödeyeceğimiz tutarı buluruz.", o:"Kalem 6 TL + silgi 3 TL = 9 TL"},
+       {b:"Para üstü", m:"Verdiğimiz paradan fiyatı çıkarırsak para üstünü buluruz.", o:"20 TL verip 15 TL'lik kitap alırsan 5 TL para üstü alırsın."}
+     ],
+     ipucu:"100 kuruş = 1 TL. Para üstü = verdiğin para − fiyat!",
+     kartlar:[["1 TL kaç kuruştur?","100 kuruş"],["50 kuruş","Yarım TL"],["10 TL verip 7 TL harcarsan","3 TL para üstü"],["Para üstü nasıl bulunur?","Verilen − fiyat"],["2 TL kaç kuruştur?","200 kuruş"],["Alışveriş toplamı hangi işlemdir?","Toplama"]],
+     sorular:[
+       {s:"1 TL kaç kuruştur?", c:["100","10","50","1000"], a:"1 TL = 100 kuruş."},
+       {s:"50 kuruş hangi paranın yarısıdır?", c:["1 TL","2 TL","10 TL","5 TL"], a:"100 kuruşun yarısı 50 kuruştur."},
+       {s:"Kalem 6 TL, silgi 3 TL'dir. İkisi birlikte kaç TL eder?", c:["9","3","18","63"], a:"6 + 3 = 9 TL."},
+       {s:"20 TL verip 15 TL'lik kitap alan kişi kaç TL para üstü alır?", c:["5","35","15","10"], a:"20 − 15 = 5 TL."},
+       {s:"2 TL kaç kuruş eder?", c:["200","20","2000","102"], a:"2 × 100 = 200 kuruş."},
+       {s:"Hangisi daha çoktur?", c:["1 TL","75 kuruş","50 kuruş","99 kuruş"], a:"1 TL = 100 kuruştur. 99 kuruştan bile fazladır."},
+       {s:"Dondurma 8 TL, bisküvi 5 TL, su 2 TL'dir. Üçü kaç TL eder?", c:["15","13","7","10"], a:"8 + 5 + 2 = 15 TL."},
+       {s:"50 TL'm var. 32 TL'lik oyuncak alırsam kaç TL'm kalır?", c:["18","82","28","22"], a:"50 − 32 = 18 TL."},
+       {s:"5 TL ve 50 kuruşluk paranın değeri kaç kuruştur?", c:["550","505","55","5050"], a:"5 TL = 500 kuruş. 500 + 50 = 550 kuruş."},
+       {s:"Her biri 4 TL olan 3 simit alıp 20 TL verdim. Kaç TL para üstü aldım?", c:["8","12","7","17"], a:"3 × 4 = 12 TL tutar. 20 − 12 = 8 TL para üstü."}
+     ],
+     uret:["para",100]
+    },
     {id:"mat2-veri-problem", ad:"Veri Toplama ve Problem Çözme", e:"📊",
      anlat:[
        {b:"Çetele", m:"Veri toplarken çetele tutarız. Her cevap için bir çizgi çekeriz. Beşinci çizgi, dört çizgiyi çapraz keser.", o:"Kedi: |||| = 4"},
@@ -277,6 +458,28 @@ HW.add({ders:"matematik", sinif:2, uniteler:[
        {s:"Ali'nin 45 bilyesi vardı. 18 bilyesini arkadaşına verdi. Kaç bilyesi kaldı?", c:["27","63","37","33"], a:"45 − 18 = 27."},
        {s:"Bir markette 36 kırmızı, 28 yeşil elma var. Toplam kaç elma vardır?", c:["64","54","8","62"], a:"6 + 8 = 14, 4 yaz 1 el. 3 + 2 + 1 = 6. Sonuç 64."},
        {s:"Ece her gün 4 sayfa okuyor. 5 günde 20 sayfa okudu. Kitap 35 sayfa ise kaç sayfası kaldı?", c:["15","20","55","9"], a:"35 − 20 = 15 sayfa kaldı."}
+     ]
+    },
+    {id:"mat2-veri-tablo", ad:"Tablo ve Nesne Grafiği", e:"📊",
+     anlat:[
+       {b:"Veri toplama", m:"Sorular sorarak bilgi toplarız. Topladığımız bilgilere veri denir.", o:"Sınıfta en sevilen meyveyi sormak"},
+       {b:"Çetele ve tablo", m:"Her cevap için bir çizgi çekeriz, 5. çizgiyi çapraz çizeriz. Sayıları bir tabloya yazarız.", o:"Elma 6, Muz 4, Çilek 8"},
+       {b:"Nesne grafiği", m:"Her veri için bir resim ya da şekil koyarız. En çok olanın sırası en uzun olur.", o:"🍎🍎🍎🍎 elma, 🍌🍌 muz"},
+       {b:"Yorumlama", m:"Tabloya ve grafiğe bakarak en çok, en az ve kaç fazla gibi soruları yanıtlarız."}
+     ],
+     ipucu:"Çetele tut, tabloya yaz, grafiğe çiz, yorum yap!",
+     kartlar:[["Topladığımız bilgilere ne denir?","Veri"],["Çetelede 5. çizgi","Çapraz çizilir"],["Sayıları yazdığımız yer","Tablo"],["Resimli grafik","Nesne grafiği"],["En uzun sıra neyi gösterir?","En çok olanı"],["En kısa sıra neyi gösterir?","En az olanı"]],
+     sorular:[
+       {s:"Topladığımız bilgilere ne denir?", c:["Veri","Çarpım","Cetvel","Takvim"], a:"Toplanan bilgilere veri denir."},
+       {s:"Tablo: Elma 6, Muz 4, Çilek 8. En çok sevilen meyve hangisidir?", c:["Çilek","Elma","Muz","Armut"], a:"8, 6 ve 4'ten büyüktür. En çok Çilek seçilmiştir."},
+       {s:"Tablo: Elma 6, Muz 4, Çilek 8. Her öğrenci bir meyve seçtiyse kaç öğrenciye soru sorulmuştur?", c:["18","14","12","8"], a:"6 + 4 + 8 = 18 öğrenci."},
+       {s:"Tablo: Elma 6, Muz 4, Çilek 8. Çilek, muzdan kaç oy fazladır?", c:["4","12","2","14"], a:"8 − 4 = 4 oy fazladır."},
+       {s:"⚽⚽⚽⚽⚽ 🏀🏀🏀 Futbolu seçenler basketbolu seçenlerden kaç kişi fazladır?", c:["2","8","3","5"], a:"5 − 3 = 2 kişi fazladır."},
+       {s:"Çetelede bir grupta 5 çizgi, bir grupta 3 çizgi var. Kaç kişi oy vermiştir?", c:["8","5","2","15"], a:"5 + 3 = 8 kişi."},
+       {s:"Grafikte en kısa sıra neyi gösterir?", c:["En az olanı","En çok olanı","Eşit olanı","Toplamı"], a:"En kısa sıra, en az olanı gösterir."},
+       {s:"Tablo: Kırmızı 7, Mavi 5, Sarı 3. Kırmızı ile Sarı arasındaki fark kaçtır?", c:["4","10","2","3"], a:"7 − 3 = 4."},
+       {s:"Tablo: Kırmızı 7, Mavi 5, Sarı 3. Mavi ve Sarı birlikte kaç kişidir?", c:["8","12","10","2"], a:"5 + 3 = 8 kişi."},
+       {s:"Tablo: Kırmızı 7, Mavi 5, Sarı 3. Her kişi bir renk seçtiyse kaç kişiye soruldu?", c:["15","12","10","7"], a:"7 + 5 + 3 = 15 kişi."}
      ]
     }
   ]}

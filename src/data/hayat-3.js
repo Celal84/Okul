@@ -22,6 +22,27 @@ HW.add({ders:"hayat", sinif:3, uniteler:[
        {s:"Okul çalışanlarına karşı nasıl davranmalıyız?", c:["Onların emeğine saygı göstermeliyiz","Onlara emir vermeliyiz","Onları görmezden gelmeliyiz","Onlardan sakınmalıyız"], a:"Her görev emek ister; saygı göstermek gerekir."}
      ]
     },
+    {id:"hb3-duygu-catisma", ad:"Duygularım, Empati ve Çatışma Çözme", e:"💬",
+     anlat:[
+       {b:"Duygularımı tanırım", m:"Mutluluk, öfke, korku ve üzüntü duygulardır. Her duygunun bir nedeni vardır. Duygularımı tanımak onları yönetmeyi kolaylaştırır.", o:"Kızınca derin nefes alırım."},
+       {b:"Empati", m:"Empati, başkasının duygusunu anlamaya çalışmaktır. Arkadaşım üzgünse yerine kendimi koyarım ve ona nasıl yardım edeceğimi düşünürüm.", o:"Üzgün arkadaşımı dinlerim."},
+       {b:"Çatışma ve çözüm", m:"Arkadaşlarla anlaşmazlık olabilir. Önce sakinleşirim, sonra düşüncemi 'ben dili' ile söylerim, karşımdakini dinlerim ve ortak çözüm ararım.", o:"'Böyle yapınca üzülüyorum.' derim."},
+       {b:"Zorbalıkla başa çıkma", m:"Zorbalık bilerek ve tekrar tekrar zarar vermektir. Zorbalığa tanık olursam seyretmem; güvenli bir yetişkine söylerim.", o:"Öğretmenime haber veririm."}
+     ],
+     ipucu:"Sakinleş, dinle, çözüm bul! Empati: Kendini onun yerine koy.",
+     kartlar:[["Başkasını anlamaya çalışmak","Empati"],["Bilerek tekrar eden zarar","Zorbalık"],["Çatışmada ilk adım","Sakinleşmek"],["'Ben dili' nedir?","Duygumu nazikçe söylemek"],["Zorbalığa tanık olunca ne yaparız?","Yetişkine söyleriz"],["Duygu örneği","Üzüntü"]],
+     sorular:[
+       {s:"Hangisi empati örneğidir?", c:["Üzülen arkadaşını dinlemek","Arkadaşına gülmek","Arkadaşını görmezden gelmek","Arkadaşıyla alay etmek"], a:"Empati, karşımızdakinin duygusunu anlamaktır."},
+       {s:"Hangisi bir duygudur?", c:["Korku","Masa","Kalem","Pencere"], a:"Korku bir duygudur."},
+       {s:"Kızgın olduğunda ilk ne yapmalısın?", c:["Sakinleşmeye çalışmalıyım","Bağırmalıyım","Eşyayı atmalıyım","Vurmalıyım"], a:"Sakinleşmek çözüme giden ilk adımdır."},
+       {s:"'Ben dili' hangisidir?", c:["'Böyle yapınca üzülüyorum.'","'Sen hep böylesin!'","'Seni sevmiyorum!'","'Hep senin suçun!'"], a:"Ben dili suçlamadan duyguyu anlatır."},
+       {s:"Zorbalık nedir?", c:["Bilerek ve tekrar tekrar zarar vermek","Tek seferlik kazara çarpmak","Oyun kuralına uymak","Arkadaşa yardım etmek"], a:"Zorbalık bilerek ve tekrar eden zarar verici davranıştır."},
+       {s:"Zorbalığı gördün. Ne yapmalısın?", c:["Güvendiğim bir yetişkine söylemeliyim","Alay edenlere katılmalıyım","Hiçbir şey olmamış gibi davranmalıyım","Kendim intikam almalıyım"], a:"Yetişkine bildirmek zorbalığı durdurmaya yardım eder."},
+       {s:"Anlaşmazlıkta hangisi çözüm sağlar?", c:["Karşımdakini dinleyip ortak yol bulmak","Küsmek","Bağırmak","Eşyasını saklamak"], a:"Dinlemek ve ortak çözüm aramak çatışmayı çözer."},
+       {s:"Arkadaşın oyunda kaybedince ağlıyor. Ne yaparsın?", c:["Onu teselli ederim","Alay ederim","Oyundan çıkarırım","Yanına gitmem"], a:"Empati kurup destek oluruz."},
+       {s:"Duygularımızı yönetmek için hangisi işe yarar?", c:["Derin nefes almak","Eşya kırmak","Birini itmek","Kapıyı çarpmak"], a:"Derin nefes sakinleşmeye yardım eder."},
+       {s:"Farklı fikre sahip arkadaşına nasıl davranırsın?", c:["Saygıyla dinlerim","Alay ederim","Küserim","Onu dışlarım"], a:"Farklı düşüncelere saygı göstermek hoşgörüdür."}
+     ]},
     {id:"hb3-ben-aile-akraba", ad:"Ben, Ailem ve Akrabalarım", e:"🌳",
      anlat:[
        {b:"İlgi ve yeteneklerim", m:"Bir şeyi yapmaktan zevk almak ilgidir. Bir işi kolay ve iyi yapmak yetenektir. İlgi ve yeteneklerimi tanırsam hedeflerimi belirleyebilirim. Bunlar zamanla gelişir.", o:"Resim yapmayı seviyorum; boya karıştırmayı iyi yapıyorum."},
@@ -67,7 +88,28 @@ HW.add({ders:"hayat", sinif:3, uniteler:[
        {s:"Hangisi gelirdir?", c:["Annenin maaşı","Market faturası","Kira ödemesi","Okul servisi ücreti"], a:"Gelir, kazanılan paradır; diğerleri gider örnekleridir."},
        {s:"Harçlığın bitti ama yeni oyuncak almak istiyorsun. En akıllıca çözüm hangisidir?", c:["Biriktirip planlı almak","Arkadaşından çalmak","Ailene bağırmak","Borç almak"], a:"Biriktirme sabır ve planlı harcama öğretir."}
      ]
-    }
+    },
+    {id:"hb3-komsuluk-misafirlik", ad:"Komşuluk, Misafirlik ve Yardımlaşma", e:"🏘️",
+     anlat:[
+       {b:"Komşuluk", m:"Komşular yan yana yaşar. Birbirlerine selam verir, ihtiyaçları olunca yardım ederler. Gürültü yapmamak, apartmanda ortak alanı temiz tutmak komşuluğun gereğidir.", o:"Merdivenleri temiz kullanırım."},
+       {b:"Misafirlik", m:"Misafir gelince güler yüzle karşılarız. Misafirliğe gidince saygılı davranır, izin almadan eşyaya dokunmaz, el öperek veya selam verip hal hatır sorarız.", o:"Misafirde 'Elinize sağlık' derim."},
+       {b:"Yardımlaşma", m:"Yardımlaşma, birlikte güçlü olmaktır. Komşuya, arkadaşa ve ihtiyacı olana yardım ederiz. Bayramlarda ve zor günlerde dayanışma artar.", o:"Yaşlı komşuma market poşetini taşırım."},
+       {b:"Gönüllülük", m:"Karşılık beklemeden başkasına yardım etmeye gönüllülük denir. Kızılay ve belediyeler gibi kuruluşlar gönüllülerle çalışır.", o:"Okulda kitap toplama kampanyasına katılırım."}
+     ],
+     ipucu:"Komşuya selam, misafire saygı, ihtiyaç sahibine yardım: Birlikte güçlüyüz!",
+     kartlar:[["Karşılıksız yardım etmek","Gönüllülük"],["Birlikte güçlü olmak","Yardımlaşma"],["Misafir gelince nasıl karşılarız?","Güler yüzle"],["Apartmanda ortak alan","Merdiven"],["Komşuya ne veririz?","Selam"],["Afetlerde yardım eden kuruluş","Kızılay"]],
+     sorular:[
+       {s:"Komşularla ilişkide hangisi doğrudur?", c:["Selam vermek","Gece gürültü yapmak","Merdivene çöp atmak","Kapıyı çarpmak"], a:"Selam ve saygı komşuluğun gereğidir."},
+       {s:"Hangisi yardımlaşmadır?", c:["Yaşlı komşunun poşetini taşımak","Komşunun bahçesinden çiçek koparmak","Merdivende bağırmak","Komşuyu görmezden gelmek"], a:"İhtiyacı olana yardım etmek yardımlaşmadır."},
+       {s:"Karşılık beklemeden yardım etmeye ne denir?", c:["Gönüllülük","Alışveriş","Yarış","Rekabet"], a:"Gönüllüler karşılık beklemez."},
+       {s:"Misafirliğe gittiğinde ne yapmalısın?", c:["Saygılı davranmalıyım","Her yere dokunmalıyım","Eşyaları kurcalamalıyım","Bağırmalıyım"], a:"Misafirlik adabı saygılı olmayı gerektirir."},
+       {s:"Apartman merdiveni kimindir?", c:["Herkesin ortak alanıdır","Sadece alt katın","Sadece üst katın","Kimsenin değil"], a:"Ortak alanı temiz tutmak herkesin görevidir."},
+       {s:"Afetlerde yardım toplayan kuruluş hangisidir?", c:["Kızılay","Pazar yeri","Sinema","Stadyum"], a:"Kızılay afetlerde ve ihtiyaç anlarında yardım sağlar."},
+       {s:"Hangisi dayanışmayı gösterir?", c:["Birlikte kitap toplamak","Tek başına kalmak","Yardımı reddetmek","Eşyayı saklamak"], a:"Dayanışma birlikte hareket etmektir."},
+       {s:"Misafir gelince nasıl davranırız?", c:["Güler yüzle karşılarız","Odamıza kapanırız","Yüz çeviririz","Görmezden geliriz"], a:"Misafirperverlik değerimizdir."},
+       {s:"Yardımlaşmanın sonucu hangisidir?", c:["Toplumda güçlü bağlar oluşur","Herkes yalnız kalır","İşler zorlaşır","Sorunlar artar"], a:"Yardımlaşma toplumu güçlendirir."},
+       {s:"Hangisi komşuluk kuralına uygun değildir?", c:["Geceleri yüksek sesle müzik dinlemek","Selam vermek","Ortak alanı temiz tutmak","İhtiyaç olunca yardım etmek"], a:"Gürültü komşuları rahatsız eder."}
+     ]}
   ]},
   {ad:"Sağlığım ve Güvenliğim", konular:[
     {id:"hb3-saglik-beslenme", ad:"Sağlıklı Yaşam", e:"🩺",
@@ -92,6 +134,27 @@ HW.add({ders:"hayat", sinif:3, uniteler:[
        {s:"Yemekten sonra çocukların neden diş fırçası kullanması önemlidir?", c:["Besin artıkları diş çürüğüne yol açmasın diye","Daha çok yemek yemek için","Dişler uzasın diye","Ağız tadı bozulsun diye"], a:"Kalan besin artıkları çürük oluşmasına neden olur."}
      ]
     },
+    {id:"hb3-dijital-guvenlik", ad:"Dijital Dünyada Güvenlik", e:"💻",
+     anlat:[
+       {b:"Ekran süresi", m:"Telefon, tablet ve bilgisayar faydalıdır ama uzun süre kullanmak gözleri, uykuyu ve derslerimizi etkiler. Ekran süremi ailemle birlikte belirleriz.", o:"Ders ve oyun için ekran sürem sınırlı."},
+       {b:"Kişisel bilgiler", m:"Adres, telefon numarası, okul adı ve şifre gibi bilgileri internette tanımadığım kişilerle paylaşmam. Şifremi kimseye söylemem.", o:"Şifremi sadece ailemle paylaşırım."},
+       {b:"Güvenli internet", m:"İnternette aileme sormadan siteye girmem ya da bir şey indirmem. Tanımadığım biri mesaj atarsa cevap vermem. Rahatsız eden bir şey görürsem hemen bir büyüğe söylerim.", o:"Garip mesajı ailemle paylaşırım."},
+       {b:"Doğru bilgi", m:"İnternetteki her bilgi doğru olmayabilir. Bilgiyi kitaplardan ve güvenilir kaynaklardan da kontrol ederim. Başkalarına kötü söz yazmam.", o:"Bilgiyi başka kaynaktan doğrularım."}
+     ],
+     ipucu:"Bilgi paylaşma, tanımadığına cevap verme, tehlike görürsen büyüğe söyle!",
+     kartlar:[["Şifreyi kimlerle paylaşırız?","Sadece ailemizle"],["Tanımadığın kişi yazarsa?","Cevap vermeyiz"],["Rahatsız edici içerik görürsek?","Büyüğe söyleriz"],["İnternetteki bilgi hep doğru mudur?","Hayır"],["Kişisel bilgi örneği","Adres"],["Ekran süresi neyi etkiler?","Göz ve uykuyu"]],
+     sorular:[
+       {s:"Hangisi paylaşılmaması gereken bir bilgidir?", c:["Şifre","Sevdiğim renk","Hava durumu","Kitap adı"], a:"Şifre gizli tutulmalıdır."},
+       {s:"İnternette tanımadığın biri mesaj attı. Ne yaparsın?", c:["Cevap vermeyip ailemize söylerim","Adresimi veririm","Buluşmayı kabul ederim","Fotoğrafımı yollarım"], a:"Tanımadıklarla iletişim kurmamalıyız."},
+       {s:"Rahatsız edici bir içerik gördün. Ne yaparsın?", c:["Hemen bir büyüğe söylerim","Arkadaşlarımla paylaşırım","Bakmaya devam ederim","Saklarım"], a:"Bir yetişkinden yardım almak gerekir."},
+       {s:"Uzun süre ekrana bakmak neye zarar verir?", c:["Gözlere ve uykuya","Saçlara","Tırnaklara","Ayaklara"], a:"Çok ekran gözleri yorar, uykuyu bozar."},
+       {s:"Şifreni kimlerle paylaşabilirsin?", c:["Sadece ailemle","Arkadaşlarımla","Tanımadıklarımla","Herkesle"], a:"Şifreyi aile dışında paylaşmayız."},
+       {s:"İnternetteki bilgi için ne yapmalıyız?", c:["Güvenilir kaynaklarla doğrulamalıyız","Gördüğümüz her şeye inanmalıyız","Kontrol etmeden bırakmalıyız","Hemen paylaşmalıyız"], a:"Bilgi doğrulanmalıdır."},
+       {s:"Bir oyunda tanımadığın biri 'Adresin ne?' diye sordu. Ne yaparsın?", c:["Söylemem ve engellerim","Söylerim","Adresimi yazarım","Cevap beklerim"], a:"Adres gibi bilgiler paylaşılmaz."},
+       {s:"Başkasına internette nasıl davranmalıyız?", c:["Saygılı ve kibar","Kaba","Alaycı","Tehditkâr"], a:"İnternette de nezaket kuralları geçerlidir."},
+       {s:"Aileye sormadan hangisini yapmamalıyız?", c:["Bilinmeyen dosya indirmek","Ders videosu izlemek","Kitabı okumak","Resim çizmek"], a:"Bilinmeyen dosya zararlı olabilir."},
+       {s:"Sağlıklı ekran kullanımı için ne yapmalıyız?", c:["Aralar verip hareket etmeliyiz","Hiç ara vermemeliyiz","Gece boyunca oynamalıyız","Karanlıkta bakmalıyız"], a:"Ara vermek göz sağlığı için önemlidir."}
+     ]},
     {id:"hb3-trafik-guvenlik", ad:"Trafik, Kişisel Güvenlik ve Acil Durumlar", e:"🚸",
      anlat:[
        {b:"Trafik işaretleri", m:"Trafik işaretleri üç gruptur: tehlike uyarı, trafik düzenleme ve bilgi işaretleri. Dur, yaya geçidi, park yasağı işaretlerini bilirsek yolda güvende oluruz. Yayalar da sürücüler de kurallara uyar.", o:"Yaya geçidi işaretini tanırım."},
@@ -114,6 +177,27 @@ HW.add({ders:"hayat", sinif:3, uniteler:[
        {s:"Trafik ışığı yeşilken bile neden dikkat etmeliyiz?", c:["Bazı sürücüler kurala uymayabilir","Yeşil ışık bozulabilir","Kırmızı daha hızlıdır","Dikkat gerekmez"], a:"Geçmeden önce çevreyi kontrol etmek kazaları önler."}
      ]
     },
+    {id:"hb3-ilk-yardim", ad:"İlk Yardım ve Sağlık Kuruluşları", e:"🩹",
+     anlat:[
+       {b:"İlk yardım nedir?", m:"Kaza ya da ani hastalık olunca doktor gelene kadar yapılan yardıma ilk yardım denir. İlk yardımın amacı yaşamı korumak ve durumun kötüleşmesini önlemektir.", o:"Yardım çağırmak ilk adımdır."},
+       {b:"Küçük yaralanmalar", m:"Küçük kesiklerde yara temiz suyla yıkanır, kanama varsa temiz bezle hafifçe bastırılır, yara bandı ile kapatılır. Burun kanamasında dik oturup öne eğilinir.", o:"Yarayı önce temiz suyla yıkarım."},
+       {b:"Acil numaralar", m:"Ağır durumlarda 112 aranır. Adres ve olay kısaca söylenir. Telefonu kapatmadan önce görevli izin verene kadar beklenir.", o:"112'de adresimi söylerim."},
+       {b:"Sağlık kuruluşları", m:"Sağlık ocağı, aile sağlığı merkezi, hastane ve eczane sağlık kuruluşlarıdır. Doktor hastayı tedavi eder, hemşire bakım yapar, eczacı ilaç verir.", o:"İlacı eczaneden alırız."}
+     ],
+     ipucu:"Önce güvende ol, sonra 112'yi ara, yaralıyı kıpırdatma!",
+     kartlar:[["Acil durum numarası","112"],["Küçük yarayı neyle yıkarız?","Temiz suyla"],["İlacı nereden alırız?","Eczaneden"],["Doktor gelene kadar yapılan yardım","İlk yardım"],["Hastayı kim tedavi eder?","Doktor"],["Ağır yaralıya ne yapmayız?","Hareket ettirmeyiz"]],
+     sorular:[
+       {s:"Doktor gelene kadar yapılan yardıma ne denir?", c:["İlk yardım","Ders yardımı","Spor","Alışveriş"], a:"Bu yardıma ilk yardım denir."},
+       {s:"Ağır bir kaza olunca hangi numara aranır?", c:["112","155","180","1111"], a:"112 acil yardım hattıdır."},
+       {s:"Küçük bir kesik ilk önce nasıl temizlenir?", c:["Temiz suyla","Tozla","Çamurla","Toprakla"], a:"Yara temiz suyla yıkanır."},
+       {s:"Hangisi sağlık kuruluşudur?", c:["Hastane","Market","Kırtasiye","Fırın"], a:"Hastane bir sağlık kuruluşudur."},
+       {s:"İlaçlar nereden alınır?", c:["Eczaneden","Bakkaldan","Pazardan","Kantinden"], a:"İlaç eczanelerde satılır."},
+       {s:"Ağır yaralı birini ne yaparız?", c:["Gereksiz yere kıpırdatmayız","Hemen ayağa kaldırırız","Sallarız","Koşturturuz"], a:"Kıpırdatmak durumu kötüleştirebilir."},
+       {s:"112'yi aradığında ne söylemelisin?", c:["Olayı ve adresi","Sadece adını","Oyun adını","Sevdiğin rengi"], a:"Doğru adres hızlı yardım sağlar."},
+       {s:"Burun kanamasında nasıl durulur?", c:["Dik oturup öne eğilerek","Başı geriye atarak","Yatarak","Koşarak"], a:"Başı öne eğmek kanın yutulmasını önler."},
+       {s:"Kardeşin ilaç kutusunu açmak istiyor. Ne yaparsın?", c:["Büyüğe haber veririm","Ona veririm","Ona yedirir","Saklanırım"], a:"İlaçlar çocukların ulaşamayacağı yerde olmalıdır."},
+       {s:"Polisi çağırmak için hangi numara aranır?", c:["155","110","177","1111"], a:"Polis için 155 aranır."}
+     ]},
     {id:"hb3-afetler", ad:"Doğal Afetler ve Hazırlık", e:"🌋",
      anlat:[
        {b:"Doğal afetler", m:"Deprem, sel, heyelan, çığ, orman yangını ve fırtına doğal afetlerdir. Deprem yer kabuğundaki hareketlerle olur. Ülkemizde fay hatları olduğu için deprem sık görülür.", o:"Kuzey Anadolu Fay Hattı bilinen bir fay hattıdır."},
@@ -160,6 +244,27 @@ HW.add({ders:"hayat", sinif:3, uniteler:[
        {s:"Krokilerde kuzey yönü genellikle sayfanın neresinde gösterilir?", c:["Yukarıda","Aşağıda","Sağda","Solda"], a:"Krokilerde kuzey genellikle yukarıda, güney aşağıdadır."}
      ]
     },
+    {id:"hb3-turkiye-haritasi", ad:"Türkiye'nin Bölgeleri ve Önemli Yerleri", e:"🗺️",
+     anlat:[
+       {b:"Türkiye haritası", m:"Türkiye'nin üç tarafı denizlerle çevrilidir: kuzeyde Karadeniz, batıda Ege Denizi, güneyde Akdeniz. İstanbul ve Çanakkale boğazları vardır. Başkentimiz Ankara'dır.", o:"Ankara İç Anadolu'dadır."},
+       {b:"Coğrafi bölgeler", m:"Türkiye yedi coğrafi bölgeye ayrılır: Marmara, Ege, Akdeniz, Karadeniz, İç Anadolu, Doğu Anadolu ve Güneydoğu Anadolu.", o:"7 bölge vardır."},
+       {b:"Doğal güzellikler", m:"Ağrı Dağı, Van Gölü, Uludağ, Pamukkale ve Peri Bacaları ülkemizin doğal güzelliklerindendir. Bu yerleri koruruz.", o:"Pamukkale Denizli'dedir."},
+       {b:"Tarihî ve kültürel yerler", m:"Anıtkabir, Ayasofya, Efes Antik Kenti ve Çanakkale Şehitler Abidesi tarihî yerlerimizdendir. Müzeleri ve tarihî yerleri gezerek öğreniriz.", o:"Anıtkabir Ankara'dadır."}
+     ],
+     ipucu:"3 yanımız deniz: Karadeniz, Ege, Akdeniz; bölgelerimiz 7!",
+     kartlar:[["Başkentimiz","Ankara"],["Bölge sayımız","7"],["Kuzey denizimiz","Karadeniz"],["Anıtkabir hangi ildedir?","Ankara'dadır"],["Pamukkale hangi ildedir?","Denizli"],["Ülkemizin en yüksek dağı","Ağrı Dağı"]],
+     sorular:[
+       {s:"Türkiye'nin başkenti neresidir?", c:["Ankara","İstanbul","İzmir","Bursa"], a:"Başkentimiz Ankara'dır."},
+       {s:"Türkiye'de kaç coğrafi bölge vardır?", c:["7","5","9","12"], a:"Yedi coğrafi bölgemiz vardır."},
+       {s:"Türkiye'nin kuzeyindeki deniz hangisidir?", c:["Karadeniz","Akdeniz","Ege Denizi","Hazar Gölü"], a:"Kuzeyde Karadeniz bulunur."},
+       {s:"Anıtkabir nerededir?", c:["Ankara","Edirne","Rize","Muğla"], a:"Anıtkabir Ankara'dadır."},
+       {s:"Ülkemizin en yüksek dağı hangisidir?", c:["Ağrı Dağı","Uludağ","Erciyes","Kaçkar"], a:"En yüksek dağımız Ağrı Dağı'dır."},
+       {s:"Hangisi Ege Bölgesi'ndedir?", c:["İzmir","Rize","Van","Ankara"], a:"İzmir Ege Bölgesi'ndedir."},
+       {s:"Pamukkale hangi ildedir?", c:["Denizli","Ankara","Samsun","Bitlis"], a:"Pamukkale Denizli'dedir."},
+       {s:"Hangisi bir boğazdır?", c:["İstanbul Boğazı","Van","Tuz","Kızılırmak"], a:"İstanbul Boğazı Karadeniz ile Marmara'yı bağlar."},
+       {s:"Tarihî yerleri gezerek ne öğreniriz?", c:["Geçmişi","Hava durumunu","Matematiği","Yemek tarifini"], a:"Tarihî yerler geçmişi anlatır."},
+       {s:"Türkiye'nin üç tarafı neyle çevrilidir?", c:["Denizlerle","Çöllerle","Karlarla","Göllerle"], a:"Üç tarafı denizlerle çevrilidir."}
+     ]},
     {id:"hb3-ataturk-bayram", ad:"Atatürk, Millî Bayramlar ve Değerler", e:"🇹🇷",
      anlat:[
        {b:"Atatürk'ün hayatı", m:"Mustafa Kemal Atatürk 1881'de Selanik'te doğdu. Çanakkale'de ve Kurtuluş Savaşı'nda önemli görevler yaptı. 29 Ekim 1923'te Cumhuriyet'i ilan etti. 1934'te soyadı Atatürk olarak verildi. 10 Kasım 1938'de vefat etti.", o:"Atatürk, ülkemizin ilk cumhurbaşkanıdır."},
@@ -181,7 +286,28 @@ HW.add({ders:"hayat", sinif:3, uniteler:[
        {s:"Atatürk hangi yıl vefat etmiştir?", c:["1938","1923","1881","1934"], a:"Atatürk 10 Kasım 1938'de vefat etmiştir."},
        {s:"Millî bayramlarımızı kutlamanın amacı nedir?", c:["Önemli olayları ve kahramanları anmak","Sadece tatil olduğu için","Okul binasını süslemek için","Bunun amacı yoktur"], a:"Bayramlar, ülkemizin önemli olaylarını ve değerlerini hatırlatır."}
      ]
-    }
+    },
+    {id:"hb3-kultur-gelenek", ad:"Kültürümüz ve Geleneklerimiz", e:"🧿",
+     anlat:[
+       {b:"Kültür nedir?", m:"Bir toplumun yemekleri, giysileri, oyunları, müziği, inançları ve gelenekleri o toplumun kültürünü oluşturur. Kültürümüz geçmişten bugüne aktarılır.", o:"Düğünler, bayramlar kültürdür."},
+       {b:"Yemek, giysi ve oyun", m:"Her bölgenin yemekleri, giysileri ve halk oyunları farklıdır. Zeybek, halay, horon ve kaşık oyunu halk oyunlarındandır.", o:"Horon Karadeniz'dedir."},
+       {b:"El sanatları", m:"Halı, kilim, çini, ebru ve bakır işleme el sanatlarımızdır. Ustalar bunları yıllar boyunca öğretir.", o:"Ebru suya yapılır."},
+       {b:"Kültürel miras", m:"Bizi geçmişe bağlayan tarihî ve kültürel eserlere kültürel miras denir. Müzeler ve tarihî binalar korunmalıdır.", o:"Tarihî eserlere zarar vermem."}
+     ],
+     ipucu:"Yemek, oyun, giysi, bayram: Hepsi kültür! Eserleri korursak miras kalır.",
+     kartlar:[["Kültürel miras örneği","Tarihî bina"],["Suyun üzerinde yapılan sanat","Ebru"],["Karadeniz'in halk oyunu","Horon"],["Ege'nin halk oyunu","Zeybek"],["Kültür geçmişten neye aktarılır?","Bugüne"],["Halı ve kilim neye örnektir?","El sanatı"]],
+     sorular:[
+       {s:"Hangisi kültürün bir parçasıdır?", c:["Halk oyunları","Dağ yükseklikleri","Yağmur miktarı","Gezegenler"], a:"Halk oyunları kültürümüzün parçasıdır."},
+       {s:"Horon hangi bölgeyle özdeşleşmiştir?", c:["Karadeniz","İç Anadolu","Güneydoğu Anadolu","Marmara"], a:"Horon Karadeniz'in oyunudur."},
+       {s:"Ebru hangi malzemeyle yapılır?", c:["Su ve boya","Kum ve taş","Yalnızca kalem","Tebeşir"], a:"Ebru su yüzeyinde yapılan bir sanattır."},
+       {s:"Hangisi bir el sanatıdır?", c:["Çini","Futbol","Voleybol","Atletizm"], a:"Çini el sanatımızdır."},
+       {s:"Kültürel mirası korumak için ne yapmalıyız?", c:["Tarihî yerlere zarar vermemeliyiz","Duvarlara yazmalıyız","Eserleri kırmalıyız","Çöp atmalıyız"], a:"Mirası korumak herkesin görevidir."},
+       {s:"Hangisi kültürel mirasa örnektir?", c:["Tarihî bir cami","Yeni oyuncak","Plastik şişe","Telefon kılıfı"], a:"Tarihî yapılar kültürel mirastır."},
+       {s:"Müzeler ne işe yarar?", c:["Geçmişin eserlerini korur","Yemek satar","Spor yaptırır","Hava tahmini yapar"], a:"Müzeler eserleri korur ve sergiler."},
+       {s:"Hangisi bayram geleneğidir?", c:["Büyükleri ziyaret etmek","Okula gitmek","Sınav olmak","Ödev yapmak"], a:"Bayramda büyükler ziyaret edilir."},
+       {s:"Halı ve kilim dokumak neye örnektir?", c:["El sanatına","Spora","Bilime","Trafik kuralına"], a:"Dokumacılık bir el sanatıdır."},
+       {s:"Kültürümüz nasıl yaşatılır?", c:["Gelenekleri öğrenip aktararak","Unutarak","Saklayarak","Yasaklayarak"], a:"Kültür kuşaktan kuşağa aktarılır."}
+     ]}
   ]},
   {ad:"Doğada Hayat", konular:[
     {id:"hb3-doga-cevre", ad:"Doğa, Hava Olayları ve Çevre", e:"🌦️",
@@ -205,7 +331,49 @@ HW.add({ders:"hayat", sinif:3, uniteler:[
        {s:"Kutuplarda yaşayan hayvanlar için hangisi doğrudur?", c:["Soğuğa uygun kalın yağ ve tüy tabakaları vardır","Çok ince derilidir","Sıcak seven hayvanlardır","Kuma gömülürler"], a:"Kutuplardaki hayvanlar soğuğa uyum sağlamıştır."},
        {s:"Elektrik tasarrufu için hangisini yapmalıyız?", c:["Kullanılmayan cihazı kapatmak","Lambayı sürekli açık tutmak","Televizyonu uyurken açmak","Buzdolabı kapağını açık bırakmak"], a:"Gereksiz tüketimi azaltmak doğa için de bütçe için de iyidir."}
      ]
-    }
+    },
+    {id:"hb3-bitki-hayvan", ad:"Bitkiler, Hayvanlar ve Yaşam Alanları", e:"🌿",
+     anlat:[
+       {b:"Bitkilerin gelişimi", m:"Bitkiler tohumdan filizlenir, büyür, çiçek açar ve meyve verir. Gelişmeleri için su, ışık, hava ve uygun sıcaklık gerekir.", o:"Fasulye tohumu filizlenir."},
+       {b:"Hayvanların beslenmesi", m:"Bazı hayvanlar bitki yer (otçul), bazıları et yer (etçil), bazıları ikisini de yer (hem otçul hem etçil). İnek otçul, aslan etçildir.", o:"Ayı hem bitki hem et yer."},
+       {b:"Yaşam alanları", m:"Canlılar yaşam alanlarına uyum sağlar. Deve çölde, penguen buzulda, balık suda yaşar. Yaşam alanı bozulursa canlılar zarar görür.", o:"Penguen kutuplarda yaşar."},
+       {b:"Doğayı korumak", m:"Nesli tükenen canlıları korumak için ormanları koruruz, avlanmayız ve çevreyi kirletmeyiz. Her canlı doğanın dengesi için önemlidir.", o:"Orman yangınına dikkat ederim."}
+     ],
+     ipucu:"Otçul bitki, etçil et, hem otçul ikisi birden! Yaşam alanı bozulmasın.",
+     kartlar:[["Sadece bitkilerle beslenen","Otçul"],["Sadece etle beslenen","Etçil"],["Çölde yaşayan hayvan","Deve"],["Buzulda yaşayan hayvan","Penguen"],["Bitki ne için ışık ister?","Gelişmek için"],["Bitki neyden filizlenir?","Tohum"]],
+     sorular:[
+       {s:"Sadece bitkilerle beslenen hayvana ne denir?", c:["Otçul","Etçil","Hem otçul hem etçil","Böcekçil"], a:"Bitkilerle beslenen hayvanlara otçul denir."},
+       {s:"Aslan nasıl beslenir?", c:["Et yer","Sadece ot yer","Sadece meyve yer","Hiç yemek yemez"], a:"Aslan etçildir."},
+       {s:"İnek hangi gruptandır?", c:["Otçul","Etçil","Böceklerle beslenen","Su içmeyen"], a:"İnek otlarla beslenir."},
+       {s:"Deve hangi yaşam alanında yaşar?", c:["Çölde","Buzulda","Okyanusta","Ormanda hep"], a:"Deve çöl koşullarına uyumludur."},
+       {s:"Bitkilerin büyümesi için hangisi gerekli değildir?", c:["Plastik","Su","Işık","Toprak"], a:"Bitkilerin plastiğe ihtiyacı yoktur."},
+       {s:"Tohum önce ne olur?", c:["Filizlenir","Meyve verir","Kurur","Taş olur"], a:"Önce filizlenir."},
+       {s:"Ayı nasıl beslenir?", c:["Hem bitki hem et yer","Sadece et yer","Sadece su içer","Sadece ot yer"], a:"Ayı hem otçul hem etçildir."},
+       {s:"Canlıların yaşam alanı bozulursa ne olur?", c:["Zarar görürler","Daha rahat ederler","Hiçbir şey olmaz","Daha çok çoğalırlar"], a:"Yaşam alanı bozulursa yaşamları tehlikeye girer."},
+       {s:"Doğayı korumak için ne yapmalıyız?", c:["Ormana çöp atmamalıyız","Orman yakmalıyız","Ağaç kesmeliyiz","Avlanmalıyız"], a:"Doğa korunmalıdır."},
+       {s:"Nesli tükenmekte olan canlıyı korumak için ne yaparız?", c:["Yaşam alanını koruruz","Avlarız","Evinde besleriz","Görmezden geliriz"], a:"Yaşam alanı korunmalıdır."}
+     ]},
+    {id:"hb3-su-enerji", ad:"Su, Enerji ve Kaynakları Korumak", e:"💧",
+     anlat:[
+       {b:"Su kaynakları", m:"Yağmur, kar, akarsu, göl ve yer altı suları su kaynaklarıdır. Temiz içme suyu sınırlıdır. Suyu israf etmeyiz.", o:"Dişimi fırçalarken musluğu kapatırım."},
+       {b:"Enerji", m:"Işık, ısı ve hareket için enerjiye ihtiyaç duyarız. Elektrik, doğalgaz ve odun enerji kaynaklarıdır. Güneş ve rüzgâr yenilenebilir kaynaklardır.", o:"Güneş paneli elektrik üretir."},
+       {b:"Tasarruf", m:"Gereksiz lambaları kapatır, cihazları fişten çeker, kısa duş alırız. Tasarruf hem doğayı hem aile bütçesini korur.", o:"Odadan çıkarken lambayı söndürürüm."},
+       {b:"Geri dönüşüm", m:"Kâğıt, cam, plastik ve metal atıkları ayrı toplarsak yeniden değerlendirilebilir. Böylece doğal kaynaklar daha az tükenir.", o:"Kâğıt atığını mavi kutuya atarım."}
+     ],
+     ipucu:"Sıkı kapat, sön, ayır: Su, enerji, geri dönüşüm!",
+     kartlar:[["Yenilenebilir enerji kaynağı","Güneş"],["Rüzgâr türbini neyi üretir?","Elektrik"],["Dişimizi fırçalarken musluğa ne yaparız?","Kapatırız"],["Kâğıt, cam, plastik, metal","Geri dönüşen maddeler"],["Odadan çıkarken ne söndürürüz?","Lambayı"],["Boşa kullanmaya ne denir?","İsraf"]],
+     sorular:[
+       {s:"Hangisi yenilenebilir bir enerji kaynağıdır?", c:["Güneş","Kömür","Petrol","Doğalgaz"], a:"Güneş enerjisi yenilenebilirdir."},
+       {s:"Dişimizi fırçalarken ne yapmalıyız?", c:["Musluğu kapatmalıyız","Musluğu açık bırakmalıyız","Su dökmeliyiz","Kovayı taşırmalıyız"], a:"Su israf edilmemelidir."},
+       {s:"Odadan çıkarken ne yapmalıyız?", c:["Lambayı söndürmeliyiz","Lambayı açık bırakmalıyız","Televizyonu açmalıyız","Kapıyı açık bırakmalıyız"], a:"Gereksiz lamba enerjiyi boşa harcar."},
+       {s:"Hangisi su kaynağıdır?", c:["Göl","Taş","Kum","Duman"], a:"Göller su kaynağıdır."},
+       {s:"Kâğıt atıkları nereye atılmalıdır?", c:["Geri dönüşüm kutusuna","Yola","Dereye","Ormana"], a:"Kâğıt geri dönüştürülebilir."},
+       {s:"Tasarruf neyi sağlar?", c:["Hem doğayı hem bütçeyi korur","Paranın boşa gitmesini","Kaynakların tükenmesini","Kirliliği"], a:"Tasarruf kaynakları ve parayı korur."},
+       {s:"İsraf nedir?", c:["Kaynakları gereksiz harcamak","Su içmek","Elektrik üretmek","Çöp toplamak"], a:"İsraf, boşa harcamaktır."},
+       {s:"Hangisi geri dönüşebilir?", c:["Cam şişe","Güneş ışığı","Işık","Rüzgâr"], a:"Cam geri dönüştürülür."},
+       {s:"Rüzgâr nasıl kullanılabilir?", c:["Elektrik üretiminde","Ders kitabı yazmada","Yemek pişirmede","Su içmede"], a:"Rüzgâr türbinleri elektrik üretir."},
+       {s:"Su kaynakları için hangisi doğrudur?", c:["Temiz içme suyu sınırlıdır","Su sonsuzdur","Su israf edilebilir","Kirletilebilir"], a:"Temiz su sınırlı olduğu için korunmalıdır."}
+     ]}
   ]},
   {ad:"Bilim, Teknoloji ve Sanat", konular:[
     {id:"hb3-bilim-teknoloji-sanat", ad:"Meslekler, Bilim, Teknoloji ve Sanat", e:"🔬",
@@ -229,6 +397,48 @@ HW.add({ders:"hayat", sinif:3, uniteler:[
        {s:"Bir bilgiye internette rastladın. En doğru davranış hangisidir?", c:["Güvenilir bir kaynakla kontrol etmek","Hemen herkese yaymak","Hiç okumamak","Doğru kabul etmek"], a:"Her bilgi doğru olmayabilir; kaynağı kontrol etmeliyiz."},
        {s:"Bir resim ya da müzik eseri sana neyi sağlar?", c:["Duygularını ve düşüncelerini anlatmayı","Dersi atlamayı","Daha çok yemek yemeyi","Hız kazanmayı"], a:"Sanat insanın ifade etme aracıdır."}
      ]
-    }
+    },
+    {id:"hb3-ulasim-iletisim", ad:"Ulaşım ve İletişim Araçları", e:"🚆",
+     anlat:[
+       {b:"Ulaşım araçları", m:"Karada otobüs, tren, araba ve bisiklet; denizde gemi ve vapur; havada uçak ve helikopter kullanılır. Araçlar insanları ve yükleri taşır.", o:"Uçak havadadır."},
+       {b:"Geçmişten bugüne ulaşım", m:"Eskiden insanlar yürüyerek, at ve kervanla giderdi. Bugün hızlı trenler ve uçaklar var. Teknoloji yolculuğu hızlandırdı.", o:"Kervan eskiden kullanılırdı."},
+       {b:"İletişim araçları", m:"Mektup, telefon, radyo, televizyon ve internet iletişim araçlarıdır. Eskiden mektup haftalar sürerdi, şimdi mesaj anında gider.", o:"Telefon uzaktakini duyurur."},
+       {b:"Doğru kullanım", m:"Toplu taşıma çevreye daha az zarar verir. İletişimde saygılı olmalı, yalnız güvendiğimiz kişilerle görüşmeli, bilgi kirliliğine dikkat etmeliyiz.", o:"Toplu taşımayı tercih ederim."}
+     ],
+     ipucu:"Kara-deniz-hava: Ulaşım! Mektup-telefon-internet: İletişim!",
+     kartlar:[["Havada giden araç","Uçak"],["Denizde giden araç","Gemi"],["Karada ray üzerinde giden araç","Tren"],["Eski iletişim aracı","Mektup"],["Yeni iletişim aracı","İnternet"],["Eski ulaşım yolu","Kervan"]],
+     sorular:[
+       {s:"Hangisi hava ulaşım aracıdır?", c:["Uçak","Gemi","Tren","Bisiklet"], a:"Uçak havada gider."},
+       {s:"Hangisi deniz ulaşım aracıdır?", c:["Vapur","Otobüs","Helikopter","Tren"], a:"Vapur denizde gider."},
+       {s:"Hangisi iletişim aracıdır?", c:["Telefon","Bisiklet","Gemi","Tren"], a:"Telefon iletişim aracıdır."},
+       {s:"Eskiden uzaktaki biriyle yazışmak için ne kullanılırdı?", c:["Mektup","İnternet","Mesaj uygulaması","E-posta"], a:"Eskiden mektup kullanılırdı."},
+       {s:"Toplu taşıma neden iyidir?", c:["Çevreye daha az zarar verir","Daha çok kirletir","Çok pahalıdır","Gürültü çıkarır"], a:"Aynı anda çok yolcu taşır."},
+       {s:"Hangisi geçmişte kullanılan taşıma yoludur?", c:["Kervan","Hızlı tren","Uçak","Metro"], a:"Kervan eskiden yük taşırdı."},
+       {s:"Teknoloji ulaşımda neyi sağladı?", c:["Daha hızlı yolculuk","Daha yavaş yolculuk","Daha az araç","Daha uzun yollar"], a:"Teknoloji hızı artırdı."},
+       {s:"Hangisi haberleşme aracıdır?", c:["Radyo","Bisiklet","Kamyon","Uçurtma"], a:"Radyo haber ve müzik yayar."},
+       {s:"İnternetten iletişim kurarken ne yapmalıyız?", c:["Güvendiğimiz kişilerle görüşmeliyiz","Her mesajı açmalıyız","Şifre vermeliyiz","Adres paylaşmalıyız"], a:"Güvenlik önemlidir."},
+       {s:"Toplu taşıma örneği hangisidir?", c:["Otobüs","Özel araba","Bisiklet","Yürüyüş"], a:"Otobüs toplu taşımadır."}
+     ]},
+    {id:"hb3-spor-sanat-hobi", ad:"Spor, Sanat ve Hobiler", e:"🎨",
+     anlat:[
+       {b:"Spor", m:"Spor vücudu güçlendirir, mutlu eder ve disiplin kazandırır. Futbol, basketbol, yüzme ve jimnastik gibi dallar vardır. Spor yaparken kurallara uyulur.", o:"Takım sporu işbirliği öğretir."},
+       {b:"Sanat", m:"Resim, müzik, tiyatro, dans ve heykel sanat dallarıdır. Sanat duygularımızı ve düşüncelerimizi anlatır. Müzeler, tiyatrolar ve sergiler sanatı bize ulaştırır.", o:"Müzikle duygumu anlatırım."},
+       {b:"Hobiler", m:"Boş zamanlarda sevdiğimiz uğraşlara hobi denir. Kitap okumak, koleksiyon yapmak, satranç oynamak hobi olabilir. Hobiler yeteneğimizi geliştirir.", o:"Satranç hobimdir."},
+       {b:"Fair play", m:"Spor ve oyunlarda dürüst davranmaya, rakibe saygı göstermeye fair play denir. Kazanınca kibirlenmez, kaybedince alay etmeyiz.", o:"Rakibimin elini sıkarım."}
+     ],
+     ipucu:"Spor sağlık, sanat duygu, hobi keyif! Fair play: Dürüstlük ve saygı.",
+     kartlar:[["Boş zamanda yapılan sevilen uğraş","Hobi"],["Spor ve oyunda dürüstlük","Fair play"],["Sahnede oynanan sanat","Tiyatro"],["Fırça ile yapılan sanat","Resim"],["Spor ne yapar?","Sağlık verir"],["Takım sporu örneği","Basketbol"]],
+     sorular:[
+       {s:"Boş zamanlarda sevdiğimiz uğraşa ne denir?", c:["Hobi","Ödev","Sınav","Ders"], a:"Hobi sevdiğimiz uğraştır."},
+       {s:"Hangisi bir sanat dalıdır?", c:["Resim","Koşu","Yüzme","Futbol"], a:"Resim bir sanat dalıdır."},
+       {s:"Hangisi bir takım sporudur?", c:["Basketbol","Yüzme","Resim","Heykel"], a:"Basketbol takımla oynanır."},
+       {s:"Fair play ne demektir?", c:["Dürüst ve saygılı davranmak","Hile yapmak","Rakibi itmek","Alay etmek"], a:"Fair play dürüstlüktür."},
+       {s:"Spor bize ne kazandırır?", c:["Sağlık ve disiplin","Hastalık","Tembellik","Yorgunluk"], a:"Spor sağlığı ve disiplini artırır."},
+       {s:"Sahnede oynanan sanata ne denir?", c:["Tiyatro","Resim","Heykel","Fotoğraf"], a:"Tiyatro sahnede oynanır."},
+       {s:"Hangisi hobi olabilir?", c:["Koleksiyon yapmak","Okula gitmek","Sınav olmak","Ödev kontrol etmek"], a:"Koleksiyon yapmak bir hobidir."},
+       {s:"Oyun kaybedilince ne yapmalıyız?", c:["Rakibi kutlamalıyız","Alay etmeliyiz","Hile yapmalıyız","Oyunu bozmalıyız"], a:"Kaybedince de saygılı olmalıyız."},
+       {s:"Müzeler ne işe yarar?", c:["Eserleri korur ve sergiler","Yemek satar","Alışveriş yapar","Spor yaptırır"], a:"Müzeler sanat eserlerini gösterir."},
+       {s:"Hangisi müzik aletidir?", c:["Gitar","Raket","Fırça","Bisiklet"], a:"Gitar bir müzik aletidir."}
+     ]}
   ]}
 ]});

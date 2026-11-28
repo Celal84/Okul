@@ -94,6 +94,28 @@ HW.add({ders:"matematik", sinif:3, uniteler:[
      ],
      uret:["topla",999]
     },
+    {id:"mat3-zihinden-tahmin", ad:"Zihinden İşlem ve Tahmin", e:"🧠",
+     anlat:[
+       {b:"Zihinden toplama", m:"Sayıyı önce en yakın onluğa tamamlarız, kalanı sonra ekleriz. Ya da onluk ve birlikleri ayrı ayrı toplarız.", o:"38 + 25: 38 + 2 = 40, 40 + 23 = 63"},
+       {b:"Zihinden çıkarma", m:"Çıkaracağımız sayıyı parçalara ayırıp sırayla çıkarırız.", o:"70 − 26: 70 − 20 = 50, 50 − 6 = 44"},
+       {b:"Tahmin", m:"Sayıları en yakın onluğa ya da yüzlüğe yuvarlayıp sonucu yaklaşık buluruz.", o:"48 + 31 yaklaşık 50 + 30 = 80"},
+       {b:"Tahminle kontrol", m:"Tahmin, bulduğumuz sonucun mantıklı olup olmadığını anlamamıza yardım eder."}
+     ],
+     ipucu:"Önce yuvarla, sonra işlem yap. Tahmin hızlı bir kontroldür!",
+     kartlar:[["38 + 2","40"],["50 + 30","80"],["100 − 40","60"],["Tahmin: 48 + 31","Yaklaşık 80"],["19 + 19 yaklaşık","Yaklaşık 40"],["98'i 100'e tamamla","2 ekle"],["70 − 20","50"]],
+     sorular:[
+       {s:"40 + 30 = ?", c:["70","60","80","700"], a:"4 onluk + 3 onluk = 7 onluk, yani 70."},
+       {s:"100 − 40 = ?", c:["60","140","50","70"], a:"10 onluktan 4 onluk çıkarsak 6 onluk kalır: 60."},
+       {s:"38 + 25 = ?", c:["63","53","73","62"], a:"38 + 2 = 40, 40 + 23 = 63."},
+       {s:"70 − 26 = ?", c:["44","54","46","56"], a:"70 − 20 = 50, 50 − 6 = 44."},
+       {s:"49 sayısı en yakın onluğa yuvarlanırsa kaç olur?", c:["50","40","49","60"], a:"49, 50'ye 40'tan daha yakındır."},
+       {s:"Tahmin: 48 + 31 işleminin sonucu yaklaşık kaçtır?", c:["80","90","70","100"], a:"48 yaklaşık 50, 31 yaklaşık 30'dur. 50 + 30 = 80."},
+       {s:"Tahmin: 297 + 102 işleminin sonucu yaklaşık kaçtır?", c:["400","500","300","200"], a:"297 yaklaşık 300, 102 yaklaşık 100'dür. 300 + 100 = 400."},
+       {s:"Zeynep 58 TL'lik kitap ve 41 TL'lik defter aldı. Yaklaşık kaç TL ödemiştir?", c:["100","90","110","80"], a:"58 yaklaşık 60, 41 yaklaşık 40. 60 + 40 = 100 TL."},
+       {s:"Ayşe 100 TL ile 63 TL'lik kazak aldı. Kaç TL para üstü alır?", c:["37","47","43","27"], a:"100 − 63 = 37 TL."},
+       {s:"Hangi işlemin sonucu 100'dür?", c:["39 + 61","45 + 45","50 + 60","29 + 29"], a:"39 + 61 = 100. 45 + 45 = 90, 50 + 60 = 110, 29 + 29 = 58."}
+     ]
+    },
     {id:"mat3-carpma", ad:"Çarpma İşlemi", e:"✖️",
      anlat:[
        {b:"Çarpma tekrarlı toplamadır", m:"Aynı sayıyı birkaç kez toplamak yerine çarpma yazarız. Çarpılan sayı kaç kez toplanacağını söyleyen sayıyla çarpılır.", o:"3 + 3 + 3 + 3 = 4 × 3 = 12"},
@@ -115,6 +137,29 @@ HW.add({ders:"matematik", sinif:3, uniteler:[
        {s:"Hangi işlemin sonucu 0'dır?", c:["475 × 0","475 × 1","475 + 0","475 − 1"], a:"Bir sayıyı 0 ile çarpınca sonuç 0 olur."},
        {s:"8 × □ = 56 ise □ kaçtır?", c:["7","6","8","48"], a:"8 × 7 = 56 olduğu için □ = 7'dir."},
        {s:"Bir sınıfta her sırada 2 öğrenci oturur. Sınıfta 14 sıra vardır ama 3 sırada yalnızca 1 öğrenci oturmaktadır. Sınıfta kaç öğrenci vardır?", c:["25","28","22","31"], a:"11 sırada 2'şer öğrenci: 11 × 2 = 22. 3 sırada 1'er öğrenci: 3. Toplam 25."}
+     ],
+     uret:["carp",10]
+    },
+    {id:"mat3-carpim-tablosu", ad:"Çarpım Tablosu: 6, 7, 8, 9", e:"✖️",
+     anlat:[
+       {b:"Çarpım tablosu", m:"1'den 10'a kadar çarpım tablosunu bilmek çarpma ve bölmede işimizi çok kolaylaştırır. Öğrendiğin tablolar yeni tabloları öğrenmene yardım eder."},
+       {b:"9'ların tablosu", m:"9 ile çarpınca çarpımın rakamları toplamı 9 eder: 9, 18, 27, 36, 45, 54, 63, 72, 81, 90.", o:"9 × 4 = 36 ve 3 + 6 = 9"},
+       {b:"Yer değiştirme", m:"Çarpanların yeri değişince çarpım değişmez. Bu yüzden öğreneceğin çarpım sayısı azalır.", o:"6 × 7 = 7 × 6 = 42"},
+       {b:"Parçalayarak çarpma", m:"Bir çarpanı parçalayıp ayrı ayrı çarpar, sonra toplarız.", o:"7 × 6 = 7 × 5 + 7 × 1 = 35 + 7 = 42"}
+     ],
+     ipucu:"9'larda onlar basamağı bir artar, birler basamağı bir azalır: 18, 27, 36, 45!",
+     kartlar:[["6 × 7","42"],["7 × 8","56"],["8 × 8","64"],["9 × 6","54"],["6 × 6","36"],["7 × 9","63"],["8 × 9","72"]],
+     sorular:[
+       {s:"6 × 7 = ?", c:["42","36","49","48"], a:"6 × 7 = 42."},
+       {s:"8 × 8 = ?", c:["64","56","72","16"], a:"8 × 8 = 64."},
+       {s:"9 × 6 = ?", c:["54","63","45","56"], a:"9 × 6 = 54. Rakamları toplamı 5 + 4 = 9'dur."},
+       {s:"7 × 8 = ?", c:["56","54","63","48"], a:"7 × 8 = 56."},
+       {s:"9 × 9 = ?", c:["81","72","90","99"], a:"9 × 9 = 81."},
+       {s:"6 × 8 = 8 × ▢ olması için kutuya hangi sayı gelmelidir?", c:["6","48","8","14"], a:"Çarpanların yeri değişince çarpım değişmez: 6 × 8 = 8 × 6."},
+       {s:"Bir pakette 6 kalem var. 7 pakette kaç kalem vardır?", c:["42","36","48","13"], a:"6 × 7 = 42 kalem."},
+       {s:"Her biri 9 sayfa olan 7 bölümlük bir kitap kaç sayfadır?", c:["63","56","72","16"], a:"9 × 7 = 63 sayfa."},
+       {s:"7 × 6 = 7 × 5 + 7 × 1 olduğuna göre 7 × 6 kaçtır?", c:["42","35","41","49"], a:"7 × 5 = 35 ve 7 × 1 = 7. 35 + 7 = 42."},
+       {s:"Bir bahçede 8 sıra ağaç var, her sırada 9 ağaç bulunuyor. 12 ağaç kesilirse kaç ağaç kalır?", c:["60","72","84","68"], a:"8 × 9 = 72 ağaç var. 72 − 12 = 60 ağaç kalır."}
      ],
      uret:["carp",10]
     },
@@ -141,6 +186,50 @@ HW.add({ders:"matematik", sinif:3, uniteler:[
      ],
      uret:["bol",10]
     },
+    {id:"mat3-kalanli-bolme", ad:"Kalanlı Bölme", e:"➗",
+     anlat:[
+       {b:"Kalan nedir?", m:"Bölünen sayı tam paylaşılamıyorsa artan kısma kalan denir. Kalan her zaman bölenden küçüktür.", o:"17 ÷ 5 = 3, kalan 2"},
+       {b:"Kontrol etme", m:"Bölen × bölüm + kalan, bölüneni verir.", o:"5 × 3 + 2 = 17"},
+       {b:"Kalan sıfırsa", m:"Kalan 0 ise bölme tam bölmedir; sayı tam olarak paylaşılmıştır.", o:"20 ÷ 5 = 4, kalan 0"},
+       {b:"Problemlerde kalan", m:"Bazen artan kısım için fazladan bir grup gerekir.", o:"22 kişi 4 kişilik arabalara biner: 22 ÷ 4 = 5 kalan 2, 6 araç gerekir."}
+     ],
+     ipucu:"Kalan, bölenden küçüktür! Kontrol: bölen × bölüm + kalan = bölünen.",
+     kartlar:[["17 ÷ 5","3, kalan 2"],["23 ÷ 5","4, kalan 3"],["30 ÷ 7","4, kalan 2"],["45 ÷ 8","5, kalan 5"],["40 ÷ 9","4, kalan 4"],["Kalan nasıl olur?","Bölenden küçük"],["Nasıl kontrol edilir?","Bölen × bölüm + kalan"]],
+     sorular:[
+       {s:"17 ÷ 5 işleminin bölümü ve kalanı nedir?", c:["Bölüm 3, kalan 2","Bölüm 2, kalan 3","Bölüm 3, kalan 3","Bölüm 4, kalan 1"], a:"5 × 3 = 15 ve 17 − 15 = 2. Bölüm 3, kalan 2."},
+       {s:"23 ÷ 5 işleminde kalan kaçtır?", c:["3","4","2","5"], a:"5 × 4 = 20 ve 23 − 20 = 3."},
+       {s:"Bir bölme işleminde bölen 6 ise kalan en çok kaç olabilir?", c:["5","6","7","1"], a:"Kalan bölenden küçük olmalıdır. 6'dan küçük en büyük sayı 5'tir."},
+       {s:"29 ÷ 4 işleminde bölüm kaçtır?", c:["7","6","8","1"], a:"4 × 7 = 28 ve 29 − 28 = 1. Bölüm 7'dir."},
+       {s:"Hangi sayı 5'e bölündüğünde kalan 2 olur?", c:["17","15","19","20"], a:"17 = 5 × 3 + 2. Diğerlerinin kalanı 0 ya da 4'tür."},
+       {s:"35 öğrenci 4'erli gruplara ayrılırsa kaç grup oluşur ve kaç öğrenci artar?", c:["8 grup, 3 öğrenci artar","9 grup, 1 öğrenci artar","8 grup, 4 öğrenci artar","7 grup, 7 öğrenci artar"], a:"4 × 8 = 32 ve 35 − 32 = 3. 8 grup olur, 3 öğrenci artar."},
+       {s:"Bir bölme işleminde bölen 7, bölüm 5, kalan 3'tür. Bölünen kaçtır?", c:["38","35","15","45"], a:"7 × 5 + 3 = 38."},
+       {s:"22 kişi 4 kişilik arabalara biniyor. En az kaç araç gerekir?", c:["6","5","4","7"], a:"22 ÷ 4 = 5, kalan 2. Artan 2 kişi için bir araç daha gerekir: 6 araç."},
+       {s:"50 bilye 6 çocuğa eşit paylaştırılıyor. Her çocuk kaç bilye alır, kaç bilye artar?", c:["8 bilye alır, 2 bilye artar","9 bilye alır, 4 bilye artar","8 bilye alır, 3 bilye artar","7 bilye alır, 8 bilye artar"], a:"6 × 8 = 48 ve 50 − 48 = 2."},
+       {s:"Bir sayı 6'ya bölününce bölüm 9, kalan 4 çıkıyor. Bu sayı kaçtır?", c:["58","54","13","64"], a:"6 × 9 + 4 = 54 + 4 = 58."}
+     ]
+    },
+    {id:"mat3-dort-islem-problem", ad:"Dört İşlem Problemleri", e:"🧩",
+     anlat:[
+       {b:"Problem çözme adımları", m:"Problemi oku, ne istendiğini ve verilenleri bul, işlemi seç, çöz, sonucu kontrol et."},
+       {b:"İşlemi nasıl seçeriz?", m:"Birlikte, toplam: toplama. Kaç kaldı, kaç fazla: çıkarma. Her birinde, katı: çarpma. Eşit paylaşma: bölme."},
+       {b:"İki işlemli problemler", m:"Önce ara sonucu buluruz, sonra ikinci işlemi yaparız.", o:"3 kutuda 6'şar kalem var, 5 kalem kullanıldı. 3 × 6 = 18, 18 − 5 = 13"},
+       {b:"Sonucu kontrol et", m:"Bulduğun sonucun soruya uyup uymadığına bak. Yaklaşık tahminle de karşılaştır."}
+     ],
+     ipucu:"Oku, anla, işlemi seç, çöz, kontrol et!",
+     kartlar:[["'Birlikte' sözcüğü","Toplama"],["'Kaç kaldı' sorusu","Çıkarma"],["'Her birinde' ve 'katı'","Çarpma"],["'Eşit paylaşma'","Bölme"],["3 × 6 − 5","13"],["24 ÷ 4 + 10","16"],["Son adım nedir?","Sonucu kontrol"]],
+     sorular:[
+       {s:"Bir bahçede 25 kırmızı, 38 sarı gül var. Bahçede kaç gül vardır?", c:["63","13","53","73"], a:"25 + 38 = 63 gül."},
+       {s:"Ali'nin 84 bilyesi vardı. 29 bilyesini arkadaşına verdi. Kaç bilyesi kaldı?", c:["55","65","113","45"], a:"84 − 29 = 55 bilye."},
+       {s:"Bir kutuda 8 kalem var. 7 kutuda kaç kalem vardır?", c:["56","15","54","48"], a:"8 × 7 = 56 kalem."},
+       {s:"48 elma 6 sepete eşit paylaştırılırsa her sepette kaç elma olur?", c:["8","7","9","42"], a:"48 ÷ 6 = 8 elma."},
+       {s:"Bir kitap 24 TL, bir defter 9 TL'dir. Kitap defterden kaç TL pahalıdır?", c:["15","33","14","16"], a:"24 − 9 = 15 TL."},
+       {s:"Mert'in 3 kutu bilyesi var, her kutuda 12 bilye bulunuyor. Mert 5 bilyesini kaybetti. Kaç bilyesi kaldı?", c:["31","41","36","30"], a:"3 × 12 = 36 bilye. 36 − 5 = 31 bilye kaldı."},
+       {s:"Bir sınıfta 5 sırada 4'er öğrenci, 2 sırada 3'er öğrenci oturuyor. Kaç öğrenci vardır?", c:["26","14","30","9"], a:"5 × 4 = 20 ve 2 × 3 = 6. 20 + 6 = 26 öğrenci."},
+       {s:"Elif'in 100 TL'si var. 6 TL'lik defterlerden 5 tane alırsa kaç TL'si kalır?", c:["70","94","60","30"], a:"5 × 6 = 30 TL. 100 − 30 = 70 TL."},
+       {s:"Bir otobüste 35 yolcu vardı. Durakta 12 kişi indi, 8 kişi bindi. Otobüste kaç yolcu kaldı?", c:["31","39","55","15"], a:"35 − 12 = 23. 23 + 8 = 31 yolcu."},
+       {s:"Bir manav 9 kasaya 12'şer kilogram elma koydu. Elmaların 6 kilogramı çürüktü. Çürük olmayan kaç kilogram elma vardır?", c:["102","114","108","96"], a:"9 × 12 = 108 kg elma var. 108 − 6 = 102 kg."}
+     ]
+    },
     {id:"mat3-kesirler", ad:"Kesirler", e:"🍕",
      anlat:[
        {b:"Kesir, bütünün eş parçalarıdır", m:"Bir bütün eşit parçalara bölünür. Alttaki sayı (payda) bütünün kaç eş parçaya bölündüğünü, üstteki sayı (pay) alınan parça sayısını gösterir.", o:"Pizza 4 eş parçaya bölünüp 3 parça yenirse yenen kısım 3/4'tür."},
@@ -163,9 +252,55 @@ HW.add({ders:"matematik", sinif:3, uniteler:[
        {s:"Ali'nin 36 bilyesi var. Bilyelerinin 1/4'ünü kardeşine, 1/3'ünü arkadaşına verdi. Kaç bilyesi kaldı?", c:["15","21","9","12"], a:"36'nın 1/4'ü 9, 1/3'ü 12. Verdiği 9 + 12 = 21. Kalan 36 − 21 = 15."}
      ],
      uret:["kesir",10]
+    },
+    {id:"mat3-kesir-karsilastirma", ad:"Kesirleri Karşılaştırma ve Kesir Problemleri", e:"🍰",
+     anlat:[
+       {b:"Pay ve payda", m:"Payda, bütünün kaç eşit parçaya bölündüğünü; pay, kaç parçanın alındığını gösterir.", o:"3/4: bütün 4 eşit parçaya bölünmüş, 3 parça alınmış."},
+       {b:"Paydalar eşitse", m:"Paydaları eşit kesirlerde payı büyük olan kesir daha büyüktür.", o:"5/8 > 3/8"},
+       {b:"Paylar eşitse", m:"Payları eşit kesirlerde paydası küçük olan kesir daha büyüktür; çünkü parçalar daha büyüktür.", o:"1/2 > 1/4"},
+       {b:"Birim kesir ve bütün", m:"Payı 1 olan kesre birim kesir denir. Pay ile payda eşitse kesir 1 bütündür.", o:"1/6 birim kesirdir, 6/6 = 1 bütündür."}
+     ],
+     ipucu:"Aynı pastayı çok parçaya bölersen parçalar küçülür: 1/8 < 1/4!",
+     kartlar:[["1/2 mi 1/4 mü büyük?","1/2"],["3/8 mi 5/8 mi büyük?","5/8"],["4/4 kaç bütündür?","1 bütün"],["Payı 1 olan kesir","Birim kesir"],["Payda neyi gösterir?","Eşit parça sayısını"],["Pay neyi gösterir?","Alınan parça sayısını"]],
+     sorular:[
+       {s:"Bir bütün 8 eşit parçaya bölünmüş, 3 parçası boyanmıştır. Boyalı kısım nasıl yazılır?", c:["3/8","8/3","3/5","5/8"], a:"Pay boyalı parça sayısı (3), payda toplam parça sayısıdır (8): 3/8."},
+       {s:"Hangi kesir en büyüktür?", c:["5/8","3/8","1/8","2/8"], a:"Paydalar eşit, payı en büyük olan 5/8'dir."},
+       {s:"Hangi kesir en küçüktür?", c:["1/8","1/2","1/4","1/3"], a:"Paylar eşit. Paydası en büyük olan 1/8 en küçüktür."},
+       {s:"Hangi kesir 1 bütüne eşittir?", c:["6/6","1/6","5/6","6/7"], a:"Pay ile payda eşit olduğunda kesir 1 bütündür."},
+       {s:"1/3 ile 1/5'ten hangisi daha büyüktür?", c:["1/3","1/5","Eşittirler","Karşılaştırılamaz"], a:"Paylar eşit, paydası küçük olan 1/3 daha büyüktür."},
+       {s:"Pizzanın 8 eşit diliminden Ali 3, Ece 2 dilim yedi. Hangisi doğrudur?", c:["Ali daha çok yedi: 3/8 > 2/8","Ece daha çok yedi: 2/8 > 3/8","İkisi eşit yedi","Ali 3/5 kadar yedi"], a:"Ali pizzanın 3/8'ini, Ece 2/8'ini yedi. 3/8 > 2/8."},
+       {s:"Hangisi birim kesirdir?", c:["1/9","2/9","9/9","9/1"], a:"Payı 1 olan kesre birim kesir denir."},
+       {s:"10 bilyenin 1/2'si kaç bilyedir?", c:["5","2","10","20"], a:"10 ÷ 2 = 5 bilye."},
+       {s:"12 kalemin 1/3'ü kaç kalemdir?", c:["4","3","6","9"], a:"12 ÷ 3 = 4 kalem."},
+       {s:"Bir kâğıt 5 eşit parçaya bölündü. 2 parçası boyanırsa boyanmayan kısım nasıl yazılır?", c:["3/5","2/5","5/3","3/2"], a:"Toplam 5 parça, 2'si boyalı, 3'ü boyasız. Boyanmayan kısım 3/5'tir."}
+     ],
+     uret:["kesir",10]
     }
   ]},
   {ad:"Ölçme", konular:[
+    {id:"mat3-saat-dakika", ad:"Saat, Dakika, Saniye ve Takvim", e:"⏱️",
+     anlat:[
+       {b:"Saati okuma", m:"Akrep saati, yelkovan dakikayı gösterir. Yelkovan her sayıda 5 dakika ilerler.", o:"Yelkovan 4'te ise 20 dakika geçmiştir."},
+       {b:"Zaman birimleri", m:"1 saat 60 dakika, 1 dakika 60 saniyedir. 1 gün 24 saattir.", o:"2 saat = 120 dakika"},
+       {b:"Süre hesaplama", m:"Başlama ve bitiş saati arasındaki farkı bularak süreyi hesaplarız.", o:"09.15'ten 10.00'a 45 dakika geçer."},
+       {b:"Takvim", m:"1 yıl 12 aydır, 1 hafta 7 gündür. Ocak 31, Şubat 28 (artık yılda 29) gün çeker. Nisan, Haziran, Eylül, Kasım 30 gün çeker."}
+     ],
+     ipucu:"Yelkovan 5'er sayarak gider: 1'de 5, 2'de 10, 3'te 15 dakika!",
+     kartlar:[["1 saat kaç dakikadır?","60 dakika"],["1 dakika kaç saniyedir?","60 saniye"],["Yelkovan 4'teyse","20 dakika"],["Yelkovan 9'daysa","45 dakika"],["Şubat kaç gün çeker?","28 (artık yılda 29)"],["30 gün çeken bir ay","Nisan"],["1 gün kaç saattir?","24 saat"]],
+     sorular:[
+       {s:"1 dakika kaç saniyedir?", c:["60","100","30","24"], a:"1 dakika = 60 saniyedir."},
+       {s:"Yelkovan 5'i gösteriyorsa saatin kaç dakikası geçmiştir?", c:["25","5","50","15"], a:"5 × 5 = 25 dakika."},
+       {s:"2 saat kaç dakikadır?", c:["120","200","60","100"], a:"2 × 60 = 120 dakika."},
+       {s:"Film 14.30'da başlayıp 16.00'da bitti. Film kaç dakika sürmüştür?", c:["90","60","100","150"], a:"14.30'dan 15.00'a 30 dakika, 15.00'dan 16.00'a 60 dakika. Toplam 90 dakika."},
+       {s:"Hangi ay 31 gün çeker?", c:["Temmuz","Nisan","Haziran","Eylül"], a:"Temmuz 31 gün çeker. Diğerleri 30 gün çeker."},
+       {s:"Artık olmayan bir yılda kaç gün vardır?", c:["365","360","366","350"], a:"Artık olmayan yıl 365 gündür."},
+       {s:"Bir ders 40 dakika sürüyor. 09.00'da başlayan ders saat kaçta biter?", c:["09.40","09.50","10.00","09.30"], a:"09.00'dan 40 dakika sonra saat 09.40 olur."},
+       {s:"Ela 45 dakika ders çalıştı, sonra 30 dakika kitap okudu. Toplam kaç dakika geçti?", c:["75","65","15","85"], a:"45 + 30 = 75 dakika."},
+       {s:"Yarım saat kaç saniyedir?", c:["1800","300","3000","180"], a:"Yarım saat 30 dakikadır. 30 × 60 = 1800 saniye."},
+       {s:"Ece okula 25 dakikada gidiyor. Okul 08.30'da başlıyorsa en geç saat kaçta evden çıkmalıdır?", c:["08.05","08.55","07.55","08.15"], a:"08.30'dan 25 dakika geri gidersek 08.05 olur."}
+     ],
+     uret:["saat",12]
+    },
     {id:"mat3-zaman-para", ad:"Zaman Ölçme ve Paralarımız", e:"⏰",
      anlat:[
        {b:"Saat ve dakika", m:"Saatte kısa çubuk akrep saati, uzun çubuk yelkovan dakikayı gösterir. 1 saat 60 dakika, 1 dakika 60 saniyedir. Çeyrek saat 15 dakika, yarım saat 30 dakikadır.", o:"Yelkovan 3'te, akrep 5'te ise saat 5.15'tir."},
@@ -188,6 +323,73 @@ HW.add({ders:"matematik", sinif:3, uniteler:[
        {s:"Okul 08.40'ta başlıyor. Her ders 40 dakika, teneffüs 10 dakikadır. İkinci ders saat kaçta biter?", c:["10.10","10.00","09.30","10.20"], a:"1. ders 09.20'de biter. Teneffüs 09.30'a kadar. 2. ders 09.30 + 40 dk = 10.10'da biter."}
      ],
      uret:["saat",12]
+    },
+    {id:"mat3-para", ad:"Paralarımız: Alışveriş ve Para Üstü", e:"💵",
+     anlat:[
+       {b:"TL ve kuruş", m:"1 TL, 100 kuruştur. TL'yi kuruşa çevirirken 100 ile çarparız.", o:"5 TL 25 kuruş = 525 kuruş"},
+       {b:"Toplama ve çıkarma", m:"TL'leri TL'lerle, kuruşları kuruşlarla toplarız. Kuruş 100'ü geçerse 1 TL'ye dönüştürürüz.", o:"2 TL 50 kuruş + 3 TL 25 kuruş = 5 TL 75 kuruş"},
+       {b:"Para üstü", m:"Para üstü, verdiğimiz paradan ödemeyi çıkarınca bulunur.", o:"50 TL verip 37 TL'lik ürün alırsak para üstü 13 TL olur."},
+       {b:"Karşılaştırma", m:"Para miktarlarını karşılaştırmak için aynı birime çeviririz.", o:"250 kuruş ile 3 TL: 3 TL = 300 kuruş, yani 3 TL daha çoktur."}
+     ],
+     ipucu:"Önce aynı birime çevir: 1 TL = 100 kuruş!",
+     kartlar:[["1 TL","100 kuruş"],["5 TL","500 kuruş"],["2 TL 50 kuruş","250 kuruş"],["Para üstü nasıl bulunur?","Verilen − tutar"],["75 kuruş + 25 kuruş","1 TL"],["3 TL 50 kr + 1 TL 50 kr","5 TL"],["10 TL − 7 TL 50 kr","2 TL 50 kr"]],
+     sorular:[
+       {s:"2 TL kaç kuruştur?", c:["200","20","2000","102"], a:"2 × 100 = 200 kuruş."},
+       {s:"3 TL 50 kuruş kaç kuruştur?", c:["350","305","3050","53"], a:"3 TL = 300 kuruş. 300 + 50 = 350 kuruş."},
+       {s:"75 kuruş ile 25 kuruş birlikte kaç eder?", c:["1 TL","100 TL","2 TL","50 kuruş"], a:"75 + 25 = 100 kuruş = 1 TL."},
+       {s:"Defter 12 TL, kalem 5 TL, silgi 3 TL'dir. Üçünü de almak için kaç TL gerekir?", c:["20","15","17","23"], a:"12 + 5 + 3 = 20 TL."},
+       {s:"50 TL verip 37 TL'lik oyuncak alan kişi kaç TL para üstü alır?", c:["13","23","87","17"], a:"50 − 37 = 13 TL."},
+       {s:"Hangisi en çok paradır?", c:["3 TL","250 kuruş","275 kuruş","199 kuruş"], a:"3 TL = 300 kuruştur. En çok budur."},
+       {s:"Elimde 2 TL 50 kuruş var. Annem 1 TL 50 kuruş daha verdi. Toplam kaç TL'm oldu?", c:["4 TL","3 TL","3 TL 50 kuruş","5 TL"], a:"50 kuruş + 50 kuruş = 1 TL. 2 + 1 + 1 = 4 TL."},
+       {s:"Her biri 7 TL olan 4 bilet kaç TL eder?", c:["28","11","24","32"], a:"7 × 4 = 28 TL."},
+       {s:"Ayşe 100 TL ile 6 TL'lik 8 defter aldı. Kaç TL'si kaldı?", c:["52","92","48","58"], a:"6 × 8 = 48 TL. 100 − 48 = 52 TL."},
+       {s:"Kitap 45 TL, çanta 60 TL'dir. 200 TL ile ikisini alan kişi kaç TL para üstü alır?", c:["95","105","85","155"], a:"45 + 60 = 105 TL. 200 − 105 = 95 TL."}
+     ],
+     uret:["para",100]
+    },
+    {id:"mat3-uzunluk", ad:"Uzunluk Ölçme: km, m, cm, mm", e:"📐",
+     anlat:[
+       {b:"Uzunluk birimleri", m:"Uzunluk birimleri milimetre (mm), santimetre (cm), metre (m) ve kilometredir (km)."},
+       {b:"Birimler arası dönüşüm", m:"1 m = 100 cm, 1 cm = 10 mm, 1 km = 1000 m. Büyük birimden küçüğe çevirirken çarparız.", o:"2 km = 2000 m"},
+       {b:"Uygun birimi seçme", m:"Çok küçük şeyler için mm, kalem ve defter için cm, oda için m, şehirler arası yol için km kullanırız."},
+       {b:"Uzunluklarla işlem", m:"İşlem yapmadan önce uzunlukları aynı birime çeviririz.", o:"2 m + 50 cm = 200 cm + 50 cm = 250 cm"}
+     ],
+     ipucu:"km uzun yollar, m odalar, cm kalem, mm kalem ucu için!",
+     kartlar:[["1 km kaç m'dir?","1000 m"],["1 m kaç cm'dir?","100 cm"],["1 cm kaç mm'dir?","10 mm"],["3 km kaç m'dir?","3000 m"],["Şehirler arası mesafe birimi","km"],["Kalem kalınlığı birimi","mm"]],
+     sorular:[
+       {s:"1 kilometre kaç metredir?", c:["1000","100","10","10000"], a:"1 km = 1000 m."},
+       {s:"5 m kaç cm'dir?", c:["500","50","5000","105"], a:"5 × 100 = 500 cm."},
+       {s:"3 cm kaç mm'dir?", c:["30","300","3","103"], a:"3 × 10 = 30 mm."},
+       {s:"Ankara ile İstanbul arasındaki uzaklık hangi birimle ölçülür?", c:["Kilometre","Santimetre","Milimetre","Metre"], a:"Şehirler arası uzaklık kilometreyle ölçülür."},
+       {s:"2 km 300 m kaç metredir?", c:["2300","230","23000","2030"], a:"2 km = 2000 m. 2000 + 300 = 2300 m."},
+       {s:"Ali okula 800 m, Ece 1 km yürüyor. Kim daha çok yürür?", c:["Ece","Ali","İkisi eşit","Bilinemez"], a:"1 km = 1000 m, 800 m'den fazladır. Ece daha çok yürür."},
+       {s:"Uzunluğu 2 m olan bir iplikten 40 cm kesilirse kaç cm ip kalır?", c:["160","38","240","180"], a:"2 m = 200 cm. 200 − 40 = 160 cm."},
+       {s:"Hangisi en uzundur?", c:["1 m","90 cm","950 mm","100 mm"], a:"1 m = 1000 mm; 90 cm = 900 mm. En uzun 1 m'dir."},
+       {s:"Bir bisikletçi sabah 12 km, akşam 8 km yol gitti. Toplam kaç metre yol gitmiştir?", c:["20000","2000","200","20"], a:"12 + 8 = 20 km. 20 × 1000 = 20000 m."},
+       {s:"Bir sınıfın eni 6 m 40 cm'dir. Bu uzunluk kaç santimetredir?", c:["640","6040","64","604"], a:"6 m = 600 cm. 600 + 40 = 640 cm."}
+     ]
+    },
+    {id:"mat3-tartma-sivi", ad:"Tartma ve Sıvı Ölçme: kg, g, L, mL", e:"⚖️",
+     anlat:[
+       {b:"Kilogram ve gram", m:"1 kg = 1000 g'dır. Küçük şeyleri gramla, büyük şeyleri kilogramla tartarız.", o:"Yarım kg = 500 g, çeyrek kg = 250 g"},
+       {b:"Litre ve mililitre", m:"1 L = 1000 mL'dir. Küçük kapları mL ile, büyük kapları L ile ölçeriz.", o:"Yarım litre = 500 mL"},
+       {b:"Birim çevirme", m:"Büyük birimden küçüğe çevirirken 1000 ile çarparız.", o:"3 kg = 3000 g ve 2 L = 2000 mL"},
+       {b:"İşlemler", m:"Toplamadan ve çıkarmadan önce miktarları aynı birime çeviririz.", o:"1 kg + 500 g = 1000 g + 500 g = 1500 g"}
+     ],
+     ipucu:"Yarım 500, çeyrek 250: hem kg-g hem L-mL'de 1000'lik ilişki var!",
+     kartlar:[["1 kg kaç g'dır?","1000 g"],["Yarım kg","500 g"],["Çeyrek kg","250 g"],["1 L kaç mL'dir?","1000 mL"],["Yarım litre","500 mL"],["2 kg kaç g'dır?","2000 g"]],
+     sorular:[
+       {s:"1 kilogram kaç gramdır?", c:["1000","100","10","10000"], a:"1 kg = 1000 g."},
+       {s:"Yarım kilogram kaç gramdır?", c:["500","50","250","1000"], a:"1000 g'ın yarısı 500 g'dır."},
+       {s:"1 litre kaç mililitredir?", c:["1000","100","10","500"], a:"1 L = 1000 mL."},
+       {s:"3 kg kaç gramdır?", c:["3000","300","30","103"], a:"3 × 1000 = 3000 g."},
+       {s:"Hangisi en ağırdır?", c:["1 kg","900 g","800 g","750 g"], a:"1 kg = 1000 g. Hepsinden fazladır."},
+       {s:"Bir şişede 2 L su var. 500 mL su içilirse kaç mL su kalır?", c:["1500","500","2500","1000"], a:"2 L = 2000 mL. 2000 − 500 = 1500 mL."},
+       {s:"Bir pakette 250 g peynir var. 4 paket kaç gram peynir eder?", c:["1000","254","500","2500"], a:"250 × 4 = 1000 g."},
+       {s:"Annem 1 kg 500 g un aldı. Bu un kaç gramdır?", c:["1500","15000","150","1005"], a:"1 kg = 1000 g. 1000 + 500 = 1500 g."},
+       {s:"Hangi sıvı miktarı en çoktur?", c:["2 L","1500 mL","1 L","900 mL"], a:"2 L = 2000 mL. Hepsinden fazladır."},
+       {s:"Bir araç 3 kg'lık 5 kutu ve 500 g'lık 2 kutu taşıyor. Toplam kaç kilogram taşır?", c:["16","15","17","20"], a:"5 × 3 = 15 kg. 2 × 500 g = 1000 g = 1 kg. 15 + 1 = 16 kg."}
+     ]
     },
     {id:"mat3-tartma-uzunluk-sivi", ad:"Tartma, Uzunluk ve Sıvı Ölçme", e:"⚖️",
      anlat:[

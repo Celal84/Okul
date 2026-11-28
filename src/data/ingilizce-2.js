@@ -228,5 +228,120 @@ HW.add({ders:"ingilizce", sinif:2, uniteler:[
        {s:"Mini okuma: This is my school bag. These are my pencils. That is my teacher. Those are my friends. Who is near the speaker?", c:["The school bag and the pencils","The teacher and the friends","Only the friends","Only the teacher"], a:"This/these yakındakiler; that/those uzaktakiler."},
        {s:"Which sentence is correct?", c:["Those are my shoes.","Those is my shoes.","That are my shoes.","This are my shoes."], a:"those çoğuldur ve are ile kullanılır."}
      ]}
+  ]},
+  {ad:"My family & friends – Ailem ve arkadaşlarım", konular:[
+    {id:"en2-family-friends", ad:"Family & friends – Aile ve arkadaşlar", e:"👨‍👩‍👧",
+     anlat:[
+       {b:"Family words", m:"mother (anne), father (baba), brother (erkek kardeş), sister (kız kardeş), grandmother (büyükanne), grandfather (büyükbaba), baby (bebek). Kısaca: mom, dad, grandma, grandpa.", o:"mother, father, brother, sister"},
+       {b:"This is my...", m:"Birini tanıştırırken <b>This is my ...</b> deriz. Erkekler için <b>He is</b>, kızlar ve kadınlar için <b>She is</b> kullanırız.", o:"This is my mother. She is Ayşe."},
+       {b:"Who is he/she?", m:"Kim olduğunu sormak için <b>Who is he?</b> / <b>Who is she?</b> deriz. Cevap: <b>He is my father.</b> / <b>She is my sister.</b>", o:"Who is she? – She is my grandmother."},
+       {b:"Friends", m:"<b>friend</b> arkadaş demektir. <b>my best friend</b> = en iyi arkadaşım. <b>my / your</b> = benim / senin.", o:"This is my friend, Deniz."}
+     ],
+     ipucu:"Erkek: HE (he, brother, father). Kız: SHE (she, sister, mother). 'He' ve 'she' arasında hep cinsiyete bak!",
+     kartlar:[["mother","anne"],["father","baba"],["brother","erkek kardeş"],["sister","kız kardeş"],["grandmother","büyükanne"],["grandfather","büyükbaba"],["friend","arkadaş"],["family","aile"]],
+     sorular:[
+       {s:"'anne' İngilizce nedir?", c:["mother","father","sister","brother"], a:"Anne = mother."},
+       {s:"'father' ne demektir?", c:["baba","anne","kardeş","dede"], a:"Father = baba."},
+       {s:"Which one is a girl? (hangisi kızdır?)", c:["sister","brother","father","grandfather"], a:"Sister kız kardeştir."},
+       {s:"This is my brother. ___ is eight.", c:["He","She","We","It"], a:"Brother erkek olduğu için He kullanılır."},
+       {s:"This is my grandmother. ___ is kind.", c:["She","He","They","I"], a:"Grandmother kadın olduğu için She kullanılır."},
+       {s:"Who is she?  She is my ___. (annem)", c:["mother","father","brother","grandfather"], a:"Anne = mother."},
+       {s:"'büyükbaba' İngilizce nedir?", c:["grandfather","grandmother","father","brother"], a:"Büyükbaba = grandfather."},
+       {s:"Choose the correct sentence.", c:["This is my sister.","This is me sister.","This my is sister.","Is this sister my."], a:"Doğru kalıp: This is my ..."},
+       {s:"Mini okuma: 'This is my family. This is my father. He is a doctor. This is my mother. She is a teacher.' What is the mother's job?", c:["Teacher","Doctor","Student","Pilot"], a:"Metinde 'She is a teacher.' yazıyor."},
+       {s:"Mert has a mother, a father and a sister. How many people are in his family (Mert dahil)?", c:["Four","Three","Five","Two"], a:"Mert + anne + baba + kız kardeş = 4 kişi."}
+     ]}
+  ]},
+  {ad:"Toys & games – Oyuncaklar ve oyunlar", konular:[
+    {id:"en2-toys-games", ad:"Toys & games – Oyuncaklar ve oyunlar", e:"🧸",
+     anlat:[
+       {b:"Toy words", m:"ball (top), doll (bebek), kite (uçurtma), robot, teddy bear (oyuncak ayı), puzzle (yapboz), car (araba), train (tren), bike (bisiklet).", o:"a ball, a doll, a kite"},
+       {b:"I have got / I like", m:"Neyin olduğunu söylemek için <b>I have got a ...</b> deriz. Sevdiğimizi söylemek için <b>I like ...</b> deriz.", o:"I have got a red kite. I like robots."},
+       {b:"Have you got...?", m:"Sormak için <b>Have you got a ...?</b> deriz. Cevap: <b>Yes, I have.</b> ya da <b>No, I haven't.</b>", o:"Have you got a ball? – Yes, I have."},
+       {b:"Where is it?", m:"Yerini söylemek için <b>in</b> (içinde), <b>on</b> (üstünde), <b>under</b> (altında) kullanırız. Where is the ball? – It is <b>under</b> the bed.", o:"The doll is on the chair."}
+     ],
+     ipucu:"Have you got...? sorusunda cevap 'have' ile biter: Yes, I have. / No, I haven't.",
+     kartlar:[["ball","top"],["doll","bebek"],["kite","uçurtma"],["teddy bear","oyuncak ayı"],["puzzle","yapboz"],["robot","robot"],["in","içinde"],["under","altında"]],
+     sorular:[
+       {s:"'uçurtma' İngilizce nedir?", c:["kite","ball","doll","puzzle"], a:"Uçurtma = kite."},
+       {s:"What is this? 🧸", c:["A teddy bear","A kite","A puzzle","A robot"], a:"🧸 oyuncak ayıdır: teddy bear."},
+       {s:"'doll' ne demektir?", c:["bebek","top","araba","tren"], a:"Doll = oyuncak bebek."},
+       {s:"I ___ a ball. (Bir topum var.)", c:["have got","has got","am got","is got"], a:"I ile 'have got' kullanılır."},
+       {s:"Have you got a robot? Yes, ___.", c:["I have","I am","I do","it is"], a:"Have you got ...? sorusuna: Yes, I have."},
+       {s:"Have you got a kite? No, ___.", c:["I haven't","I am not","I don't","it isn't"], a:"Olumsuz cevap: No, I haven't."},
+       {s:"The ball is ___ the box. (⚽ kutunun içinde)", c:["in","on","under","from"], a:"İçinde = in."},
+       {s:"The cat is ___ the table. (🐱 masanın altında)", c:["under","in","on","at"], a:"Altında = under."},
+       {s:"Choose the correct sentence.", c:["I like puzzles.","I likes puzzles.","I like puzzles are.","Like I puzzles."], a:"I ile fiilin yalın hali: I like."},
+       {s:"Mini okuma: 'Ali has got a red car and a blue kite. He likes the kite.' What colour is Ali's kite?", c:["Blue","Red","Green","Yellow"], a:"Metinde 'a blue kite' yazıyor."}
+     ]}
+  ]},
+  {ad:"Feelings & pets – Duygular ve evcil hayvanlar", konular:[
+    {id:"en2-feelings-pets", ad:"Feelings & pets – Duygular ve evcil hayvanlar", e:"😊",
+     anlat:[
+       {b:"Feelings", m:"happy (mutlu), sad (üzgün), angry (kızgın), hungry (aç), thirsty (susamış), tired (yorgun), sleepy (uykulu), scared (korkmuş).", o:"I am happy. He is sad."},
+       {b:"How are you?", m:"Nasıl olduğunu sormak için <b>How are you?</b> deriz. Cevap: <b>I'm fine, thank you.</b> / <b>I'm hungry.</b> / <b>I'm tired.</b>", o:"How are you? – I'm happy."},
+       {b:"Pets", m:"Evcil hayvanlar: cat (kedi), dog (köpek), bird (kuş), fish (balık), rabbit (tavşan), hamster (hamster), turtle (kaplumbağa).", o:"I have got a cat."},
+       {b:"Is it...?", m:"Hayvanı tarif ederiz: <b>It is small / big / cute.</b> Sahibi anlatırız: <b>It is my dog. Its name is Max.</b>", o:"It is a small bird."}
+     ],
+     ipucu:"Hungry = açım (karnım aç), Thirsty = susadım. 'Hungry' için bir hamburger, 'thirsty' için bir bardak su düşün!",
+     kartlar:[["happy","mutlu"],["sad","üzgün"],["angry","kızgın"],["hungry","aç"],["thirsty","susamış"],["tired","yorgun"],["rabbit","tavşan"],["fish","balık"]],
+     sorular:[
+       {s:"'mutlu' İngilizce nedir?", c:["happy","sad","angry","tired"], a:"Mutlu = happy."},
+       {s:"'sad' ne demektir?", c:["üzgün","kızgın","mutlu","aç"], a:"Sad = üzgün."},
+       {s:"How are you?", c:["I'm fine, thank you.","I'm a cat.","It's a dog.","I have got a fish."], a:"How are you? sorusuna: I'm fine, thank you."},
+       {s:"I want a sandwich. I am ___.", c:["hungry","thirsty","sleepy","angry"], a:"Yemek istiyorsan aç demektir: hungry."},
+       {s:"I want water. I am ___.", c:["thirsty","hungry","happy","sad"], a:"Su istiyorsan susamışsındır: thirsty."},
+       {s:"'tavşan' İngilizce nedir?", c:["rabbit","turtle","bird","fish"], a:"Tavşan = rabbit."},
+       {s:"Which one is a pet?", c:["cat","lion","tiger","elephant"], a:"Cat evcil hayvandır; diğerleri vahşi hayvandır."},
+       {s:"I have got a dog. ___ name is Max.", c:["Its","It","Me","They"], a:"Hayvanın adı için 'its' kullanılır."},
+       {s:"Choose the correct sentence.", c:["She is tired.","She tired is.","She am tired.","She are tired."], a:"She ile 'is' kullanılır."},
+       {s:"Mini okuma: 'Deniz has got a rabbit. It is white. Today the rabbit is hungry.' What does the rabbit need?", c:["Food","Water","A bed","A toy"], a:"Tavşan hungry (aç), yani yemeğe ihtiyacı var."}
+     ]}
+  ]},
+  {ad:"I like / I don't like – Sevdiklerim", konular:[
+    {id:"en2-likes-food", ad:"I like / I don't like – Sevdiklerim", e:"🍕",
+     anlat:[
+       {b:"I like / I don't like", m:"Sevdiğimiz şeyi <b>I like ...</b> ile, sevmediğimizi <b>I don't like ...</b> ile söyleriz. 'Don't' = do not.", o:"I like pizza. I don't like fish."},
+       {b:"Do you like...?", m:"Sormak için <b>Do you like ...?</b> deriz. Cevap: <b>Yes, I do.</b> ya da <b>No, I don't.</b>", o:"Do you like milk? – Yes, I do."},
+       {b:"Food and drink", m:"bread (ekmek), cheese (peynir), egg (yumurta), milk (süt), juice (meyve suyu), water (su), pizza, cake (pasta), ice cream (dondurma), soup (çorba).", o:"I like cake and juice."},
+       {b:"Favourite", m:"En çok sevdiğimiz şeye <b>favourite</b> deriz. <b>My favourite food is pizza.</b> (En sevdiğim yemek pizza.)", o:"My favourite colour is blue."}
+     ],
+     ipucu:"I like = beğeniyorum 👍, I don't like = beğenmiyorum 👎. Cevapta fiil 'do' olur: Yes, I do. / No, I don't.",
+     kartlar:[["I like pizza.","Pizzayı severim."],["I don't like soup.","Çorbayı sevmem."],["Do you like milk?","Süt sever misin?"],["Yes, I do.","Evet, severim."],["No, I don't.","Hayır, sevmem."],["favourite","en sevilen"],["cheese","peynir"],["ice cream","dondurma"]],
+     sorular:[
+       {s:"'peynir' İngilizce nedir?", c:["cheese","bread","milk","egg"], a:"Peynir = cheese."},
+       {s:"What is this? 🥚", c:["An egg","A cake","Bread","Cheese"], a:"🥚 yumurtadır: egg."},
+       {s:"I ___ ice cream. (Dondurmayı severim.)", c:["like","likes","am like","liking"], a:"I ile 'like' kullanılır."},
+       {s:"I ___ soup. (Çorbayı sevmem.)", c:["don't like","doesn't like","not like","no like"], a:"Olumsuz: I don't like."},
+       {s:"Do you like juice? Yes, ___.", c:["I do","I am","I like","it is"], a:"Do you ...? sorusuna: Yes, I do."},
+       {s:"Do you like fish? No, ___.", c:["I don't","I am not","I haven't","it isn't"], a:"Olumsuz cevap: No, I don't."},
+       {s:"'favourite' ne demektir?", c:["en sevilen","en büyük","en hızlı","en yeni"], a:"Favourite = en sevilen, favori."},
+       {s:"My favourite food is pizza. What does it mean?", c:["En sevdiğim yemek pizza.","Pizzayı sevmem.","Pizza yemedim.","Pizza yapıyorum."], a:"Favourite food = en sevdiğim yemek."},
+       {s:"Choose the correct sentence.", c:["I like bread and milk.","I likes bread and milk.","I am like bread.","Like bread I."], a:"I ile fiilin yalın hali: I like."},
+       {s:"Mini okuma: 'Ece likes cake. She doesn't like soup. She likes juice.' What doesn't Ece like?", c:["Soup","Cake","Juice","Milk"], a:"Metinde 'She doesn't like soup.' yazıyor."}
+     ]}
+  ]},
+  {ad:"Shapes & colours – Şekiller ve renkler", konular:[
+    {id:"en2-shapes-colours", ad:"Shapes & colours – Şekiller ve renkler", e:"🔷",
+     anlat:[
+       {b:"Shapes", m:"circle (daire), square (kare), triangle (üçgen), rectangle (dikdörtgen), star (yıldız), heart (kalp).", o:"a circle, a square, a triangle"},
+       {b:"What shape is it?", m:"Şekli sormak için <b>What shape is it?</b> deriz. Cevap: <b>It is a circle.</b> Renk için: <b>What colour is it?</b> – <b>It is red.</b>", o:"What shape is the ball? – It is a circle."},
+       {b:"Colours", m:"red (kırmızı), blue (mavi), yellow (sarı), green (yeşil), orange (turuncu), pink (pembe), purple (mor), brown (kahverengi), black (siyah), white (beyaz).", o:"a red heart, a blue star"},
+       {b:"Shape + colour", m:"Önce renk, sonra şekil söylenir: <b>a yellow star</b>, <b>a green triangle</b>. Sayı için: <b>three red circles</b>.", o:"I can see a pink heart."}
+     ],
+     ipucu:"Triangle = tri = 3 (üç köşe). Square = 4 eşit kenar. Circle = yuvarlak, köşesi yok!",
+     kartlar:[["circle","daire"],["square","kare"],["triangle","üçgen"],["rectangle","dikdörtgen"],["star","yıldız"],["heart","kalp"],["purple","mor"],["brown","kahverengi"]],
+     sorular:[
+       {s:"'daire' İngilizce nedir?", c:["circle","square","triangle","star"], a:"Daire = circle."},
+       {s:"What shape is it? 🔺", c:["A triangle","A circle","A square","A heart"], a:"Üç köşeli şekil: triangle."},
+       {s:"'square' ne demektir?", c:["kare","üçgen","daire","yıldız"], a:"Square = kare."},
+       {s:"Which shape has no corners?", c:["circle","square","triangle","rectangle"], a:"Dairenin (circle) köşesi yoktur."},
+       {s:"'mor' İngilizce nedir?", c:["purple","pink","brown","orange"], a:"Mor = purple."},
+       {s:"What colour is the sun? ☀️", c:["Yellow","Blue","Green","Purple"], a:"Güneş sarıdır: yellow."},
+       {s:"Choose the correct phrase. (sarı yıldız)", c:["a yellow star","a star yellow","yellow a star","star a yellow"], a:"Önce renk, sonra şekil söylenir."},
+       {s:"How many corners has a triangle got?", c:["Three","Four","Five","Two"], a:"Üçgenin 3 köşesi vardır."},
+       {s:"Red + yellow = ?", c:["orange","green","purple","pink"], a:"Kırmızı ile sarı karışınca turuncu (orange) olur."},
+       {s:"Mini okuma: 'I have a box. In the box there are two red hearts and one blue star.' How many hearts are there?", c:["Two","One","Three","Four"], a:"Metinde 'two red hearts' yazıyor."}
+     ]}
   ]}
 ]});

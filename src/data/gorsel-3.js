@@ -58,5 +58,26 @@ HW.add({ders:"gorsel", sinif:3, uniteler:[
        {s:"Minyatür sanatının özelliği hangisidir?", c:["Küçük ve ayrıntılı resimlerdir","Devasa duvar resimleridir","Taştan yapılan heykellerdir","Sadece siyah beyaz boyalardır"], a:"Minyatürler küçük ölçekte ayrıntılı resimlerdir."},
        {s:"Bir müzenin gezenler için en önemli görevi nedir?", c:["Eserleri koruyup sergilemek","Eşya satmak","Oyun oynatmak","Resim satmak"], a:"Müzeler eserleri korur, gelecek nesillere ulaştırır."}
      ]}
+  ]},
+  {ad:"Grafik ve Tasarım", konular:[
+    {id:"gs3-grafik-tasarim", ad:"Afiş, Logo ve Ambalaj Tasarımı", e:"🪧",
+     anlat:[
+       {b:"Grafik tasarım", m:"Resim, yazı ve renkleri bir araya getirerek bir şey anlatmaya grafik tasarım denir. Afiş, logo, kartpostal, kitap kapağı ve ambalaj grafik tasarım ürünleridir.", o:"Bir sinema afişi filmi anlatır."},
+       {b:"Afiş", m:"Afiş, insanlara bir olayı veya bilgiyi duyuran büyük görsel bir çalışmadır. Dikkat çekmek için büyük yazı, parlak renk ve net bir resim kullanılır. Yazı kısa ve okunaklı olmalıdır.", o:"23 Nisan etkinliği afişi."},
+       {b:"Logo ve simge", m:"Logo, bir kurumun ya da markanın sade ve akılda kalıcı işaretidir. Basit biçimler ve az renk kullanılır. Trafik levhaları da bir simge dilidir; uzaktan anlaşılırlar.", o:"Basit biçim, güçlü anlam."},
+       {b:"Ambalaj", m:"Ürünleri saran kutu, poşet ya da şişeye ambalaj denir. İyi ambalaj hem ürünü korur hem de ne olduğunu gösterir. Çevre için geri dönüştürülebilir ambalaj tercih edilir.", o:"Süt kutusunun üzerindeki resim ve yazılar."}
+     ],
+     ipucu:"İyi afiş: Büyük, Basit, Parlak! Az yazı, net resim, uzaktan okunur.",
+     kartlar:[["Afiş","Duyuru yapan büyük görsel"],["Logo","Marka veya kurum işareti"],["Ambalaj","Ürünü saran kutu veya poşet"],["Grafik tasarım","Resim ve yazıyla anlatım"],["Kartpostal","Küçük resimli kart"],["Kitap kapağı","Grafik tasarım ürünü"],["Afişte yazı","Kısa ve okunaklı"],["Logo özelliği","Sade ve akılda kalıcı"]],
+     sorular:[
+       {s:"İnsanlara bir etkinliği duyuran büyük görsel çalışmaya ne denir?", c:["Afiş","Heykel","Kil","Müzik"], a:"Duyuru yapan görsel çalışma afiştir."},
+       {s:"Hangisi grafik tasarım ürünüdür?", c:["Kitap kapağı","Taş","Kum","Yaprak"], a:"Kitap kapağı resim ve yazıyla tasarlanır."},
+       {s:"İyi bir afişte yazı nasıl olmalıdır?", c:["Kısa ve okunaklı","Çok uzun ve küçük","Silik","Yok"], a:"Afiş uzaktan okunmalıdır; yazı kısa olmalıdır."},
+       {s:"Ambalajın görevi nedir?", c:["Ürünü korumak ve tanıtmak","Ürünü gizlemek","Ürünü yok etmek","Ürünü boyamak"], a:"Ambalaj hem korur hem tanıtır."},
+       {s:"Hangisi logo özelliğidir?", c:["Sade ve akılda kalıcı olması","Çok ayrıntılı olması","Her renkten oluşması","Yazıdan oluşması şart"], a:"Logo basit ve hatırlanır olmalıdır."},
+       {s:"Okul kermesi için afiş hazırlıyorsun. Neleri yazmalısın?", c:["Etkinliğin adı, günü ve yeri","Sınav tarihleri","Ders programı","Sadece bir resim"], a:"Afişte duyurunun temel bilgileri bulunmalıdır."},
+       {s:"Bir ürünün ambalajında hangi bilgi mutlaka olmalıdır?", c:["Ürünün adı","Mevsim","Müzik","Oyun"], a:"Ambalajda ürün adı yer alır."},
+       {s:"Neden trafik levhaları basit çizilir?", c:["Uzaktan hızlı anlaşılsın diye","Süs olsun diye","Rengarenk olsun diye","Okunmasın diye"], a:"Basit simgeler hızlı anlaşılır."}
+     ]}
   ]}
 ]});

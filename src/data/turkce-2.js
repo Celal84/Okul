@@ -1,4 +1,27 @@
 HW.add({ders:"turkce", sinif:2, uniteler:[
+  {ad:"Dinleme ve Konuşma", konular:[
+    {id:"tr2-dinleme-konusma", ad:"Dinleme, İzleme ve Konuşma", e:"👂",
+     anlat:[
+      {b:"İyi dinleyici", m:"İyi dinleyici konuşanı bölmez, ona bakar ve ne söylediğini anlamaya çalışır. Anlamadığını konuşma bitince sorar."},
+      {b:"Önemli bilgileri bulma", m:"Dinlerken anahtar kelimeleri aklımızda tutarız. Gerekirse kısa notlar alırız.", o:"'Yarın piknik var, su getirin.' → piknik, su"},
+      {b:"İzleme", m:"Bir video ya da program izlerken konuyu, kişileri ve olayı takip ederiz. Sonra izlediğimizi kendi sözlerimizle anlatırız."},
+      {b:"Konuşma kuralları", m:"Sırayla konuşuruz. Konuya uygun, anlaşılır ve nazik konuşuruz. Sesimizi ortama göre ayarlarız.", o:"Kütüphanede alçak sesle konuşuruz."}
+     ],
+     ipucu:"Dinle, anla, sırayı bekle, sonra konuş!",
+     kartlar:[["İyi dinleyici ne yapar?","Konuşanı bölmez"],["Anlamadığımızı ne yaparız?","Sonra soru sorarız"],["Dinlerken neyi aklımızda tutarız?","Anahtar kelimeleri"],["Konuşma sırası kimde?","Sözü alan kişide"],["Toplulukta ses nasıl olmalı?","Ortama uygun"],["İzlediğimizi nasıl anlatırız?","Kendi sözlerimizle"]],
+     sorular:[
+      {s:"Hangisi iyi bir dinleyici davranışıdır?", c:["Konuşanı bölmeden dinlemek","Arkadaşla fısıldaşmak","Başka işle uğraşmak"], a:"İyi dinleyici bölmez ve dikkat eder."},
+      {s:"Anlamadığımız bir şey olursa ne yaparız?", c:["Konuşma bitince nazikçe sorarız","Sınıftan çıkarız","Hiç sormayız"], a:"Anlamadığımızı sonra sorarız."},
+      {s:"Dinlerken neyi aklımızda tutmaya çalışırız?", c:["Önemli bilgileri ve anahtar kelimeleri","Yalnızca son kelimeyi","Sınıftaki gürültüyü"], a:"Önemli bilgiler anlamamızı kolaylaştırır."},
+      {s:"Sınıfta konuşmak isteyen ne yapmalıdır?", c:["Parmak kaldırıp sırasını beklemeli","Hemen bağırmalı","Arkadaşının sözünü kesmeli"], a:"Konuşma sırasına uyulur."},
+      {s:"Not almak ne işe yarar?", c:["Önemli bilgileri unutmamamızı sağlar","Dinlemeyi zorlaştırır","Konuşanı üzer"], a:"Notlar bilgiyi hatırlatır."},
+      {s:"Bir video izledik. Ne yapabiliriz?", c:["Kendi sözlerimizle anlatabiliriz","Hiç hatırlamamalıyız","Olayı değiştirmeliyiz"], a:"İzlediğimizi kendi sözlerimizle anlatırız."},
+      {s:"Kütüphanede nasıl konuşmalıyız?", c:["Alçak sesle","Yüksek sesle","Bağırarak"], a:"Ses ortama uygun olmalıdır."},
+      {s:"Tartışırken farklı düşünen arkadaşımıza ne yapmalıyız?", c:["Saygıyla dinleyip düşüncemizi nazikçe söylemeliyiz","Onunla alay etmeliyiz","Konuşmasına izin vermemeliyiz"], a:"Farklı düşüncelere saygı gösteririz."},
+      {s:"Öğretmen 'Yarın piknik için sandviç ve su getirin.' dedi. Neyi getireceğiz?", c:["Sandviç ve su","Oyuncak ve kitap","Defter ve kalem"], a:"Dinlediğimiz bilgi: sandviç ve su."},
+      {s:"Hangisi konuşma kurallarından biri değildir?", c:["Karşımızdakinin sözünü kesmek","Sırayla konuşmak","Konuya uygun konuşmak"], a:"Söz kesmek kurallara aykırıdır."}
+     ]}
+  ]},
   {ad:"Sözcük Dünyası", konular:[
     {id:"tr2-alfabetik-siralama", ad:"Alfabetik Sıralama", e:"🔠",
      anlat:[
@@ -20,6 +43,27 @@ HW.add({ders:"turkce", sinif:2, uniteler:[
        {s:"Hangi sıralama doğrudur?", c:["mavi, mor, sarı, yeşil","yeşil, sarı, mor, mavi","mor, mavi, sarı, yeşil","sarı, mavi, mor, yeşil"], a:"mavi ve mor M ile başlar; a, o'dan önce gelir. Sonra S, sonra Y gelir."},
        {s:"Sözlükte Ç ile başlayan sözcükler hangi harfle başlayanların hemen ardından gelir?", c:["C","D","B","E"], a:"Alfabede Ç, C'den hemen sonra gelir."},
        {s:"Sınıf listesinde Ece, Ali, Deniz ve Can var. Liste alfabetik sıralanınca ikinci sırada kim olur?", c:["Can","Ali","Deniz","Ece"], a:"Sıra Ali, Can, Deniz, Ece olur; ikinci Can'dır."}
+     ]},
+    {id:"tr2-sozluk", ad:"Sözlük Kullanımı", e:"📚",
+     anlat:[
+      {b:"Sözlük nedir?", m:"Sözlük, sözcüklerin anlamını ve yazılışını öğrendiğimiz kitaptır. Sözcükler alfabe sırasına göre dizilir."},
+      {b:"Sözcüğü bulma", m:"Önce sözcüğün ilk harfini sözlükte buluruz. İlk harfler aynıysa ikinci harfe, sonra üçüncü harfe bakarız.", o:"kale, kalem: kale önce gelir"},
+      {b:"Madde başı", m:"Sözlükte her sözcüğün başlığına madde başı denir. Anlamı altında yazılır.", o:"kalem: yazı yazmaya yarayan araç"},
+      {b:"Neden kullanırız?", m:"Bilmediğimiz bir sözcüğün anlamını ve doğru yazılışını bulmak için sözlük kullanırız."}
+     ],
+     ipucu:"İlk harf, ikinci harf, üçüncü harf: alfabe sırasıyla ara!",
+     kartlar:[["Sözlük nedir?","Sözcüklerin anlamını veren kitap"],["Sözlükte sözcükler nasıl sıralanır?","Alfabe sırasına göre"],["Sözlükte sözcüğün başlığı","Madde başı"],["Önce hangi harfe bakılır?","Sözcüğün ilk harfine"],["Sözlük neye yarar?","Anlam ve yazılışı bulmaya"],["Hangisi önce gelir: kale, kalem?","kale"]],
+     sorular:[
+      {s:"Sözcüklerin anlamının bulunduğu kitaba ne denir?", c:["Sözlük","Roman","Atlas"], a:"Anlam sözlükte bulunur."},
+      {s:"Sözlükte sözcükler nasıl sıralanır?", c:["Alfabe sırasına göre","Uzunluğuna göre","Rastgele"], a:"Alfabe sırası kullanılır."},
+      {s:"Hangi sözcük sözlükte daha önce bulunur?", c:["armut","balık","elma"], a:"A harfi diğerlerinden önce gelir."},
+      {s:"Hangi sözcük sözlükte önce gelir?", c:["kale","kalem","ikisi aynı yerde"], a:"Kısa olan kale, kalem'den önce gelir."},
+      {s:"Sözlükte aradığımız sözcüğün başlığına ne denir?", c:["Madde başı","Konu","Resim"], a:"Başlık sözcüğe madde başı denir."},
+      {s:"Bilmediğimiz bir sözcüğün anlamını nereden öğreniriz?", c:["Sözlükten","Takvimden","Haritadan"], a:"Anlam için sözlüğe bakarız."},
+      {s:"Sözlükte 'çilek' sözcüğünü ararken önce hangi harfe bakarız?", c:["Ç","K","E"], a:"Önce ilk harfe bakılır."},
+      {s:"Hangi sözcük alfabe sırasına göre ilk gelir? zeytin, kuş, elma, ayı", c:["ayı","elma","kuş"], a:"A harfi en öndedir."},
+      {s:"'masa', 'mavi', 'makas' sözcüklerinden hangisi sözlükte en sonda yer alır?", c:["mavi","masa","makas"], a:"Sıra: makas, masa, mavi."},
+      {s:"Sözlükten hangisini öğrenemeyiz?", c:["Yarınki hava durumunu","Bir sözcüğün anlamını","Bir sözcüğün yazılışını"], a:"Hava durumu sözlükte bulunmaz."}
      ]},
     {id:"tr2-hece-satir-sonu", ad:"Hece Bölme ve Satır Sonu", e:"✂️",
      anlat:[
@@ -128,6 +172,48 @@ HW.add({ders:"turkce", sinif:2, uniteler:[
        {s:"Hangi sözcük çoğuldur?", c:["balıklar","balık","kuş","uçak"], a:"-lar eki çoğul yapar."},
        {s:"Hangi cümlede hem özel ad hem çoğul ad vardır?", c:["Ali kuşları besledi.","Ali kuşu besledi.","Çocuklar kuşları besledi.","Kuşlar uçtu."], a:"Ali özel ad, kuşları çoğul addır."}
      ]},
+    {id:"tr2-sifat-eylem", ad:"Eylemler ve Niteleyen Sözcükler", e:"🏃",
+     anlat:[
+      {b:"Eylem", m:"İş, hareket ve oluş bildiren sözcüklere eylem denir. Koşmak, yazmak, uyumak birer eylemdir.", o:"Ali koştu. Elif yazıyor."},
+      {b:"Eylemi bulma", m:"Cümlede 'Ne yaptı?' sorusunun cevabı eylemdir.", o:"Kuş uçtu. → uçtu"},
+      {b:"Sıfat", m:"Varlıkların nasıl olduğunu anlatan sözcüklere sıfat denir. Sıfat, varlığın adından önce gelir.", o:"kırmızı elma, büyük ev"},
+      {b:"Nasıl? Kaç? Hangi?", m:"Sıfatı 'nasıl, kaç, hangi' sorularıyla buluruz.", o:"üç kuş, bu çanta, tatlı kek"}
+     ],
+     ipucu:"Eylem: ne yaptı? Sıfat: nasıl? kaç? hangi?",
+     kartlar:[["Eylem nedir?","İş, hareket bildiren sözcük"],["Eylemi hangi soruyla buluruz?","Ne yaptı?"],["Sıfat nedir?","Varlığı niteleyen sözcük"],["Sıfat nerede durur?","Adın önünde"],["'Güzel çiçek'te sıfat","güzel"],["'Kuş uçtu'da eylem","uçtu"],["'Üç elma'da sıfat","üç"]],
+     sorular:[
+      {s:"Hangisi bir eylemdir?", c:["koşmak","masa","mavi"], a:"Koşmak hareket bildirir."},
+      {s:"'Ayşe kitap okudu.' cümlesinde eylem hangisidir?", c:["okudu","Ayşe","kitap"], a:"Ne yaptı? Okudu."},
+      {s:"'Kırmızı elma yere düştü.' cümlesinde sıfat hangisidir?", c:["Kırmızı","elma","düştü"], a:"Kırmızı, elmanın nasıl olduğunu anlatır."},
+      {s:"Sıfat ne yapar?", c:["Varlığın nasıl olduğunu anlatır","Hareketi gösterir","Kişiyi sorar"], a:"Sıfat varlığı niteler."},
+      {s:"'Büyük ağaç' söz grubunda 'büyük' sözcüğü hangi türdendir?", c:["Sıfat","Eylem","Özel ad"], a:"Büyük, ağacı niteler."},
+      {s:"Hangisi hareket bildiren sözcüktür?", c:["yüzmek","deniz","güzel"], a:"Yüzmek bir eylemdir."},
+      {s:"'Kuşlar ağaçta ötüyor.' cümlesinde eylem hangisidir?", c:["ötüyor","Kuşlar","ağaçta"], a:"Kuşlar ne yapıyor? Ötüyor."},
+      {s:"'Üç kedi bahçede oynuyor.' cümlesinde sayıyı bildiren sıfat hangisidir?", c:["Üç","kedi","bahçede"], a:"Üç, kedinin kaç tane olduğunu söyler."},
+      {s:"Hangi sözcük bir varlığı niteler?", c:["tatlı","koştu","gelmek"], a:"Tatlı, varlığın özelliğini anlatır."},
+      {s:"Hangi cümlede sıfat vardır?", c:["Beyaz kedi uyudu.","Kedi uyudu.","Ali geldi."], a:"Beyaz, kediyi niteler."}
+     ]},
+    {id:"tr2-ekler", ad:"Sözcüğe Ek Gelince", e:"➕",
+     anlat:[
+      {b:"Kök ve ek", m:"Sözcüğün anlamlı en küçük parçasına kök denir. Köke eklenen parçalara ek denir.", o:"göz + lük = gözlük"},
+      {b:"Yeni sözcük türeten ekler", m:"-lık, -cı, -lı, -sız gibi ekler köke gelince yeni anlamlı sözcükler oluşur.", o:"balık + çı = balıkçı"},
+      {b:"-lı ve -sız", m:"-lı 'var' anlamı katar, -sız 'yok' anlamı katar. Bu iki ek zıt anlam kurar.", o:"sulu ↔ susuz"},
+      {b:"Kökü bulma", m:"Sözcükten eki çıkarırsak kök kalır.", o:"kitapçı → kitap"}
+     ],
+     ipucu:"Kök kalır, ek gelir: yeni sözcük doğar!",
+     kartlar:[["Kök nedir?","Sözcüğün anlamlı en küçük parçası"],["Ek nedir?","Köke eklenen parça"],["balık + çı","balıkçı"],["göz + lük","gözlük"],["su + suz","susuz"],["kar + lı","karlı"],["-sız eki hangi anlamı katar?","Yokluk"]],
+     sorular:[
+      {s:"'Balıkçı' sözcüğünün kökü hangisidir?", c:["balık","çı","balıkçı"], a:"Eki çıkarınca kök kalır: balık."},
+      {s:"'Gözlük' sözcüğünde ek hangisidir?", c:["-lük","göz","gö"], a:"Ek: -lük; kök: göz."},
+      {s:"'Susuz' sözcüğü ne anlatır?", c:["Suyu olmayan","Suyu çok olan","Suya giren"], a:"-suz yokluk bildirir."},
+      {s:"Hangi ek 'var' anlamı katar?", c:["-lı","-sız","-cı"], a:"Karlı: karı olan."},
+      {s:"'Karlı' sözcüğünün kökü nedir?", c:["kar","karlı","lı"], a:"Eki çıkarınca kar kalır."},
+      {s:"'Ev' + '-siz' birleşince hangi sözcük olur?", c:["evsiz","evler","evli"], a:"Evsiz: evi olmayan."},
+      {s:"'Çiçekçi' sözcüğünde yeni anlamı hangi ek katar?", c:["-çi","çiçek","çiç"], a:"-çi eki meslek bildirir."},
+      {s:"'Sütlü' sözcüğünün zıt anlamlısı hangisidir?", c:["sütsüz","sütçü","sütlük"], a:"-lı ve -sız zıt anlamlı kurar."},
+      {s:"Hangisi kökten türemiş bir sözcüktür?", c:["kitapçı","kitap","masa"], a:"Kitapçı = kitap + çı."},
+      {s:"Hangi sözcükte yokluk anlamı vardır?", c:["şekersiz","şekerli","şekerci"], a:"-siz yokluk bildirir."}
+     ]},
     {id:"tr2-cumle-noktalama", ad:"Cümle Türleri ve Noktalama", e:"❗",
      anlat:[
        {b:"Nokta ve soru işareti", m:"Bilgi veren cümlenin sonuna nokta (.), soru bildiren cümlenin sonuna soru işareti (?) konur.", o:"Bugün okula gittim. / Sen de geldin mi?"},
@@ -149,6 +235,27 @@ HW.add({ders:"turkce", sinif:2, uniteler:[
        {s:"Hangi cümle doğru yazılmıştır?", c:["Elif'in kedisi çok tatlı.","Elifin kedisi çok tatlı.","Elif'in kedisi çok tatlı?","Elif'in kedisi çok tatlı,"], a:"Özel adın ilk harfi büyük, ek kesmeyle ayrılır, cümle noktayla biter."},
        {s:"Hangi cümle yanlış noktalanmıştır?", c:["Sen nerede oturuyorsun.","Ben İzmir'de oturuyorum.","Ne kadar güzel bir gün!","Sepette elma, armut var."], a:"Soru cümlesinin sonuna soru işareti konur."}
      ]},
+    {id:"tr2-soru-eki-mi", ad:"Soru Eki mı, mi, mu, mü", e:"❓",
+     anlat:[
+      {b:"Soru eki", m:"Cümleyi soru yapan ekler mı, mi, mu, mü'dür. Cümleye soru anlamı katar.", o:"Geldin mi?"},
+      {b:"Ayrı yazılır", m:"Soru eki kendinden önceki sözcükten ayrı yazılır.", o:"Okula gittin mi? Kitap mı okudun?"},
+      {b:"Hangi biçim?", m:"Önceki sözcüğün son sesli harfine göre seçilir: a, ı → mı; e, i → mi; o, u → mu; ö, ü → mü.", o:"araba mı, kedi mi, okul mu, gül mü"},
+      {b:"Soru işareti", m:"Soru cümlelerinin sonuna soru işareti (?) konur. Soru hem soru eki hem soru sözcüğüyle yapılır.", o:"Ne yedin? Yedin mi?"}
+     ],
+     ipucu:"mı-mi-mu-mü son sesliye uyar ve her zaman ayrı yazılır!",
+     kartlar:[["a, ı ile biten sözcüğe","mı"],["e, i ile biten sözcüğe","mi"],["o, u ile biten sözcüğe","mu"],["ö, ü ile biten sözcüğe","mü"],["Soru eki nasıl yazılır?","Ayrı yazılır"],["Soru cümlesi sonuna ne konur?","Soru işareti"]],
+     sorular:[
+      {s:"Hangisi doğru yazılmıştır?", c:["Geldin mi?","Geldinmi?","Geldin mı?"], a:"Soru eki ayrı yazılır ve son sesli i olduğu için mi gelir."},
+      {s:"Boşluğa hangisi gelir? Okula gittin ___?", c:["mi","mı","mu"], a:"Gittin sözcüğünün son sesli harfi i'dir: mi."},
+      {s:"Boşluğa hangisi gelir? Kitap ___ okudun?", c:["mı","mi","mu"], a:"Kitap sözcüğünün son sesli harfi a'dır: mı."},
+      {s:"Boşluğa hangisi gelir? Sen uyudun ___?", c:["mu","mı","mi"], a:"Uyudun sözcüğünün son sesli harfi u'dur: mu."},
+      {s:"Boşluğa hangisi gelir? Bu gül ___?", c:["mü","mu","mi"], a:"Gül sözcüğünün son sesli harfi ü'dür: mü."},
+      {s:"Soru eki nasıl yazılır?", c:["Önceki sözcükten ayrı","Bitişik","Tireyle bitişik"], a:"Soru eki ayrı yazılır."},
+      {s:"Hangisi soru cümlesidir?", c:["Eve geldin mi?","Eve geldin.","Eve geldim."], a:"Soru eki içeren cümle sorudur."},
+      {s:"'Çocuklar parka gitti mi' cümlesinin sonuna hangi işaret konur?", c:["?",".","!"], a:"Soru cümlesi soru işaretiyle biter."},
+      {s:"Hangisi doğru yazılmıştır?", c:["Bunu sen mi yaptın?","Bunu senmi yaptın?","Bunu sen mı yaptın?"], a:"Sen sözcüğü e ile biter: mi, ayrı yazılır."},
+      {s:"Hangi cümlede soru eki vardır?", c:["Elma mı yiyeceksin?","Elma yiyeceksin.","Elmayı yedim."], a:"Mı soru ekidir."}
+     ]},
     {id:"tr2-buyuk-harf", ad:"Büyük Harflerin Kullanımı", e:"🅰️",
      anlat:[
        {b:"Cümle başı", m:"Her cümle büyük harfle başlar. Soru işareti ya da ünlemden sonra gelen yeni cümle de büyük harfle başlar.", o:"Nasılsın? İyiyim."},
@@ -169,6 +276,27 @@ HW.add({ders:"turkce", sinif:2, uniteler:[
        {s:"Hangi cümle doğru noktalanmıştır?", c:["Zeynep İzmir'de oturuyor.", "Zeynep İzmir'de oturuyor", "Zeynep İzmir'de oturuyor?", "Zeynep İzmir'de oturuyor,"], a:"Bilgi veren cümle noktayla biter."},
        {s:"Hangi sözcük cümle içinde küçük harfle yazılır?", c:["masa", "Ankara", "Ayşe", "Sakarya"], a:"Masa cins addır."},
        {s:"'cemre ile kaan bursa'ya gitti.' cümlesinde kaç sözcüğün ilk harfi büyük olmalıdır?", c:["3", "2", "1", "4"], a:"Cemre, Kaan ve Bursa'ya büyük başlar."}
+     ]},
+    {id:"tr2-yazim-yanlislari", ad:"Doğru Yazalım", e:"✍️",
+     anlat:[
+      {b:"Sık yanlış yazılanlar", m:"Bazı sözcükleri duyduğumuz gibi yazarsak yanlış olur. Yalnız ve yanlış sözcüklerini karıştırmayalım.", o:"yalnız (tek), yanlış (hatalı)"},
+      {b:"Herkes, hiç, şey", m:"Doğru yazılışlar: herkes, hiç, şey.", o:"Herkes geldi. Hiç korkmadım."},
+      {b:"Bitişik yazılanlar", m:"Bugün, birçok, pazartesi, cumartesi bitişik yazılır.", o:"Bugün pazartesi."},
+      {b:"Ayrı yazılanlar", m:"Her gün, her şey, ya da, hafta sonu ayrı yazılır.", o:"Her gün okula giderim."}
+     ],
+     ipucu:"Yalnız = tek başına, yanlış = hata. İkisini karıştırma!",
+     kartlar:[["Doğru yazılış: yalnız mı yanlız mı?","yalnız"],["Hata anlamında","yanlış"],["Doğru yazılış: herkes/herkez?","herkes"],["Doğru yazılış: hiç/hiçç?","hiç"],["Bitişik yazılır: bu gün/bugün","bugün"],["Ayrı yazılır: herşey/her şey","her şey"],["Doğru: ya da / yada?","ya da"]],
+     sorular:[
+      {s:"Hangisi doğru yazılmıştır?", c:["yanlış","yalnış","yanliş"], a:"Doğru yazılış: yanlış."},
+      {s:"Tek başına olmak anlamındaki sözcük nasıl yazılır?", c:["yalnız","yanlız","yalnıs"], a:"Doğru yazılış: yalnız."},
+      {s:"Hangisi doğru yazılmıştır?", c:["herkes","herkez","herkeş"], a:"Doğru yazılış: herkes."},
+      {s:"Hangi cümle doğru yazılmıştır?", c:["Bugün hava çok güzel.","Bu gün hava çok güzel.","Bugun hava çok güzel."], a:"Bugün bitişik yazılır."},
+      {s:"Hangisi doğru yazılmıştır?", c:["her şey","herşey","her sey"], a:"Her şey ayrı yazılır."},
+      {s:"Hangisi doğru yazılmıştır?", c:["pazartesi","pazar tesi","pazartezi"], a:"Pazartesi bitişik yazılır."},
+      {s:"Hangi cümle doğru yazılmıştır?", c:["Çay ya da süt içebilirsin.","Çay yada süt içebilirsin.","Çay ya da süt içebilirsin"], a:"Ya da ayrı yazılır; cümle noktayla biter."},
+      {s:"Hangisi doğru yazılmıştır?", c:["birçok","bir çok","birçog"], a:"Birçok bitişik yazılır."},
+      {s:"Hangisi doğru yazılmıştır?", c:["cumartesi","cuma tesi","cumarteci"], a:"Cumartesi bitişik yazılır."},
+      {s:"Hangi cümle doğru yazılmıştır?", c:["Herkes her gün okula geliyor.","Herkez her gün okula geliyor.","Herkes hergün okula geliyor."], a:"Herkes ve her gün doğru yazılmıştır."}
      ]}
   ]},
   {ad:"Okuma ve Anlama", konular:[
@@ -193,6 +321,27 @@ HW.add({ders:"turkce", sinif:2, uniteler:[
        {s:"Ana fikir nedir?", c:["Metnin vermek istediği temel mesaj","Metindeki ilk cümle","Metindeki kahramanın adı","Metindeki sözcük sayısı"], a:"Ana fikir, metnin vermek istediği temel mesajdır."},
        {s:"Metin: 'Dün akşam kardeşim Ali ile evde kek yaptık. Kek çok lezzetli oldu.' Hangi sorunun cevabı metinde yoktur?", c:["Kek kaç yumurtayla yapıldı?","Kek nerede yapıldı?","Kek kiminle yapıldı?","Kek nasıl oldu?"], a:"Yumurta sayısı metinde yazmıyor."}
      ]},
+    {id:"tr2-neden-sonuc", ad:"Neden-Sonuç ve Olay Sırası", e:"🔗",
+     anlat:[
+      {b:"Neden ve sonuç", m:"Bir olayın sebebine neden, ortaya çıkan duruma sonuç denir.", o:"Yağmur yağdı, bu yüzden ıslandık."},
+      {b:"Nedeni bul", m:"'Neden?' sorusunun cevabı nedeni verir. 'Çünkü' nedeni bildirir.", o:"Elif üşüdü, çünkü hava soğuktu."},
+      {b:"Olay sırası", m:"Olaylar zaman sırasına göre dizilir.", o:"Önce uyandı, sonra yüzünü yıkadı."},
+      {b:"Sıralama ipuçları", m:"Önce, ilk olarak, daha sonra, ardından ve en sonunda sözcükleri sırayı bulmamızı kolaylaştırır."}
+     ],
+     ipucu:"Çünkü neden, bu yüzden sonuç; önce-sonra sırayı gösterir!",
+     kartlar:[["Olayın sebebine ne denir?","Neden"],["Olayın ortaya çıkan durumu","Sonuç"],["'Çünkü' neyi bildirir?","Nedeni"],["'Bu yüzden' neyi bildirir?","Sonucu"],["Olaylar nasıl sıralanır?","Zaman sırasına göre"],["Sırayı gösteren söz","Önce, sonra, en son"]],
+     sorular:[
+      {s:"'Hava soğuktu, bu yüzden montumu giydim.' cümlesinde sonuç hangisidir?", c:["Montumu giydim.","Hava soğuktu.","Hava güzeldi."], a:"Bu yüzden sonrası sonucu bildirir."},
+      {s:"'Elif üşüdü, çünkü hava soğuktu.' cümlesinde neden hangisidir?", c:["Hava soğuktu.","Elif üşüdü.","Elif geldi."], a:"Çünkü sonrası nedeni bildirir."},
+      {s:"'Çünkü' sözcüğü neyi bildirir?", c:["Nedeni","Sonucu","Zamanı"], a:"Çünkü nedeni bildirir."},
+      {s:"'Bu yüzden' sözcüğü neyi bildirir?", c:["Sonucu","Nedeni","Yeri"], a:"Bu yüzden sonucu bildirir."},
+      {s:"Ali ödevini yaptı, çünkü ... Boşluğa hangisi uygundur?", c:["öğretmeni ödev verdi.","dün yağmur yağdı.","kedi uyudu."], a:"Ödev yapmanın nedeni ödev verilmesidir."},
+      {s:"Hangi sıralama doğrudur?", c:["Önce uyandı, sonra yüzünü yıkadı, en son kahvaltı yaptı.","Önce kahvaltı yaptı, sonra uyandı, en son yüzünü yıkadı.","En son uyandı, önce kahvaltı yaptı."], a:"Günlük olaylar mantıklı sırayla gerçekleşir."},
+      {s:"Tohum ekildi, sulandı ve filizlendi. Olaylar hangi sırayla olmuştur?", c:["Ekildi, sulandı, filizlendi","Filizlendi, sulandı, ekildi","Sulandı, filizlendi, ekildi"], a:"Önce ekilir, sonra sulanır, sonra filizlenir."},
+      {s:"'Yağmur yağdığı için yollar ıslandı.' cümlesinde neden hangisidir?", c:["Yağmur yağması","Yolların ıslanması","Yolların uzunluğu"], a:"Islanmanın nedeni yağmurdur."},
+      {s:"Hangisi bir sonuç cümlesidir?", c:["Bu yüzden maça gidemedi.","Çünkü yağmur yağıyordu.","Hava yağmurlu olduğu için"], a:"Bu yüzden ile başlayan söz sonuç bildirir."},
+      {s:"Hangisi sıra bildiren sözdür?", c:["En sonunda","Çünkü","Bu yüzden"], a:"En sonunda sırayı bildirir."}
+     ]},
     {id:"tr2-gercek-hayal", ad:"Gerçek ve Hayal Ürünü", e:"🧚",
      anlat:[
        {b:"Gerçek nedir?", m:"Gerçekte olan, gözlemleyebildiğimiz şeylere gerçek denir. Güneşin doğması, yağmurun yağması gerçektir.", o:"Balık suda yaşar."},
@@ -213,9 +362,30 @@ HW.add({ders:"turkce", sinif:2, uniteler:[
        {s:"Hangi ikisi de gerçektir?", c:["Ağaç, yağmur","Peri, cüce","Uçan at, cin","Konuşan masa, dev"], a:"Ağaç ve yağmur gerçekte vardır."},
        {s:"Hangisi gerçek değildir?", c:["Dağın yürümesi","Dağın yüksek olması","Dağda kar olması","Dağda ağaç bitmesi"], a:"Dağlar yürüyemez."},
        {s:"'Küçük bir tohum toprağa düştü. Sulandı, filizlendi.' Bu anlatım gerçek mi, hayal mi?", c:["Gerçek, tohumlar böyle filizlenir","Hayal, çünkü tohum yürür","Hayal, çünkü tohum uçar","Hayal, çünkü toprak konuşur"], a:"Tohumun toprakta filizlenmesi gerçek bir olaydır."}
+     ]},
+    {id:"tr2-siir-bilgisi", ad:"Şiir: Dize ve Kıta", e:"🎭",
+     anlat:[
+      {b:"Şiir nedir?", m:"Şiir, duyguları ve düşünceleri güzel, ahenkli sözlerle anlatan yazıdır. Şiiri yazan kişiye şair denir."},
+      {b:"Dize (mısra)", m:"Şiirin her satırına dize ya da mısra denir.", o:"4 satırlık parçada 4 dize vardır."},
+      {b:"Kıta", m:"Dizelerin oluşturduğu bölüme kıta (bent) denir. Kıtalar boşlukla ayrılır. Dört dizelik kıtaya dörtlük denir."},
+      {b:"Uyak", m:"Dize sonlarındaki ses benzerliğine uyak (kafiye) denir.", o:"gelir - bilir"}
+     ],
+     ipucu:"Şiirde satır = dize, bölüm = kıta, sonlardaki benzerlik = uyak!",
+     kartlar:[["Şiirin her satırı","Dize"],["Dizelerin oluşturduğu bölüm","Kıta"],["Şiiri yazan kişi","Şair"],["Dize sonlarındaki ses benzerliği","Uyak"],["Dörtlük kaç dizeden oluşur?","Dört dize"],["Dizenin başka adı","Mısra"]],
+     sorular:[
+      {s:"Şiirin her satırına ne denir?", c:["Dize","Kıta","Başlık"], a:"Her satır bir dizedir."},
+      {s:"Şiiri yazan kişiye ne denir?", c:["Şair","Ressam","Terzi"], a:"Şiir yazan kişiye şair denir."},
+      {s:"Dizelerin oluşturduğu bölüme ne denir?", c:["Kıta","Uyak","Başlık"], a:"Dizeler kıtayı oluşturur."},
+      {s:"Dörtlük kaç dizeden oluşur?", c:["4","2","8"], a:"Dörtlük dört dizeden oluşur."},
+      {s:"Dize sonlarındaki ses benzerliğine ne denir?", c:["Uyak","Kıta","Başlık"], a:"Buna uyak (kafiye) denir."},
+      {s:"Hangi iki sözcük uyaklıdır?", c:["gelir - bilir","masa - kitap","kuş - elma"], a:"Gelir ve bilir -lir ile biter."},
+      {s:"Üç kıtalık ve her kıtası dört dizelik şiirde kaç dize vardır?", c:["12","7","16"], a:"3 x 4 = 12 dize."},
+      {s:"'Mısra' sözcüğüyle aynı anlama gelen hangisidir?", c:["Dize","Kıta","Uyak"], a:"Mısra ve dize aynı anlamdadır."},
+      {s:"Şiir hangi amaçla yazılır?", c:["Duygu ve düşünceleri güzel sözlerle anlatmak için","Yalnızca sayı saymak için","Tarif vermek için"], a:"Şiir duyguları ahenkle anlatır."},
+      {s:"'Yağmur yağar çatıda, / Damlalar dans eder suda.' parçada kaç dize vardır?", c:["2","1","4"], a:"Her satır bir dizedir: 2 dize."}
      ]}
   ]},
-  {ad:"Söz Varlığımız", konular:[
+  {ad:"Söz Varlığımız ve Yazma", konular:[
     {id:"tr2-atasozu-deyim", ad:"Atasözü, Deyim, Tekerleme, Bilmece", e:"💬",
      anlat:[
        {b:"Atasözü", m:"Atasözleri, atalarımızın uzun yıllar boyunca edindiği deneyimlerden doğan, öğüt veren kısa sözlerdir.", o:"Damlaya damlaya göl olur."},
@@ -236,6 +406,27 @@ HW.add({ders:"turkce", sinif:2, uniteler:[
        {s:"Hızlı söylenen, eğlenceli söz oyununa ne denir?", c:["Tekerleme","Atasözü","Deyim","Kural"], a:"Tekerlemeler hızlı ve eğlenceli söylenir."},
        {s:"Hangisi atasözüdür?", c:["Sakla samanı gelir zamanı.","Elini çabuk tut.","Kulak vermek.","Bir berber bir berbere gel beraber berberlik edelim demiş."], a:"Öğüt veren kalıp söz atasözüdür."},
        {s:"'Öğretmenimiz konuşurken kulak verdik.' cümlesinde 'kulak vermek' ne demektir?", c:["Dinlemek","Kulağını çıkarmak","Konuşmak","Kulağına bir şey takmak"], a:"Kulak vermek: dikkatle dinlemek."}
+     ]},
+    {id:"tr2-mektup-davetiye", ad:"Mektup, Davetiye ve Not", e:"✉️",
+     anlat:[
+      {b:"Mektup", m:"Mektup, uzaktaki birine duygu ve düşüncelerimizi anlatmak için yazılır. Başta hitap, sonda imza bulunur.", o:"Sevgili Ayşe, ... Seni seven Elif"},
+      {b:"Davetiye", m:"Davetiye, birini bir etkinliğe çağırmak için yazılır. Etkinliğin yeri, günü ve saati yazılır.", o:"Doğum günüme bekliyorum. Cumartesi, 15.00"},
+      {b:"Not", m:"Not, kısa ve çabuk bilgi vermek için yazılır. Kime ve kimden olduğu belli olmalıdır.", o:"Anne, ekmek aldım. Ali"},
+      {b:"Yazarken dikkat", m:"Yazılı anlatımda büyük harf, nokta ve doğru yazım kurallarına uyarız. Cümleleri düzenli yazarız."}
+     ],
+     ipucu:"Mektupta hitap ve imza, davetiyede yer-gün-saat, notta kısa bilgi!",
+     kartlar:[["Mektup ne için yazılır?","Duygu ve düşünceyi anlatmak"],["Mektubun başındaki söz","Hitap"],["Mektubun sonundaki ad","İmza"],["Davetiye ne için yazılır?","Birini çağırmak için"],["Davetiyede hangi bilgiler olur?","Yer, gün, saat"],["Not nasıl bir yazıdır?","Kısa bilgi yazısı"]],
+     sorular:[
+      {s:"Uzaktaki birine duygu ve düşüncelerimizi anlatmak için ne yazarız?", c:["Mektup","Davetiye","Tarif"], a:"Bunun için mektup yazılır."},
+      {s:"Mektubun başındaki 'Sevgili Ayşe,' bölümüne ne denir?", c:["Hitap","İmza","Konu"], a:"Kişiye seslenme hitaptır."},
+      {s:"Mektubun sonuna yazılan ada ne denir?", c:["İmza","Hitap","Başlık"], a:"Yazanın adı imzadır."},
+      {s:"Birini doğum günü partisine çağırmak için ne yazarız?", c:["Davetiye","Mektup","Not"], a:"Çağırmak için davetiye yazılır."},
+      {s:"Davetiyede hangisi mutlaka yazılmalıdır?", c:["Etkinliğin yeri, günü ve saati","Yemek tarifi","Ders programı"], a:"Davetli ne zaman ve nereye geleceğini bilmelidir."},
+      {s:"'Anne, ekmek aldım. Ali' hangi yazı türüdür?", c:["Not","Davetiye","Mektup"], a:"Kısa bilgi veren yazı nottur."},
+      {s:"Hangisi mektubun özelliğidir?", c:["Hitapla başlar, imzayla biter","Yalnızca sayılardan oluşur","Hiç cümle içermez"], a:"Mektupta hitap ve imza bulunur."},
+      {s:"Hangisi bir davetiye cümlesidir?", c:["Doğum günüme cumartesi saat 15.00'te bekliyorum.","Dün parka gittik.","Kitabım masanın üzerinde."], a:"Çağırma ve zaman bilgisi içerir."},
+      {s:"Yazı yazarken hangisine dikkat etmeliyiz?", c:["Büyük harf, nokta ve doğru yazıma","Hiç boşluk bırakmamaya","Yalnızca büyük harf kullanmaya"], a:"Yazım kurallarına uyulur."},
+      {s:"Elif anneannesine mektup yazacak. Mektuba nasıl başlamalıdır?", c:["Sevgili anneanneciğim,","Anneanne bana","Hemen cevap ver"], a:"Mektup hitapla başlar."}
      ]}
   ]}
 ]});
